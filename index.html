@@ -56,119 +56,199 @@ animation: softGradient 20s ease infinite;
 </style>
 
 
-<!-- START NAVBAR -->
-<nav class="navbar navbar-expand-lg ftco-navbar" id="ftco-navbar">
-    <div class="container d-flex align-items-center justify-content-between">
 
-        <!-- Logo -->
-        <a href="index.html" class="navbar-brand d-flex align-items-center">
+
+
+<!-- MODERN NAVBAR START -->
+<nav class="modern-navbar">
+    <div class="nav-container">
+        <!-- Logo & Brand -->
+        <a href="index.html" class="nav-logo">
             <img src="images/logo.png" alt="Logo">
             <span>Ceylon Birdwing Tours</span>
         </a>
 
-        <!-- Mobile MENU text -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav">
-            MENU
-        </button>
+        <!-- Hamburger for mobile -->
+        <div class="nav-toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
         <!-- Menu -->
-        <div class="collapse navbar-collapse" id="ftco-nav">
-            <ul class="navbar-nav ml-auto text-left">
-                <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
-                <li class="nav-item"><a href="packages.html" class="nav-link">Tour Packages</a></li>
-                <li class="nav-item"><a href="CustomTours.html" class="nav-link">Custom Tours</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item active"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="destination.html">Destination</a></li>
+            <li class="nav-item"><a href="packages.html">Tour Packages</a></li>
+            <li class="nav-item"><a href="CustomTours.html">Custom Tours</a></li>
+            <li class="nav-item"><a href="contact.html">Contact</a></li>
+        </ul>
     </div>
 </nav>
 
 <style>
-/* ===== MAIN NAVBAR ===== */
-#ftco-navbar {
-    background: linear-gradient(135deg, #ffffff 30%, #1aa85c);
-    padding: 0.6rem 0;
-    position: sticky;
+/* ===== MODERN NAVBAR ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Container */
+.modern-navbar {
+    position: fixed;
+    width: 100%;
     top: 0;
+    left: 0;
+    background: rgba(255, 204, 0, 0.85); /* yellow theme, slightly transparent */
+    backdrop-filter: blur(10px);
     z-index: 999;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: background 0.3s ease;
 }
 
-/* ===== LOGO ===== */
-#ftco-navbar .navbar-brand img {
-    height: 75px; /* increased size */
-    width: 75px;
-    object-fit: cover;
+.modern-navbar.scrolled {
+    background: linear-gradient(135deg, #ffcc00, #e6b800); /* stronger yellow on scroll */
+}
+
+/* Flex container */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.8rem 1rem;
+}
+
+/* Logo */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-logo img {
+    height: 70px; /* slightly bigger logo */
+    width: 70px;
     margin-right: 12px;
-}
-#ftco-navbar .navbar-brand span {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #1aa85c;
+    object-fit: cover;
 }
 
-/* ===== NAV LINKS ===== */
-#ftco-navbar .nav-link {
-    color: #ffffff;
-    font-weight: 500;
-    margin: 0 0.6rem;
-    padding: 6px 10px;
-    border-radius: 20px;
+.nav-logo span {
+    color: #000; /* dark text on yellow */
+    font-weight: 700;
+    font-size: 1.4rem;
+    white-space: nowrap;
+}
+
+/* Menu */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.nav-item a {
+    color: #000; /* dark text */
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 25px;
     transition: all 0.3s ease;
+    font-weight: 500;
+    background: rgba(255,255,255,0.2);
 }
-#ftco-navbar .nav-link:hover {
-    background: rgba(255,255,255,0.25);
-    color: #ffffff;
-}
-#ftco-navbar .nav-item.active .nav-link {
-    background: #ffffff;
-    color: #1aa85c;
+
+.nav-item a:hover,
+.nav-item.active a {
+    background: #fff;
+    color: #e6b800; /* darker yellow */
     font-weight: 600;
 }
 
-/* ===== TOGGLER BUTTON ===== */
-.navbar-toggler {
-    border: none;
-    background: none;
-    font-weight: bold;
-    color: #ffffff; /* MENU text white */
-    font-size: 1rem;
-    padding: 0.25rem 0.75rem;
+/* Hamburger for mobile */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
 }
 
-/* ===== MOBILE VIEW ===== */
+.nav-toggle span {
+    display: block;
+    height: 3px;
+    width: 28px;
+    background: #000;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Mobile responsive */
 @media (max-width: 768px) {
-    #ftco-navbar {
-        background: linear-gradient(135deg, #ffffff, #1aa85c);
+    .nav-toggle {
+        display: flex;
     }
 
-    /* Collapse menu background */
-    #ftco-navbar .navbar-collapse {
-        background: #1aa85c;
-        margin-top: 10px;
-        border-radius: 12px;
-        padding: 12px;
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        flex-direction: column;
+        background: linear-gradient(180deg, #ffcc00 0%, #e6b800 100%);
+        width: 220px;
+        padding: 20px;
+        border-radius: 10px 0 0 10px;
+        gap: 12px;
+        transition: right 0.3s ease;
+        box-shadow: -4px 0 12px rgba(0,0,0,0.2);
     }
 
-    /* Left align menu items */
-    #ftco-navbar .navbar-nav {
-        text-align: left;
+    .nav-menu.show {
+        right: 0;
     }
 
-    #ftco-navbar .nav-link {
-        color: #ffffff;
-        margin: 6px 0;
-        border-radius: 6px;
+    .nav-item a {
+        padding: 10px 15px;
+        border-radius: 10px;
+        background: rgba(255,255,255,0.2);
+        color: #000;
     }
 
-    #ftco-navbar .nav-item.active .nav-link {
-        background: #ffffff;
-        color: #1aa85c;
+    .nav-item a:hover,
+    .nav-item.active a {
+        background: #fff;
+        color: #e6b800;
+        font-weight: 600;
+    }
+}
+
+/* Extra wrap for very small screens */
+@media (max-width: 480px) {
+    .nav-logo span {
+        font-size: 1.2rem;
+        line-height: 1.2;
     }
 }
 </style>
-<!-- END NAVBAR -->
+
+<script>
+// Hamburger toggle
+const toggle = document.getElementById('nav-toggle');
+const menu = document.getElementById('nav-menu');
+
+toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+});
+
+// Navbar background change on scroll
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.modern-navbar');
+    if(window.scrollY > 50){
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+</script>
 
 
 
