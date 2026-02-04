@@ -31,7 +31,33 @@
 
 
 </head>
-<body>
+
+<body
+style="
+margin:0;
+min-height:100vh;
+background: 
+  linear-gradient(
+    120deg,
+    rgba(240, 248, 255, 0.7),
+    rgba(255, 255, 255, 0.7),
+    rgba(245, 245, 245, 0.7)
+  ),
+  url('images/birdBG.jpg') no-repeat center center fixed;
+background-size: cover;
+animation: softGradient 20s ease infinite;
+">
+<style>
+@keyframes softGradient {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+</style>
+
+
+
+
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
 
@@ -94,7 +120,6 @@
 					<p class="caps">Travel to the any corner of the Sri Lanka, without going around in circles</p>
 				</div>
 				
-					<span class="fa fa-play"></span>
 				</a>
 			</div>
 		</div>
@@ -377,7 +402,7 @@
 										<span class="subheading">About Us</span>
 										<h2 class="mb-4">Make Your Tour Memorable and Safe With Us</h2>
 										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-										<p><a href="#" class="btn btn-primary">Book Your Destination</a></p>
+										<p><a href="destination.html" class="btn btn-primary">Book Your Destination</a></p>
 									</div>
 								</div>
 							</div>
@@ -418,6 +443,9 @@
 </section>
 
 
+
+
+<!-- Post code fully start here -->
 <section class="ftco-section">
 	<div class="container">
 		<div class="row justify-content-center pb-4">
@@ -426,67 +454,287 @@
 				<h2 class="mb-4">Recent Post</h2>
 			</div>
 		</div>
-		<div class="row d-flex">
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-					<a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
+
+		<div class="row d-flex justify-content-center">
+
+			<!-- BLOG ITEM 1 -->
+			<div class="col-md-4 col-sm-8 mb-4 d-flex">
+				<div class="blog-entry flex-fill d-flex flex-column">
+					<a href="javascript:void(0)"
+					   class="block-20 read-more-btn mb-3"
+					   style="background-image:url('images/image_1.jpg');"
+					   data-title="Most Popular Place In Sri Lanka"
+					   data-image="images/image_1.jpg"
+					   data-content="Sri Lanka is famous for its beautiful beaches, ancient cities, tea plantations, and wildlife. This destination is highly popular among local and foreign tourists.">
 					</a>
-					<div class="text">
-						<div class="d-flex align-items-center mb-4 topp">
-							<div class="one">
-								<span class="day">11</span>
-							</div>
+
+					<div class="text flex-fill d-flex flex-column justify-content-between">
+						<div class="d-flex align-items-center mb-3 topp">
+							<div class="one"><span class="day">11</span></div>
 							<div class="two">
 								<span class="yr">2025</span>
 								<span class="mos">September</span>
 							</div>
 						</div>
-						<h3 class="heading"><a href="#">Most Popular Place In This Sri Lanka</a></h3>
-						<p><a href="#" class="btn btn-primary btn-gold-animated">Read more</a></p>
+
+						<h3 class="heading mb-3">Most Popular Place In Sri Lanka</h3>
+
+						<p>
+							<a href="javascript:void(0)"
+							   class="btn btn-primary btn-gold-animated read-more-btn"
+							   data-title="Most Popular Place In Sri Lanka"
+							   data-image="images/image_1.jpg"
+							   data-content="Sri Lanka is famous for its beautiful beaches, ancient cities, tea plantations, and wildlife. This destination is highly popular among local and foreign tourists.">
+							   Read more
+							</a>
+						</p>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-					<a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+
+			<!-- BLOG ITEM 2 -->
+			<div class="col-md-4 col-sm-8 mb-4 d-flex">
+				<div class="blog-entry flex-fill d-flex flex-column">
+					<a href="javascript:void(0)"
+					   class="block-20 read-more-btn mb-3"
+					   style="background-image:url('images/image_2.jpg');"
+					   data-title="Beautiful Beach Destinations"
+					   data-image="images/image_2.jpg"
+					   data-content="Sri Lanka has some of the most beautiful beaches including Mirissa, Unawatuna, and Arugam Bay. Perfect for relaxing and surfing.">
 					</a>
-					<div class="text">
-						<div class="d-flex align-items-center mb-4 topp">
-							<div class="one">
-								<span class="day">11</span>
-							</div>
+
+					<div class="text flex-fill d-flex flex-column justify-content-between">
+						<div class="d-flex align-items-center mb-3 topp">
+							<div class="one"><span class="day">15</span></div>
 							<div class="two">
 								<span class="yr">2025</span>
-								<span class="mos">September</span>
+								<span class="mos">October</span>
 							</div>
 						</div>
-						<h3 class="heading"><a href="#">Most Popular Place In This Sri Lanka</a></h3>
-						<p><a href="#" class="btn btn-primary btn-gold-animated">Read more</a></p>
+
+						<h3 class="heading mb-3">Beautiful Beach Destinations</h3>
+
+						<p>
+							<a href="javascript:void(0)"
+							   class="btn btn-primary btn-gold-animated read-more-btn"
+							   data-title="Beautiful Beach Destinations"
+							   data-image="images/image_2.jpg"
+							   data-content="Sri Lanka has some of the most beautiful beaches including Mirissa, Unawatuna, and Arugam Bay. Perfect for relaxing and surfing.">
+							   Read more
+							</a>
+						</p>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry">
-					<a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
+
+			<!-- BLOG ITEM 3 -->
+			<div class="col-md-4 col-sm-8 mb-4 d-flex">
+				<div class="blog-entry flex-fill d-flex flex-column">
+					<a href="javascript:void(0)"
+					   class="block-20 read-more-btn mb-3"
+					   style="background-image:url('images/image_3.jpg');"
+					   data-title="Wildlife & Nature Tours"
+					   data-image="images/image_3.jpg"
+					   data-content="Experience wildlife safaris, national parks, and breathtaking mountain views. Sri Lanka is home to elephants, leopards, and rare bird species.">
 					</a>
-					<div class="text">
-						<div class="d-flex align-items-center mb-4 topp">
-							<div class="one">
-								<span class="day">11</span>
-							</div>
+
+					<div class="text flex-fill d-flex flex-column justify-content-between">
+						<div class="d-flex align-items-center mb-3 topp">
+							<div class="one"><span class="day">20</span></div>
 							<div class="two">
 								<span class="yr">2025</span>
-								<span class="mos">September</span>
+								<span class="mos">November</span>
 							</div>
 						</div>
-						<h3 class="heading"><a href="#">Most Popular Place In This Sri Lanka</a></h3>
-						<p><a href="#" class="btn btn-primary btn-gold-animated">Read more</a></p>
+
+						<h3 class="heading mb-3">Wildlife & Nature Tours</h3>
+
+						<p>
+							<a href="javascript:void(0)"
+							   class="btn btn-primary btn-gold-animated read-more-btn"
+							   data-title="Wildlife & Nature Tours"
+							   data-image="images/image_3.jpg"
+							   data-content="Experience wildlife safaris, national parks, and breathtaking mountain views. Sri Lanka is home to elephants, leopards, and rare bird species.">
+							   Read more
+							</a>
+						</p>
 					</div>
 				</div>
 			</div>
+
 		</div>
 	</div>
 </section>
+
+<!-- MODAL -->
+<div id="blogModal" class="custom-modal" role="dialog" aria-hidden="true">
+	<div class="custom-modal-content">
+		<span class="close-modal">&times;</span>
+		<img id="modalImage" alt="">
+		<h3 id="modalTitle"></h3>
+		<p id="modalContent"></p>
+		<button class="btn btn-primary close-btn">Close</button>
+	</div>
+</div>
+
+<style>
+/* ---------- BLOG CARD ---------- */
+.blog-entry {
+	display: flex;
+	flex-direction: column;
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+	padding: 12px;
+	flex: 1;
+}
+
+.blog-entry .text {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.block-20 {
+	display: block;
+	width: 100%;
+	height: 180px;
+	background-size: cover;
+	background-position: center;
+	border-radius: 12px;
+}
+
+/* ---------- MODAL ---------- */
+.custom-modal {
+	position: fixed;
+	inset: 0;
+	background: rgba(0,0,0,0.6);
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999;
+}
+
+.custom-modal-content {
+	position: relative;
+	background: #fff;
+	width: 90%;
+	max-width: 700px;
+	max-height: 85vh;
+	overflow-y: auto;
+	border-radius: 16px;
+	padding: 22px;
+	text-align: center;
+	animation: popupFade 0.35s ease;
+}
+
+.custom-modal-content img {
+	width: 100%;
+	max-height: 300px;
+	object-fit: cover;
+	border-radius: 12px;
+	margin-bottom: 15px;
+}
+
+.close-modal {
+	position: absolute;
+	top: 10px;
+	right: 16px;
+	font-size: 28px;
+	cursor: pointer;
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes popupFade {
+	from { transform: scale(0.85); opacity: 0; }
+	to   { transform: scale(1); opacity: 1; }
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 576px) {
+	.row.d-flex.justify-content-center {
+		flex-direction: column;
+		align-items: center;
+	}
+	.col-sm-8 {
+		width: 90% !important;
+	}
+	.custom-modal {
+		align-items: flex-end;
+	}
+	.custom-modal-content {
+		width: 100%;
+		max-width: 100%;
+		border-radius: 18px 18px 0 0;
+		padding: 16px;
+		animation: slideUp 0.35s ease;
+	}
+	.custom-modal-content img {
+		max-height: 180px;
+	}
+}
+
+/* ---------- TABLET ---------- */
+@media (min-width: 577px) and (max-width: 991px) {
+	.custom-modal-content {
+		max-width: 600px;
+	}
+	.custom-modal-content img {
+		max-height: 220px;
+	}
+}
+
+/* ---------- DESKTOP ---------- */
+@media (min-width: 992px) {
+	.custom-modal-content {
+		max-width: 720px;
+	}
+}
+
+/* ---------- MOBILE SLIDE ---------- */
+@keyframes slideUp {
+	from { transform: translateY(100%); opacity: 0; }
+	to   { transform: translateY(0); opacity: 1; }
+}
+</style>
+
+<script>
+const modal = document.getElementById('blogModal');
+const body = document.body;
+
+function openModal(btn) {
+	document.getElementById('modalTitle').textContent = btn.dataset.title;
+	document.getElementById('modalImage').src = btn.dataset.image;
+	document.getElementById('modalContent').textContent = btn.dataset.content;
+	modal.style.display = 'flex';
+	body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+	modal.style.display = 'none';
+	body.style.overflow = '';
+}
+
+document.querySelectorAll('.read-more-btn').forEach(btn => {
+	btn.addEventListener('click', () => openModal(btn));
+});
+
+document.querySelector('.close-modal').addEventListener('click', closeModal);
+document.querySelector('.close-btn').addEventListener('click', closeModal);
+
+window.addEventListener('click', e => {
+	if (e.target === modal) closeModal();
+});
+
+window.addEventListener('keydown', e => {
+	if (e.key === 'Escape') closeModal();
+});
+</script>
+<!-- Post code fully end here -->
+
+
+
 
 
 <section class="ftco-intro ftco-section ftco-no-pt">
@@ -499,7 +747,7 @@
                     <p>Get instant answers and personalized quotes for your dream Sri Lanka trip via WhatsApp.</p>
                     
                     <p class="mb-0">
-                        <a href="https://wa.me/94760578645?text=Hello,%20I%20am%20interested%20in%20a%20tour%20package%20to%20Sri%20Lanka." 
+                        <a href="https://wa.me/94762055008?text=Hello,%20I%20am%20interested%20in%20a%20tour%20package%20to%20Sri%20Lanka." 
                            target="_blank" 
                            class="btn py-3 px-4 d-inline-flex align-items-center" 
                            style="background-color: #FFD700; color: black; font-weight: bold;">
@@ -520,10 +768,12 @@
 
 
 
+<!-- Footer start -->
 <footer class="ftco-footer bg-bottom ftco-no-pt" style="background-color: #FFD700; color: black; background-image: none; font-size: 14px;">
 <br><br>
 	<div class="container">
 		<div class="row mb-1">
+            <!-- About -->
             <div class="col-md-5 pt-2">
 				<div class="ftco-footer-widget pt-md-2 mb-2">
 					<h2 class="ftco-heading-2" style="color: black; font-size: 18px;">Sri Lanka Tours</h2>
@@ -531,46 +781,47 @@
 					<ul class="ftco-footer-social list-unstyled float-md-left float-lft">
 						<li class="ftco-animate"><a href="#"><span class="fa fa-facebook" style="color: black;"></span></a></li>
 						<li class="ftco-animate"><a href="#"><span class="fa fa-instagram" style="color: black;"></span></a></li>
-						<li class="ftco-animate">
-							<a href="#" style="background: none; border: none; padding: 0;">
-                           
-							</a>
-						</li>
 					</ul>
 				</div>
 			</div>
 
+            <!-- Quick Links -->
             <div class="col-md-3 pt-2 border-left">
 				<div class="ftco-footer-widget pt-md-2 mb-2 ml-md-5">
 					<h2 class="ftco-heading-2" style="color: black; font-size: 18px;">Quick Links</h2>
 					<ul class="list-unstyled">
-						<li><a href="#" class="py-1 d-block" style="color: black;">Online Enquiry</a></li>
-						<li><a href="#" class="py-1 d-block" style="color: black;">Booking Conditions</a></li>
-						<li><a href="#" class="py-1 d-block" style="color: black;">Privacy Policy</a></li>
-						<li><a href="#" class="py-1 d-block" style="color: black;">FAQ</a></li>
+						<li><a href="javascript:void(0)" class="py-1 d-block footer-link" 
+							   data-title="Online Enquiry" 
+							   data-content="Fill out our online enquiry form to get personalized travel information and assistance.">Online Enquiry</a></li>
+						<li><a href="javascript:void(0)" class="py-1 d-block footer-link" 
+							   data-title="Booking Conditions" 
+							   data-content="Read our booking terms, conditions, and cancellation policies before confirming your tour.">Booking Conditions</a></li>
+						<li><a href="javascript:void(0)" class="py-1 d-block footer-link" 
+							   data-title="Privacy Policy" 
+							   data-content="We respect your privacy. Learn how we collect, use, and protect your personal information.">Privacy Policy</a></li>
+						<li><a href="javascript:void(0)" class="py-1 d-block footer-link" 
+							   data-title="FAQ" 
+							   data-content="Check frequently asked questions to help you plan your tour efficiently.">FAQ</a></li>
 					</ul>
 				</div>
 			</div>
             
+            <!-- Contact -->
             <div class="col-md-4 pt-2 border-left">
 				<div class="ftco-footer-widget pt-md-2 mb-2">
 					<h2 class="ftco-heading-2" style="color: black; font-size: 18px;">Contact Us</h2>
 					<div class="block-23 mb-2">
 						<ul>
 							<li style="color: black;">
-								<span class="icon fa fa-map-marker" style="color: black;"></span>
-								<span class="text">Dehiwala-Mount Lavinia, Western Province, Sri Lanka</span>
-							</li>
-							<li style="color: black;">
 								<a href="tel:+94760578645">
 									<span class="icon fa fa-phone" style="color: black;"></span>
-									<span class="text">+94 76 057 8645</span>
+									<span class="text">+94 76 2055008</span>
 								</a>
 							</li>
 							<li style="color: black;">
-								<a href="mailto:info@yourdomain.com">
+								<a href="mailto:ceylonbirdwingtours@gmail.com">
 									<span class="icon fa fa-paper-plane" style="color: black;"></span>
-									<span class="text">info@yourdomain.com</span>
+									<span class="text">ceylonbirdwingtours@gmail.com</span>
 								</a>
 							</li>
 						</ul>
@@ -587,6 +838,100 @@
 		</div>
 	</div>
 </footer>
+
+<!-- FOOTER MODAL -->
+<div id="footerModal" class="custom-modal" role="dialog" aria-hidden="true">
+	<div class="custom-modal-content">
+		<span class="close-modal">&times;</span>
+		<h3 id="footerModalTitle"></h3>
+		<p id="footerModalContent"></p>
+		<button class="btn btn-primary close-btn">Close</button>
+	</div>
+</div>
+
+<style>
+/* Footer modal uses same styles as blog modal */
+.custom-modal {
+	position: fixed;
+	inset: 0;
+	background: rgba(0,0,0,0.6);
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999;
+}
+
+.custom-modal-content {
+	background: #fff;
+	width: 90%;
+	max-width: 500px;
+	max-height: 80vh;
+	overflow-y: auto;
+	border-radius: 15px;
+	padding: 20px;
+	text-align: center;
+	animation: popupFade 0.35s ease;
+}
+
+.close-modal {
+	position: absolute;
+	top: 10px;
+	right: 16px;
+	font-size: 28px;
+	cursor: pointer;
+}
+
+@keyframes popupFade {
+	from { transform: scale(0.85); opacity: 0; }
+	to { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive mobile */
+@media (max-width:576px){
+	.custom-modal-content {
+		width: 95%;
+		padding: 16px;
+	}
+}
+</style>
+
+<script>
+const footerModal = document.getElementById('footerModal');
+const footerBody = document.body;
+
+function openFooterModal(link) {
+	document.getElementById('footerModalTitle').textContent = link.dataset.title;
+	document.getElementById('footerModalContent').textContent = link.dataset.content;
+	footerModal.style.display = 'flex';
+	footerBody.style.overflow = 'hidden';
+}
+
+function closeFooterModal() {
+	footerModal.style.display = 'none';
+	footerBody.style.overflow = '';
+}
+
+// attach click event to all footer links
+document.querySelectorAll('.footer-link').forEach(link => {
+	link.addEventListener('click', () => openFooterModal(link));
+});
+
+// close events
+document.querySelector('#footerModal .close-modal').addEventListener('click', closeFooterModal);
+document.querySelector('#footerModal .close-btn').addEventListener('click', closeFooterModal);
+
+window.addEventListener('click', e => {
+	if(e.target === footerModal) closeFooterModal();
+});
+
+window.addEventListener('keydown', e => {
+	if(e.key === 'Escape') closeFooterModal();
+});
+</script>
+
+
+<!-- FOOTER code fully end here -->
+
 
 		
 

@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Pacific - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Ceylon Birdwing Tours</title>
+    <link rel="icon" type="image/png" href="images/logo.png"> 
+        <link rel="shortcut icon" href="images/logo.ico">
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -92,131 +95,343 @@
 
 
 
+<!-- TOUR PACKAGES SECTION -->
+<section class="tour-section">
+  <div class="tour-container">
 
-<section style="padding: 50px 0; background-color: #f8f8f8;">
-  <div style="max-width: 1000px; margin: auto; padding: 0 15px; font-family: Arial, sans-serif;">
-
-    <!-- Coastal & Beach Destinations Heading -->
-    <div style="text-align: center; margin-bottom: 50px;">
-      <span style="color: #ff6b6b; font-weight: bold; font-size: 16px;">Relax & Unwind</span>
-      <h2 style="margin-top: 10px; font-size: 36px; color: #333;">Coastal & Beach Destinations</h2>
+    <!-- Heading -->
+    <div class="tour-header">
+      <span>Explore Sri Lanka</span>
+      <h2>Our Tour Packages</h2>
     </div>
 
-    <!-- Card Template -->
-    <script>
-      const cardData = [
-        {
-          title: "Mirissa",
-          best: "April",
-          location: "Sri Lanka (2–3 hrs from Colombo)",
-          desc: "A relaxed coastal town known for whale watching, surfing, and stunning sunsets.",
-          highlights: ["Whale & Dolphin watching", "Coconut Tree Hill Viewpoint", "Secret Beach & quiet coves"],
-          price: "Rs.20,000/1 Day",
-          img: "images/mirissa.jpg",
-          link: "https://wa.me/94760578645?text=Hi,%20I%20am%20interested%20in%20visiting%20Mirissa"
-        },
-        {
-          title: "Weligama",
-          best: "Nov-Apr",
-          location: "Sri Lanka (2.5 hrs from Colombo)",
-          desc: "Lively beach town famous for stilt fishermen and beginner-friendly surfing.",
-          highlights: ["Iconic stilt fishermen", "Fresh seafood markets", "Beginner surf spots"],
-          price: "Rs.20,000/1 Day",
-          img: "images/weligama.jpg",
-          link: "https://wa.me/94760578645?text=Hi,%20I%20am%20interested%20in%20visiting%20Weligama"
-        },
-        {
-          title: "Bentota",
-          best: "Nov-Apr",
-          location: "Sri Lanka (2 hrs from Colombo)",
-          desc: "Where the river meets the sea. Known for water sports and Ayurvedic spas.",
-          highlights: ["River safaris (Mangroves)", "Water sports & Windsurfing", "Wide sandy beaches"],
-          price: "Rs.20,000/1 Day",
-          img: "images/bentota.jpg",
-          link: "https://wa.me/94760578645?text=Hi,%20I%20am%20interested%20in%20visiting%20Bentota"
-        },
-        {
-          title: "Negombo",
-          best: "Dec-Apr",
-          location: "Sri Lanka (30 mins from Colombo)",
-          desc: "Lively coastal city with Dutch colonial architecture near the airport.",
-          highlights: ["Dutch Canal & Colonial buildings", "Historic churches", "Fresh seafood markets"],
-          price: "Rs.20,000/1 Day",
-          img: "images/negombo.jpg",
-          link: "https://wa.me/94760578645?text=Hi,%20I%20am%20interested%20in%20visiting%20Negombo"
-        },
-        {
-          title: "Arugam Bay",
-          best: "May-Sep",
-          location: "Sri Lanka (7-8 hrs from Colombo)",
-          desc: "Renowned surf destination with a laid-back vibe and nearby wildlife.",
-          highlights: ["World-class surfing", "Lagoon safaris", "Beachside nightlife"],
-          price: "Rs.20,000/1 Day",
-          img: "images/arugam_bay.jpg",
-          link: "https://wa.me/94760578645?text=Hi,%20I%20am%20interested%20in%20visiting%20Arugam%20Bay"
-        },
-        {
-          title: "Trincomalee",
-          best: "Apr-Oct",
-          location: "Sri Lanka (6 hrs from Colombo)",
-          desc: "Pristine beaches, rich marine life, and historic temples.",
-          highlights: ["Nilaveli & Uppuveli Beaches", "Fort Frederick", "Pigeon Island Marine Park"],
-          price: "Rs.20,000/1 Day",
-          img: "images/trincomalee.jpg",
-          link: "https://wa.me/94760578645?text=Hi,%20I%20am%20interested%20in%20visiting%20Trincomalee"
-        },
-        {
-          title: "Sigiriya",
-          best: "Mar-May",
-          location: "Sri Lanka (4-5 hrs from Colombo)",
-          desc: "The ‘Lion Rock’ fortress with frescoes and landscaped gardens.",
-          highlights: ["5th-century rock fortress", "Iconic 'Heavenly Maidens' frescoes", "Ancient Mirror Wall"],
-          price: "Rs.20,000/1 Day",
-          img: "images/sigiriya.jpg",
-          link: "https://wa.me/94760578645?text=Hi,%20I%20am%20interested%20in%20visiting%20Sigiriya"
-        }
-      ];
-
-      cardData.forEach(data => {
-        const container = document.querySelector('div[style*="max-width: 1000px"]');
-
-        const card = document.createElement('div');
-        card.style.cssText = "display:flex; flex-direction:row; background-color:#fff; border-radius:15px; overflow:hidden; box-shadow:0 6px 15px rgba(0,0,0,0.2); margin-bottom:30px; transition: transform 0.3s, box-shadow 0.3s;";
-        
-        card.innerHTML = `
-          <a href="${data.link}" target="_blank" style="flex:1; background-image: url('${data.img}'); background-size: cover; background-position: center; position: relative; text-decoration: none; min-height:300px;">
-            <span style="position: absolute; top: 12px; right: 12px; background-color: #ff6b6b; color:#fff; padding:8px 16px; font-size:14px; font-weight:bold; border-radius:6px; cursor:pointer;">Inquire Now</span>
-          </a>
-          <div style="flex:1; padding:25px;">
-            <span style="display:inline-block; margin-bottom:10px; font-size:14px; font-weight:bold; color:#ff6b6b;">Best: ${data.best}</span>
-            <h3 style="margin:0 0 12px 0; font-size:26px; color:#333;">${data.title}</h3>
-            <p style="margin:0 0 10px 0; font-size:15px; color:#666;"> ${data.location}</p>
-            <p style="margin:0 0 15px 0; font-size:15px; color:#555;">${data.desc}</p>
-            <ul style="padding-left:20px; margin:0 0 15px 0; color:#555; font-size:15px;">
-              ${data.highlights.map(item => `<li>${item}</li>`).join('')}
-            </ul>
-            <div style="font-weight:bold; font-size:18px; color:#ff6b6b;">Price: ${data.price}</div>
-          </div>
-        `;
-
-        container.appendChild(card);
-
-        // Hover effect
-        card.addEventListener('mouseenter', () => {
-          card.style.transform = 'translateY(-10px)';
-          card.style.boxShadow = '0 12px 25px rgba(0,0,0,0.3)';
-        });
-        card.addEventListener('mouseleave', () => {
-          card.style.transform = 'translateY(0)';
-          card.style.boxShadow = '0 6px 15px rgba(0,0,0,0.2)';
-        });
-      });
-    </script>
+    <!-- Cards Container -->
+    <div id="tourCards"></div>
 
   </div>
 </section>
 
+<!-- STYLES -->
+<style>
+/* SECTION WITH BACKGROUND IMAGE */
+.tour-section {
+  position: relative;
+  padding: 60px 15px;
+  font-family: Arial, sans-serif;
+  background-image: url("images/tour-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 
+/* TRANSPARENT OVERLAY */
+.tour-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0.65)
+  );
+  z-index: 1;
+}
+
+/* CONTENT ABOVE OVERLAY */
+.tour-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* HEADER */
+.tour-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.tour-header span {
+  color: #ff6b6b;
+  font-weight: bold;
+  font-size: 16px;
+}
+.tour-header h2 {
+  margin-top: 10px;
+  font-size: 36px;
+  color: #333;
+}
+
+/* CARD */
+.tour-card {
+  display: flex;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
+}
+
+/* IMAGE */
+.tour-image {
+  flex: 1;
+  min-height: 260px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* DAYS BADGE */
+.tour-days {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #ff6b6b;
+  color: #fff;
+  padding: 6px 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* CONTENT */
+.tour-content {
+  flex: 1;
+  padding: 25px;
+}
+.tour-content h3 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.tour-content p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* GOLD BUTTON (#FFD700) */
+.tour-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #FFD700;
+  color: #333;
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
+}
+
+.tour-btn:hover {
+  background: #e6c200;
+  transform: translateY(-2px);
+}
+
+/* HOVER EFFECT */
+.tour-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .tour-card {
+    flex-direction: column;
+  }
+
+  .tour-image {
+    min-height: 220px;
+  }
+
+  .tour-content h3 {
+    font-size: 22px;
+  }
+
+  .tour-header h2 {
+    font-size: 28px;
+  }
+
+  .tour-section {
+    background-attachment: scroll;
+  }
+}
+</style>
+
+<!-- SCRIPT -->
+<script>
+const tourData = [
+  {
+    title: "Treasures of the Island",
+    days: "4 Days",
+    locations: "Sigiriya, Galle, Mirissa, Bentota, Kandy",
+    img: "images/roundtour1.jpg"
+  },
+  {
+    title: "Wild Ceylon Experience",
+    days: "5 Days",
+    locations: "Galle, Yala, Mirissa, Ella, Nuwara Eliya",
+    img: "images/roundtour2.jpg"
+  },
+  {
+    title: "Majestic Sri Lankan Tour",
+    days: "6 Days",
+    locations: "Galle, Yala, Ella, Kandy, Sigiriya",
+    img: "images/ella.jpg"
+  },
+  {
+    title: "Sri Lanka Panorama Escape",
+    days: "7 Days",
+    locations: "Sigiriya, Kandy, Nuwara Eliya, Ella, Mirissa, Bentota",
+    img: "images/beach.jpg"
+  },
+  {
+    title: "Island Essence Journey",
+    days: "8 Days",
+    locations: "Kandy, Ella, Udawalawe, Unawatuna",
+    img: "images/island.jpg"
+  },
+  {
+    title: "The Ceylon Circuit",
+    days: "9 Days",
+    locations: "Galle, Ella, Nuwara Eliya, Kandy, Sigiriya",
+    img: "images/circuit.jpg"
+  },
+  {
+    title: "Scenic Ceylon Journey",
+    days: "10 Days",
+    locations: "Galle, Tissamaharama, Ella, Nuwara Eliya, Kandy, Sigiriya",
+    img: "images/scenic.jpg"
+  },
+  {
+    title: "Sri Lanka Signature Tour",
+    days: "12 Days",
+    locations: "Galle, Tissamaharama, Ella, Nuwara Eliya, Kandy, Mirissa, Sigiriya",
+    img: "images/history.jpg"
+  },
+  {
+    title: "Kingdoms to Coastline",
+    days: "14 Days",
+    locations: "Sigiriya, Polonnaruwa, Anuradhapura, Trincomalee, Kandy, Nuwara Eliya, Ella, Yala, Mirissa",
+    img: "images/anura.jpg"
+  }
+];
+
+const container = document.getElementById("tourCards");
+
+tourData.forEach(tour => {
+  const card = document.createElement("div");
+  card.className = "tour-card";
+
+  card.innerHTML = `
+    <div class="tour-image" style="background-image:url('${tour.img}')">
+      <span class="tour-days">${tour.days}</span>
+    </div>
+    <div class="tour-content">
+      <h3>${tour.title}</h3>
+      <p><strong>Locations:</strong> ${tour.locations}</p>
+   <a class="tour-btn" href="#" onclick="openTourPopup('Treasures of the Island')">
+  View Details
+</a>
+
+    </div>
+  `;
+
+  container.appendChild(card);
+});
+</script>
+<!-- TOUR PACKAGES SECTION END -->
+
+
+<!-- DETAIL POPUP -->
+
+<div id="tourDetailPopup" style="
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+  z-index:9999;
+  padding:20px;
+">
+
+  <div style="
+    background:#fff;
+    max-width:900px;
+    margin:auto;
+    border-radius:18px;
+    padding:25px;
+    position:relative;
+    max-height:90vh;
+    overflow-y:auto;
+  ">
+
+    <!-- Close -->
+    <span onclick="closeTourPopup()" style="
+      position:absolute;
+      top:15px;
+      right:20px;
+      cursor:pointer;
+      font-size:22px;
+      font-weight:bold;
+    ">✖</span>
+
+    <!-- Title -->
+    <h2 id="popupTitle" style="margin-bottom:20px;">
+      Exclusive Plan
+    </h2>
+
+    <!-- ACCORDION -->
+    <div style="display:grid; gap:12px;">
+
+      <details open style="border:1px solid #ddd; border-radius:10px; padding:10px;">
+        <summary style="cursor:pointer; font-weight:bold;">Day 1 : Sigiriya</summary>
+        <ul>
+          <li>Pick-up from Colombo Airport / Hotel</li>
+          <li>Visit Sigiriya Lion Rock Fortress</li>
+          <li>Minneriya Jeep Safari</li>
+          <li>Overnight stay in Sigiriya</li>
+        </ul>
+      </details>
+
+      <details style="border:1px solid #ddd; border-radius:10px; padding:10px;">
+        <summary style="cursor:pointer; font-weight:bold;">Day 2 : Sigiriya</summary>
+        <ul>
+          <li>Village tour</li>
+          <li>Dambulla Cave Temple</li>
+        </ul>
+      </details>
+
+      <details style="border:1px solid #ddd; border-radius:10px; padding:10px;">
+        <summary style="cursor:pointer; font-weight:bold;">Day 3 : Kandy</summary>
+        <ul>
+          <li>Temple of the Tooth Relic</li>
+          <li>Cultural Dance Show</li>
+        </ul>
+      </details>
+
+      <details style="border:1px solid #ddd; border-radius:10px; padding:10px;">
+        <summary style="cursor:pointer; font-weight:bold;">Day 4 : Departure</summary>
+        <ul>
+          <li>Transfer to Airport</li>
+        </ul>
+      </details>
+
+    </div>
+
+  </div>
+</div>
+<script>
+function openTourPopup(title = "Exclusive Plan"){
+  document.getElementById("popupTitle").innerText = title;
+  document.getElementById("tourDetailPopup").style.display = "block";
+}
+
+function closeTourPopup(){
+  document.getElementById("tourDetailPopup").style.display = "none";
+}
+</script>
+
+<!-- DETAIL POPUP end -->
 
 
 
@@ -252,7 +467,7 @@
 
 
 
-
+<br><br>
 
 <section class="ftco-intro ftco-section ftco-no-pt">
     <div class="container">
@@ -264,7 +479,7 @@
                     <p>Get instant answers and personalized quotes for your dream Sri Lanka trip via WhatsApp.</p>
                     
                     <p class="mb-0">
-                        <a href="https://wa.me/94760578645?text=Hello,%20I%20am%20interested%20in%20a%20tour%20package%20to%20Sri%20Lanka." 
+                        <a href="https://wa.me/94762055008?text=Hello,%20I%20am%20interested%20in%20a%20tour%20package%20to%20Sri%20Lanka." 
                            target="_blank" 
                            class="btn py-3 px-4 d-inline-flex align-items-center" 
                            style="background-color: #FFD700; color: black; font-weight: bold;">
@@ -282,10 +497,12 @@
 
 
 
+<!-- Footer start -->
 <footer class="ftco-footer bg-bottom ftco-no-pt" style="background-color: #FFD700; color: black; background-image: none; font-size: 14px;">
 <br><br>
 	<div class="container">
 		<div class="row mb-1">
+            <!-- About -->
             <div class="col-md-5 pt-2">
 				<div class="ftco-footer-widget pt-md-2 mb-2">
 					<h2 class="ftco-heading-2" style="color: black; font-size: 18px;">Sri Lanka Tours</h2>
@@ -293,46 +510,47 @@
 					<ul class="ftco-footer-social list-unstyled float-md-left float-lft">
 						<li class="ftco-animate"><a href="#"><span class="fa fa-facebook" style="color: black;"></span></a></li>
 						<li class="ftco-animate"><a href="#"><span class="fa fa-instagram" style="color: black;"></span></a></li>
-						<li class="ftco-animate">
-							<a href="#" style="background: none; border: none; padding: 0;">
-                           
-							</a>
-						</li>
 					</ul>
 				</div>
 			</div>
 
+            <!-- Quick Links -->
             <div class="col-md-3 pt-2 border-left">
 				<div class="ftco-footer-widget pt-md-2 mb-2 ml-md-5">
 					<h2 class="ftco-heading-2" style="color: black; font-size: 18px;">Quick Links</h2>
 					<ul class="list-unstyled">
-						<li><a href="#" class="py-1 d-block" style="color: black;">Online Enquiry</a></li>
-						<li><a href="#" class="py-1 d-block" style="color: black;">Booking Conditions</a></li>
-						<li><a href="#" class="py-1 d-block" style="color: black;">Privacy Policy</a></li>
-						<li><a href="#" class="py-1 d-block" style="color: black;">FAQ</a></li>
+						<li><a href="javascript:void(0)" class="py-1 d-block footer-link" 
+							   data-title="Online Enquiry" 
+							   data-content="Fill out our online enquiry form to get personalized travel information and assistance.">Online Enquiry</a></li>
+						<li><a href="javascript:void(0)" class="py-1 d-block footer-link" 
+							   data-title="Booking Conditions" 
+							   data-content="Read our booking terms, conditions, and cancellation policies before confirming your tour.">Booking Conditions</a></li>
+						<li><a href="javascript:void(0)" class="py-1 d-block footer-link" 
+							   data-title="Privacy Policy" 
+							   data-content="We respect your privacy. Learn how we collect, use, and protect your personal information.">Privacy Policy</a></li>
+						<li><a href="javascript:void(0)" class="py-1 d-block footer-link" 
+							   data-title="FAQ" 
+							   data-content="Check frequently asked questions to help you plan your tour efficiently.">FAQ</a></li>
 					</ul>
 				</div>
 			</div>
             
+            <!-- Contact -->
             <div class="col-md-4 pt-2 border-left">
 				<div class="ftco-footer-widget pt-md-2 mb-2">
 					<h2 class="ftco-heading-2" style="color: black; font-size: 18px;">Contact Us</h2>
 					<div class="block-23 mb-2">
 						<ul>
 							<li style="color: black;">
-								<span class="icon fa fa-map-marker" style="color: black;"></span>
-								<span class="text">Dehiwala-Mount Lavinia, Western Province, Sri Lanka</span>
-							</li>
-							<li style="color: black;">
 								<a href="tel:+94760578645">
 									<span class="icon fa fa-phone" style="color: black;"></span>
-									<span class="text">+94 76 057 8645</span>
+									<span class="text">+94 76 2055008</span>
 								</a>
 							</li>
 							<li style="color: black;">
-								<a href="mailto:info@yourdomain.com">
+								<a href="mailto:ceylonbirdwingtours@gmail.com">
 									<span class="icon fa fa-paper-plane" style="color: black;"></span>
-									<span class="text">info@yourdomain.com</span>
+									<span class="text">ceylonbirdwingtours@gmail.com</span>
 								</a>
 							</li>
 						</ul>
@@ -349,6 +567,99 @@
 		</div>
 	</div>
 </footer>
+
+<!-- FOOTER MODAL -->
+<div id="footerModal" class="custom-modal" role="dialog" aria-hidden="true">
+	<div class="custom-modal-content">
+		<span class="close-modal">&times;</span>
+		<h3 id="footerModalTitle"></h3>
+		<p id="footerModalContent"></p>
+		<button class="btn btn-primary close-btn">Close</button>
+	</div>
+</div>
+
+<style>
+/* Footer modal uses same styles as blog modal */
+.custom-modal {
+	position: fixed;
+	inset: 0;
+	background: rgba(0,0,0,0.6);
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999;
+}
+
+.custom-modal-content {
+	background: #fff;
+	width: 90%;
+	max-width: 500px;
+	max-height: 80vh;
+	overflow-y: auto;
+	border-radius: 15px;
+	padding: 20px;
+	text-align: center;
+	animation: popupFade 0.35s ease;
+}
+
+.close-modal {
+	position: absolute;
+	top: 10px;
+	right: 16px;
+	font-size: 28px;
+	cursor: pointer;
+}
+
+@keyframes popupFade {
+	from { transform: scale(0.85); opacity: 0; }
+	to { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive mobile */
+@media (max-width:576px){
+	.custom-modal-content {
+		width: 95%;
+		padding: 16px;
+	}
+}
+</style>
+
+<script>
+const footerModal = document.getElementById('footerModal');
+const footerBody = document.body;
+
+function openFooterModal(link) {
+	document.getElementById('footerModalTitle').textContent = link.dataset.title;
+	document.getElementById('footerModalContent').textContent = link.dataset.content;
+	footerModal.style.display = 'flex';
+	footerBody.style.overflow = 'hidden';
+}
+
+function closeFooterModal() {
+	footerModal.style.display = 'none';
+	footerBody.style.overflow = '';
+}
+
+// attach click event to all footer links
+document.querySelectorAll('.footer-link').forEach(link => {
+	link.addEventListener('click', () => openFooterModal(link));
+});
+
+// close events
+document.querySelector('#footerModal .close-modal').addEventListener('click', closeFooterModal);
+document.querySelector('#footerModal .close-btn').addEventListener('click', closeFooterModal);
+
+window.addEventListener('click', e => {
+	if(e.target === footerModal) closeFooterModal();
+});
+
+window.addEventListener('keydown', e => {
+	if(e.key === 'Escape') closeFooterModal();
+});
+</script>
+
+
+<!-- FOOTER code fully end here -->
 
 
 
