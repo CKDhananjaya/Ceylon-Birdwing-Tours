@@ -32,63 +32,167 @@
 
 
 </head>
-<body>
- <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-   <div class="container">
-
-
-<!-- Logo -->
-<a href="index.html" style="text-decoration: none;"> 
-    <img 
-        src="images/logo.png" 
-        alt="Sri Lanka Travel Logo" 
-        style="
-            height: 80px;  /* slightly smaller */
-            width: 80px;   /* slightly smaller */
-            object-fit: cover;
-            margin-right: 20px; 
-            vertical-align: middle; 
-            border-radius: 0;       /* remove rounded corners */
-            box-shadow: none;       /* remove shadow/border effect */
-        "
-    > 
-</a>
-<!-- Logo end -->
-<br>
 
 
 
+<body
+style="
+margin:0;
+min-height:100vh;
+background: 
+  linear-gradient(
+    120deg,
+    rgba(240, 248, 255, 0.7),
+    rgba(255, 255, 255, 0.7),
+    rgba(245, 245, 245, 0.7)
+  ),
+  url('images/destinationBG.jpg') no-repeat center center fixed;
+background-size: cover;
+animation: softGradient 20s ease infinite;
+">
+<style>
+@keyframes softGradient {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+</style>
 
-    <a class="navbar-brand" href="index.html">Ceylon Birdwing Tours<span></span></a>
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="oi oi-menu"></span> Menu
-   </button>
 
-   <div class="collapse navbar-collapse" id="ftco-nav">
-       <ul class="navbar-nav ml-auto">
-         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-         <!-- END nav  <li class="nav-item"><a href="##" class="nav-link">About</a></li> -->
-         <li class="nav-item "><a href="destination.html" class="nav-link">Destination</a></li>
-         <li class="nav-item active"><a href="##" class="nav-link">Tour Packages</a></li>
-         <li class="nav-item"><a href="CustomTours.html" class="nav-link">Custom Tours</a></li>
-         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-     </ul>
- </div>
-</div>
+
+
+
+<!-- START NAVBAR -->
+<nav class="navbar navbar-expand-lg ftco-navbar" id="ftco-navbar">
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <!-- Logo -->
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <img src="images/logo.png" alt="Logo">
+            <span>Ceylon Birdwing Tours</span>
+        </a>
+
+        <!-- Mobile MENU text -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav">
+            MENU
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto text-left">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
+                <li class="nav-item active"><a href="packages.html" class="nav-link">Tour Packages</a></li>
+                <li class="nav-item"><a href="CustomTours.html" class="nav-link">Custom Tours</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </div>
 </nav>
-<!-- END nav -->
 
-<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_4.jpg');">
-  <div class="overlay"></div>
-  <div class="container">
-    <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
-      <div class="col-md-9 ftco-animate pb-5 text-center">
-         <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>Tour Packages <i class="fa fa-chevron-right"></i></span></p>
-         <h1 class="mb-0 bread">Tour Packages</h1>
-     </div>
- </div>
+<style>
+/* ===== MAIN NAVBAR ===== */
+#ftco-navbar {
+    background: linear-gradient(135deg, #ffffff 30%, #1aa85c);
+    padding: 0.6rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ===== LOGO ===== */
+#ftco-navbar .navbar-brand img {
+    height: 75px; /* increased size */
+    width: 75px;
+    object-fit: cover;
+    margin-right: 12px;
+}
+#ftco-navbar .navbar-brand span {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1aa85c;
+}
+
+/* ===== NAV LINKS ===== */
+#ftco-navbar .nav-link {
+    color: #ffffff;
+    font-weight: 500;
+    margin: 0 0.6rem;
+    padding: 6px 10px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+#ftco-navbar .nav-link:hover {
+    background: rgba(255,255,255,0.25);
+    color: #ffffff;
+}
+#ftco-navbar .nav-item.active .nav-link {
+    background: #ffffff;
+    color: #1aa85c;
+    font-weight: 600;
+}
+
+/* ===== TOGGLER BUTTON ===== */
+.navbar-toggler {
+    border: none;
+    background: none;
+    font-weight: bold;
+    color: #ffffff; /* MENU text white */
+    font-size: 1rem;
+    padding: 0.25rem 0.75rem;
+}
+
+/* ===== MOBILE VIEW ===== */
+@media (max-width: 768px) {
+    #ftco-navbar {
+        background: linear-gradient(135deg, #ffffff, #1aa85c);
+    }
+
+    /* Collapse menu background */
+    #ftco-navbar .navbar-collapse {
+        background: #1aa85c;
+        margin-top: 10px;
+        border-radius: 12px;
+        padding: 12px;
+    }
+
+    /* Left align menu items */
+    #ftco-navbar .navbar-nav {
+        text-align: left;
+    }
+
+    #ftco-navbar .nav-link {
+        color: #ffffff;
+        margin: 6px 0;
+        border-radius: 6px;
+    }
+
+    #ftco-navbar .nav-item.active .nav-link {
+        background: #ffffff;
+        color: #1aa85c;
+    }
+}
+</style>
+<!-- END NAVBAR -->
+
+
+
+
+<div class="hero-wrap js-fullheight" style="background-image: url('images/bg_2.jpg');">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
+				<div class="col-md-7 ftco-animate">
+					<span class="subheading">Welcome to Ceylon Birdwing Tours</span>
+					<h1 class="mb-4">Tour Packages</h1>
+					<p class="caps">Travel to the any corner of the Sri Lanka, without going around in circles</p>
+				</div>
+				
+				</a>
+			</div>
+		</div>
 </div>
-</section>
 
 
 
@@ -118,7 +222,7 @@
   position: relative;
   padding: 60px 15px;
   font-family: Arial, sans-serif;
-  background-image: url("images/tour-bg.jpg");
+  background-image: url("images/##.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -234,7 +338,7 @@
   box-shadow: 0 12px 25px rgba(0,0,0,0.25);
 }
 
-/* 📱 MOBILE RESPONSIVE */
+/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .tour-card {
     flex-direction: column;
