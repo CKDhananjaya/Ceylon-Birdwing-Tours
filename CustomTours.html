@@ -287,6 +287,189 @@ window.addEventListener('scroll', () => {
 
 
 
+<!-- Form start -->
+
+<section style="max-width: 1000px; margin: 50px auto; font-family: 'Arial', sans-serif; padding: 0 15px;">
+    <div style="text-align: center; margin-bottom: 40px;">
+        <h2 style="font-size: 32px; color: #ff6b6b; margin-bottom: 10px;">Send Your Custom Tour Request</h2>
+        <p style="font-size: 16px; color: #555;">Fill the details below and we’ll respond via WhatsApp!</p>
+    </div>
+
+    <form id="custom-tour-form" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+
+        <input type="text" name="name" placeholder="Your Name*" required class="styled-input">
+        <input type="email" name="email" placeholder="Email*" required class="styled-input">
+
+        <input type="tel" name="phone" placeholder="Phone*" required class="styled-input">
+        <input type="text" name="country" placeholder="Country*" required class="styled-input">
+
+        <select name="vehicle" required class="styled-input">
+            <option value="" disabled selected>Vehicle Type*</option>
+            <option>Car</option>
+            <option>Van</option>
+            <option>Bus</option>
+            <option>Luxury Car</option>
+        </select>
+        <select name="hotel" required class="styled-input">
+            <option value="" disabled selected>Hotel Type*</option>
+            <option>Budget</option>
+            <option>3-Star</option>
+            <option>4-Star</option>
+            <option>5-Star</option>
+            <option>Luxury</option>
+        </select>
+
+        <input type="text" name="budget" placeholder="Your Budget*" required class="styled-input">
+        <input type="text" name="arrival" placeholder="Arrival Date (yyyy-mm-dd)*" onfocus="(this.type='date')" required class="styled-input">
+
+        <input type="text" name="departure" placeholder="Departure Date (yyyy-mm-dd)*" onfocus="(this.type='date')" required class="styled-input">
+        <input type="number" name="adults" placeholder="Adults*" min="1" required class="styled-input">
+
+        <input type="number" name="children" placeholder="Children" min="0" class="styled-input">
+        <select name="luggage" required class="styled-input">
+            <option value="" disabled selected>Luggage Size*</option>
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+        </select>
+
+        <textarea name="message" placeholder="Additional Message" rows="4" class="styled-input" style="grid-column: 1 / -1;"></textarea>
+
+        <div style="grid-column: 1 / -1; display: flex; gap: 20px; flex-wrap: wrap;">
+            <button type="submit">Send Request via WhatsApp</button>
+            <button type="button" id="clear-form" style="background-color:#ff6b6b;">Clear Form</button>
+        </div>
+
+    </form>
+
+    <p id="form-success" style="display:none; color:#28a745; font-weight:bold; margin-top:15px; text-align:center;">
+        Your request has been sent via WhatsApp! Our team will reply soon.
+    </p>
+</section>
+
+<style>
+.styled-input {
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.styled-input:focus {
+    border-color: #25D366;
+    box-shadow: 0 4px 15px rgba(37,211,102,0.3);
+    outline: none;
+}
+
+button[type="submit"], #clear-form {
+    padding: 15px 25px;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    flex: 1 1 200px;
+}
+
+button[type="submit"] {
+    background-color: #25D366;
+}
+
+button[type="submit"]:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    background-color: #1ebe57;
+}
+
+#clear-form {
+    background-color:#ff6b6b;
+}
+
+#clear-form:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    background-color:#e55b5b;
+}
+
+@media (max-width: 768px) {
+    form#custom-tour-form {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    #clear-form, button[type="submit"] {
+        flex: 1 1 100%;
+    }
+}
+</style>
+
+<script>
+document.getElementById("custom-tour-form").addEventListener("submit", function(e){
+    e.preventDefault();
+    const form = e.target;
+
+    const name = form.name.value || "-";
+    const email = form.email.value || "-";
+    const phone = form.phone.value || "-";
+    const country = form.country.value || "-";
+    const vehicle = form.vehicle.value || "-";
+    const hotel = form.hotel.value || "-";
+    const budget = form.budget.value || "-";
+    const arrival = form.arrival.value || "-";
+    const departure = form.departure.value || "-";
+    const adults = form.adults.value || "-";
+    const children = form.children.value || "0";
+    const luggage = form.luggage.value || "-";
+    const message = form.message.value || "-";
+
+    let whatsappMsg = `🛫 *Custom Tour Request*\n\n`;
+    whatsappMsg += `*Name:* ${name}\n`;
+    whatsappMsg += `*Email:* ${email}\n`;
+    whatsappMsg += `*Phone:* ${phone}\n`;
+    whatsappMsg += `*Country:* ${country}\n`;
+    whatsappMsg += `*Vehicle:* ${vehicle}\n`;
+    whatsappMsg += `*Hotel:* ${hotel}\n`;
+    whatsappMsg += `*Budget:* ${budget}\n`;
+    whatsappMsg += `*Arrival:* ${arrival}\n`;
+    whatsappMsg += `*Departure:* ${departure}\n`;
+    whatsappMsg += `*Adults:* ${adults}\n`;
+    whatsappMsg += `*Children:* ${children}\n`;
+    whatsappMsg += `*Luggage:* ${luggage}\n`;
+    whatsappMsg += `*Message:* ${message}\n\n`;
+    whatsappMsg += `We look forward to assisting you!`;
+
+    const whatsappNumber = "94762055008";
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMsg)}`, "_blank");
+
+    document.getElementById("form-success").style.display = "block";
+    form.reset();
+});
+
+// Clear form button
+document.getElementById("clear-form").addEventListener("click", function(){
+    document.getElementById("custom-tour-form").reset();
+    document.getElementById("form-success").style.display = "none";
+});
+</script>
+
+
+<!-- Form end -->
+
+
+
+
+
+
+
+
+
+
+
+
 <section style="padding: 50px 0; background-color: #f5f5f5; font-family: Arial, sans-serif;">
 
   <!-- Heading -->
@@ -400,31 +583,137 @@ window.addEventListener('scroll', () => {
 
 
 
+<!-- Whatsapp code start -->
+
 <section class="ftco-intro ftco-section ftco-no-pt">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 text-center">
-                <div class="img" style="background-image: url(images/bg_2.jpg);">
+                <div class="whatsapp-hero" style="background-image: url('images/bg_2.jpg');">
                     <div class="overlay"></div>
-                    <h2>Have Questions? Contact Us Directly!</h2>
-                    <p>Get instant answers and personalized quotes for your dream Sri Lanka trip via WhatsApp.</p>
-                    
-                    <p class="mb-0">
+                    <div class="content">
+                        <h2>Have Questions? Contact Us Directly!</h2>
+                        <p>Get instant answers and personalized quotes for your dream Sri Lanka trip via WhatsApp.</p>
                         <a href="https://wa.me/94762055008?text=Hello,%20I%20am%20interested%20in%20a%20tour%20package%20to%20Sri%20Lanka." 
                            target="_blank" 
-                           class="btn py-3 px-4 d-inline-flex align-items-center" 
-                           style="background-color: #FFD700; color: black; font-weight: bold;">
-                           
-                            <img src="images/whatsapp_logo.png" alt="WhatsApp Logo" style="height: 25px; margin-right: 10px;">
-                            
+                           class="whatsapp-btn">
+                            <img src="images/whatsapp_logo.png" alt="WhatsApp Logo">
                             INQUIRE ON WHATSAPP
                         </a>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+/* Hero WhatsApp Section */
+.whatsapp-hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 80px 20px;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+.whatsapp-hero:hover {
+    transform: scale(1.02);
+}
+
+/* Overlay */
+.whatsapp-hero .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+    transition: background 0.5s ease;
+}
+.whatsapp-hero:hover .overlay {
+    background: rgba(0,0,0,0.25);
+}
+
+/* Content */
+.whatsapp-hero .content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    animation: fadeUp 1s ease forwards;
+}
+.whatsapp-hero h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    animation: slideInLeft 1s ease forwards;
+}
+.whatsapp-hero p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    animation: slideInRight 1s ease forwards;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #25D366, #1ebe57);
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+.whatsapp-btn img {
+    height: 25px;
+}
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    background: linear-gradient(45deg, #1ebe57, #25D366);
+}
+
+/* Animations */
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInLeft {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+    0% { opacity: 0; transform: translateX(50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .whatsapp-hero {
+        padding: 60px 15px;
+    }
+    .whatsapp-hero h2 {
+        font-size: 26px;
+    }
+    .whatsapp-btn {
+        font-size: 14px;
+        padding: 12px 25px;
+        gap: 8px;
+    }
+}
+</style>
+
+
+<!-- Whatsapp code end -->
+
 
 
 

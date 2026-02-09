@@ -271,29 +271,138 @@ window.addEventListener('scroll', () => {
 	
 
 
-	
-	<div class="hero-wrap js-fullheight" style="background-image: url('images/bg_5.jpg');">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
-				<div class="col-md-7 ftco-animate">
-					<span class="subheading">Welcome to Ceylon Birdwing Tours</span>
-					<h1 class="mb-4">Discover Your Favorite Place with Us</h1>
-					<p class="caps">Travel to the any corner of the Sri Lanka, without going around in circles</p>
-				</div>
-				
-				</a>
-			</div>
-		</div>
-	</div>
+<!-- ================= HERO SECTION START ================= -->
+<div class="hero-wrap js-fullheight" id="hero-slider">
+    <div class="overlay"></div>
+
+    <!-- Slide Layers (3 images) -->
+    <div class="hero-slide-layer" style="background-image: url('images/bg_5.jpg'); opacity: 1;"></div>
+    <div class="hero-slide-layer" style="background-image: url('images/bg_2.jpg'); opacity: 0;"></div>
+    <div class="hero-slide-layer" style="background-image: url('images/bg_3.jpg'); opacity: 0;"></div>
+
+    <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
+            <div class="col-md-7 ftco-animate">
+
+                <span class="subheading">Welcome to Ceylon Birdwing Tours</span>
+
+                <!-- REAL-TIME TYPING TEXT -->
+                <h1 class="mb-4">
+                    <span id="typing-text"></span>
+                </h1>
+
+                <p class="caps fade-text">
+                    Travel to any corner of Sri Lanka, without going around in circles
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Typing cursor */
+#typing-text::after {
+    content: "|";
+    margin-left: 5px;
+    animation: blink 1s infinite;
+}
+
+/* Fade-in text */
+.fade-text {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 3.2s;
+}
+
+/* Cursor blink */
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+/* Fade up */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero Slider Base */
+#hero-slider {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Slide layers */
+.hero-slide-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1.5s ease-in-out;
+}
+
+/* Overlay above slides */
+#hero-slider .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.35);
+    z-index: 1;
+}
+
+/* Text content above everything */
+#hero-slider .container {
+    position: relative;
+    z-index: 2;
+}
+</style>
+
+<script>
+    // ------------------ Hero Crossfade Slider (3 images) ------------------
+    const layers = document.querySelectorAll('#hero-slider .hero-slide-layer');
+    let currentIndex = 0;
+
+    setInterval(() => {
+        const nextIndex = (currentIndex + 1) % layers.length;
+        layers[currentIndex].style.opacity = 0;
+        layers[nextIndex].style.opacity = 1;
+        currentIndex = nextIndex;
+    }, 5000); // Change every 5 seconds
+
+    // ------------------ Typing Text Example ------------------
+    const typingText = "Discover Your Favorite Place with Us";
+    const typingElement = document.getElementById("typing-text");
+    let index = 0;
+
+    function typeText() {
+        if (index <= typingText.length) {
+            typingElement.textContent = typingText.substring(0, index);
+            index++;
+            setTimeout(typeText, 100);
+        }
+    }
+
+    window.onload = () => {
+        typeText();
+    };
+</script>
+<!-- ================= HERO SECTION END ================= -->
 
 
 
 
 
-
-
-
+<!-- START: Mouse Hover Animation Code -->
 <section class="ftco-section services-section">
     <div class="container">
         <div class="row d-flex">
@@ -304,52 +413,114 @@ window.addEventListener('scroll', () => {
                     <p>At Ceylon Birdwing Tours, we believe travel should be personal, safe, and truly immersive. We craft every adventure to showcase the very best of Sri Lanka, from the ancient ruins of Sigiriya to the golden beaches of Mirissa.</p>
                     <p>Our commitment is to deliver unforgettable, hassle-free journeys. We pair you with trusted local experts and dedicated private drivers, ensuring every moment is comfortable and focused purely on your enjoyment of the island.
                     Choose the experts who live and breathe Sri Lanka.</p>
-                    <p><a href="destination.html" class="btn btn-primary py-3 px-4">Find Your Next Destination</a></p>
+
+                    <!-- Button hover animation -->
+                    <p>
+                        <a href="destination.html"
+                           class="btn btn-primary py-3 px-4"
+                           style="
+                           transition: all 0.3s ease;
+                           "
+                           onmouseover="this.style.transform='translateY(-3px) scale(1.03)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.2)';"
+                           onmouseout="this.style.transform='none'; this.style.boxShadow='none';">
+                           Find Your Next Destination
+                        </a>
+                    </p>
                 </div>
             </div>
+
             <div class="col-md-6">
                 <div class="row">
+
+                    <!-- Card 1 -->
                     <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                        <div class="services services-1 color-1 d-block img" style="background-image: url(images/services-1.jpg);">
-                            <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-paragliding"></span></div>
+                        <div class="services services-1 color-1 d-block img"
+                             style="
+                             background-image: url(images/services-1.jpg);
+                             transition: all 0.3s ease;
+                             cursor: pointer;
+                             "
+                             onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.25)';"
+                             onmouseout="this.style.transform='none'; this.style.boxShadow='none';">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="flaticon-paragliding"></span>
+                            </div>
                             <div class="media-body">
                                 <h3 class="heading mb-3">Fully Customizable Tours</h3>
                                 <p>Every trip is yours to craft—choose destinations, set your pace, and make each moment unforgettable.</p>
                             </div>
-                        </div>  
+                        </div>
                     </div>
+
+                    <!-- Card 2 -->
                     <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                        <div class="services services-1 color-2 d-block img" style="background-image: url(images/services-2.jpg);">
-                            <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-route"></span></div>
+                        <div class="services services-1 color-2 d-block img"
+                             style="
+                             background-image: url(images/services-2.jpg);
+                             transition: all 0.3s ease;
+                             cursor: pointer;
+                             "
+                             onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.25)';"
+                             onmouseout="this.style.transform='none'; this.style.boxShadow='none';">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="flaticon-route"></span>
+                            </div>
                             <div class="media-body">
                                 <h3 class="heading mb-3">Safe & Reliable Travel</h3>
                                 <p>Journey with assurance – trusted, professional drivers delivering comfort, safety, and peace of mind.</p>
                             </div>
-                        </div>  
+                        </div>
                     </div>
+
+                    <!-- Card 3 -->
                     <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                        <div class="services services-1 color-3 d-block img" style="background-image: url(images/services-3.jpg);">
-                            <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-tour-guide"></span></div>
+                        <div class="services services-1 color-3 d-block img"
+                             style="
+                             background-image: url(images/services-3.jpg);
+                             transition: all 0.3s ease;
+                             cursor: pointer;
+                             "
+                             onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.25)';"
+                             onmouseout="this.style.transform='none'; this.style.boxShadow='none';">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="flaticon-tour-guide"></span>
+                            </div>
                             <div class="media-body">
                                 <h3 class="heading mb-3">Transparent Pricing</h3>
                                 <p>What you see is what you pay — honest, simple, and worry-free pricing with no hidden charges.</p>
                             </div>
-                        </div>  
+                        </div>
                     </div>
+
+                    <!-- Card 4 -->
                     <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                        <div class="services services-1 color-4 d-block img" style="background-image: url(images/services-4.jpg);">
-                            <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-map"></span></div>
+                        <div class="services services-1 color-4 d-block img"
+                             style="
+                             background-image: url(images/services-4.jpg);
+                             transition: all 0.3s ease;
+                             cursor: pointer;
+                             "
+                             onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.25)';"
+                             onmouseout="this.style.transform='none'; this.style.boxShadow='none';">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="flaticon-map"></span>
+                            </div>
                             <div class="media-body">
                                 <h3 class="heading mb-3">24/7 Expert Support</h3>
                                 <p>Relax and enjoy your journey – our dedicated team is available around the clock for every need.</p>
                             </div>
-                        </div>  
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
 </section>
+<!-- END: Mouse Hover Animation Code -->
+
+
+
 
 
                  <!-- Removed
@@ -425,6 +596,7 @@ window.addEventListener('scroll', () => {
 
 
 
+<!-- ================= START: Featured Destinations Section ================= -->
 <section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center pb-4">
@@ -433,147 +605,298 @@ window.addEventListener('scroll', () => {
                 <h2 class="mb-4">Featured Sri Lanka Destinations</h2>
             </div>
         </div>
+
         <div class="row">
-            
+
+            <!-- Sigiriya -->
             <div class="col-md-4 ftco-animate">
                 <div class="project-wrap" style="transition: all 0.3s ease; cursor: pointer;">
-                    <a href="destination-sigiriya.html" class="img" style="background-image: url(images/destination-sigiriya.jpeg); height: 250px;">
+                    <a href="destination-sigiriya.html"
+                       class="img"
+                       style="background-image:url(images/destination-sigiriya.jpeg); height:250px;"
+                       onclick="event.preventDefault(); openPopup(
+                       'Sigiriya Rock Fortress',
+                       'Sigiriya is a UNESCO World Heritage Site famous for its ancient rock fortress, frescoes, royal gardens, and breathtaking views.',
+                       'images/destination-sigiriya.jpeg'
+                       );">
                     </a>
                     <div class="text p-4">
                         <h3><a href="destination-sigiriya.html">Sigiriya Rock Fortress</a></h3>
                         <p class="location"><span class="fa fa-map-marker"></span> Sigiriya, Matale District, Sri Lanka</p>
-                        <ul></ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-4 ftco-animate">
-                <div class="project-wrap" style="transition: all 0.3s ease; cursor: pointer;">
-                    <a href="destination-kandy.html" class="img" style="background-image: url(images/destination-kandy.jpeg); height: 250px;">
-                    </a>
-                    <div class="text p-4">
-                        <h3><a href="destination-kandy.html">Sacred Kandy & Tea Plantations</a></h3>
-                        <p class="location"><span class="fa fa-map-marker"></span> Kandy, Central Province, Sri Lanka</p>
-                        <ul></ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-4 ftco-animate">
-                <div class="project-wrap" style="transition: all 0.3s ease; cursor: pointer;">
-                    <a href="destination-mirissa.html" class="img" style="background-image: url(images/destination-mirissa.jpg); height: 250px;">
-                    </a>
-                    <div class="text p-4">
-                        <h3><a href="destination-mirissa.html">Mirissa & Southern Coast</a></h3>
-                        <p class="location"><span class="fa fa-map-marker"></span> Mirissa, Southern Province, Sri Lanka</p>
-                        <ul></ul>
                     </div>
                 </div>
             </div>
 
+            <!-- Kandy -->
             <div class="col-md-4 ftco-animate">
                 <div class="project-wrap" style="transition: all 0.3s ease; cursor: pointer;">
-                    <a href="destination-galle.html" class="img" style="background-image: url(images/destination-galle.jpeg); height: 250px;">
+                    <a href="destination-kandy.html"
+                       class="img"
+                       style="background-image:url(images/destination-kandy.jpeg); height:250px;"
+                       onclick="event.preventDefault(); openPopup(
+                       'Sacred Kandy & Tea Plantations',
+                       'Kandy is the cultural heart of Sri Lanka, home to the Sacred Tooth Relic Temple and surrounded by scenic tea estates.',
+                       'images/destination-kandy.jpeg'
+                       );">
+                    </a>
+                    <div class="text p-4">
+                        <h3><a href="destination-kandy.html">Sacred Kandy & Tea Plantations</a></h3>
+                        <p class="location"><span class="fa fa-map-marker"></span> Kandy, Central Province, Sri Lanka</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mirissa -->
+            <div class="col-md-4 ftco-animate">
+                <div class="project-wrap" style="transition: all 0.3s ease; cursor: pointer;">
+                    <a href="destination-mirissa.html"
+                       class="img"
+                       style="background-image:url(images/destination-mirissa.jpg); height:250px;"
+                       onclick="event.preventDefault(); openPopup(
+                       'Mirissa & Southern Coast',
+                       'Mirissa is known for its golden beaches, whale watching tours, and relaxed tropical atmosphere.',
+                       'images/destination-mirissa.jpg'
+                       );">
+                    </a>
+                    <div class="text p-4">
+                        <h3><a href="destination-mirissa.html">Mirissa & Southern Coast</a></h3>
+                        <p class="location"><span class="fa fa-map-marker"></span> Mirissa, Southern Province, Sri Lanka</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galle -->
+            <div class="col-md-4 ftco-animate">
+                <div class="project-wrap" style="transition: all 0.3s ease; cursor: pointer;">
+                    <a href="destination-galle.html"
+                       class="img"
+                       style="background-image:url(images/destination-galle.jpeg); height:250px;"
+                       onclick="event.preventDefault(); openPopup(
+                       'Historic Galle Fort',
+                       'Galle Fort is a historic coastal fortress featuring colonial architecture, ocean views, and charming streets.',
+                       'images/destination-galle.jpeg'
+                       );">
                     </a>
                     <div class="text p-4">
                         <h3><a href="destination-galle.html">Historic Galle Fort</a></h3>
                         <p class="location"><span class="fa fa-map-marker"></span> Galle, Southern Province, Sri Lanka</p>
-                        <ul></ul>
                     </div>
                 </div>
             </div>
-            
+
+            <!-- Yala -->
             <div class="col-md-4 ftco-animate">
                 <div class="project-wrap" style="transition: all 0.3s ease; cursor: pointer;">
-                    <a href="destination-yala.html" class="img" style="background-image: url(images/destination-yala.jpg); height: 250px;">
+                    <a href="destination-yala.html"
+                       class="img"
+                       style="background-image:url(images/destination-yala.jpg); height:250px;"
+                       onclick="event.preventDefault(); openPopup(
+                       'Yala National Park Safari',
+                       'Yala National Park offers exciting wildlife safaris with elephants, leopards, and diverse ecosystems.',
+                       'images/destination-yala.jpg'
+                       );">
                     </a>
                     <div class="text p-4">
                         <h3><a href="destination-yala.html">Yala National Park Safari</a></h3>
                         <p class="location"><span class="fa fa-map-marker"></span> Yala, Southern Province, Sri Lanka</p>
-                        <ul></ul>
                     </div>
                 </div>
             </div>
-            
+
+            <!-- Nuwara Eliya -->
             <div class="col-md-4 ftco-animate">
                 <div class="project-wrap" style="transition: all 0.3s ease; cursor: pointer;">
-                    <a href="destination-nuwara-eliya.html" class="img" style="background-image: url(images/destination-nuwara-eliya.jpg); height: 250px;">
+                    <a href="destination-nuwara-eliya.html"
+                       class="img"
+                       style="background-image:url(images/destination-nuwara-eliya.jpg); height:250px;"
+                       onclick="event.preventDefault(); openPopup(
+                       'Nuwara Eliya Hill Stations',
+                       'Nuwara Eliya is famous for its cool climate, misty hills, tea gardens, and colonial-era charm.',
+                       'images/destination-nuwara-eliya.jpg'
+                       );">
                     </a>
                     <div class="text p-4">
                         <h3><a href="destination-nuwara-eliya.html">Nuwara Eliya Hill Stations</a></h3>
                         <p class="location"><span class="fa fa-map-marker"></span> Nuwara Eliya, Central Province, Sri Lanka</p>
-                        <ul></ul>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
 
 <style>
-    /* This CSS needs to be added to your main stylesheet or <head> section */
-    .project-wrap:hover {
-        transform: translateY(-5px); /* Lifts the card */
-        box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Adds a shadow */
-    }
+.project-wrap:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
 </style>
+<!-- ================= END: Featured Destinations Section ================= -->
 
 
+<!-- ================= START: Destination Popup UI ================= -->
+<div id="destinationPopup"
+     style="
+     position:fixed;
+     top:0; left:0;
+     width:100%; height:100%;
+     background:rgba(0,0,0,0.7);
+     display:none;
+     align-items:center;
+     justify-content:center;
+     z-index:9999;
+     padding:15px;
+     ">
 
+    <div id="popupBox"
+         style="
+         background:#fff;
+         max-width:500px;
+         width:100%;
+         border-radius:14px;
+         overflow:hidden;
+         transform:scale(0.8);
+         opacity:0;
+         transition:all 0.3s ease;
+         ">
 
-		
-		<section class="ftco-section ftco-about img" style="background-image: url(images/bg_4.jpg); position: relative; overflow: hidden;">
-    <div class="overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;"></div>
-    
-    <video autoplay loop muted playsinline 
-        style="
-            position: absolute; 
-            top: 50%; 
-            left: 50%; 
-            min-width: 100%; 
-            min-height: 100%; 
-            width: auto; 
-            height: auto; 
-            z-index: 0; 
-            transform: translate(-50%, -50%); 
-            object-fit: cover;
-        ">
-        <source src="images/srilanka.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="container py-md-5" style="position: relative; z-index: 2;">
-        <div class="row py-md-5">
-            </div>
+        <div id="popupImage"
+             style="height:220px; background-size:cover; background-position:center;"></div>
+
+        <div style="padding:20px; position:relative; text-align:center;">
+            <span onclick="closePopup()"
+                  style="position:absolute; top:10px; right:15px; font-size:24px; cursor:pointer;">&times;</span>
+
+            <h3 id="popupTitle"></h3>
+            <p id="popupText" style="font-size:14px; line-height:1.6; margin-bottom:20px;"></p>
+
+            <button onclick="closePopup()"
+                    style="
+                    background:#f8b500;
+                    color:#000;
+                    border:none;
+                    padding:10px 30px;
+                    border-radius:30px;
+                    font-size:14px;
+                    cursor:pointer;
+                    transition:all 0.3s ease;
+                    "
+                    onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)';"
+                    onmouseout="this.style.transform='none'; this.style.boxShadow='none';">
+                Close
+            </button>
+        </div>
     </div>
-</section>
+</div>
+
+<script>
+function openPopup(title, text, image) {
+    popupTitle.innerText = title;
+    popupText.innerText = text;
+    popupImage.style.backgroundImage = "url(" + image + ")";
+    destinationPopup.style.display = "flex";
+    setTimeout(() => {
+        popupBox.style.transform = "scale(1)";
+        popupBox.style.opacity = "1";
+    }, 50);
+}
+
+function closePopup() {
+    popupBox.style.transform = "scale(0.8)";
+    popupBox.style.opacity = "0";
+    setTimeout(() => {
+        destinationPopup.style.display = "none";
+    }, 300);
+}
+
+destinationPopup.addEventListener("click", function(e) {
+    if (e.target === this) closePopup();
+});
+</script>
+<!-- ================= END: Destination Popup UI ================= -->
 
 
 
-		<section class="ftco-section ftco-about ftco-no-pt img">
-			<div class="container">
-				<div class="row d-flex">
-					<div class="col-md-12 about-intro">
-						<div class="row">
-							<div class="col-md-6 d-flex align-items-stretch">
-								<div class="img d-flex w-100 align-items-center justify-content-center" style="background-image:url(images/about-1.jpg);">
-								</div>
-							</div>
-							<div class="col-md-6 pl-md-5 py-5">
-								<div class="row justify-content-start pb-3">
-									<div class="col-md-12 heading-section ftco-animate">
-										<span class="subheading">About Us</span>
-										<h2 class="mb-4">Make Your Tour Memorable and Safe With Us</h2>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-										<p><a href="destination.html" class="btn btn-primary">Book Your Destination</a></p>
-									</div>
-								</div>
+<!-- About us code fully start here -->
+<section class="ftco-section ftco-about ftco-no-pt img">
+	<div class="container">
+		<div class="row d-flex">
+			<div class="col-md-12 about-intro">
+				<div class="row">
+
+					<!-- IMAGE -->
+					<div class="col-md-6 d-flex align-items-stretch">
+						<div class="img about-img d-flex w-100 align-items-center justify-content-center"
+							 style="background-image:url(images/about-1.jpg);">
+						</div>
+					</div>
+
+					<!-- CONTENT -->
+					<div class="col-md-6 pl-md-5 py-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate about-content">
+								<span class="subheading">About Us</span>
+								<h2 class="mb-4">Make Your Tour Memorable and Safe With Us</h2>
+								<p>
+									Far far away, behind the word mountains, far from the countries
+									Vokalia and Consonantia, there live the blind texts.
+								</p>
+								<p>
+									<a href="destination.html" class="btn btn-primary about-btn">
+										Book Your Destination
+									</a>
+								</p>
 							</div>
 						</div>
 					</div>
+
 				</div>
 			</div>
-		</section>
+		</div>
+	</div>
+</section>
 
+<!-- MOUSE ANIMATION STYLES -->
+<style>
+/* ---------- IMAGE HOVER ANIMATION ---------- */
+.about-img {
+	transition: transform 0.6s ease;
+	background-size: cover;
+	background-position: center;
+}
+
+.about-img:hover {
+	transform: scale(1.05);
+}
+
+/* ---------- CONTENT LIFT ---------- */
+.about-content {
+	transition: transform 0.4s ease;
+}
+
+.about-content:hover {
+	transform: translateY(-6px);
+}
+
+/* ---------- BUTTON MOUSE EFFECT ---------- */
+.about-btn {
+	transition: all 0.3s ease;
+}
+
+.about-btn:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* ---------- SMOOTH EXPERIENCE ---------- */
+.about-img,
+.about-content,
+.about-btn {
+	will-change: transform;
+}
+</style>
+<!-- About us code fully end here -->
 
 
 <section class="ftco-section testimony-section bg-bottom" style="background-image: url(images/bg_1.png);">
@@ -631,16 +954,7 @@ window.addEventListener('scroll', () => {
 					</a>
 
 					<div class="text flex-fill d-flex flex-column justify-content-between">
-						<div class="d-flex align-items-center mb-3 topp">
-							<div class="one"><span class="day"></span></div>
-							<div class="two">
-								<span class="yr">2025</span>
-								<span class="mos">September</span>
-							</div>
-						</div>
-
 						<h3 class="heading mb-3">Most Popular Place In Sri Lanka</h3>
-
 						<p>
 							<a href="javascript:void(0)"
 							   class="btn btn-primary btn-gold-animated read-more-btn"
@@ -666,16 +980,7 @@ window.addEventListener('scroll', () => {
 					</a>
 
 					<div class="text flex-fill d-flex flex-column justify-content-between">
-						<div class="d-flex align-items-center mb-3 topp">
-							<div class="one"><span class="day"></span></div>
-							<div class="two">
-								<span class="yr">2025</span>
-								<span class="mos">October</span>
-							</div>
-						</div>
-
 						<h3 class="heading mb-3">Beautiful Beach Destinations</h3>
-
 						<p>
 							<a href="javascript:void(0)"
 							   class="btn btn-primary btn-gold-animated read-more-btn"
@@ -701,16 +1006,7 @@ window.addEventListener('scroll', () => {
 					</a>
 
 					<div class="text flex-fill d-flex flex-column justify-content-between">
-						<div class="d-flex align-items-center mb-3 topp">
-							<div class="one"><span class="day"></span></div>
-							<div class="two">
-								<span class="yr">2025</span>
-								<span class="mos">November</span>
-							</div>
-						</div>
-
 						<h3 class="heading mb-3">Wildlife & Nature Tours</h3>
-
 						<p>
 							<a href="javascript:void(0)"
 							   class="btn btn-primary btn-gold-animated read-more-btn"
@@ -742,29 +1038,40 @@ window.addEventListener('scroll', () => {
 <style>
 /* ---------- BLOG CARD ---------- */
 .blog-entry {
-	display: flex;
-	flex-direction: column;
 	background: #fff;
 	border-radius: 12px;
 	box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 	padding: 12px;
-	flex: 1;
+	transition: all 0.35s ease;
 }
 
-.blog-entry .text {
-	flex-grow: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+/* Card hover */
+.blog-entry:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 14px 28px rgba(0,0,0,0.18);
 }
 
+/* Image zoom */
 .block-20 {
-	display: block;
-	width: 100%;
 	height: 180px;
 	background-size: cover;
 	background-position: center;
 	border-radius: 12px;
+	transition: transform 0.4s ease;
+}
+
+.blog-entry:hover .block-20 {
+	transform: scale(1.05);
+}
+
+/* Button hover */
+.btn-gold-animated {
+	transition: all 0.3s ease;
+}
+
+.btn-gold-animated:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 20px rgba(248,181,0,0.5);
 }
 
 /* ---------- MODAL ---------- */
@@ -779,12 +1086,9 @@ window.addEventListener('scroll', () => {
 }
 
 .custom-modal-content {
-	position: relative;
 	background: #fff;
 	width: 90%;
 	max-width: 700px;
-	max-height: 85vh;
-	overflow-y: auto;
 	border-radius: 16px;
 	padding: 22px;
 	text-align: center;
@@ -810,54 +1114,7 @@ window.addEventListener('scroll', () => {
 /* ---------- ANIMATIONS ---------- */
 @keyframes popupFade {
 	from { transform: scale(0.85); opacity: 0; }
-	to   { transform: scale(1); opacity: 1; }
-}
-
-/* ---------- MOBILE ---------- */
-@media (max-width: 576px) {
-	.row.d-flex.justify-content-center {
-		flex-direction: column;
-		align-items: center;
-	}
-	.col-sm-8 {
-		width: 90% !important;
-	}
-	.custom-modal {
-		align-items: flex-end;
-	}
-	.custom-modal-content {
-		width: 100%;
-		max-width: 100%;
-		border-radius: 18px 18px 0 0;
-		padding: 16px;
-		animation: slideUp 0.35s ease;
-	}
-	.custom-modal-content img {
-		max-height: 180px;
-	}
-}
-
-/* ---------- TABLET ---------- */
-@media (min-width: 577px) and (max-width: 991px) {
-	.custom-modal-content {
-		max-width: 600px;
-	}
-	.custom-modal-content img {
-		max-height: 220px;
-	}
-}
-
-/* ---------- DESKTOP ---------- */
-@media (min-width: 992px) {
-	.custom-modal-content {
-		max-width: 720px;
-	}
-}
-
-/* ---------- MOBILE SLIDE ---------- */
-@keyframes slideUp {
-	from { transform: translateY(100%); opacity: 0; }
-	to   { transform: translateY(0); opacity: 1; }
+	to { transform: scale(1); opacity: 1; }
 }
 </style>
 
@@ -866,10 +1123,10 @@ const modal = document.getElementById('blogModal');
 const body = document.body;
 
 function openModal(btn) {
+	modal.style.display = 'flex';
 	document.getElementById('modalTitle').textContent = btn.dataset.title;
 	document.getElementById('modalImage').src = btn.dataset.image;
 	document.getElementById('modalContent').textContent = btn.dataset.content;
-	modal.style.display = 'flex';
 	body.style.overflow = 'hidden';
 }
 
@@ -888,42 +1145,143 @@ document.querySelector('.close-btn').addEventListener('click', closeModal);
 window.addEventListener('click', e => {
 	if (e.target === modal) closeModal();
 });
-
-window.addEventListener('keydown', e => {
-	if (e.key === 'Escape') closeModal();
-});
 </script>
 <!-- Post code fully end here -->
 
 
 
 
+<!-- Whatsapp code start -->
 
 <section class="ftco-intro ftco-section ftco-no-pt">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 text-center">
-                <div class="img" style="background-image: url(images/bg_2.jpg);">
+                <div class="whatsapp-hero" style="background-image: url('images/bg_2.jpg');">
                     <div class="overlay"></div>
-                    <h2>Have Questions? Contact Us Directly!</h2>
-                    <p>Get instant answers and personalized quotes for your dream Sri Lanka trip via WhatsApp.</p>
-                    
-                    <p class="mb-0">
+                    <div class="content">
+                        <h2>Have Questions? Contact Us Directly!</h2>
+                        <p>Get instant answers and personalized quotes for your dream Sri Lanka trip via WhatsApp.</p>
                         <a href="https://wa.me/94762055008?text=Hello,%20I%20am%20interested%20in%20a%20tour%20package%20to%20Sri%20Lanka." 
                            target="_blank" 
-                           class="btn py-3 px-4 d-inline-flex align-items-center" 
-                           style="background-color: #FFD700; color: black; font-weight: bold;">
-                           
-                            <img src="images/whatsapp_logo.png" alt="WhatsApp Logo" style="height: 25px; margin-right: 10px;">
-                            
+                           class="whatsapp-btn">
+                            <img src="images/whatsapp_logo.png" alt="WhatsApp Logo">
                             INQUIRE ON WHATSAPP
                         </a>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+/* Hero WhatsApp Section */
+.whatsapp-hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 80px 20px;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+.whatsapp-hero:hover {
+    transform: scale(1.02);
+}
+
+/* Overlay */
+.whatsapp-hero .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+    transition: background 0.5s ease;
+}
+.whatsapp-hero:hover .overlay {
+    background: rgba(0,0,0,0.25);
+}
+
+/* Content */
+.whatsapp-hero .content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    animation: fadeUp 1s ease forwards;
+}
+.whatsapp-hero h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    animation: slideInLeft 1s ease forwards;
+}
+.whatsapp-hero p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    animation: slideInRight 1s ease forwards;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #25D366, #1ebe57);
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+.whatsapp-btn img {
+    height: 25px;
+}
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    background: linear-gradient(45deg, #1ebe57, #25D366);
+}
+
+/* Animations */
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInLeft {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+    0% { opacity: 0; transform: translateX(50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .whatsapp-hero {
+        padding: 60px 15px;
+    }
+    .whatsapp-hero h2 {
+        font-size: 26px;
+    }
+    .whatsapp-btn {
+        font-size: 14px;
+        padding: 12px 25px;
+        gap: 8px;
+    }
+}
+</style>
+
+
+<!-- Whatsapp code end -->
+
 
 
 

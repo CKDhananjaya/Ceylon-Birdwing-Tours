@@ -288,44 +288,51 @@ window.addEventListener('scroll', () => {
 
 
 
-
-<section style="max-width: 1000px; margin: 50px auto; font-family: 'Arial', sans-serif; display: flex; flex-direction: column; gap: 40px;">
+<section style="max-width: 1000px; margin: 50px auto; font-family: 'Arial', sans-serif; display: flex; flex-direction: column; gap: 40px; padding: 0 15px;">
 
     <!-- Intro / Description -->
-    <div style="background: linear-gradient(135deg, #ff6b6b, #f7d794); padding: 40px; border-radius: 20px; color: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+    <div style="background: linear-gradient(135deg, #ff6b6b, #f7d794); padding: 40px; border-radius: 20px; color: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.15); text-align: center;">
         <h2 style="margin-top: 0; font-size: 36px;">Make Your Travel Dreams Come True</h2>
-        <p style="font-size: 18px; line-height: 1.6; max-width: 800px;">
-            Work with our travel team to plan a journey designed around your interests. Whether you want a relaxed beach holiday, cultural exploration, or an adventure-filled trip, we help craft every detail to make it unforgettable.
+        <p style="font-size: 18px; line-height: 1.6; max-width: 800px; margin: 15px auto;">
+            Work with our travel team to plan a journey designed around your interests. Relaxed beach holidays, cultural exploration, or adventure trips — we craft every detail to make it unforgettable.
         </p>
     </div>
 
-    <!-- Phone Card -->
-    <div style="display: flex; align-items: center; gap: 25px; background-color: #fff; padding: 35px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;"
-         onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.2)';"
-         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.1)';">
-        <div style="font-size: 40px; color: #ff6b6b;"></div>
-        <div>
-            <h3 style="margin: 0 0 8px 0; font-size: 22px; color: #333;">Call Us</h3>
-            <p style="margin: 0; font-size: 16px; color: #555;">+94 76 2055008</p>
-            <p style="margin: 5px 0 0 0; font-size: 14px; color: #777;">Reach out anytime for inquiries or trip planning advice. Our team is ready to assist you with personalized guidance.</p>
+    <!-- Contact Cards -->
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+
+        <!-- Call / WhatsApp Card -->
+        <div style="flex: 1 1 300px; background-color: #25D366; color: #fff; padding: 25px 30px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); display: flex; flex-direction: column; align-items: flex-start; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;"
+             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.25)';"
+             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.15)';">
+            <h3 style="margin: 0 0 10px 0; font-size: 22px;">Call or WhatsApp</h3>
+            <p style="margin: 0; font-size: 16px;">+94 76 2055008</p>
+            <p style="margin: 8px 0 15px 0; font-size: 14px;">Reach out anytime via call or WhatsApp for inquiries, personalized guidance, or instant quotes.</p>
+            <a href="https://wa.me/94762055008?text=Hello,%20I%20am%20interested%20in%20a%20tour%20package%20to%20Sri%20Lanka." target="_blank"
+               class="whatsapp-button"
+               style="display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; background-color: #fff; color: #25D366; font-weight: bold; border-radius: 50px; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s;">
+                <img src="images/whatsapp_logo.png" alt="WhatsApp Logo" style="height: 25px;">
+                WhatsApp Us
+            </a>
         </div>
+
+        <!-- Email Card -->
+        <div style="flex: 1 1 300px; background-color: #fff; color: #333; padding: 25px 30px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: flex-start; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;"
+             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.15)';"
+             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.1)';">
+            <h3 style="margin: 0 0 10px 0; font-size: 22px;">Email</h3>
+            <p style="margin: 0; font-size: 16px;">ceylonbirdwingtours@gmail.com</p>
+            <p style="margin: 8px 0 15px 0; font-size: 14px;">Send us your questions, requests, or custom tour ideas. We respond promptly with tailored options.</p>
+            <a href="mailto:ceylonbirdwingtours@gmail.com" 
+               class="email-button"
+               style="display: inline-block; padding: 12px 20px; background-color: #ff6b6b; color: #fff; font-weight: bold; border-radius: 50px; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s;">
+                Send Email
+            </a>
+        </div>
+
     </div>
 
-    <!-- Email Card -->
-    <div style="display: flex; align-items: center; gap: 25px; background-color: #fff; padding: 35px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; cursor: pointer;"
-         onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.2)';"
-         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.1)';">
-        <div style="font-size: 40px; color: #ff6b6b;"></div>
-        <div>
-            <h3 style="margin: 0 0 8px 0; font-size: 22px; color: #333;">Email</h3>
-            <p style="margin: 0; font-size: 16px; color: #555;">ceylonbirdwingtours@gmail.com</p>
-            <p style="margin: 5px 0 0 0; font-size: 14px; color: #777;">Send us your questions, requests, or ideas for a custom tour, and we’ll respond promptly with options tailored for you.</p>
-        </div>
-    </div>
-
-
-
-    <!-- Travel Philosophy / Custom Tours -->
+    <!-- Tailor Your Journey -->
     <div style="background-color: #fef3e0; padding: 40px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
         <h2 style="margin-top: 0; font-size: 32px; color: #ff6b6b;">Tailor Your Sri Lankan Journey</h2>
         <p style="font-size: 16px; color: #555; line-height: 1.6;">
@@ -338,69 +345,39 @@ window.addEventListener('scroll', () => {
 
 </section>
 
-
-
-
-
 <style>
-    /* Resetting previous button styles (if they exist) */
-    .inquire-whatsapp-green, .inquire-now-black {
-        display: none !important; 
+    /* WhatsApp Button Hover Animation */
+    .whatsapp-button:hover {
+        transform: scale(1.08);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     }
 
-    /* Styling for the new overlaid badge */
-    .project-wrap .img .inquire-badge {
-        position: absolute;
-        top: 20px; 
-        right: 20px; 
-        z-index: 9;
-        padding: 10px 15px;
-        background-color: #25D366; /* WhatsApp Green */
-        color: white;
-        font-weight: bold;
-        border-radius: 5px;
-        text-transform: uppercase;
-        font-size: 14px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        cursor: pointer; /* CHANGED to pointer so users know it's clickable */
-        transition: background-color 0.3s ease;
+    /* Email Button Hover Animation */
+    .email-button:hover {
+        transform: scale(1.08);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     }
 
-    /* Add hover effect for better user experience */
-    .project-wrap .img .inquire-badge:hover {
-        background-color: #128C7E; /* Darker WhatsApp green on hover */
+    /* Card Hover Animation */
+    .contact-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .contact-card {
+            flex: 1 1 100%;
+            padding: 25px;
+        }
+        .whatsapp-button, .email-button {
+            padding: 12px 18px;
+            font-size: 15px;
+        }
     }
 </style>
 
 
-
-
-
-<section class="ftco-intro ftco-section ftco-no-pt">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12 text-center">
-                <div class="img" style="background-image: url(images/bg_2.jpg);">
-                    <div class="overlay"></div>
-                    <h2>Have Questions? Contact Us Directly!</h2>
-                    <p>Get instant answers and personalized quotes for your dream Sri Lanka trip via WhatsApp.</p>
-                    
-                    <p class="mb-0">
-                        <a href="https://wa.me/94762055008?text=Hello,%20I%20am%20interested%20in%20a%20tour%20package%20to%20Sri%20Lanka." 
-                           target="_blank" 
-                           class="btn py-3 px-4 d-inline-flex align-items-center" 
-                           style="background-color: #FFD700; color: black; font-weight: bold;">
-                           
-                            <img src="images/whatsapp_logo.png" alt="WhatsApp Logo" style="height: 25px; margin-right: 10px;">
-                            
-                            INQUIRE ON WHATSAPP
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 
 

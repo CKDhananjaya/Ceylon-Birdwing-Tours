@@ -668,31 +668,136 @@ function closeTourPopup(){
 
 <br><br>
 
+<!-- Whatsapp code start -->
+
 <section class="ftco-intro ftco-section ftco-no-pt">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 text-center">
-                <div class="img" style="background-image: url(images/bg_2.jpg);">
+                <div class="whatsapp-hero" style="background-image: url('images/bg_2.jpg');">
                     <div class="overlay"></div>
-                    <h2>Have Questions? Contact Us Directly!</h2>
-                    <p>Get instant answers and personalized quotes for your dream Sri Lanka trip via WhatsApp.</p>
-                    
-                    <p class="mb-0">
+                    <div class="content">
+                        <h2>Have Questions? Contact Us Directly!</h2>
+                        <p>Get instant answers and personalized quotes for your dream Sri Lanka trip via WhatsApp.</p>
                         <a href="https://wa.me/94762055008?text=Hello,%20I%20am%20interested%20in%20a%20tour%20package%20to%20Sri%20Lanka." 
                            target="_blank" 
-                           class="btn py-3 px-4 d-inline-flex align-items-center" 
-                           style="background-color: #FFD700; color: black; font-weight: bold;">
-                           
-                            <img src="images/whatsapp_logo.png" alt="WhatsApp Logo" style="height: 25px; margin-right: 10px;">
-                            
+                           class="whatsapp-btn">
+                            <img src="images/whatsapp_logo.png" alt="WhatsApp Logo">
                             INQUIRE ON WHATSAPP
                         </a>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+/* Hero WhatsApp Section */
+.whatsapp-hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 80px 20px;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+.whatsapp-hero:hover {
+    transform: scale(1.02);
+}
+
+/* Overlay */
+.whatsapp-hero .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+    transition: background 0.5s ease;
+}
+.whatsapp-hero:hover .overlay {
+    background: rgba(0,0,0,0.25);
+}
+
+/* Content */
+.whatsapp-hero .content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    animation: fadeUp 1s ease forwards;
+}
+.whatsapp-hero h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    animation: slideInLeft 1s ease forwards;
+}
+.whatsapp-hero p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    animation: slideInRight 1s ease forwards;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #25D366, #1ebe57);
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+.whatsapp-btn img {
+    height: 25px;
+}
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    background: linear-gradient(45deg, #1ebe57, #25D366);
+}
+
+/* Animations */
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInLeft {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+    0% { opacity: 0; transform: translateX(50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .whatsapp-hero {
+        padding: 60px 15px;
+    }
+    .whatsapp-hero h2 {
+        font-size: 26px;
+    }
+    .whatsapp-btn {
+        font-size: 14px;
+        padding: 12px 25px;
+        gap: 8px;
+    }
+}
+</style>
+
+
+<!-- Whatsapp code end -->
 
 
 

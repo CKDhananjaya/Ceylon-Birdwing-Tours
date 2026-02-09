@@ -271,24 +271,56 @@ window.addEventListener('scroll', () => {
 
 
 
+<!-- ================= HERO SECTION START ================= -->
 <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
-				<div class="col-md-7 ftco-animate">
-					<span class="subheading">Welcome to Ceylon Birdwing Tours</span>
-					<h1 class="mb-4">Destination</h1>
-					<p class="caps">Travel to the any corner of the Sri Lanka, without going around in circles</p>
-				</div>
-				
-				</a>
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
+			<div class="col-md-7 ftco-animate">
+
+				<!-- Animated Text -->
+				<span class="subheading animated-text delay-1">Welcome to Ceylon Birdwing Tours</span>
+				<h1 class="mb-4 animated-text delay-2">Destination</h1>
+				<p class="caps animated-text delay-3">Travel to the any corner of the Sri Lanka, without going around in circles</p>
+
 			</div>
 		</div>
+	</div>
 </div>
+<!-- ================= HERO SECTION END ================= -->
+
+<!-- ================= TEXT ANIMATION STYLE START ================= -->
+<style>
+/* Basic text animation */
+.animated-text {
+	opacity: 0;
+	transform: translateY(20px);
+	animation: fadeSlideUp 1s forwards;
+}
+
+/* Animation delays */
+.delay-1 { animation-delay: 0.5s; }
+.delay-2 { animation-delay: 1s; }
+.delay-3 { animation-delay: 1.5s; }
+
+/* Keyframes */
+@keyframes fadeSlideUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+</style>
+<!-- ================= TEXT ANIMATION STYLE END ================= -->
 
 
 
 
+<!-- ================= DESTINATION CARDS SECTION START ================= -->
 <section class="ftco-section">
     <div class="container">
         
@@ -300,8 +332,9 @@ window.addEventListener('scroll', () => {
         </div>
         <div class="row">
             
+            <!-- Mirissa -->
             <div class="col-md-4 ftco-animate">
-                <div class="project-wrap">
+                <div class="project-wrap mouse-animate">
                     <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Mirissa" class="img" style="background-image: url(images/mirissa.jpg);" target="_blank">
                         <span class="inquire-badge">Inquire Now</span>
                     </a>
@@ -319,8 +352,9 @@ window.addEventListener('scroll', () => {
                 </div>
             </div>
 
+            <!-- Weligama -->
             <div class="col-md-4 ftco-animate">
-                <div class="project-wrap">
+                <div class="project-wrap mouse-animate">
                     <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Weligama" class="img" style="background-image: url(images/weligama.jpg);" target="_blank">
                         <span class="inquire-badge">Inquire Now</span>
                     </a>
@@ -338,8 +372,9 @@ window.addEventListener('scroll', () => {
                 </div>
             </div>
 
+            <!-- Bentota -->
             <div class="col-md-4 ftco-animate">
-                <div class="project-wrap">
+                <div class="project-wrap mouse-animate">
                     <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Bentota" class="img" style="background-image: url(images/bentota.jpg);" target="_blank">
                         <span class="inquire-badge">Inquire Now</span>
                     </a>
@@ -357,8 +392,9 @@ window.addEventListener('scroll', () => {
                 </div>
             </div>
 
+            <!-- Negombo -->
             <div class="col-md-4 ftco-animate">
-                <div class="project-wrap">
+                <div class="project-wrap mouse-animate">
                     <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Negombo" class="img" style="background-image: url(images/negombo.jpg);" target="_blank">
                         <span class="inquire-badge">Inquire Now</span>
                     </a>
@@ -376,8 +412,9 @@ window.addEventListener('scroll', () => {
                 </div>
             </div>
 
+            <!-- Arugam Bay -->
             <div class="col-md-4 ftco-animate">
-                <div class="project-wrap">
+                <div class="project-wrap mouse-animate">
                     <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Arugam%20Bay" class="img" style="background-image: url(images/arugam_bay.jpg);" target="_blank">
                         <span class="inquire-badge">Inquire Now</span>
                     </a>
@@ -395,8 +432,9 @@ window.addEventListener('scroll', () => {
                 </div>
             </div>
 
+            <!-- Trincomalee -->
             <div class="col-md-4 ftco-animate">
-                <div class="project-wrap">
+                <div class="project-wrap mouse-animate">
                     <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Trincomalee" class="img" style="background-image: url(images/trincomalee.jpg);" target="_blank">
                         <span class="inquire-badge">Inquire Now</span>
                     </a>
@@ -413,18 +451,10 @@ window.addEventListener('scroll', () => {
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="row justify-content-center pb-4 pt-5">
-            <div class="col-md-12 heading-section text-center ftco-animate">
-                <span class="subheading">History & Heritage</span>
-                <h2 class="mb-4">Cultural Destinations</h2>
-            </div>
-        </div>
-        <div class="row">
-
+            <!-- Sigiriya -->
             <div class="col-md-4 ftco-animate">
-                <div class="project-wrap">
+                <div class="project-wrap mouse-animate">
                     <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Sigiriya" class="img" style="background-image: url(images/sigiriya.jpg);" target="_blank">
                         <span class="inquire-badge">Inquire Now</span>
                     </a>
@@ -442,8 +472,9 @@ window.addEventListener('scroll', () => {
                 </div>
             </div>
 
+            <!-- Dambulla -->
             <div class="col-md-4 ftco-animate">
-                <div class="project-wrap">
+                <div class="project-wrap mouse-animate">
                     <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Dambulla" class="img" style="background-image: url(images/dambulla.jpg);" target="_blank">
                         <span class="inquire-badge">Inquire Now</span>
                     </a>
@@ -461,8 +492,9 @@ window.addEventListener('scroll', () => {
                 </div>
             </div>
 
+            <!-- Jaffna -->
             <div class="col-md-4 ftco-animate">
-                <div class="project-wrap">
+                <div class="project-wrap mouse-animate">
                     <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Jaffna" class="img" style="background-image: url(images/jaffna.jpg);" target="_blank">
                         <span class="inquire-badge">Inquire Now</span>
                     </a>
@@ -480,8 +512,9 @@ window.addEventListener('scroll', () => {
                 </div>
             </div>
 
+            <!-- Kandy -->
             <div class="col-md-4 ftco-animate">
-                <div class="project-wrap">
+                <div class="project-wrap mouse-animate">
                     <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Kandy" class="img" style="background-image: url(images/kandy.jpg);" target="_blank">
                         <span class="inquire-badge">Inquire Now</span>
                     </a>
@@ -499,8 +532,9 @@ window.addEventListener('scroll', () => {
                 </div>
             </div>
 
+            <!-- Galle -->
             <div class="col-md-4 ftco-animate">
-                <div class="project-wrap">
+                <div class="project-wrap mouse-animate">
                     <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Galle" class="img" style="background-image: url(images/galle.jpg);" target="_blank">
                         <span class="inquire-badge">Inquire Now</span>
                     </a>
@@ -518,8 +552,9 @@ window.addEventListener('scroll', () => {
                 </div>
             </div>
 
+            <!-- Anuradhapura -->
             <div class="col-md-4 ftco-animate">
-                <div class="project-wrap">
+                <div class="project-wrap mouse-animate">
                     <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Anuradhapura" class="img" style="background-image: url(images/anuradhapura.jpg);" target="_blank">
                         <span class="inquire-badge">Inquire Now</span>
                     </a>
@@ -537,8 +572,9 @@ window.addEventListener('scroll', () => {
                 </div>
             </div>
 
+            <!-- Polonnaruwa -->
             <div class="col-md-4 ftco-animate">
-                <div class="project-wrap">
+                <div class="project-wrap mouse-animate">
                     <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Polonnaruwa" class="img" style="background-image: url(images/polonnaruwa.jpg);" target="_blank">
                         <span class="inquire-badge">Inquire Now</span>
                     </a>
@@ -555,18 +591,10 @@ window.addEventListener('scroll', () => {
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="row justify-content-center pb-4 pt-5">
-            <div class="col-md-12 heading-section text-center ftco-animate">
-                <span class="subheading">Thrills & Trails</span>
-                <h2 class="mb-4">Adventure Destinations</h2>
-            </div>
-        </div>
-        <div class="row">
-
+            <!-- Ella -->
             <div class="col-md-4 ftco-animate">
-                <div class="project-wrap">
+                <div class="project-wrap mouse-animate">
                     <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Ella" class="img" style="background-image: url(images/ella.jpg);" target="_blank">
                         <span class="inquire-badge">Inquire Now</span>
                     </a>
@@ -584,8 +612,9 @@ window.addEventListener('scroll', () => {
                 </div>
             </div>
 
+            <!-- Kithulgala -->
             <div class="col-md-4 ftco-animate">
-                <div class="project-wrap">
+                <div class="project-wrap mouse-animate">
                     <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Kithulgala" class="img" style="background-image: url(images/kithulgala.jpg);" target="_blank">
                         <span class="inquire-badge">Inquire Now</span>
                     </a>
@@ -603,8 +632,9 @@ window.addEventListener('scroll', () => {
                 </div>
             </div>
 
+            <!-- Haputhale -->
             <div class="col-md-4 ftco-animate">
-                <div class="project-wrap">
+                <div class="project-wrap mouse-animate">
                     <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Haputhale" class="img" style="background-image: url(images/haputhale.jpg);" target="_blank">
                         <span class="inquire-badge">Inquire Now</span>
                     </a>
@@ -627,65 +657,175 @@ window.addEventListener('scroll', () => {
 </section>
 
 <style>
-    /* Resetting previous button styles (if they exist) */
-    .inquire-whatsapp-green, .inquire-now-black {
-        display: none !important; 
-    }
+/* Inquire badge */
+.project-wrap .img .inquire-badge {
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+    z-index: 9;
+    padding: 10px 15px;
+    background-color: #25D366;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-    /* Styling for the new overlaid badge */
-    .project-wrap .img .inquire-badge {
-        position: absolute;
-        top: 20px; 
-        right: 20px; 
-        z-index: 9;
-        padding: 10px 15px;
-        background-color: #25D366; /* WhatsApp Green */
-        color: white;
-        font-weight: bold;
-        border-radius: 5px;
-        text-transform: uppercase;
-        font-size: 14px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        cursor: pointer; /* CHANGED to pointer so users know it's clickable */
-        transition: background-color 0.3s ease;
-    }
+.project-wrap .img .inquire-badge:hover {
+    background-color: #128C7E;
+}
 
-    /* Add hover effect for better user experience */
-    .project-wrap .img .inquire-badge:hover {
-        background-color: #128C7E; /* Darker WhatsApp green on hover */
-    }
+/* Small popup effect for cards */
+.project-wrap {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.project-wrap:hover {
+    transform: scale(1.03); /* Slight zoom */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* subtle shadow */
+}
 </style>
 
+<!-- ================= DESTINATION CARDS SECTION END ================= -->
 
 
 
+
+<!-- Whatsapp code start -->
 
 <section class="ftco-intro ftco-section ftco-no-pt">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 text-center">
-                <div class="img" style="background-image: url(images/bg_2.jpg);">
+                <div class="whatsapp-hero" style="background-image: url('images/bg_2.jpg');">
                     <div class="overlay"></div>
-                    <h2>Have Questions? Contact Us Directly!</h2>
-                    <p>Get instant answers and personalized quotes for your dream Sri Lanka trip via WhatsApp.</p>
-                    
-                    <p class="mb-0">
+                    <div class="content">
+                        <h2>Have Questions? Contact Us Directly!</h2>
+                        <p>Get instant answers and personalized quotes for your dream Sri Lanka trip via WhatsApp.</p>
                         <a href="https://wa.me/94762055008?text=Hello,%20I%20am%20interested%20in%20a%20tour%20package%20to%20Sri%20Lanka." 
                            target="_blank" 
-                           class="btn py-3 px-4 d-inline-flex align-items-center" 
-                           style="background-color: #FFD700; color: black; font-weight: bold;">
-                           
-                            <img src="images/whatsapp_logo.png" alt="WhatsApp Logo" style="height: 25px; margin-right: 10px;">
-                            
+                           class="whatsapp-btn">
+                            <img src="images/whatsapp_logo.png" alt="WhatsApp Logo">
                             INQUIRE ON WHATSAPP
                         </a>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+<style>
+/* Hero WhatsApp Section */
+.whatsapp-hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 80px 20px;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+.whatsapp-hero:hover {
+    transform: scale(1.02);
+}
+
+/* Overlay */
+.whatsapp-hero .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+    transition: background 0.5s ease;
+}
+.whatsapp-hero:hover .overlay {
+    background: rgba(0,0,0,0.25);
+}
+
+/* Content */
+.whatsapp-hero .content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    animation: fadeUp 1s ease forwards;
+}
+.whatsapp-hero h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    animation: slideInLeft 1s ease forwards;
+}
+.whatsapp-hero p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    animation: slideInRight 1s ease forwards;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #25D366, #1ebe57);
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+.whatsapp-btn img {
+    height: 25px;
+}
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    background: linear-gradient(45deg, #1ebe57, #25D366);
+}
+
+/* Animations */
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInLeft {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+    0% { opacity: 0; transform: translateX(50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .whatsapp-hero {
+        padding: 60px 15px;
+    }
+    .whatsapp-hero h2 {
+        font-size: 26px;
+    }
+    .whatsapp-btn {
+        font-size: 14px;
+        padding: 12px 25px;
+        gap: 8px;
+    }
+}
+</style>
+
+
+<!-- Whatsapp code end -->
 
 
 <!-- Footer start -->
