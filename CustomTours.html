@@ -462,8 +462,110 @@ document.getElementById("clear-form").addEventListener("click", function(){
 
 
 
+<!-- ================= AIRPORT TRANSFER PROMO ================= -->
+<section class="airport-transfer-promo">
+    <div class="container">
+        <div class="promo-wrapper">
+            <!-- Left Image -->
+            <div class="promo-image">
+                <img src="images/air.jpg" alt="Airport Transfer" />
+            </div>
 
+            <!-- Right Content -->
+            <div class="promo-content">
+                <h2>Airport Transfer Service</h2>
+                <p>
+                    Make your journey seamless with our airport transfer service. Pick-up and drop-off available with comfortable vehicles. Send your request and get a quick response via WhatsApp.
+                </p>
+                <a href="transfer.html" class="btn-transfer">Book Airport Transfer</a>
+            </div>
+        </div>
+    </div>
+</section>
 
+<style>
+.airport-transfer-promo {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #fef3e0, #fff8f0);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    max-width: 1000px;
+    margin: 50px auto;
+    font-family: 'Arial', sans-serif;
+    animation: fadeInSection 1s ease forwards;
+}
+
+.promo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.promo-image {
+    flex: 1 1 45%;
+}
+.promo-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+.promo-image img:hover {
+    transform: scale(1.05);
+}
+
+.promo-content {
+    flex: 1 1 50%;
+}
+.promo-content h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #ff6b6b;
+}
+.promo-content p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #555;
+    line-height: 1.6;
+}
+.btn-transfer {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #25D366, #1ebe57);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.btn-transfer:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* Animations */
+@keyframes fadeInSection {
+    from {opacity:0; transform: translateY(30px);}
+    to {opacity:1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .promo-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    .promo-content {
+        flex: 1 1 100%;
+    }
+    .promo-image {
+        flex: 1 1 100%;
+    }
+}
+</style>
+
+<!-- ================= AIRPORT TRANSFER PROMO - END  ================= -->
 
 
 
