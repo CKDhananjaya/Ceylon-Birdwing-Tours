@@ -1,132 +1,146 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Airport Transfer Service</title>
-</head>
-<body>
-<!-- ================= TRANSFER PAGE FORM START ================= -->
-<section class="transfer-form-section">
-    <div class="container">
-        <h2 class="form-title">Airport Transfer</h2>
-        <p class="form-subtitle">
-            Fill in the details below. Your request will be sent via <strong>WhatsApp</strong> for a faster response.
-        </p>
-
-        <form id="transferForm">
-            <!-- Two-column fields -->
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Your Name*</label>
-                    <input type="text" id="name" placeholder="Enter your name" required>
-                </div>
-                <div class="form-group">
-                    <label>Email*</label>
-                    <input type="email" id="email" placeholder="Enter your email" required>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Phone*</label>
-                    <input type="tel" id="phone" placeholder="Enter your phone number" required>
-                </div>
-                <div class="form-group">
-                    <label>Country*</label>
-                    <input type="text" id="country" placeholder="Enter your country" required>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Adults*</label>
-                    <input type="number" id="adults" min="1" value="1" required>
-                </div>
-                <div class="form-group">
-                    <label>Children</label>
-                    <input type="number" id="children" min="0" value="0">
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Vehicle Type*</label>
-                    <select id="vehicleType" required>
-                        <option value="">Select Vehicle</option>
-                        <option>Car</option>
-                        <option>Van</option>
-                        <option>Bus</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Luggage*</label>
-                    <select id="luggage" required>
-                        <option value="">Select Bag Size</option>
-                        <option>Small</option>
-                        <option>Medium</option>
-                        <option>Large</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group checkbox-group">
-                    <input type="checkbox" id="pickup">
-                    <label for="pickup">Pick Up</label>
-                </div>
-                <div class="form-group checkbox-group">
-                    <input type="checkbox" id="dropoff">
-                    <label for="dropoff">Drop Off</label>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group full-width">
-                    <label>Additional Message</label>
-                    <textarea id="message" placeholder="Any special request or note"></textarea>
-                </div>
-            </div>
-
-            <div class="form-row buttons-row">
-                <button type="button" id="sendBtn">Send via WhatsApp</button>
-                <button type="reset" id="clearBtn">Clear Form</button>
-            </div>
-
-            <p id="formFeedback" class="feedback"></p>
-        </form>
-
-        <div class="back-home">
-            <button onclick="window.location.href='CustomTours.html'">← Back to Home</button>
-        </div>
-    </div>
-</section>
-
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* ================= STYLISH FORM UI ================= */
-.transfer-form-section {
-    max-width: 950px;
-    margin: 50px auto;
-    padding: 30px;
-    background: linear-gradient(135deg, #fff8f0, #fef3e0);
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-    font-family: 'Arial', sans-serif;
-    animation: fadeInForm 1s ease;
+/* ================= SLACK-INSPIRED DESIGN SYSTEM ================= */
+:root {
+    --primary-purple: #4A154B; /* The deep purple from the top bar */
+    --hover-purple: #5d1b5e;
+    --accent-teal: #2EB67D;    /* From the decorative circles */
+    --accent-pink: #E01E5A;    /* From the decorative circles */
+    --accent-blue: #36C5F0;    /* From the decorative circles */
+    --text-dark: #1d1c1d;
+    --text-gray: #616061;
+    --border-light: #dddddd;
+    --bg-light: #f4ede4;       /* Slight warm off-white/gray */
 }
 
-/* Title & Subtitle */
-.form-title {
-    text-align: center;
-    font-size: 36px;
-    color: #ff6b6b;
-    margin-bottom: 10px;
-    animation: slideIn 0.8s ease forwards;
+body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #fff;
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-.form-subtitle {
-    text-align: center;
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 35px;
-    animation: slideIn 0.8s ease forwards;
-    animation-delay: 0.2s;
+
+/* The Top Purple Header Strip */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 380px; /* Deep header like the screenshot */
+    background-color: var(--primary-purple);
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); /* Slight angle for modern feel */
+}
+
+/* Container - Floating Card Style */
+.transfer-container {
+    display: flex;
+    max-width: 960px;
+    width: 90%;
+    margin: 80px auto;
+    background: #ffffff;
+    border-radius: 12px; /* Smoother rounding */
+    box-shadow: 0 4px 40px rgba(0,0,0,0.15); /* Soft, deep shadow */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Left Info Panel - Mimicking the "Graphic/Context" side */
+.transfer-info {
+    flex: 0 0 35%; /* Fixed width for info */
+    background: #f8f8f8;
+    padding: 50px 40px;
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-right: 1px solid var(--border-light);
+    overflow: hidden;
+}
+
+/* Decorative "Bubbles" to match the screenshot graphics */
+.transfer-info::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 120px;
+    height: 120px;
+    background: var(--accent-teal);
+    border-radius: 50%;
+    opacity: 0.2;
+}
+.transfer-info::after {
+    content: "";
+    position: absolute;
+    bottom: 50px;
+    left: -40px;
+    width: 180px;
+    height: 180px;
+    background: var(--accent-pink);
+    border-radius: 50%;
+    opacity: 0.1;
+}
+
+.transfer-info h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--primary-purple); /* Brand color heading */
+    font-weight: 700;
+    z-index: 1;
+}
+
+.transfer-info p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-gray);
+    margin-bottom: 30px;
+    z-index: 1;
+}
+
+.contact-item {
+    margin-top: 15px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-dark);
+    font-weight: 500;
+    z-index: 1;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Right Form Panel */
+.transfer-form {
+    flex: 1;
+    padding: 50px 50px;
+    background: #fff;
+}
+
+.transfer-form h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+.transfer-form p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: var(--text-gray);
 }
 
 /* Form Layout */
@@ -135,146 +149,264 @@ form {
     flex-direction: column;
     gap: 20px;
 }
+
 .form-row {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap;
 }
+
 .form-group {
-    flex: 1 1 45%;
+    flex: 1;
     display: flex;
     flex-direction: column;
 }
+
 .form-group.full-width {
-    flex: 1 1 100%;
-}
-label {
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
-}
-input, select, textarea {
-    padding: 14px 16px;
-    border-radius: 12px;
-    border: 1px solid #ccc;
-    font-size: 15px;
-    width: 100%;
-    transition: all 0.3s ease;
-}
-input:focus, select:focus, textarea:focus {
-    border-color: #25D366;
-    box-shadow: 0 0 12px rgba(37,211,102,0.25);
-    outline: none;
-}
-textarea {
-    resize: vertical;
-    min-height: 90px;
+    flex: 100%;
 }
 
-/* Checkboxes */
+/* Inputs & Selects - Clean, Boxy, Light Border */
+input, select, textarea {
+    padding: 14px 16px;
+    border-radius: 6px;
+    border: 1px solid var(--border-light);
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    box-sizing: border-box; /* Fix padding issues */
+    transition: 0.2s;
+    background: #fff;
+    color: var(--text-dark);
+}
+
+input::placeholder, textarea::placeholder {
+    color: #a0a0a0;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 4px rgba(54, 197, 240, 0.15); /* Blue focus ring like screenshot */
+    outline: none;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Checkboxes - Styled to look cleaner */
 .checkbox-group {
-    flex: 1 1 45%;
-    display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 10px;
+    background: #f9f9f9;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+}
+.checkbox-group:hover {
+    border-color: var(--border-light);
 }
 .checkbox-group input {
-    width: auto;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    cursor: pointer;
+    accent-color: var(--primary-purple);
+}
+.checkbox-group label {
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--text-dark);
 }
 
 /* Buttons */
 .buttons-row {
     display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-#sendBtn, #clearBtn {
-    padding: 14px 30px;
-    font-weight: bold;
-    font-size: 16px;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-#sendBtn {
-    background: linear-gradient(45deg, #25D366, #1ebe57);
-    color: #fff;
-}
-#sendBtn:hover {
-    transform: scale(1.08);
-    box-shadow: 0 10px 25px rgba(37,211,102,0.3);
-}
-#clearBtn {
-    background: #ff6b6b;
-    color: #fff;
-}
-#clearBtn:hover {
-    transform: scale(1.08);
-    box-shadow: 0 10px 25px rgba(255,107,107,0.3);
-}
-
-/* Feedback Message */
-.feedback {
-    text-align: center;
+    gap: 15px;
     margin-top: 15px;
-    font-weight: bold;
-    color: #25D366;
-    font-size: 15px;
-    animation: fadeInFeedback 0.5s ease forwards;
+    flex-wrap: wrap;
 }
 
-/* Back to Home Button */
-.back-home {
-    text-align: center;
-    margin-top: 30px;
-}
-.back-home button {
-    background: #ff6b6b;
-    color: #fff;
-    padding: 12px 25px;
-    font-weight: bold;
-    font-size: 16px;
-    border-radius: 50px;
-    border: none;
+button {
+    padding: 14px 24px;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease-in-out;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
+
+/* Primary Button - Matches the "Send us a message" purple button */
+#sendBtn {
+    background: var(--primary-purple);
+    color: #fff;
+    border: 1px solid var(--primary-purple);
+    flex: 2;
+}
+
+#sendBtn:hover {
+    background: var(--hover-purple);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(74, 21, 75, 0.3);
+}
+
+/* Secondary Button - Matches the "Start a live chat" outline button */
+#clearBtn {
+    background: transparent;
+    color: var(--primary-purple);
+    border: 1px solid var(--border-light);
+    flex: 1;
+}
+
+#clearBtn:hover {
+    border-color: var(--primary-purple);
+    background: rgba(74, 21, 75, 0.05);
+}
+
+/* Feedback */
+.feedback {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent-teal);
+    text-align: center;
+    min-height: 20px;
+}
+
+/* Back Home */
+.back-home {
+    margin-top: 30px;
+    border-top: 1px solid var(--border-light);
+    padding-top: 20px;
+    text-align: center;
+}
+
+.back-home button {
+    background: none;
+    color: var(--text-gray);
+    padding: 8px 16px;
+    border: none;
+    font-size: 13px;
+    text-transform: none;
+    font-weight: 500;
+}
+
 .back-home button:hover {
-    background: #ff4747;
-    transform: scale(1.05);
+    color: var(--primary-purple);
+    text-decoration: underline;
+    background: none;
+    box-shadow: none;
+    transform: none;
 }
 
-/* Animations */
-@keyframes fadeInForm {
-    from {opacity:0; transform: translateY(30px);}
-    to {opacity:1; transform: translateY(0);}
-}
-@keyframes slideIn {
-    from {opacity:0; transform: translateY(-20px);}
-    to {opacity:1; transform: translateY(0);}
-}
-@keyframes fadeInFeedback {
-    from {opacity:0;}
-    to {opacity:1;}
-}
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px){
+    .transfer-container {
+        flex-direction: column;
+        margin: 20px auto;
+        width: 95%;
+    }
+    
+    body::before {
+        height: 180px; /* Smaller header on mobile */
+        clip-path: none;
+    }
+    
+    .transfer-info {
+        padding: 30px 25px;
+        flex: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border-light);
+    }
+    
+    .transfer-form {
+        padding: 30px 20px;
+    }
 
-/* Responsive */
-@media (max-width: 768px) {
     .form-row {
         flex-direction: column;
+        gap: 15px;
     }
-    .form-group {
-        flex: 1 1 100%;
+    
+    .buttons-row {
+        flex-direction: column;
     }
-    .checkbox-group {
-        flex: 1 1 100%;
+    
+    button {
+        width: 100%;
     }
 }
 </style>
+</head>
+<body>
+
+<div class="transfer-container">
+    <div class="transfer-info">
+        <h2>Support Team</h2>
+        <p>Welcome! Fill in the form to request an airport transfer. Our team will respond quickly via WhatsApp.</p>
+        <div class="contact-item">📞 +94 76 2055008</div>
+        <div class="contact-item">✉️ ceylonbirdwingtours@gmail.com</div>
+    </div>
+
+    <div class="transfer-form">
+        <h2>Send Us a Message</h2>
+        <p>We are here for it all. Ask us anything about your transfer.</p>
+        <form id="transferForm">
+            <div class="form-row">
+                <div class="form-group"><input type="text" id="name" placeholder="Your Name*" required></div>
+                <div class="form-group"><input type="email" id="email" placeholder="Email*" required></div>
+            </div>
+            <div class="form-row">
+                <div class="form-group"><input type="tel" id="phone" placeholder="Phone*" required></div>
+                <div class="form-group"><input type="text" id="country" placeholder="Country*" required></div>
+            </div>
+            <div class="form-row">
+                <div class="form-group"><input type="number" id="adults" placeholder="Adults*" min="1" value="1" required></div>
+                <div class="form-group"><input type="number" id="children" placeholder="Children" min="0" value="0"></div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <select id="vehicleType" required>
+                        <option value="">Vehicle Type*</option>
+                        <option>Car</option>
+                        <option>Van</option>
+                        <option>Bus</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select id="luggage" required>
+                        <option value="">Luggage*</option>
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Large</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group checkbox-group"><input type="checkbox" id="pickup"><label for="pickup">Pick Up</label></div>
+                <div class="form-group checkbox-group"><input type="checkbox" id="dropoff"><label for="dropoff">Drop Off</label></div>
+            </div>
+            <div class="form-row">
+                <div class="form-group full-width"><textarea id="message" placeholder="Add any additional information we can use to help you..."></textarea></div>
+            </div>
+            <div class="buttons-row">
+                <button type="button" id="sendBtn">Send via WhatsApp</button>
+                <button type="reset" id="clearBtn">Clear</button>
+            </div>
+            <p class="feedback" id="formFeedback"></p>
+        </form>
+
+        <div class="back-home">
+            <button onclick="window.location.href='CustomTours.html'">← Back to Home</button>
+        </div>
+    </div>
+</div>
 
 <script>
-// =================== WHATSAPP FORM SEND ===================
 document.getElementById("sendBtn").addEventListener("click", function() {
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
@@ -288,13 +420,11 @@ document.getElementById("sendBtn").addEventListener("click", function() {
     const dropoff = document.getElementById("dropoff").checked ? "Yes" : "No";
     const message = document.getElementById("message").value.trim();
 
-    // Validate required fields
     if(!name || !email || !phone || !country || !adults || !vehicle || !luggage){
         alert("Please fill all required fields marked with *.");
         return;
     }
 
-    // Format WhatsApp message
     const whatsappMessage = 
 `*Airport Transfer Request*%0A
 *Name:* ${name}%0A
@@ -309,22 +439,16 @@ document.getElementById("sendBtn").addEventListener("click", function() {
 *Drop Off:* ${dropoff}%0A
 *Message:* ${message}`;
 
-    // Open WhatsApp link
-    const whatsappURL = `https://wa.me/94762055008?text=${whatsappMessage}`;
-    window.open(whatsappURL, "_blank");
-
-    // Show feedback message
+    window.open(`https://wa.me/94762055008?text=${whatsappMessage}`, "_blank");
     const feedback = document.getElementById("formFeedback");
     feedback.textContent = "✅ Your transfer request has been sent via WhatsApp!";
     setTimeout(()=> feedback.textContent="", 7000);
 });
 
-// Clear button
 document.getElementById("clearBtn").addEventListener("click", function() {
     document.getElementById("formFeedback").textContent = "";
 });
 </script>
-<!-- ================= TRANSFER PAGE FORM END ================= -->
 
 </body>
 </html>
