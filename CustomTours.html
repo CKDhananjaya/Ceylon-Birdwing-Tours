@@ -537,7 +537,7 @@ document.getElementById("clear-form").addEventListener("click", function() {
 
 
 
-<!-- ================= AIRPORT TRANSFER PROMO ================= -->
+<!-- ================= AIRPORT TRANSFER PROMO START ================= -->
 
 
 <section class="airport-transfer-promo">
@@ -599,13 +599,13 @@ document.getElementById("clear-form").addEventListener("click", function() {
 /* --- IMAGE OPTIMIZATION --- */
 .promo-image-viewport {
     flex: 1 1 450px;
-    perspective: 1000px; /* Gives a 3D depth feel */
+    perspective: 1000px;
 }
 
 .image-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 4 / 3; /* Maintains perfect shape on all screens */
+    aspect-ratio: 4 / 3;
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
@@ -615,7 +615,7 @@ document.getElementById("clear-form").addEventListener("click", function() {
 .optimized-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures image fills space without stretching */
+    object-fit: cover;
     display: block;
 }
 
@@ -701,14 +701,14 @@ document.getElementById("clear-form").addEventListener("click", function() {
     color: #222;
 }
 
-/* Button */
+/* --- UPDATED BUTTON STYLE --- */
 .btn-modern-black {
     display: inline-flex;
     align-items: center;
     gap: 12px;
     padding: 18px 40px;
-    background: #000;
-    color: #fff;
+    background: #000; /* Default Black */
+    color: #fff; /* White Text */
     text-decoration: none;
     font-weight: 700;
     border-radius: 50px;
@@ -716,8 +716,14 @@ document.getElementById("clear-form").addEventListener("click", function() {
 }
 
 .btn-modern-black:hover {
-    background: #ff0099; /* Turns brand pink on hover */
+    background: #D4AF37; /* Gold Color */
+    color: #000; /* Black text on Gold background */
     transform: scale(1.05);
+}
+
+/* Ensure the SVG arrow also turns black on hover */
+.btn-modern-black:hover svg {
+    stroke: #000;
 }
 
 /* RESPONSIVE */
@@ -733,6 +739,7 @@ document.getElementById("clear-form").addEventListener("click", function() {
     .btn-modern-black {
         width: 100%;
         justify-content: center;
+        box-sizing: border-box;
     }
 }
 </style>
@@ -741,7 +748,7 @@ document.getElementById("clear-form").addEventListener("click", function() {
 
 
 
-
+<!-- Contact code fully start here -->
 
 <section class="how-it-works">
     <div class="section-container">
@@ -784,10 +791,10 @@ document.getElementById("clear-form").addEventListener("click", function() {
                 <p class="cta-subtitle">Work with our team to design a journey around your interests.</p>
                 <div class="cta-details">
                     <a href="tel:+94762055008" class="cta-btn">
-                        <span>📞</span> +94 76 205 5008
+                        <span class="icon">📞</span> +94 76 205 5008
                     </a>
-                    <a href="mailto:ceylonbirdwingtours@gmail.com" class="cta-btn">
-                        <span>📧</span> ceylonbirdwingtours@gmail.com
+                    <a href="mailto:ceylonbirdwingtours@gmail.com" class="cta-btn email-btn">
+                        <span class="icon">📧</span> <span class="text-truncate">ceylonbirdwingtours@gmail.com</span>
                     </a>
                 </div>
             </div>
@@ -909,7 +916,7 @@ document.getElementById("clear-form").addEventListener("click", function() {
     font-size: 15px;
 }
 
-/* --- UPDATED CTA BOX (Glass Style) --- */
+/* --- OPTIMIZED CTA BOX --- */
 .cta-glass-box {
     background: #ffffff;
     border: 1px solid #e0e0e0;
@@ -918,7 +925,7 @@ document.getElementById("clear-form").addEventListener("click", function() {
     text-align: center;
     margin-bottom: 80px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-    position: relative;
+    overflow: hidden; /* Added to contain children */
 }
 
 .cta-title {
@@ -937,8 +944,9 @@ document.getElementById("clear-form").addEventListener("click", function() {
 .cta-details {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .cta-btn {
@@ -946,20 +954,26 @@ document.getElementById("clear-form").addEventListener("click", function() {
     border: 1px solid #000;
     color: #000;
     text-decoration: none;
-    padding: 14px 28px;
+    padding: 14px 24px;
     border-radius: 50px;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 15px;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 8px;
+    max-width: 100%; /* Prevents breaking the box */
+}
+
+.email-btn {
+    word-break: break-all; /* Fixed: allows email to wrap on tiny screens */
 }
 
 .cta-btn:hover {
     background: #000;
     color: #fff;
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 /* Highlights Grid */
@@ -995,15 +1009,31 @@ document.getElementById("clear-form").addEventListener("click", function() {
     line-height: 1.5;
 }
 
-/* Mobile Responsive */
+/* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
-    .cta-glass-box { padding: 40px 20px; }
-    .cta-details { flex-direction: column; }
-    .cta-btn { justify-content: center; }
+    .cta-glass-box { 
+        padding: 40px 15px; /* Less padding on small screens */
+    }
+    .cta-details { 
+        flex-direction: column; 
+    }
+    .cta-btn { 
+        width: 100%; /* Full width buttons on mobile */
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+    .email-btn .text-truncate {
+        display: block;
+        width: 100%;
+        overflow-wrap: break-word; /* Ensures email doesn't overflow */
+    }
+    .how-it-works {
+        padding: 60px 15px;
+    }
 }
 </style>
 
-
+<!-- Contact code fully end here -->
 
 
 
