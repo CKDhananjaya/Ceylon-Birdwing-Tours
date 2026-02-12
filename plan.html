@@ -43,8 +43,6 @@
             border: 5px solid var(--accent-orange);
             border-bottom-color: transparent;
             border-radius: 50%;
-            display: inline-block;
-            box-sizing: border-box;
             animation: rotation 1s linear infinite;
         }
 
@@ -53,16 +51,9 @@
             100% { transform: rotate(360deg); }
         }
 
-        /* --- ANIMATIONS --- */
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         body {
@@ -71,7 +62,7 @@
             margin: 0;
             padding: 60px 20px;
             color: var(--text-dark);
-            opacity: 0; /* Changed by JS */
+            opacity: 0;
             transition: opacity 1s ease;
         }
 
@@ -85,25 +76,17 @@
             font-family: 'Merriweather', serif;
             font-size: 42px;
             margin-bottom: 15px;
-            color: var(--text-dark);
         }
 
-        .page-header p {
-            color: var(--text-gray);
-            font-size: 18px;
-        }
-
-        /* LAYOUT CONTAINER */
         .plans-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
-            max-width: 1200px;
+            max-width: 1250px;
             margin: 0 auto;
             align-items: start;
         }
 
-        /* CARD STYLE */
         .plan-card {
             background: var(--card-bg);
             border-radius: 24px;
@@ -128,71 +111,61 @@
             font-size: 26px;
             margin-top: 0;
             margin-bottom: 30px;
-            color: var(--text-dark);
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
         }
 
-        /* ACCORDION STYLES */
+        .plan-title span {
+            font-size: 14px;
+            background: #fff7ed;
+            color: var(--accent-orange);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-family: 'Inter', sans-serif;
+        }
+
         details {
             border: 1px solid var(--border-color);
             border-radius: 12px;
             margin-bottom: 15px;
             transition: var(--transition);
-            background: #fff;
-        }
-
-        details:hover {
-            border-color: var(--accent-orange);
         }
 
         details[open] {
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             border-color: var(--accent-orange);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
         summary {
             padding: 18px 24px;
             cursor: pointer;
             font-weight: 600;
-            font-size: 16px;
             list-style: none;
             display: flex;
             justify-content: space-between;
-            align-items: center;
             outline: none;
         }
 
         summary::after {
             content: '↓';
-            font-size: 18px;
-            color: var(--text-gray);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s;
         }
 
-        details[open] summary::after {
-            transform: rotate(180deg);
-            color: var(--accent-orange);
-        }
-
-        summary::-webkit-details-marker { display: none; }
+        details[open] summary::after { transform: rotate(180deg); color: var(--accent-orange); }
 
         .day-content {
-            padding: 0 24px 20px 24px;
+            padding: 0 24px 20px;
             color: var(--text-gray);
             line-height: 1.7;
-            font-size: 15px;
-            animation: fadeInUp 0.3s ease-in;
+            font-size: 14.5px;
         }
 
         .day-content ul { padding-left: 20px; margin: 0; }
-        .day-content li { margin-bottom: 10px; }
+        .day-content li { margin-bottom: 8px; }
 
-        /* BUTTON STYLE */
         .btn-book {
-            display: inline-flex;
-            align-items: center;
+            display: flex;
             justify-content: center;
             width: 100%;
             background-color: var(--accent-orange);
@@ -203,63 +176,39 @@
             text-decoration: none;
             margin-top: 25px;
             transition: var(--transition);
-            font-size: 16px;
-            border: none;
-            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.2);
         }
 
         .btn-book:hover {
             background-color: var(--accent-hover);
             transform: scale(1.02);
-            box-shadow: 0 6px 20px rgba(249, 115, 22, 0.3);
         }
 
-        /* BACK BUTTON */
-        .back-container {
-            text-align: center;
-            margin-top: 50px;
-            padding-bottom: 50px;
-            animation: fadeInUp 0.8s ease forwards;
-            animation-delay: 0.6s;
-            opacity: 0;
-        }
+        .back-container { text-align: center; margin-top: 50px; }
 
         .btn-back {
             display: inline-flex;
             align-items: center;
             padding: 14px 30px;
-            background-color: #fff;
+            background: #fff;
             color: var(--text-dark);
             text-decoration: none;
             border-radius: 50px;
             font-weight: 600;
-            font-size: 15px;
             border: 1px solid var(--border-color);
             transition: var(--transition);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
         }
 
-        .btn-back:hover {
-            background-color: var(--text-dark);
-            color: #fff;
-            transform: translateX(-5px);
-        }
+        .btn-back:hover { background: var(--text-dark); color: #fff; }
 
-        .btn-back span { margin-right: 10px; font-size: 18px; }
-
-        /* MOBILE RESPONSIVE */
         @media (max-width: 992px) {
-            .plans-container { grid-template-columns: 1fr; gap: 30px; }
+            .plans-container { grid-template-columns: 1fr; }
             .page-header h1 { font-size: 32px; }
-            body { padding: 40px 15px; }
         }
     </style>
 </head>
 <body>
 
-    <div id="preloader">
-        <span class="loader"></span>
-    </div>
+    <div id="preloader"><span class="loader"></span></div>
 
     <div class="page-header">
         <h1>Our Exclusive Tour Plans</h1>
@@ -274,24 +223,24 @@
                 <summary>Day 1 : Sigiriya</summary>
                 <div class="day-content">
                     <ul>
+                        <li>Arrive at Bandaranaike International Airport</li>
                         <li>Pick-up from Airport, or hotel in Colombo/Negombo.</li>
-                        <li>Travel to Sigiriya.</li>
-                        <li>Traditional village tour or cooking demonstration.</li>
-                        <li>Enjoy an authentic village lunch.</li>
-                        <li><strong>Sunset at Pidurangala Rock.</strong></li>
+                        <li>Travel to Sigiriya</li>
+                        <li>Experience a traditional village tour or cooking demonstration of Sri Lankan curries. We will enjoy village lunch we prepare.</li>
+                        <li>Watch the sunset from Pidurangala Rock.</li>
                         <li>Overnight stay in Sigiriya.</li>
                     </ul>
                 </div>
             </details>
 
             <details>
-                <summary>Day 2 : Sigiriya & Wildlife</summary>
+                <summary>Day 2 : Sigiriya</summary>
                 <div class="day-content">
                     <ul>
-                        <li>Early Morning visit <strong>Sigiriya Rock Fortress</strong>.</li>
-                        <li>Safari at Minneriya, Kaudulla, or Hurulu National Park.</li>
-                        <li>Explore the <strong>Dambulla Cave Temple</strong>.</li>
-                        <li>Recommended: Ayurveda massage and steam bath.</li>
+                        <li>Early Morning visit Sigiriya Rock Fortress</li>
+                        <li>Safari at national park near by. Kaudulla, Minneriya or Hurulla national park.</li>
+                        <li>Explore the Dambulla Cave Temple.</li>
+                        <li>We recommended to experience Ayurveda massage and stem bath.</li>
                     </ul>
                 </div>
             </details>
@@ -300,10 +249,11 @@
                 <summary>Day 3 : Kandy</summary>
                 <div class="day-content">
                     <ul>
-                        <li>Travel to Kandy.</li>
-                        <li>Visit Spice & Herbal Garden and Silk Garden.</li>
-                        <li>Visit the <strong>Ceylon Tea Museum</strong>.</li>
-                        <li>Temple of the Tooth Relic & Kandy Lake.</li>
+                        <li>Travel to Kandy</li>
+                        <li>Visit a Spice & Herbal Garden.</li>
+                        <li>Explore a Silk Garden.</li>
+                        <li>Visit the Ceylon Tea Museum.</li>
+                        <li>See the Temple of the Tooth Relic and Kandy Lake.</li>
                         <li>Evening Kandyan Dance Show.</li>
                         <li>Overnight stay in Kandy.</li>
                     </ul>
@@ -315,28 +265,27 @@
                 <div class="day-content">
                     <ul>
                         <li>Visit Gem & Mineral shops.</li>
-                        <li>Bahiravokanda Buddha Statue & View Point.</li>
-                        <li>Walk through the <strong>Royal Botanical Gardens</strong>.</li>
-                        <li>Millennium Elephant Foundation.</li>
-                        <li>Drop-off at Colombo Airport or Hotel.</li>
+                        <li>Stop at the Bahiravokanda Buddha Statue and Kandy View Point.</li>
+                        <li>Walk through the Royal Botanical Gardens.</li>
+                        <li>Experience the Millennium Elephant Foundation.</li>
+                        <li>Drop-off at Colombo Airport,or hotel in Colombo/Negombo.</li>
                     </ul>
                 </div>
             </details>
 
-            <a href="https://wa.me/94771234567?text=I'm%20interested%20in%20Exclusive%20Plan%2001" class="btn-book">
-                📅 Plan Your Visit (Plan 01)
-            </a>
+            <a href="https://wa.me/94771234567?text=Interested%20in%20Plan%2001" class="btn-book">📅 Plan Your Visit (Plan 01)</a>
         </div>
 
         <div class="plan-card">
             <h2 class="plan-title">Exclusive Plan - 02 <span>8 Days</span></h2>
 
             <details open>
-                <summary>Day 1 : Sigiriya Arrival</summary>
+                <summary>Day 1 : Sigiriya</summary>
                 <div class="day-content">
                     <ul>
                         <li>Pick-up from Colombo Airport, Port, or hotel.</li>
-                        <li>Visit <strong>Pinnawala Elephant Orphanage</strong>.</li>
+                        <li>Travel to Sigiriya</li>
+                        <li>Visit Pinnawala Elephant Orphanage.</li>
                         <li>Explore Dambulla Cave Temple.</li>
                         <li>Sunset at Pidurangala Rock.</li>
                     </ul>
@@ -344,12 +293,12 @@
             </details>
 
             <details>
-                <summary>Day 2 : Sigiriya Adventure</summary>
+                <summary>Day 2 : Sigiriya</summary>
                 <div class="day-content">
                     <ul>
-                        <li>Climb <strong>Sigiriya Lion Rock</strong>.</li>
-                        <li>Experience a traditional village tour.</li>
-                        <li>Jeep Safari (Minneriya/Kawudulla/Hurulu).</li>
+                        <li>Climb Sigiriya Lion Rock.</li>
+                        <li>Experience a village tour.</li>
+                        <li>Jeep Safari(Minneriya/Kawudulla/Hurulu).</li>
                         <li>Overnight in Sigiriya.</li>
                     </ul>
                 </div>
@@ -359,10 +308,13 @@
                 <summary>Day 3 : Kandy</summary>
                 <div class="day-content">
                     <ul>
-                        <li>Travel to Kandy.</li>
-                        <li>Visit Spice Garden & Silk Garden.</li>
+                        <li>Travel to kandy</li>
+                        <li>Visit a Spice Garden & Silk Garden</li>
                         <li>Ceylon Tea Museum & Gem Museum.</li>
-                        <li>Temple of the Tooth Relic & Cultural Show.</li>
+                        <li>Bahiravokanda Buddha Statue & Kandy View Point.</li>
+                        <li>Temple of the Tooth Relic & Kandy Lake.</li>
+                        <li>Kandyan Dance Show.</li>
+                        <li>Overnight in Kandy.</li>
                     </ul>
                 </div>
             </details>
@@ -372,8 +324,9 @@
                 <div class="day-content">
                     <ul>
                         <li>Ramboda Waterfalls & Hanuman Temple.</li>
-                        <li><strong>Tea Plantation & Factory visit.</strong></li>
-                        <li>City Tour: Gregory Lake, Victoria Park, Strawberry Farm.</li>
+                        <li>Tea plantation and factory.</li>
+                        <li>City Tour of Nuwara Eliya (Victoria Park, Gregory Lake, Moon Plains, Strawberry Farm & Vegetable Market)</li>
+                        <li>Lover’s Leap Waterfall.</li>
                         <li>Overnight in Nuwara Eliya.</li>
                     </ul>
                 </div>
@@ -383,9 +336,8 @@
                 <summary>Day 5 : Ella</summary>
                 <div class="day-content">
                     <ul>
-                        <li>Scenic Train ride from Nanuoya to Ella.</li>
-                        <li><strong>Little Adam’s Peak & Nine Arch Bridge.</strong></li>
-                        <li>Flying Ravana Zipline & Ravana Falls.</li>
+                        <li>Train ride from Nanuoya to Ella.</li>
+                        <li>City Tour of Ella (Little Adam’s Peak, Ella Rock, Ella Gap, Nine Arch Bridge, Demodara Loop, Flying Ravana Zipline, Ravana Caves, Ravana Falls)</li>
                         <li>Overnight in Ella.</li>
                     </ul>
                 </div>
@@ -395,8 +347,9 @@
                 <summary>Day 6 : Yala & Weligama</summary>
                 <div class="day-content">
                     <ul>
-                        <li><strong>Yala National Park Jeep Safari.</strong></li>
-                        <li>Travel to Weligama.</li>
+                        <li>Travel to Yala</li>
+                        <li>Yala Jeep Safari.</li>
+                        <li>Travel to Weligama</li>
                         <li>Leisure at Weligama Beach.</li>
                         <li>Overnight in Weligama.</li>
                     </ul>
@@ -407,9 +360,11 @@
                 <summary>Day 7 : Bentota</summary>
                 <div class="day-content">
                     <ul>
-                        <li>Visit <strong>Galle Dutch Fort</strong>.</li>
-                        <li>Kosgoda Turtle Hatchery & Madu Ganga Boat Safari.</li>
-                        <li>Water sports at Bentota Beach.</li>
+                        <li>Travel to Galle</li>
+                        <li>Visit Galle Dutch Fort.</li>
+                        <li>Kosgoda Turtle Hatchery.</li>
+                        <li>Madu Ganga Boat Safari.</li>
+                        <li>Leasure at Bentota (diving, snorkeling, water skiing, speed boating, kitesurfing, windsurfing, banana boating,3)</li>
                         <li>Overnight in Bentota.</li>
                     </ul>
                 </div>
@@ -419,23 +374,19 @@
                 <summary>Day 8 : Departure</summary>
                 <div class="day-content">
                     <ul>
-                        <li>Colombo City Tour (Lotus Tower, Red Masjid, Pettah).</li>
-                        <li>Shopping.</li>
-                        <li>Drop-off at Colombo Airport or Hotel.</li>
+                        <li>Travel to Colombo</li>
+                        <li>Colombo City Tour (Gangaramaya Temple, Independence Square, Lotus Tower, Red Masjid, Pettah Market, shopping.</li>
+                        <li>Drop-off at Colombo Airport, or hotel)</li>
                     </ul>
                 </div>
             </details>
 
-            <a href="https://wa.me/94771234567?text=I'm%20interested%20in%20Exclusive%20Plan%2002" class="btn-book">
-                📅 Plan Your Visit (Plan 02)
-            </a>
+            <a href="https://wa.me/94771234567?text=Interested%20in%20Plan%2002" class="btn-book">📅 Plan Your Visit (Plan 02)</a>
         </div>
     </div>
 
     <div class="back-container">
-        <a href="packages.html" class="btn-back">
-            <span>←</span> Back to All Packages
-        </a>
+        <a href="packages.html" class="btn-back"><span>←</span> Back to All Packages</a>
     </div>
 
     <script>
@@ -448,6 +399,5 @@
             }, 500);
         });
     </script>
-
 </body>
 </html>
