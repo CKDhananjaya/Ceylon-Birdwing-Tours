@@ -349,12 +349,13 @@ window.addEventListener('scroll', () => {
                     <input type="number" name="adults" placeholder="Adults*" min="1" required class="styled-input">
                     <input type="number" name="children" placeholder="Children" min="0" class="styled-input">
 
-                    <select name="luggage" required class="styled-input full-width">
-                        <option value="" disabled selected>Luggage Amount*</option>
+                    <select name="luggage" required class="styled-input">
+                        <option value="" disabled selected>Luggage Type*</option>
                         <option>Light (Small)</option>
                         <option>Standard (Medium)</option>
                         <option>Heavy (Large)</option>
                     </select>
+                    <input type="number" name="luggage_count" placeholder="Luggage Count" min="0" class="styled-input">
 
                     <textarea name="message" placeholder="Tell us about your dream trip (Destinations, interests, etc.)" rows="4" class="styled-input full-width"></textarea>
                 </div>
@@ -503,6 +504,7 @@ document.getElementById("custom-tour-form").addEventListener("submit", function(
     const adults = form.adults.value || "-";
     const children = form.children.value || "0";
     const luggage = form.luggage.value || "-";
+    const luggageCount = form.luggage_count.value || "0"; // GET LUGGAGE COUNT
     const message = form.message.value || "-";
 
     let whatsappMsg = `🏝️ *Custom Tour Request - Ceylon Birdwing Tours*\n\n`;
@@ -516,7 +518,8 @@ document.getElementById("custom-tour-form").addEventListener("submit", function(
     whatsappMsg += `*Arrival:* ${arrival}\n`;
     whatsappMsg += `*Departure:* ${departure}\n`;
     whatsappMsg += `*Pax:* ${adults} Adults, ${children} Children\n`;
-    whatsappMsg += `*Luggage:* ${luggage}\n`;
+    whatsappMsg += `*Luggage Amount:* ${luggage}\n`;
+    whatsappMsg += `*Luggage Count:* ${luggageCount}\n`; // ADD TO MESSAGE
     whatsappMsg += `*Notes:* ${message}`;
 
     const whatsappNumber = "94762055008";

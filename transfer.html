@@ -8,15 +8,15 @@
 <style>
 /* ================= SLACK-INSPIRED DESIGN SYSTEM ================= */
 :root {
-    --primary-purple: #4A154B; /* The deep purple from the top bar */
+    --primary-purple: #4A154B; 
     --hover-purple: #5d1b5e;
-    --accent-teal: #2EB67D;    /* From the decorative circles */
-    --accent-pink: #E01E5A;    /* From the decorative circles */
-    --accent-blue: #36C5F0;    /* From the decorative circles */
+    --accent-teal: #2EB67D;    
+    --accent-pink: #E01E5A;    
+    --accent-blue: #36C5F0;    
     --text-dark: #1d1c1d;
     --text-gray: #616061;
     --border-light: #dddddd;
-    --bg-light: #f4ede4;       /* Slight warm off-white/gray */
+    --bg-light: #f4ede4;       
 }
 
 body {
@@ -29,35 +29,32 @@ body {
     min-height: 100vh;
 }
 
-/* The Top Purple Header Strip */
 body::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 380px; /* Deep header like the screenshot */
+    height: 380px; 
     background-color: var(--primary-purple);
     z-index: -1;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); /* Slight angle for modern feel */
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); 
 }
 
-/* Container - Floating Card Style */
 .transfer-container {
     display: flex;
     max-width: 960px;
     width: 90%;
     margin: 80px auto;
     background: #ffffff;
-    border-radius: 12px; /* Smoother rounding */
-    box-shadow: 0 4px 40px rgba(0,0,0,0.15); /* Soft, deep shadow */
+    border-radius: 12px; 
+    box-shadow: 0 4px 40px rgba(0,0,0,0.15); 
     overflow: hidden;
     position: relative;
 }
 
-/* Left Info Panel - Mimicking the "Graphic/Context" side */
 .transfer-info {
-    flex: 0 0 35%; /* Fixed width for info */
+    flex: 0 0 35%; 
     background: #f8f8f8;
     padding: 50px 40px;
     color: var(--text-dark);
@@ -68,7 +65,6 @@ body::before {
     overflow: hidden;
 }
 
-/* Decorative "Bubbles" to match the screenshot graphics */
 .transfer-info::before {
     content: "";
     position: absolute;
@@ -95,7 +91,7 @@ body::before {
 .transfer-info h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: var(--primary-purple); /* Brand color heading */
+    color: var(--primary-purple); 
     font-weight: 700;
     z-index: 1;
 }
@@ -123,7 +119,6 @@ body::before {
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* Right Form Panel */
 .transfer-form {
     flex: 1;
     padding: 50px 50px;
@@ -143,7 +138,6 @@ body::before {
     color: var(--text-gray);
 }
 
-/* Form Layout */
 form {
     display: flex;
     flex-direction: column;
@@ -165,7 +159,14 @@ form {
     flex: 100%;
 }
 
-/* Inputs & Selects - Clean, Boxy, Light Border */
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
 input, select, textarea {
     padding: 14px 16px;
     border-radius: 6px;
@@ -173,7 +174,7 @@ input, select, textarea {
     font-size: 15px;
     font-family: 'Inter', sans-serif;
     width: 100%;
-    box-sizing: border-box; /* Fix padding issues */
+    box-sizing: border-box; 
     transition: 0.2s;
     background: #fff;
     color: var(--text-dark);
@@ -185,7 +186,7 @@ input::placeholder, textarea::placeholder {
 
 input:focus, select:focus, textarea:focus {
     border-color: var(--accent-blue);
-    box-shadow: 0 0 0 4px rgba(54, 197, 240, 0.15); /* Blue focus ring like screenshot */
+    box-shadow: 0 0 0 4px rgba(54, 197, 240, 0.15); 
     outline: none;
 }
 
@@ -194,7 +195,6 @@ textarea {
     resize: vertical;
 }
 
-/* Checkboxes - Styled to look cleaner */
 .checkbox-group {
     flex-direction: row;
     align-items: center;
@@ -215,13 +215,13 @@ textarea {
     accent-color: var(--primary-purple);
 }
 .checkbox-group label {
+    margin-bottom: 0;
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
     color: var(--text-dark);
 }
 
-/* Buttons */
 .buttons-row {
     display: flex;
     gap: 15px;
@@ -240,7 +240,6 @@ button {
     text-transform: uppercase;
 }
 
-/* Primary Button - Matches the "Send us a message" purple button */
 #sendBtn {
     background: var(--primary-purple);
     color: #fff;
@@ -254,7 +253,6 @@ button {
     box-shadow: 0 4px 12px rgba(74, 21, 75, 0.3);
 }
 
-/* Secondary Button - Matches the "Start a live chat" outline button */
 #clearBtn {
     background: transparent;
     color: var(--primary-purple);
@@ -267,7 +265,6 @@ button {
     background: rgba(74, 21, 75, 0.05);
 }
 
-/* Feedback */
 .feedback {
     margin-top: 15px;
     font-size: 14px;
@@ -277,7 +274,6 @@ button {
     min-height: 20px;
 }
 
-/* Back Home */
 .back-home {
     margin-top: 30px;
     border-top: 1px solid var(--border-light);
@@ -303,7 +299,6 @@ button {
     transform: none;
 }
 
-/* ================= RESPONSIVE ================= */
 @media (max-width: 900px){
     .transfer-container {
         flex-direction: column;
@@ -312,7 +307,7 @@ button {
     }
     
     body::before {
-        height: 180px; /* Smaller header on mobile */
+        height: 180px; 
         clip-path: none;
     }
     
@@ -357,42 +352,88 @@ button {
         <p>We are here for it all. Ask us anything about your transfer.</p>
         <form id="transferForm">
             <div class="form-row">
-                <div class="form-group"><input type="text" id="name" placeholder="Your Name*" required></div>
-                <div class="form-group"><input type="email" id="email" placeholder="Email*" required></div>
+                <div class="form-group">
+                    <label for="name">Your Name*</label>
+                    <input type="text" id="name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address*</label>
+                    <input type="email" id="email" placeholder="john@example.com" required>
+                </div>
             </div>
-            <div class="form-row">
-                <div class="form-group"><input type="tel" id="phone" placeholder="Phone*" required></div>
-                <div class="form-group"><input type="text" id="country" placeholder="Country*" required></div>
-            </div>
-            <div class="form-row">
-                <div class="form-group"><input type="number" id="adults" placeholder="Adults*" min="1" value="1" required></div>
-                <div class="form-group"><input type="number" id="children" placeholder="Children" min="0" value="0"></div>
-            </div>
+
             <div class="form-row">
                 <div class="form-group">
+                    <label for="phone">Phone Number*</label>
+                    <input type="tel" id="phone" placeholder="+123 456 7890" required>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country*</label>
+                    <input type="text" id="country" placeholder="Your Country" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="adults">Adults*</label>
+                    <input type="number" id="adults" placeholder="1" min="1" value="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="children">Children</label>
+                    <input type="number" id="children" placeholder="0" min="0" value="0">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="vehicleType">Vehicle Type*</label>
                     <select id="vehicleType" required>
-                        <option value="">Vehicle Type*</option>
+                        <option value="">Select Vehicle</option>
                         <option>Car</option>
                         <option>Van</option>
                         <option>Bus</option>
                     </select>
                 </div>
                 <div class="form-group">
+                    <label for="luggage">Luggage Size*</label>
                     <select id="luggage" required>
-                        <option value="">Luggage*</option>
+                        <option value="">Select Size</option>
                         <option>Small</option>
                         <option>Medium</option>
                         <option>Large</option>
                     </select>
                 </div>
             </div>
+
             <div class="form-row">
-                <div class="form-group checkbox-group"><input type="checkbox" id="pickup"><label for="pickup">Pick Up</label></div>
-                <div class="form-group checkbox-group"><input type="checkbox" id="dropoff"><label for="dropoff">Drop Off</label></div>
+                <div class="form-group">
+                    <label for="luggageCount">Luggage Count</label>
+                    <input type="number" id="luggageCount" placeholder="Number of bags" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="tripDateTime">Date & Time*</label>
+                    <input type="datetime-local" id="tripDateTime" required>
+                </div>
             </div>
+
             <div class="form-row">
-                <div class="form-group full-width"><textarea id="message" placeholder="Add any additional information we can use to help you..."></textarea></div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="pickup">
+                    <label for="pickup">Pick Up</label>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="dropoff">
+                    <label for="dropoff">Drop Off</label>
+                </div>
             </div>
+
+            <div class="form-row">
+                <div class="form-group full-width">
+                    <label for="message">Additional Information</label>
+                    <textarea id="message" placeholder="Add any details we can use to help you..."></textarea>
+                </div>
+            </div>
+
             <div class="buttons-row">
                 <button type="button" id="sendBtn">Send via WhatsApp</button>
                 <button type="reset" id="clearBtn">Clear</button>
@@ -412,34 +453,42 @@ document.getElementById("sendBtn").addEventListener("click", function() {
     const email = document.getElementById("email").value.trim();
     const phone = document.getElementById("phone").value.trim();
     const country = document.getElementById("country").value.trim();
-    const adults = document.getElementById("adults").value.trim();
-    const children = document.getElementById("children").value.trim();
+    const adults = document.getElementById("adults").value;
+    const children = document.getElementById("children").value || "0";
     const vehicle = document.getElementById("vehicleType").value;
     const luggage = document.getElementById("luggage").value;
+    const luggageCount = document.getElementById("luggageCount").value || "0";
+    const dateTimeRaw = document.getElementById("tripDateTime").value;
     const pickup = document.getElementById("pickup").checked ? "Yes" : "No";
     const dropoff = document.getElementById("dropoff").checked ? "Yes" : "No";
-    const message = document.getElementById("message").value.trim();
+    const message = document.getElementById("message").value.trim() || "-";
 
-    if(!name || !email || !phone || !country || !adults || !vehicle || !luggage){
+    if(!name || !email || !phone || !country || !adults || !vehicle || !luggage || !dateTimeRaw){
         alert("Please fill all required fields marked with *.");
         return;
     }
 
-    const whatsappMessage = 
-`*Airport Transfer Request*%0A
-*Name:* ${name}%0A
-*Email:* ${email}%0A
-*Phone:* ${phone}%0A
-*Country:* ${country}%0A
-*Adults:* ${adults}%0A
-*Children:* ${children}%0A
-*Vehicle Type:* ${vehicle}%0A
-*Luggage:* ${luggage}%0A
-*Pick Up:* ${pickup}%0A
-*Drop Off:* ${dropoff}%0A
+    // Fix for Date & Time display
+    const dateTimeFormatted = dateTimeRaw.replace("T", " ");
+
+    const whatsappMessage = `*Airport Transfer Request*
+*Name:* ${name}
+*Email:* ${email}
+*Phone:* ${phone}
+*Country:* ${country}
+*Date & Time:* ${dateTimeFormatted}
+*Adults:* ${adults}
+*Children:* ${children}
+*Vehicle Type:* ${vehicle}
+*Luggage Size:* ${luggage}
+*Luggage Count:* ${luggageCount}
+*Pick Up:* ${pickup}
+*Drop Off:* ${dropoff}
 *Message:* ${message}`;
 
-    window.open(`https://wa.me/94762055008?text=${whatsappMessage}`, "_blank");
+    const whatsappUrl = `https://wa.me/94762055008?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, "_blank");
+
     const feedback = document.getElementById("formFeedback");
     feedback.textContent = "✅ Your transfer request has been sent via WhatsApp!";
     setTimeout(()=> feedback.textContent="", 7000);
