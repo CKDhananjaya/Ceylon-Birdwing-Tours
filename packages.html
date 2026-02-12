@@ -294,30 +294,28 @@ window.addEventListener('scroll', () => {
 
 
 
-<!-- TOUR PACKAGES SECTION -->
+<!-- TOUR PACKAGES SECTION START  -->
+
 <section class="tour-section">
   <div class="tour-container">
 
-    <!-- Heading -->
     <div class="tour-header">
       <span>Explore Sri Lanka</span>
       <h2>Our Tour Packages</h2>
     </div>
 
-    <!-- Cards Container -->
     <div id="tourCards"></div>
 
   </div>
 </section>
 
-<!-- STYLES -->
 <style>
 /* SECTION WITH BACKGROUND IMAGE */
 .tour-section {
   position: relative;
   padding: 60px 15px;
-  font-family: Arial, sans-serif;
-  background-image: url("images/##.jpg");
+  font-family: 'Inter', Arial, sans-serif;
+  background-image: url("images/main-bg.jpg"); 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -329,8 +327,8 @@ window.addEventListener('scroll', () => {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    rgba(255, 255, 255, 0.75),
-    rgba(255, 255, 255, 0.65)
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.7)
   );
   z-index: 1;
 }
@@ -352,6 +350,7 @@ window.addEventListener('scroll', () => {
   color: #ff6b6b;
   font-weight: bold;
   font-size: 16px;
+  text-transform: uppercase;
 }
 .tour-header h2 {
   margin-top: 10px;
@@ -366,7 +365,7 @@ window.addEventListener('scroll', () => {
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 30px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   transition: 0.3s ease;
 }
 
@@ -394,11 +393,14 @@ window.addEventListener('scroll', () => {
 
 /* CONTENT */
 .tour-content {
-  flex: 1;
+  flex: 1.2;
   padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .tour-content h3 {
-  font-size: 26px;
+  font-size: 24px;
   color: #333;
   margin-bottom: 10px;
 }
@@ -408,7 +410,7 @@ window.addEventListener('scroll', () => {
   line-height: 1.6;
 }
 
-/* GOLD BUTTON (#FFD700) */
+/* GOLD BUTTON */
 .tour-btn {
   display: inline-block;
   margin-top: 15px;
@@ -419,7 +421,8 @@ window.addEventListener('scroll', () => {
   font-weight: bold;
   text-decoration: none;
   transition: 0.3s;
-  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
+  align-self: flex-start;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4);
 }
 
 .tour-btn:hover {
@@ -430,7 +433,7 @@ window.addEventListener('scroll', () => {
 /* HOVER EFFECT */
 .tour-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 
 /* MOBILE RESPONSIVE */
@@ -438,77 +441,76 @@ window.addEventListener('scroll', () => {
   .tour-card {
     flex-direction: column;
   }
-
   .tour-image {
     min-height: 220px;
   }
-
-  .tour-content h3 {
-    font-size: 22px;
-  }
-
   .tour-header h2 {
     font-size: 28px;
-  }
-
-  .tour-section {
-    background-attachment: scroll;
   }
 }
 </style>
 
-<!-- SCRIPT -->
 <script>
 const tourData = [
+
   {
+    id: "treasures",
     title: "Treasures of the Island",
     days: "4 Days",
     locations: "Sigiriya, Galle, Mirissa, Bentota, Kandy",
     img: "images/roundtour1.jpg"
   },
   {
+    id: "wild-ceylon",
     title: "Wild Ceylon Experience",
     days: "5 Days",
     locations: "Galle, Yala, Mirissa, Ella, Nuwara Eliya",
     img: "images/roundtour2.jpg"
   },
   {
+    id: "majestic",
     title: "Majestic Sri Lankan Tour",
     days: "6 Days",
     locations: "Galle, Yala, Ella, Kandy, Sigiriya",
     img: "images/ella.jpg"
   },
   {
+    id: "panorama",
     title: "Sri Lanka Panorama Escape",
     days: "7 Days",
     locations: "Sigiriya, Kandy, Nuwara Eliya, Ella, Mirissa, Bentota",
     img: "images/beach.jpg"
   },
   {
+    id: "island-essence",
     title: "Island Essence Journey",
     days: "8 Days",
     locations: "Kandy, Ella, Udawalawe, Unawatuna",
     img: "images/island.jpg"
   },
   {
+    id: "circuit",
     title: "The Ceylon Circuit",
     days: "9 Days",
     locations: "Galle, Ella, Nuwara Eliya, Kandy, Sigiriya",
     img: "images/circuit.jpg"
   },
   {
+    id: "scenic",
     title: "Scenic Ceylon Journey",
     days: "10 Days",
     locations: "Galle, Tissamaharama, Ella, Nuwara Eliya, Kandy, Sigiriya",
     img: "images/scenic.jpg"
   },
   {
+    id: "signature",
     title: "Sri Lanka Signature Tour",
     days: "12 Days",
     locations: "Galle, Tissamaharama, Ella, Nuwara Eliya, Kandy, Mirissa, Sigiriya",
     img: "images/history.jpg"
   },
   {
+    id: "kingdoms",
     title: "Kingdoms to Coastline",
     days: "14 Days",
     locations: "Sigiriya, Polonnaruwa, Anuradhapura, Trincomalee, Kandy, Nuwara Eliya, Ella, Yala, Mirissa",
@@ -528,109 +530,19 @@ tourData.forEach(tour => {
     </div>
     <div class="tour-content">
       <h3>${tour.title}</h3>
-      <p><strong>Locations:</strong> ${tour.locations}</p>
-   <a class="tour-btn" href="#" onclick="openTourPopup('Treasures of the Island')">
-  View Details
-</a>
-
+      <p><strong>Route:</strong> ${tour.locations}</p>
+      <p>Explore the wonders of Sri Lanka with our signature ${tour.days} itinerary.</p>
+      <a class="tour-btn" href="plan.html?plan=${tour.id}">View Details</a>
     </div>
   `;
 
   container.appendChild(card);
 });
 </script>
-<!-- TOUR PACKAGES SECTION END -->
 
+<!-- TOUR PACKAGES SECTION END  -->
 
-<!-- DETAIL POPUP -->
-
-<div id="tourDetailPopup" style="
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.6);
-  z-index:9999;
-  padding:20px;
-">
-
-  <div style="
-    background:#fff;
-    max-width:900px;
-    margin:auto;
-    border-radius:18px;
-    padding:25px;
-    position:relative;
-    max-height:90vh;
-    overflow-y:auto;
-  ">
-
-    <!-- Close -->
-    <span onclick="closeTourPopup()" style="
-      position:absolute;
-      top:15px;
-      right:20px;
-      cursor:pointer;
-      font-size:22px;
-      font-weight:bold;
-    ">✖</span>
-
-    <!-- Title -->
-    <h2 id="popupTitle" style="margin-bottom:20px;">
-      Exclusive Plan
-    </h2>
-
-    <!-- ACCORDION -->
-    <div style="display:grid; gap:12px;">
-
-      <details open style="border:1px solid #ddd; border-radius:10px; padding:10px;">
-        <summary style="cursor:pointer; font-weight:bold;">Day 1 : Sigiriya</summary>
-        <ul>
-          <li>Pick-up from Colombo Airport / Hotel</li>
-          <li>Visit Sigiriya Lion Rock Fortress</li>
-          <li>Minneriya Jeep Safari</li>
-          <li>Overnight stay in Sigiriya</li>
-        </ul>
-      </details>
-
-      <details style="border:1px solid #ddd; border-radius:10px; padding:10px;">
-        <summary style="cursor:pointer; font-weight:bold;">Day 2 : Sigiriya</summary>
-        <ul>
-          <li>Village tour</li>
-          <li>Dambulla Cave Temple</li>
-        </ul>
-      </details>
-
-      <details style="border:1px solid #ddd; border-radius:10px; padding:10px;">
-        <summary style="cursor:pointer; font-weight:bold;">Day 3 : Kandy</summary>
-        <ul>
-          <li>Temple of the Tooth Relic</li>
-          <li>Cultural Dance Show</li>
-        </ul>
-      </details>
-
-      <details style="border:1px solid #ddd; border-radius:10px; padding:10px;">
-        <summary style="cursor:pointer; font-weight:bold;">Day 4 : Departure</summary>
-        <ul>
-          <li>Transfer to Airport</li>
-        </ul>
-      </details>
-
-    </div>
-
-  </div>
-</div>
-<script>
-function openTourPopup(title = "Exclusive Plan"){
-  document.getElementById("popupTitle").innerText = title;
-  document.getElementById("tourDetailPopup").style.display = "block";
-}
-
-function closeTourPopup(){
-  document.getElementById("tourDetailPopup").style.display = "none";
-}
-</script>
-
-<!-- DETAIL POPUP end -->
+  
 
 
 
