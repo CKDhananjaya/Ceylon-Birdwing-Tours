@@ -395,24 +395,23 @@ button {
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="luggage">Luggage Size*</label>
-                    <select id="luggage" required>
-                        <option value="">Select Size</option>
-                        <option>Small</option>
-                        <option>Medium</option>
-                        <option>Large</option>
-                    </select>
+                    <label for="tripDateTime">Date & Time*</label>
+                    <input type="datetime-local" id="tripDateTime" required>
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
-                    <label for="luggageCount">Luggage Count</label>
-                    <input type="number" id="luggageCount" placeholder="Number of bags" min="0">
+                    <label for="lugSmall">Small Luggage</label>
+                    <input type="number" id="lugSmall" placeholder="0" min="0" value="0">
                 </div>
                 <div class="form-group">
-                    <label for="tripDateTime">Date & Time*</label>
-                    <input type="datetime-local" id="tripDateTime" required>
+                    <label for="lugMed">Medium Luggage</label>
+                    <input type="number" id="lugMed" placeholder="0" min="0" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="lugLarge">Large Luggage</label>
+                    <input type="number" id="lugLarge" placeholder="0" min="0" value="0">
                 </div>
             </div>
 
@@ -456,19 +455,19 @@ document.getElementById("sendBtn").addEventListener("click", function() {
     const adults = document.getElementById("adults").value;
     const children = document.getElementById("children").value || "0";
     const vehicle = document.getElementById("vehicleType").value;
-    const luggage = document.getElementById("luggage").value;
-    const luggageCount = document.getElementById("luggageCount").value || "0";
+    const lugSmall = document.getElementById("lugSmall").value || "0";
+    const lugMed = document.getElementById("lugMed").value || "0";
+    const lugLarge = document.getElementById("lugLarge").value || "0";
     const dateTimeRaw = document.getElementById("tripDateTime").value;
     const pickup = document.getElementById("pickup").checked ? "Yes" : "No";
     const dropoff = document.getElementById("dropoff").checked ? "Yes" : "No";
     const message = document.getElementById("message").value.trim() || "-";
 
-    if(!name || !email || !phone || !country || !adults || !vehicle || !luggage || !dateTimeRaw){
+    if(!name || !email || !phone || !country || !adults || !vehicle || !dateTimeRaw){
         alert("Please fill all required fields marked with *.");
         return;
     }
 
-    // Fix for Date & Time display
     const dateTimeFormatted = dateTimeRaw.replace("T", " ");
 
     const whatsappMessage = `*Airport Transfer Request*
@@ -480,8 +479,10 @@ document.getElementById("sendBtn").addEventListener("click", function() {
 *Adults:* ${adults}
 *Children:* ${children}
 *Vehicle Type:* ${vehicle}
-*Luggage Size:* ${luggage}
-*Luggage Count:* ${luggageCount}
+*Luggage:*
+- Small: ${lugSmall}
+- Medium: ${lugMed}
+- Large: ${lugLarge}
 *Pick Up:* ${pickup}
 *Drop Off:* ${dropoff}
 *Message:* ${message}`;

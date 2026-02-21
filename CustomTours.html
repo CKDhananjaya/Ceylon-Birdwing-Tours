@@ -26,6 +26,8 @@
     
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
 
 
 
@@ -288,253 +290,323 @@ window.addEventListener('scroll', () => {
 <br><br>
 
 <!-- Form start -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <section class="tour-request-container">
-    <div class="tour-content-wrapper">
-        
-        <div class="tour-info-section">
-            <h2 class="tour-title">Plan Your Sri Lankan Adventure</h2>
-            <p class="tour-description-black">
-                Welcome to <strong>Ceylon Birdwing Tours</strong>! Our dedicated team is here to help you craft the perfect island getaway. 
+    <header class="tour-header">
+        <div class="header-content">
+            <h1 class="tour-title">Contact Us & Plan Your Sri Lanka Tour</h1>
+            <p class="tour-description">
+                Experience the magic of the island with <strong>Ceylon Birdwing Tours</strong>. 
+                Fill out the details below and we will craft a bespoke itinerary for your journey.
             </p>
-            <p class="tour-description-black">
-                Whether you're looking for wildlife safaris, scenic train rides, or pristine beaches, fill out this form to send your custom request <strong>directly to our experts via WhatsApp</strong>. We specialize in personalized itineraries that make your satisfaction our top priority.
-            </p>
-            
-            <hr class="divider">
-            
-            <div class="contact-details-black">
-                <h3>Direct Contact</h3>
-                <p>📞 +94 76 2055008</p>
-                <p>📧 ceylonbirdwingtours@gmail.com</p>
-               
-            </div>
         </div>
+        <div class="header-contact-info">
+            <span class="contact-item">📞 +94 76 2055008</span>
+            <span class="contact-item">📧 ceylonbirdwingtours@gmail.com</span>
+        </div>
+    </header>
 
-        <div class="tour-form-section">
-            <h2 class="form-heading">Send Us a message</h2>
-            <p style="margin-top:-20px; margin-bottom:20px; color:#000; font-size: 14px; font-weight: 600;">
-                * Your request will be sent instantly via WhatsApp.
-            </p>
+    <div class="tour-form-section">
+        <form id="custom-tour-form">
+            <div class="form-grid-3">
+                <div class="input-group">
+                    <label>Full Name *</label>
+                    <input type="text" name="name" required class="styled-input">
+                </div>
+                <div class="input-group">
+                    <label>WhatsApp / Phone *</label>
+                    <input type="tel" name="phone" required class="styled-input">
+                </div>
+                <div class="input-group">
+                    <label>Email Address *</label>
+                    <input type="email" name="email" required class="styled-input">
+                </div>
+            </div>
 
-            <form id="custom-tour-form">
-                <div class="form-grid">
-                    <input type="text" name="name" placeholder="Your Name*" required class="styled-input full-width">
-                    
-                    <input type="email" name="email" placeholder="Email*" required class="styled-input">
-                    <input type="tel" name="phone" placeholder="Phone / WhatsApp*" required class="styled-input">
+            <div class="form-grid-3">
+                <div class="input-group">
+                    <label>Country *</label>
+                    <input type="text" name="country" required class="styled-input">
+                </div>
+                <div class="input-group">
+                    <label>Arrival Date *</label>
+                    <input type="date" name="arrival" id="arrival-date" required class="styled-input">
+                </div>
+                <div class="input-group">
+                    <label>Departure Date *</label>
+                    <input type="date" name="departure" id="departure-date" required class="styled-input">
+                </div>
+            </div>
 
-                    <input type="text" name="country" placeholder="Country*" required class="styled-input">
-                    <input type="text" name="budget" placeholder="Approx. Budget (USD/LKR)*" required class="styled-input">
-
+            <div class="form-grid-3">
+                <div class="input-group">
+                    <label>Preferred Vehicle *</label>
                     <select name="vehicle" required class="styled-input">
-                        <option value="" disabled selected>Preferred Vehicle*</option>
-                        <option>Car</option>
-                        <option>Van</option>
-                        <option>Bus</option>
-                       
+                        <option value="" disabled selected>Select Vehicle</option>
+                        <option>🚗 Car </option>
+                        <option>🚐 Van </option>
+                        <option>🚌 Bus (Large Group)</option>
                     </select>
+                </div>
+                <div class="input-group">
+                    <label>Accommodation *</label>
                     <select name="hotel" required class="styled-input">
-                        <option value="" disabled selected>Accommodation Level*</option>
+                        <option value="" disabled selected>Select Level</option>
                         <option>Budget / Guesthouse</option>
                         <option>3-Star Standard</option>
                         <option>4-Star Deluxe</option>
                         <option>5-Star Luxury</option>
                         <option>Boutique Hotels</option>
                     </select>
-
-                    <input type="text" name="arrival" placeholder="Arrival Date*" onfocus="(this.type='date')" required class="styled-input">
-                    <input type="text" name="departure" placeholder="Departure Date*" onfocus="(this.type='date')" required class="styled-input">
-
-                    <input type="number" name="adults" placeholder="Adults*" min="1" required class="styled-input">
-                    <input type="number" name="children" placeholder="Children" min="0" class="styled-input">
-
-                    <select name="luggage" required class="styled-input">
-                        <option value="" disabled selected>Luggage Type*</option>
-                        <option>Light (Small)</option>
-                        <option>Standard (Medium)</option>
-                        <option>Heavy (Large)</option>
-                    </select>
-                    <input type="number" name="luggage_count" placeholder="Luggage Count" min="0" class="styled-input">
-
-                    <textarea name="message" placeholder="Tell us about your dream trip (Destinations, interests, etc.)" rows="4" class="styled-input full-width"></textarea>
                 </div>
-
-                <div class="button-group">
-                    <button type="submit" class="btn-submit">Submit via WhatsApp</button>
-                    <button type="button" id="clear-form" class="btn-clear">Clear Form</button>
+                <div class="input-group">
+                    <label>Budget *</label>
+                    <input type="text" name="budget" required class="styled-input">
                 </div>
-            </form>
-            <p id="form-success" style="display:none; color:#000; font-weight:bold; margin-top:15px; text-align:center; background: rgba(255,255,255,0.6); padding: 12px; border-radius: 8px; border: 1px solid #000;">
-                ✅ Opening WhatsApp... Please click "Send" in the app.
-            </p>
-        </div>
+            </div>
+
+            <div class="divider"><span>PASSENGERS & LUGGAGE</span></div>
+
+            <div class="pax-luggage-grid">
+                <div class="input-group">
+                    <label>Adults *</label>
+                    <input type="number" name="adults" min="1" required class="styled-input">
+                </div>
+                <div class="input-group">
+                    <label>Children</label>
+                    <input type="number" name="children" min="0" class="styled-input">
+                </div>
+                <div class="input-group">
+                    <label>Small Luggage</label>
+                    <input type="text" name="lug_small" class="styled-input">
+                </div>
+                <div class="input-group">
+                    <label>Medium Luggage</label>
+                    <input type="text" name="lug_medium" class="styled-input">
+                </div>
+                <div class="input-group">
+                    <label>Large Luggage</label>
+                    <input type="text" name="lug_large" class="styled-input">
+                </div>
+            </div>
+
+            <div class="input-group full-width">
+                <label>Dream Trip Details & Interests</label>
+                <textarea name="message" rows="3" class="styled-textarea"></textarea>
+            </div>
+
+            <div class="button-container">
+                <button type="button" id="clear-form" class="btn-clear">Clear Form</button>
+                <button type="submit" class="btn-submit">Plan My Tour via WhatsApp</button>
+            </div>
+        </form>
+        <p id="form-success" class="success-banner">✅ Opening WhatsApp...</p>
     </div>
 </section>
 
 <style>
+/* Reset & Base */
+.tour-request-container * { box-sizing: border-box; }
+
 .tour-request-container {
-    background-color: #8ccfff;
-    padding: 80px 20px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    /* Serrated Border Effect */
-    clip-path: polygon(0% 1%, 2% 0%, 4% 1%, 6% 0%, 8% 1%, 10% 0%, 12% 1%, 14% 0%, 16% 1%, 18% 0%, 20% 1%, 22% 0%, 24% 1%, 26% 0%, 28% 1%, 30% 0%, 32% 1%, 34% 0%, 36% 1%, 38% 0%, 40% 1%, 42% 0%, 44% 1%, 46% 0%, 48% 1%, 50% 0%, 52% 1%, 54% 0%, 56% 1%, 58% 0%, 60% 1%, 62% 0%, 64% 1%, 66% 0%, 68% 1%, 70% 0%, 72% 1%, 74% 0%, 76% 1%, 78% 0%, 80% 1%, 82% 0%, 84% 1%, 86% 0%, 88% 1%, 90% 0%, 92% 1%, 94% 0%, 96% 1%, 98% 0%, 100% 1%, 100% 99%, 98% 100%, 96% 99%, 94% 100%, 92% 99%, 90% 100%, 88% 99%, 86% 100%, 84% 99%, 82% 100%, 80% 99%, 78% 100%, 76% 99%, 74% 100%, 72% 99%, 70% 100%, 68% 99%, 66% 100%, 64% 99%, 62% 100%, 60% 99%, 58% 100%, 56% 99%, 54% 100%, 52% 99%, 50% 100%, 48% 99%, 46% 100%, 44% 99%, 42% 100%, 40% 99%, 38% 100%, 36% 99%, 34% 100%, 32% 99%, 30% 100%, 28% 99%, 26% 100%, 24% 99%, 22% 100%, 20% 99%, 18% 100%, 16% 99%, 14% 100%, 12% 99%, 10% 100%, 8% 99%, 6% 100%, 4% 99%, 2% 100%, 0% 99%);
-}
-
-.tour-content-wrapper {
     max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
+    margin: 30px auto;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 15px 60px rgba(0,0,0,0.1);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    border: 1px solid #f0f0f0;
 }
 
-.tour-info-section { flex: 1 1 320px; }
-.tour-form-section { flex: 1.5 1 400px; }
+/* Header Styling */
+.tour-header {
+    background: linear-gradient(135deg, #aa72c8 0%, #7b4397 100%);
+    color: #fff;
+    padding: 35px 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
 
-/* Black Font styles */
-.tour-description-black {
-    color: #000000;
-    font-size: 17px;
-    line-height: 1.6;
+.tour-title { font-size: 26px; font-weight: 800; margin: 0; line-height: 1.2; }
+.tour-description { font-size: 14px; opacity: 0.9; max-width: 600px; margin: 8px 0 0 0; font-weight: 300; }
+
+.header-contact-info { display: flex; flex-direction: column; gap: 8px; font-size: 13px; font-weight: 600; white-space: nowrap; }
+
+/* Form Layouts */
+.tour-form-section { padding: 40px 45px; }
+
+.form-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px 30px;
     margin-bottom: 20px;
 }
 
-.contact-details-black { color: #000000; }
-.contact-details-black h3 {
-    font-family: 'Georgia', serif;
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-.contact-details-black p {
-    margin: 10px 0;
-    font-size: 17px;
-    font-weight: 600;
-}
-
-/* Titles */
-.tour-title, .form-heading {
-    font-family: 'Georgia', serif;
-    color: #ff0099; /* Pink as requested in design */
-    font-size: clamp(34px, 5vw, 48px);
+.pax-luggage-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
     margin-bottom: 25px;
 }
 
-.divider { border: 0.5px solid #000; margin: 30px 0; opacity: 0.2; }
-
 /* Form Elements */
-.form-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+.input-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 8px;
 }
 
-.styled-input {
+.styled-input, .styled-textarea {
     width: 100%;
-    padding: 14px;
-    border: 1.5px solid #000;
+    padding: 12px 18px;
+    border: 1.5px solid #eee;
     border-radius: 8px;
-    font-size: 15px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    background: #fcfcfc;
+    transition: all 0.3s;
+    outline: none;
+}
+
+.styled-input:focus, .styled-textarea:focus {
+    border-color: #aa72c8;
     background: #fff;
-    box-sizing: border-box;
-    color: #000;
+    box-shadow: 0 4px 15px rgba(170, 114, 200, 0.1);
 }
 
-.full-width { grid-column: span 2; }
+.styled-textarea { resize: none; grid-column: span 3; }
 
-.button-group {
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+.divider {
+    margin: 30px 0;
+    border-top: 1px solid #eee;
+    text-align: center;
 }
+.divider span {
+    position: relative;
+    top: -12px;
+    background: #fff;
+    padding: 0 20px;
+    font-size: 10px;
+    font-weight: 800;
+    color: #aa72c8;
+    letter-spacing: 1.5px;
+}
+
+/* Buttons */
+.button-container { display: flex; justify-content: flex-end; gap: 15px; margin-top: 30px; }
 
 .btn-submit {
-    background: #000;
+    background: #aa72c8;
     color: #fff;
     border: none;
-    padding: 18px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 17px;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.btn-submit:hover { transform: scale(1.02); }
-
-.btn-clear {
-    background: transparent;
-    border: 1.5px solid #000;
-    color: #000;
-    padding: 12px;
+    padding: 14px 40px;
     border-radius: 50px;
     font-weight: 600;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-/* Responsiveness */
-@media (min-width: 650px) {
-    .button-group { flex-direction: row; }
-    .btn-submit { flex: 2; }
-    .btn-clear { flex: 1; }
+.btn-submit:hover { background: #7b4397; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(170, 114, 200, 0.3); }
+
+.btn-clear {
+    background: #f5f5f5;
+    border: none;
+    color: #aaa;
+    padding: 14px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
 }
 
-@media (max-width: 550px) {
-    .form-grid { grid-template-columns: 1fr; }
-    .full-width { grid-column: span 1; }
-    .tour-request-container { padding: 40px 15px; clip-path: none; }
+.success-banner { display: none; text-align: center; color: #7b4397; font-weight: 600; margin-top: 20px; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .pax-luggage-grid { grid-template-columns: repeat(3, 1fr); }
+    .form-grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .tour-header { flex-direction: column; text-align: center; padding: 30px 20px; }
+    .header-contact-info { align-items: center; }
+    .tour-form-section { padding: 30px 20px; }
+    .form-grid-3, .pax-luggage-grid { grid-template-columns: 1fr; }
+    .button-container { flex-direction: column-reverse; }
+    .btn-submit, .btn-clear { width: 100%; }
 }
 </style>
 
 <script>
 document.getElementById("custom-tour-form").addEventListener("submit", function(e) {
     e.preventDefault();
-    const form = e.target;
+    const f = e.target;
+    
+    // Calculate Trip Duration Logic
+    const start = new Date(f.arrival.value);
+    const end = new Date(f.departure.value);
+    let durationText = "Dates provided";
+    
+    if (!isNaN(start) && !isNaN(end)) {
+        const diff = Math.ceil((end - start) / (1000 * 60 * 60 * 24));
+        durationText = diff > 0 ? `${diff} Days / ${diff - 1} Nights` : "Same Day Excursion";
+    }
 
-    const name = form.name.value || "-";
-    const email = form.email.value || "-";
-    const phone = form.phone.value || "-";
-    const country = form.country.value || "-";
-    const vehicle = form.vehicle.value || "-";
-    const hotel = form.hotel.value || "-";
-    const budget = form.budget.value || "-";
-    const arrival = form.arrival.value || "-";
-    const departure = form.departure.value || "-";
-    const adults = form.adults.value || "-";
-    const children = form.children.value || "0";
-    const luggage = form.luggage.value || "-";
-    const luggageCount = form.luggage_count.value || "0"; // GET LUGGAGE COUNT
-    const message = form.message.value || "-";
+    // Build the Detailed Professional Message
+    let msg = `*🌟 NEW TOUR INQUIRY: Ceylon Birdwing Tours* \n`;
+    msg += `------------------------------------------\n\n`;
+    
+    msg += `*👤 CLIENT PROFILE*\n`;
+    msg += `• *Name:* ${f.name.value}\n`;
+    msg += `• *Country:* ${f.country.value}\n`;
+    msg += `• *WhatsApp:* ${f.phone.value}\n`;
+    msg += `• *Email:* ${f.email.value}\n\n`;
+    
+    msg += `*🗓️ ITINERARY OVERVIEW*\n`;
+    msg += `• *Arrival:* ${f.arrival.value}\n`;
+    msg += `• *Departure:* ${f.departure.value}\n`;
+    msg += `• *Duration:* ${durationText}\n\n`;
+    
+    msg += `*🏨 TRAVEL PREFERENCES*\n`;
+    msg += `• *Stay Level:* ${f.hotel.value}\n`;
+    msg += `• *Transport:* ${f.vehicle.value}\n`;
+    msg += `• *Est. Budget:* ${f.budget.value}\n\n`;
+    
+    msg += `*👥 GROUP & LUGGAGE*\n`;
+    msg += `• *Pax:* ${f.adults.value} Adults | ${f.children.value || 0} Children\n`;
+    msg += `• *Small Bags:* ${f.lug_small.value || 0}\n`;
+    msg += `• *Medium Bags:* ${f.lug_medium.value || 0}\n`;
+    msg += `• *Large Bags:* ${f.lug_large.value || 0}\n\n`;
+    
+    msg += `*📝 SPECIAL REQUESTS*\n`;
+    msg += `_${f.message.value || 'Custom itinerary requested'}_ \n\n`;
+    
+    msg += `------------------------------------------\n`;
+    msg += `*Sent via Ceylon Birdwing Web Planner*`;
 
-    let whatsappMsg = `🏝️ *Custom Tour Request - Ceylon Birdwing Tours*\n\n`;
-    whatsappMsg += `*Name:* ${name}\n`;
-    whatsappMsg += `*Email:* ${email}\n`;
-    whatsappMsg += `*Phone:* ${phone}\n`;
-    whatsappMsg += `*Country:* ${country}\n`;
-    whatsappMsg += `*Vehicle:* ${vehicle}\n`;
-    whatsappMsg += `*Hotel Level:* ${hotel}\n`;
-    whatsappMsg += `*Budget:* ${budget}\n`;
-    whatsappMsg += `*Arrival:* ${arrival}\n`;
-    whatsappMsg += `*Departure:* ${departure}\n`;
-    whatsappMsg += `*Pax:* ${adults} Adults, ${children} Children\n`;
-    whatsappMsg += `*Luggage Amount:* ${luggage}\n`;
-    whatsappMsg += `*Luggage Count:* ${luggageCount}\n`; // ADD TO MESSAGE
-    whatsappMsg += `*Notes:* ${message}`;
+    // Open WhatsApp URL
+    const waLink = `https://wa.me/94762055008?text=${encodeURIComponent(msg)}`;
+    window.open(waLink, "_blank");
 
-    const whatsappNumber = "94762055008";
-    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMsg)}`, "_blank");
-
+    // UI Success state
     document.getElementById("form-success").style.display = "block";
-    form.reset();
 });
 
-document.getElementById("clear-form").addEventListener("click", function() {
-    document.getElementById("custom-tour-form").reset();
-    document.getElementById("form-success").style.display = "none";
+// Clear Form Logic
+document.getElementById("clear-form").addEventListener("click", () => {
+    if(confirm("Are you sure you want to reset the form?")) {
+        document.getElementById("custom-tour-form").reset();
+        document.getElementById("form-success").style.display = "none";
+    }
 });
 </script>
-
 <!-- Form end -->
 
 
@@ -1175,167 +1247,253 @@ document.getElementById("clear-form").addEventListener("click", function() {
 
 
 <!-- Footer start -->
-<footer class="ftco-footer bg-bottom ftco-no-pt" style="background-color: #FFD700; color: black; background-image: none; font-size: 14px;">
-<br><br>
-	<div class="container">
-		<div class="row mb-1">
-            <!-- About -->
-            <div class="col-md-5 pt-2">
-				<div class="ftco-footer-widget pt-md-2 mb-2">
-					<h2 class="ftco-heading-2" style="color: black; font-size: 18px;">Sri Lanka Tours</h2>
-					<p style="color: black;">Specializing in personalized tours across Sri Lanka, covering historical, nature, and coastal experiences. We are committed to making your island dream a reality.</p>
-					<ul class="ftco-footer-social list-unstyled float-md-left float-lft">
-						<li class="ftco-animate"><a href="#"><span class="fa fa-facebook" style="color: black;"></span></a></li>
-						<li class="ftco-animate"><a href="#"><span class="fa fa-instagram" style="color: black;"></span></a></li>
-					</ul>
-				</div>
-			</div>
 
-            <!-- Quick Links -->
-            <div class="col-md-3 pt-2 border-left">
-				<div class="ftco-footer-widget pt-md-2 mb-2 ml-md-5">
-					<h2 class="ftco-heading-2" style="color: black; font-size: 18px;">Quick Links</h2>
-					<ul class="list-unstyled">
-						<li><a href="javascript:void(0)" class="py-1 d-block footer-link" 
-							   data-title="Online Enquiry" 
-							   data-content="Fill out our online enquiry form to get personalized travel information and assistance.">Online Enquiry</a></li>
-						<li><a href="javascript:void(0)" class="py-1 d-block footer-link" 
-							   data-title="Booking Conditions" 
-							   data-content="Read our booking terms, conditions, and cancellation policies before confirming your tour.">Booking Conditions</a></li>
-						<li><a href="javascript:void(0)" class="py-1 d-block footer-link" 
-							   data-title="Privacy Policy" 
-							   data-content="We respect your privacy. Learn how we collect, use, and protect your personal information.">Privacy Policy</a></li>
-						<li><a href="javascript:void(0)" class="py-1 d-block footer-link" 
-							   data-title="FAQ" 
-							   data-content="Check frequently asked questions to help you plan your tour efficiently.">FAQ</a></li>
-					</ul>
-				</div>
-			</div>
+<footer class="ftco-footer bg-bottom ftco-no-pt" style="background-color: #FFD700; color: black; background-image: none; font-size: 14px;">
+    <br><br>
+    <div class="container">
+        <div class="row mb-1">
             
-            <!-- Contact -->
+            <div class="col-md-5 pt-2">
+                <div class="ftco-footer-widget pt-md-2 mb-2">
+                    <h2 class="ftco-heading-2" style="color: black; font-size: 18px; font-weight: bold;">Ceylon Birdwing Tours</h2>
+                    <p style="color: black;">Specializing in personalized tours across Sri Lanka, covering historical, nature, and coastal experiences. We are committed to making your island dream a reality.</p>
+                    
+                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft social-icons">
+                        <li>
+                            <a href="https://web.facebook.com/people/Ceylon-Birdwing-Tours/61588023495848/" data-tooltip="Facebook" target="_blank">
+                                <img src="https://cdn.simpleicons.org/facebook/ffffff" alt="Facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/ceylonbirdwingtours" data-tooltip="Instagram" target="_blank">
+                                <img src="https://cdn.simpleicons.org/instagram/ffffff" alt="Instagram">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.tiktok.com/@ceylon.birdwing.t" data-tooltip="TikTok" target="_blank">
+                                <img src="https://cdn.simpleicons.org/tiktok/ffffff" alt="TikTok">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.threads.com/@ceylonbirdwingtours" data-tooltip="Threads" target="_blank">
+                                <img src="https://cdn.simpleicons.org/threads/ffffff" alt="Threads">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3 pt-2 border-left">
+                <div class="ftco-footer-widget pt-md-2 mb-2 ml-md-5">
+                    <h2 class="ftco-heading-2" style="color: black; font-size: 18px; font-weight: bold;">Quick Links</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="javascript:void(0)" class="py-1 d-block footer-link" 
+                               data-title="Online Enquiry" 
+                               data-content="Fill out our online enquiry form to get personalized travel information and assistance.">Online Enquiry</a></li>
+                        <li><a href="javascript:void(0)" class="py-1 d-block footer-link" 
+                               data-title="Booking Conditions" 
+                               data-content="Read our booking terms, conditions, and cancellation policies before confirming your tour.">Booking Conditions</a></li>
+                        <li><a href="javascript:void(0)" class="py-1 d-block footer-link" 
+                               data-title="Privacy Policy" 
+                               data-content="We respect your privacy. Learn how we collect, use, and protect your personal information.">Privacy Policy</a></li>
+                        <li><a href="javascript:void(0)" class="py-1 d-block footer-link" 
+                               data-title="FAQ" 
+                               data-content="Check frequently asked questions to help you plan your tour efficiently.">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
             <div class="col-md-4 pt-2 border-left">
-				<div class="ftco-footer-widget pt-md-2 mb-2">
-					<h2 class="ftco-heading-2" style="color: black; font-size: 18px;">Contact Us</h2>
-					<div class="block-23 mb-2">
-						<ul>
-							<li style="color: black;">
-								<a href="tel:+94760578645">
-									<span class="icon fa fa-phone" style="color: black;"></span>
-									<span class="text">+94 76 2055008</span>
-								</a>
-							</li>
-							<li style="color: black;">
-								<a href="mailto:ceylonbirdwingtours@gmail.com">
-									<span class="icon fa fa-paper-plane" style="color: black;"></span>
-									<span class="text">ceylonbirdwingtours@gmail.com</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
+                <div class="ftco-footer-widget pt-md-2 mb-2">
+                    <h2 class="ftco-heading-2" style="color: black; font-size: 18px; font-weight: bold;">Contact Us</h2>
+                    <div class="block-23 mb-2">
+                        <ul class="list-unstyled">
+                            <li style="margin-bottom: 10px;">
+                                <a href="tel:+94762055008" style="color: black; text-decoration: none;">
+                                    <span class="icon fa fa-phone" style="margin-right: 10px;"></span>
+                                    <span class="text">+94 76 2055008</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:ceylonbirdwingtours@gmail.com" style="color: black; text-decoration: none;">
+                                    <span class="icon fa fa-paper-plane" style="margin-right: 10px;"></span>
+                                    <span class="text">ceylonbirdwingtours@gmail.com</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
         <div class="row">
-			<div class="col-md-12 text-center">
-				<p class="py-2 mb-0" style="color: black;">
-					Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Ceylon Birdwing Tours
-				</p>
-			</div>
-		</div>
-	</div>
+            <div class="col-md-12 text-center">
+                <hr style="border-top: 1px solid rgba(0,0,0,0.1);">
+                <p class="py-2 mb-0" style="color: black;">
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Ceylon Birdwing Tours
+                </p>
+            </div>
+        </div>
+    </div>
 </footer>
 
-<!-- FOOTER MODAL -->
 <div id="footerModal" class="custom-modal" role="dialog" aria-hidden="true">
-	<div class="custom-modal-content">
-		<span class="close-modal">&times;</span>
-		<h3 id="footerModalTitle"></h3>
-		<p id="footerModalContent"></p>
-		<button class="btn btn-primary close-btn">Close</button>
-	</div>
+    <div class="custom-modal-content">
+        <span class="close-modal">&times;</span>
+        <h3 id="footerModalTitle" style="font-weight: bold;"></h3>
+        <p id="footerModalContent" style="color: #666;"></p>
+        <button class="btn btn-primary close-btn" style="background: #ff5733; border: none;">Close</button>
+    </div>
 </div>
 
 <style>
-/* Footer modal uses same styles as blog modal */
+/* ----------------- Social Icons Fixed ----------------- */
+.social-icons {
+    padding: 0;
+    margin: 20px 0 0 0;
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-icons a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px;
+    height: 44px;
+    background: #ff5733; 
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    position: relative;
+    text-decoration: none;
+}
+
+.social-icons a img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* ----------------- Tooltip ----------------- */
+.social-icons a::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #333;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.social-icons a:hover {
+    transform: translateY(-4px);
+    background: #e64a19;
+}
+
+.social-icons a:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* ----------------- Other Footer Styles ----------------- */
+.footer-link {
+    color: black !important;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.footer-link:hover {
+    padding-left: 5px;
+    color: #ff5733 !important;
+}
+
+.border-left {
+    border-left: 1px solid rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .border-left { border-left: none; border-top: 1px solid rgba(0,0,0,0.05); margin-top: 20px; }
+}
+
+/* ----------------- Footer Modal ----------------- */
 .custom-modal {
-	position: fixed;
-	inset: 0;
-	background: rgba(0,0,0,0.6);
-	display: none;
-	align-items: center;
-	justify-content: center;
-	z-index: 9999;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
 }
 
 .custom-modal-content {
-	background: #fff;
-	width: 90%;
-	max-width: 500px;
-	max-height: 80vh;
-	overflow-y: auto;
-	border-radius: 15px;
-	padding: 20px;
-	text-align: center;
-	animation: popupFade 0.35s ease;
+    background: #fff;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .close-modal {
-	position: absolute;
-	top: 10px;
-	right: 16px;
-	font-size: 28px;
-	cursor: pointer;
-}
-
-@keyframes popupFade {
-	from { transform: scale(0.85); opacity: 0; }
-	to { transform: scale(1); opacity: 1; }
-}
-
-/* Responsive mobile */
-@media (max-width:576px){
-	.custom-modal-content {
-		width: 95%;
-		padding: 16px;
-	}
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #aaa;
 }
 </style>
 
 <script>
-const footerModal = document.getElementById('footerModal');
-const footerBody = document.body;
+(function() {
+    const footerModal = document.getElementById('footerModal');
+    const footerBody = document.body;
 
-function openFooterModal(link) {
-	document.getElementById('footerModalTitle').textContent = link.dataset.title;
-	document.getElementById('footerModalContent').textContent = link.dataset.content;
-	footerModal.style.display = 'flex';
-	footerBody.style.overflow = 'hidden';
-}
+    function openFooterModal(link) {
+        document.getElementById('footerModalTitle').textContent = link.getAttribute('data-title');
+        document.getElementById('footerModalContent').textContent = link.getAttribute('data-content');
+        footerModal.style.display = 'flex';
+        footerBody.style.overflow = 'hidden';
+    }
 
-function closeFooterModal() {
-	footerModal.style.display = 'none';
-	footerBody.style.overflow = '';
-}
+    function closeFooterModal() {
+        footerModal.style.display = 'none';
+        footerBody.style.overflow = '';
+    }
 
-// attach click event to all footer links
-document.querySelectorAll('.footer-link').forEach(link => {
-	link.addEventListener('click', () => openFooterModal(link));
-});
+    document.querySelectorAll('.footer-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            openFooterModal(link);
+        });
+    });
 
-// close events
-document.querySelector('#footerModal .close-modal').addEventListener('click', closeFooterModal);
-document.querySelector('#footerModal .close-btn').addEventListener('click', closeFooterModal);
+    document.querySelector('.close-modal').addEventListener('click', closeFooterModal);
+    document.querySelector('.close-btn').addEventListener('click', closeFooterModal);
 
-window.addEventListener('click', e => {
-	if(e.target === footerModal) closeFooterModal();
-});
-
-window.addEventListener('keydown', e => {
-	if(e.key === 'Escape') closeFooterModal();
-});
+    window.addEventListener('click', e => {
+        if(e.target === footerModal) closeFooterModal();
+    });
+})();
 </script>
-
-
 <!-- FOOTER code fully end here -->
 
 
