@@ -1,1584 +1,2228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Ceylon Birdwing Tours</title>
-        <link rel="icon" type="image/png" href="images/logo.png"> 
-        <link rel="shortcut icon" href="images/logo.ico">
+  <title>Ceylon Birdwing Tours – Discover Sri Lanka</title>
+  <meta name="description" content="Ceylon Birdwing Tours – Personalized, safe & memorable tours across Sri Lanka. Explore ancient ruins, golden beaches, tea hills & wildlife with expert guides.">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="shortcut icon" href="images/logo.ico">
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Google Fonts: Outfit + Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="css/animate.css">
-	
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-	<link rel="stylesheet" href="css/bootstrap-datepicker.css">
-	<link rel="stylesheet" href="css/jquery.timepicker.css">
+  <!-- Plugins CSS -->
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/style.css">
 
-	
-	<link rel="stylesheet" href="css/flaticon.css">
-	<link rel="stylesheet" href="css/style.css">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-        
+  <style>
+  /* ============================================================
+     DESIGN TOKENS
+  ============================================================ */
+  :root {
+    --gold:        #FFD233;
+    --gold-dark:   #FFA800;
+    --accent:      #ff5733;
+    --dark:        #0f0f0f;
+    --dark-2:      #1a1a1a;
+    --dark-3:      #242424;
+    --text-light:  #f0f0f0;
+    --text-muted:  #aaaaaa;
+    --white:       #ffffff;
+    --glass-bg:    rgba(255,255,255,0.08);
+    --glass-border:rgba(255,255,255,0.15);
+    --radius-sm:   8px;
+    --radius-md:   16px;
+    --radius-lg:   24px;
+    --shadow-sm:   0 4px 15px rgba(0,0,0,0.12);
+    --shadow-md:   0 8px 30px rgba(0,0,0,0.2);
+    --shadow-lg:   0 20px 60px rgba(0,0,0,0.35);
+    --transition:  0.35s cubic-bezier(0.4,0,0.2,1);
+    --font-main:   'Outfit', 'Poppins', sans-serif;
+  }
 
+  /* ============================================================
+     GLOBAL RESET & BASE
+  ============================================================ */
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
 
-
-</head>
-
-<body
-style="
-margin:0;
-min-height:100vh;
-background: 
-  linear-gradient(
-    120deg,
-    rgba(240, 248, 255, 0.7),
-    rgba(255, 255, 255, 0.7),
-    rgba(245, 245, 245, 0.7)
-  ),
-  url('images/destinationBG.jpg') no-repeat center center fixed;
-background-size: cover;
-animation: softGradient 20s ease infinite;
-">
-<style>
-@keyframes softGradient {
-    0%   { background-position: 0% 50%; }
-    50%  { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-</style>
-
-
-
-
-
-<!-- MODERN NAVBAR START -->
-<nav class="modern-navbar">
-    <div class="nav-container">
-        <!-- Logo & Brand -->
-        <a href="index.html" class="nav-logo">
-            <img src="images/logo.png" alt="Logo">
-            <span>Ceylon Birdwing Tours</span>
-        </a>
-
-        <!-- Hamburger for mobile -->
-        <div class="nav-toggle" id="nav-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <!-- Menu -->
-        <ul class="nav-menu" id="nav-menu">
-            <li class="nav-item active"><a href="index.html">Home</a></li>
-            <li class="nav-item"><a href="destination.html">Destination</a></li>
-            <li class="nav-item"><a href="packages.html">Tour Packages</a></li>
-            <li class="nav-item"><a href="CustomTours.html">Custom Tours</a></li>
-            <li class="nav-item"><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-</nav>
-
-<style>
-/* ===== MODERN NAVBAR ===== */
-body {
+  body {
+    font-family: var(--font-main);
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-}
+    background: #f7f5f0;
+    color: #222;
+    overflow-x: hidden;
+  }
 
-.modern-navbar {
+  h1,h2,h3,h4,h5,h6 { font-family: var(--font-main); }
+
+  img { max-width: 100%; }
+
+  /* ============================================================
+     SCROLLBAR STYLE
+  ============================================================ */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #111; }
+  ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
+
+  /* ============================================================
+     NAVBAR
+  ============================================================ */
+  .modern-navbar {
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    background: rgba(255, 210, 51, 0.85); /* bright yellow (ලා පාට) */
-    backdrop-filter: blur(10px);
-    z-index: 999;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: background 0.3s ease;
-}
+    z-index: 1000;
+    padding: 0;
+    transition: all 0.4s ease;
+  }
 
-.modern-navbar.scrolled {
-    background: linear-gradient(135deg, #FFD233, #FFC300);
-}
-
-/* Flex container */
-.nav-container {
+  .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 0.8rem 1rem;
-}
+    padding: 6px 24px;
+    transition: padding var(--transition);
+  }
 
-/* Logo */
-.nav-logo {
+  /* Gold/yellow at top */
+  .modern-navbar.at-top {
+    background: rgba(255, 210, 51, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+  }
+
+  /* Deeper gold on scroll */
+  .modern-navbar.scrolled {
+    background: linear-gradient(135deg, #FFD233, #FFC300);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  }
+  .modern-navbar.scrolled .nav-container {
+    padding: 4px 24px;
+  }
+
+  /* Logo */
+  .nav-logo {
     display: flex;
     align-items: center;
-    flex-shrink: 0;
+    gap: 14px;
     text-decoration: none;
-}
-
-.nav-logo img {
-    height: 70px;
-    width: 70px;
-    margin-right: 12px;
+    flex-shrink: 0;
+  }
+  .nav-logo-img-wrap {
+    position: relative;
+    width: 76px;
+    height: 76px;
+    flex-shrink: 0;
+    transition: transform var(--transition);
+  }
+  .modern-navbar.scrolled .nav-logo-img-wrap { width: 64px; height: 64px; }
+  .nav-logo-img-wrap img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
     object-fit: cover;
-}
+    border: none;
+  }
+  .nav-logo:hover .nav-logo-img-wrap { transform: rotate(-5deg) scale(1.05); }
 
-.nav-logo span {
-    color: #000;
-    font-weight: 700;
-    font-size: 1.4rem;
-    white-space: nowrap;
-}
+  .nav-logo-text { display: flex; flex-direction: column; }
+  .nav-logo-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #111;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+  }
+  .nav-logo-sub {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: rgba(0,0,0,0.55);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
 
-/* Menu */
-.nav-menu {
+  /* Menu */
+  .nav-menu {
     display: flex;
     list-style: none;
-    gap: 1rem;
+    gap: 4px;
     margin: 0;
     padding: 0;
     align-items: center;
-}
+  }
 
-.nav-item a {
-    color: #000;
+  .nav-item a {
+    display: block;
+    color: #111;
     text-decoration: none;
-    padding: 8px 18px;
+    padding: 8px 16px;
     border-radius: 25px;
-    transition: all 0.3s ease;
-    font-weight: 500;
-    background: rgba(255,255,255,0.15);
-}
-
-.nav-item a:hover,
-.nav-item.active a {
-    background: #fff;
-    color: #FFC300; /* slightly darker yellow on hover */
     font-weight: 600;
-}
+    font-size: 0.93rem;
+    letter-spacing: 0.02em;
+    transition: all var(--transition);
+    position: relative;
+    background: rgba(255,255,255,0.15);
+  }
+  .nav-item a::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 16px;
+    right: 16px;
+    height: 2px;
+    background: #111;
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform var(--transition);
+  }
+  .nav-item a:hover,
+  .nav-item.active a {
+    color: #FFC300;
+    background: #fff;
+    font-weight: 700;
+  }
+  .nav-item a:hover::after,
+  .nav-item.active a::after {
+    background: #FFC300;
+    transform: scaleX(1);
+  }
 
-/* Hamburger for mobile */
-.nav-toggle {
+  /* CTA nav button */
+  .nav-cta a {
+    background: #fff !important;
+    color: #111 !important;
+    font-weight: 700 !important;
+    padding: 9px 20px !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  }
+  .nav-cta a::after { display: none !important; }
+  .nav-cta a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2) !important;
+    background: #fff !important;
+    color: #FFC300 !important;
+  }
+
+  /* Hamburger */
+  .nav-toggle {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    gap: 4px;
-}
-
-.nav-toggle span {
+    gap: 5px;
+    padding: 8px;
+    border-radius: var(--radius-sm);
+    transition: background var(--transition);
+  }
+  .nav-toggle:hover { background: rgba(255,255,255,0.1); }
+  .nav-toggle span {
     display: block;
-    height: 3px;
-    width: 28px;
-    background: #000;
+    height: 2px;
+    width: 26px;
+    background: #fff;
     border-radius: 2px;
-    transition: 0.3s;
-}
+    transition: all 0.35s ease;
+    transform-origin: center;
+  }
+  /* Animated X */
+  .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* Mobile responsive */
-@media (max-width: 768px) {
-    .nav-toggle {
-        display: flex;
-    }
+  /* Hamburger bars — dark on gold bg */
+  .nav-toggle span { background: #111; }
+
+  /* Mobile nav */
+  @media (max-width: 900px) {
+    .nav-toggle { display: flex; }
 
     .nav-menu {
-        position: fixed;
-        top: 80px;
-        right: -100%;
-        flex-direction: column;
-        background: linear-gradient(180deg, #FFD233 0%, #FFC300 100%);
-        width: 220px;
-        padding: 20px;
-        border-radius: 10px 0 0 10px;
-        gap: 12px;
-        transition: right 0.3s ease;
-        box-shadow: -4px 0 12px rgba(0,0,0,0.2);
-
-        display: flex;
-        align-items: flex-start;   /* LEFT ALIGN */
-        text-align: left;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 280px;
+      height: 100vh;
+      flex-direction: column;
+      background: linear-gradient(180deg, #FFD233 0%, #FFC300 100%);
+      padding: 100px 20px 30px;
+      gap: 6px;
+      transition: right 0.4s cubic-bezier(0.4,0,0.2,1);
+      box-shadow: -6px 0 30px rgba(0,0,0,0.25);
+      align-items: flex-start;
+      overflow-y: auto;
     }
+    .nav-menu.show { right: 0; }
 
-    .nav-menu.show {
-        right: 0;
-    }
-
-    .nav-item {
-        width: 100%;   /* full width of menu */
-    }
-
+    .nav-item { width: 100%; }
     .nav-item a {
-        display: block;
-        width: 100%;   /* make link fill the container */
-        padding: 10px 15px;
-        border-radius: 10px;
-        background: rgba(255,255,255,0.15);
-        color: #000;
-        text-align: left; /* LEFT ALIGN */
+      border-radius: var(--radius-sm);
+      padding: 12px 18px;
+      font-size: 1rem;
+      color: #111;
+      background: rgba(255,255,255,0.2);
     }
-
-    .nav-item a:hover,
-    .nav-item.active a {
-        background: #fff;
-        color: #FFC300;
-        font-weight: 600;
+    .nav-item a::after { display: none; }
+    .nav-item a:hover, .nav-item.active a {
+      background: #fff;
+      color: #FFC300;
+      padding-left: 24px;
     }
-}
+    .nav-cta { width: 100%; margin-top: 10px; }
+    .nav-cta a { text-align: center !important; justify-content: center; border-radius: var(--radius-sm) !important; }
 
-
-/* Extra wrap for very small screens */
-@media (max-width: 480px) {
-    .nav-logo span {
-        font-size: 1.2rem;
-        line-height: 1.2;
+    /* Nav overlay */
+    .nav-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 999;
     }
-}
-</style>
+    .nav-overlay.show { display: block; }
+  }
 
-<script>
-// Hamburger toggle
-const toggle = document.getElementById('nav-toggle');
-const menu = document.getElementById('nav-menu');
+  @media (max-width: 480px) {
+    .nav-logo-title { font-size: 0.95rem; }
+    .nav-logo-sub { display: none; }
+    .nav-logo-img-wrap { width: 58px; height: 58px; }
+    .nav-container { padding: 6px 14px; }
+  }
 
-toggle.addEventListener('click', () => {
-    menu.classList.toggle('show');
-});
-
-// Navbar background change on scroll
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.modern-navbar');
-    if(window.scrollY > 50){
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
-</script>
-
-
-<!-- MODERN NAVBAR END -->
-
-	
-
-
-<!-- ================= HERO SECTION START ================= -->
-<div class="hero-wrap js-fullheight" id="hero-slider">
-    <div class="overlay"></div>
-
-    <!-- Slide Layers (3 images) -->
-    <div class="hero-slide-layer" style="background-image: url('images/bg_5.jpg'); opacity: 1;"></div>
-    <div class="hero-slide-layer" style="background-image: url('images/bg_2.jpg'); opacity: 0;"></div>
-    <div class="hero-slide-layer" style="background-image: url('images/bg_3.jpg'); opacity: 0;"></div>
-
-    <div class="container">
-        <div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
-            <div class="col-md-7 ftco-animate">
-
-                <span class="subheading">Welcome to Ceylon Birdwing Tours</span>
-
-                <!-- REAL-TIME TYPING TEXT -->
-                <h1 class="mb-4">
-                    <span id="typing-text"></span>
-                </h1>
-
-                <p class="caps fade-text">
-                    Travel to any corner of Sri Lanka, without going around in circles
-                </p>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<style>
-/* Typing cursor */
-#typing-text::after {
-    content: "|";
-    margin-left: 5px;
-    animation: blink 1s infinite;
-}
-
-/* Fade-in text */
-.fade-text {
-    opacity: 0;
-    transform: translateY(10px);
-    animation: fadeUp 1s ease forwards;
-    animation-delay: 3.2s;
-}
-
-/* Cursor blink */
-@keyframes blink {
-    0%, 50%, 100% { opacity: 1; }
-    25%, 75% { opacity: 0; }
-}
-
-/* Fade up */
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Hero Slider Base */
-#hero-slider {
+  /* ============================================================
+     HERO
+  ============================================================ */
+  #hero-slider {
     position: relative;
     height: 100vh;
+    min-height: 580px;
     overflow: hidden;
-}
+    display: flex;
+    align-items: center;
+  }
 
-/* Slide layers */
-.hero-slide-layer {
+  /* Slide layers with Ken Burns */
+  .hero-slide-layer {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background-size: cover;
     background-position: center;
+    opacity: 0;
     transition: opacity 1.5s ease-in-out;
-}
+    animation: kenBurns 20s ease-in-out infinite alternate;
+    will-change: transform, opacity;
+  }
+  .hero-slide-layer.active { opacity: 1; }
 
-/* Overlay above slides */
-#hero-slider .overlay {
+  @keyframes kenBurns {
+    0%   { transform: scale(1)    translateX(0)    translateY(0); }
+    50%  { transform: scale(1.08) translateX(-1%)  translateY(-1%); }
+    100% { transform: scale(1.12) translateX(1%)   translateY(0.5%); }
+  }
+
+  /* Multi-layer overlay */
+  #hero-slider .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.35);
+    inset: 0;
+    background:
+      linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 60%, transparent 100%),
+      linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%);
     z-index: 1;
-}
+  }
 
-/* Text content above everything */
-#hero-slider .container {
+  /* Content */
+  #hero-slider .container {
     position: relative;
     z-index: 2;
-}
-</style>
+  }
 
-<script>
-    // ------------------ Hero Crossfade Slider (3 images) ------------------
-    const layers = document.querySelectorAll('#hero-slider .hero-slide-layer');
-    let currentIndex = 0;
-
-    setInterval(() => {
-        const nextIndex = (currentIndex + 1) % layers.length;
-        layers[currentIndex].style.opacity = 0;
-        layers[nextIndex].style.opacity = 1;
-        currentIndex = nextIndex;
-    }, 5000); // Change every 5 seconds
-
-    // ------------------ Typing Text Example ------------------
-    const typingText = "Discover Your Favorite Place with Us";
-    const typingElement = document.getElementById("typing-text");
-    let index = 0;
-
-    function typeText() {
-        if (index <= typingText.length) {
-            typingElement.textContent = typingText.substring(0, index);
-            index++;
-            setTimeout(typeText, 100);
-        }
-    }
-
-    window.onload = () => {
-        typeText();
-    };
-</script>
-<!-- ================= HERO SECTION END ================= -->
-
-
-
-
-
-
-
-<!-- START: Mouse Hover Animation Code -->
-<section class="ftco-section services-section">
-    <div class="container">
-        <div class="row d-flex">
-            <div class="col-md-6 order-md-last heading-section pl-md-5 ftco-animate d-flex align-items-center">
-                <div class="w-100">
-                    <span class="subheading">Why Choose Ceylon Birdwing Tours?</span>
-                    <h2 class="mb-4">Explore Sri Lanka Like Never Before</h2>
-                    <p>At Ceylon Birdwing Tours, we believe travel should be personal, safe, and truly immersive. We craft every adventure to showcase the very best of Sri Lanka, from the ancient ruins of Sigiriya to the golden beaches of Mirissa.</p>
-                    <p>Our commitment is to deliver unforgettable, hassle-free journeys. We pair you with trusted local experts and dedicated private drivers, ensuring every moment is comfortable and focused purely on your enjoyment of the island.
-                    Choose the experts who live and breathe Sri Lanka.</p>
-
-                    <!-- Button hover animation -->
-                    <p>
-                        <a href="destination.html"
-                           class="btn btn-primary py-3 px-4"
-                           style="
-                           transition: all 0.3s ease;
-                           "
-                           onmouseover="this.style.transform='translateY(-3px) scale(1.03)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.2)';"
-                           onmouseout="this.style.transform='none'; this.style.boxShadow='none';">
-                           Find Your Next Destination
-                        </a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="row">
-
-                    <!-- Card 1 -->
-                    <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                        <div class="services services-1 color-1 d-block img"
-                             style="
-                             background-image: url(images/services-1.jpg);
-                             transition: all 0.3s ease;
-                             cursor: pointer;
-                             "
-                             onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.25)';"
-                             onmouseout="this.style.transform='none'; this.style.boxShadow='none';">
-                            <div class="icon d-flex align-items-center justify-content-center">
-                                <span class="flaticon-paragliding"></span>
-                            </div>
-                            <div class="media-body">
-                                <h3 class="heading mb-3">Fully Customizable Tours</h3>
-                                <p>Every trip is yours to craft—choose destinations, set your pace, and make each moment unforgettable.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                        <div class="services services-1 color-2 d-block img"
-                             style="
-                             background-image: url(images/services-2.jpg);
-                             transition: all 0.3s ease;
-                             cursor: pointer;
-                             "
-                             onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.25)';"
-                             onmouseout="this.style.transform='none'; this.style.boxShadow='none';">
-                            <div class="icon d-flex align-items-center justify-content-center">
-                                <span class="flaticon-route"></span>
-                            </div>
-                            <div class="media-body">
-                                <h3 class="heading mb-3">Safe & Reliable Travel</h3>
-                                <p>Journey with assurance – trusted, professional drivers delivering comfort, safety, and peace of mind.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                        <div class="services services-1 color-3 d-block img"
-                             style="
-                             background-image: url(images/services-3.jpg);
-                             transition: all 0.3s ease;
-                             cursor: pointer;
-                             "
-                             onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.25)';"
-                             onmouseout="this.style.transform='none'; this.style.boxShadow='none';">
-                            <div class="icon d-flex align-items-center justify-content-center">
-                                <span class="flaticon-tour-guide"></span>
-                            </div>
-                            <div class="media-body">
-                                <h3 class="heading mb-3">Transparent Pricing</h3>
-                                <p>What you see is what you pay — honest, simple, and worry-free pricing with no hidden charges.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 4 -->
-                    <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                        <div class="services services-1 color-4 d-block img"
-                             style="
-                             background-image: url(images/services-4.jpg);
-                             transition: all 0.3s ease;
-                             cursor: pointer;
-                             "
-                             onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.25)';"
-                             onmouseout="this.style.transform='none'; this.style.boxShadow='none';">
-                            <div class="icon d-flex align-items-center justify-content-center">
-                                <span class="flaticon-map"></span>
-                            </div>
-                            <div class="media-body">
-                                <h3 class="heading mb-3">24/7 Expert Support</h3>
-                                <p>Relax and enjoy your journey – our dedicated team is available around the clock for every need.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- END: Mouse Hover Animation Code -->
-
-
-
-
-
-                 <!-- Removed
-		<section class="ftco-section img ftco-select-destination" style="background-image: url(images/bg_3.jpg);">
-			<div class="container">
-				<div class="row justify-content-center pb-4">
-					<div class="col-md-12 heading-section text-center ftco-animate">
-						<span class="subheading">Pacific Provide Places</span>
-						<h2 class="mb-4">Select Your Destination</h2>
-					</div>
-				</div>
-			</div>
-			<div class="container container-2">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="carousel-destination owl-carousel ftco-animate">
-							<div class="item">
-								<div class="project-destination">
-									<a href="#" class="img" style="background-image: url(images/place-1.jpg);">
-										<div class="text">
-											<h3>Philippines</h3>
-											<span>8 Tours</span>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="item">
-								<div class="project-destination">
-									<a href="#" class="img" style="background-image: url(images/place-2.jpg);">
-										<div class="text">
-											<h3>Canada</h3>
-											<span>2 Tours</span>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="item">
-								<div class="project-destination">
-									<a href="#" class="img" style="background-image: url(images/place-3.jpg);">
-										<div class="text">
-											<h3>Thailand</h3>
-											<span>5 Tours</span>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="item">
-								<div class="project-destination">
-									<a href="#" class="img" style="background-image: url(images/place-4.jpg);">
-										<div class="text">
-											<h3>Autralia</h3>
-											<span>5 Tours</span>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="item">
-								<div class="project-destination">
-									<a href="#" class="img" style="background-image: url(images/place-5.jpg);">
-										<div class="text">
-											<h3>Greece</h3>
-											<span>7 Tours</span>
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-                -->
-
-
-
-<!-- ================= START: Featured Destinations Section ================= -->
-<section class="ftco-section">
-    <div class="container">
-        <div class="row justify-content-center pb-4">
-            <div class="col-md-12 heading-section text-center ftco-animate">
-                <span class="subheading">Explore the Island Nation</span>
-                <h2 class="mb-4">Featured Sri Lanka Destinations</h2>
-            </div>
-        </div>
-
-        <div class="row">
-
-            <!-- Sigiriya -->
-            <div class="col-md-4 ftco-animate">
-                <div class="project-wrap" style="transition: all 0.3s ease; cursor: pointer;">
-                    <a href="destination-sigiriya.html"
-                       class="img"
-                       style="background-image:url(images/destination-sigiriya.jpeg); height:250px;"
-                       onclick="event.preventDefault(); openPopup(
-                       'Sigiriya Rock Fortress',
-                       'Sigiriya is a UNESCO World Heritage Site famous for its ancient rock fortress, frescoes, royal gardens, and breathtaking views.',
-                       'images/destination-sigiriya.jpeg'
-                       );">
-                    </a>
-                    <div class="text p-4">
-                        <h3><a href="destination.html">Sigiriya Rock Fortress</a></h3>
-                        <p class="location"><span class="fa fa-map-marker"></span> Sigiriya, Matale District, Sri Lanka</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Kandy -->
-            <div class="col-md-4 ftco-animate">
-                <div class="project-wrap" style="transition: all 0.3s ease; cursor: pointer;">
-                    <a href="destination-kandy.html"
-                       class="img"
-                       style="background-image:url(images/destination-kandy.jpeg); height:250px;"
-                       onclick="event.preventDefault(); openPopup(
-                       'Sacred Kandy & Tea Plantations',
-                       'Kandy is the cultural heart of Sri Lanka, home to the Sacred Tooth Relic Temple and surrounded by scenic tea estates.',
-                       'images/destination-kandy.jpeg'
-                       );">
-                    </a>
-                    <div class="text p-4">
-                        <h3><a href="destination.html">Sacred Kandy & Tea Plantations</a></h3>
-                        <p class="location"><span class="fa fa-map-marker"></span> Kandy, Central Province, Sri Lanka</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mirissa -->
-            <div class="col-md-4 ftco-animate">
-                <div class="project-wrap" style="transition: all 0.3s ease; cursor: pointer;">
-                    <a href="destination-mirissa.html"
-                       class="img"
-                       style="background-image:url(images/destination-mirissa.jpg); height:250px;"
-                       onclick="event.preventDefault(); openPopup(
-                       'Mirissa & Southern Coast',
-                       'Mirissa is known for its golden beaches, whale watching tours, and relaxed tropical atmosphere.',
-                       'images/destination-mirissa.jpg'
-                       );">
-                    </a>
-                    <div class="text p-4">
-                        <h3><a href="destination.html">Mirissa & Southern Coast</a></h3>
-                        <p class="location"><span class="fa fa-map-marker"></span> Mirissa, Southern Province, Sri Lanka</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Galle -->
-            <div class="col-md-4 ftco-animate">
-                <div class="project-wrap" style="transition: all 0.3s ease; cursor: pointer;">
-                    <a href="destination-galle.html"
-                       class="img"
-                       style="background-image:url(images/destination-galle.jpeg); height:250px;"
-                       onclick="event.preventDefault(); openPopup(
-                       'Historic Galle Fort',
-                       'Galle Fort is a historic coastal fortress featuring colonial architecture, ocean views, and charming streets.',
-                       'images/destination-galle.jpeg'
-                       );">
-                    </a>
-                    <div class="text p-4">
-                        <h3><a href="destination.html">Historic Galle Fort</a></h3>
-                        <p class="location"><span class="fa fa-map-marker"></span> Galle, Southern Province, Sri Lanka</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Yala -->
-            <div class="col-md-4 ftco-animate">
-                <div class="project-wrap" style="transition: all 0.3s ease; cursor: pointer;">
-                    <a href="destination-yala.html"
-                       class="img"
-                       style="background-image:url(images/destination-yala.jpg); height:250px;"
-                       onclick="event.preventDefault(); openPopup(
-                       'Yala National Park Safari',
-                       'Yala National Park offers exciting wildlife safaris with elephants, leopards, and diverse ecosystems.',
-                       'images/destination-yala.jpg'
-                       );">
-                    </a>
-                    <div class="text p-4">
-                        <h3><a href="destination.html">Yala National Park Safari</a></h3>
-                        <p class="location"><span class="fa fa-map-marker"></span> Yala, Southern Province, Sri Lanka</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Nuwara Eliya -->
-            <div class="col-md-4 ftco-animate">
-                <div class="project-wrap" style="transition: all 0.3s ease; cursor: pointer;">
-                    <a href="destination-nuwara-eliya.html"
-                       class="img"
-                       style="background-image:url(images/destination-nuwara-eliya.jpg); height:250px;"
-                       onclick="event.preventDefault(); openPopup(
-                       'Nuwara Eliya Hill Stations',
-                       'Nuwara Eliya is famous for its cool climate, misty hills, tea gardens, and colonial-era charm.',
-                       'images/destination-nuwara-eliya.jpg'
-                       );">
-                    </a>
-                    <div class="text p-4">
-                        <h3><a href="destination.html">Nuwara Eliya Hill Stations</a></h3>
-                        <p class="location"><span class="fa fa-map-marker"></span> Nuwara Eliya, Central Province, Sri Lanka</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<style>
-.project-wrap:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-</style>
-<!-- ================= END: Featured Destinations Section ================= -->
-
-
-<!-- ================= START: Destination Popup UI ================= -->
-<div id="destinationPopup"
-     style="
-     position:fixed;
-     top:0; left:0;
-     width:100%; height:100%;
-     background:rgba(0,0,0,0.7);
-     display:none;
-     align-items:center;
-     justify-content:center;
-     z-index:9999;
-     padding:15px;
-     ">
-
-    <div id="popupBox"
-         style="
-         background:#fff;
-         max-width:500px;
-         width:100%;
-         border-radius:14px;
-         overflow:hidden;
-         transform:scale(0.8);
-         opacity:0;
-         transition:all 0.3s ease;
-         ">
-
-        <div id="popupImage"
-             style="height:220px; background-size:cover; background-position:center;"></div>
-
-        <div style="padding:20px; position:relative; text-align:center;">
-            <span onclick="closePopup()"
-                  style="position:absolute; top:10px; right:15px; font-size:24px; cursor:pointer;">&times;</span>
-
-            <h3 id="popupTitle"></h3>
-            <p id="popupText" style="font-size:14px; line-height:1.6; margin-bottom:20px;"></p>
-
-            <button onclick="closePopup()"
-                    style="
-                    background:#f8b500;
-                    color:#000;
-                    border:none;
-                    padding:10px 30px;
-                    border-radius:30px;
-                    font-size:14px;
-                    cursor:pointer;
-                    transition:all 0.3s ease;
-                    "
-                    onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)';"
-                    onmouseout="this.style.transform='none'; this.style.boxShadow='none';">
-                Close
-            </button>
-        </div>
-    </div>
-</div>
-
-<script>
-function openPopup(title, text, image) {
-    popupTitle.innerText = title;
-    popupText.innerText = text;
-    popupImage.style.backgroundImage = "url(" + image + ")";
-    destinationPopup.style.display = "flex";
-    setTimeout(() => {
-        popupBox.style.transform = "scale(1)";
-        popupBox.style.opacity = "1";
-    }, 50);
-}
-
-function closePopup() {
-    popupBox.style.transform = "scale(0.8)";
-    popupBox.style.opacity = "0";
-    setTimeout(() => {
-        destinationPopup.style.display = "none";
-    }, 300);
-}
-
-destinationPopup.addEventListener("click", function(e) {
-    if (e.target === this) closePopup();
-});
-</script>
-<!-- ================= END: Destination Popup UI ================= -->
-
-
-
-<!-- About us code fully start here -->
-
-<section class="ftco-section ftco-about ftco-no-pt img">
-	<div class="container">
-		<div class="row d-flex">
-			<div class="col-md-12 about-intro">
-				<div class="row">
-
-					<div class="col-md-6 d-flex align-items-stretch">
-						<div class="img about-img d-flex w-100 align-items-center justify-content-center"
-							 style="background-image:url(images/about-1.jpg);">
-						</div>
-					</div>
-
-					<div class="col-md-6 pl-md-5 py-5">
-						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate about-content">
-								<span class="subheading">About Us</span>
-								<h2 class="mb-4">Make Your Tour Memorable and Safe With Us</h2>
-								<p>
-									Far far away, behind the word mountains, far from the countries
-									Vokalia and Consonantia, there live the blind texts.
-								</p>
-								<p>
-									<a href="destination.html" class="btn btn-primary about-btn">
-										Book Your Destination
-									</a>
-								</p>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<style>
-.about-img {
-	transition: transform 0.6s ease;
-	background-size: cover;
-	background-position: center;
-}
-
-.about-img:hover {
-	transform: scale(1.05);
-}
-
-.about-content {
-	transition: transform 0.4s ease;
-}
-
-.about-content:hover {
-	transform: translateY(-6px);
-}
-
-.about-btn {
-	transition: all 0.3s ease;
-}
-
-.about-btn:hover {
-	transform: translateY(-3px);
-	box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-.about-img,
-.about-content,
-.about-btn {
-	will-change: transform;
-}
-</style>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-    const images = [
-        "images/about-1.jpg",
-        "images/about-2.jpg",
-        "images/about-3.jpg"
-    ];
-
-    const aboutImage = document.querySelector(".about-img");
-
-    function changeImage() {
-        const randomIndex = Math.floor(Math.random() * images.length);
-        aboutImage.style.backgroundImage = "url('" + images[randomIndex] + "')";
-    }
-
-    setInterval(changeImage, 3000);
-
-});
-</script>
-
-<!-- About us code fully end here -->
-
-
-
-<!-- TripAdvisor start -->
-<section class="ftco-section testimony-section bg-bottom" style="background-image: url(images/bg_1.png);">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row justify-content-center pb-4">
-            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-                <span class="subheading">Trusted Reviews</span>
-                <h2 class="mb-4">See Our Tourist Feedback</h2>
-            </div>
-        </div>
-        
-        <div class="row ftco-animate justify-content-center">
-            <div class="col-md-8 text-center">
-                <p class="mb-4 text-white">We are proud of our excellent track record! View hundreds of verified reviews and ratings from our guests on TripAdvisor.</p>
-                
-                <a href="https://www.tripadvisor.com/Profile/ceylonbirdwingtours" target="_blank" rel="noopener noreferrer"
-                   class="btn btn-warning py-3 px-5 d-inline-flex align-items-center justify-content-center">
-                    
-                    <img src="images/tripadvisor_logo.png" alt="TripAdvisor Logo" style="height: 45px; margin-right: 15px;">
-                    
-                    <span style="font-size: 18px; font-weight: bold;">VIEW OUR TRIPADVISOR PROFILE</span>
-                </a>
-                
-                <p class="mt-3 text-white-50"><small>Click above to see reviews on the official TripAdvisor website.</small></p>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- TripAdvisor end -->
-
-
-
-<!-- Post code fully start here -->
-<section class="ftco-section">
-	<div class="container">
-		<div class="row justify-content-center pb-4">
-			<div class="col-md-12 heading-section text-center ftco-animate">
-				<span class="subheading">Our Blog</span>
-				<h2 class="mb-4">Recent Post</h2>
-			</div>
-		</div>
-
-		<div class="row d-flex justify-content-center">
-
-			<!-- BLOG ITEM 1 -->
-			<div class="col-md-4 col-sm-8 mb-4 d-flex">
-				<div class="blog-entry flex-fill d-flex flex-column">
-					<a href="javascript:void(0)"
-					   class="block-20 read-more-btn mb-3"
-					   style="background-image:url('images/image_1.jpg');"
-					   data-title="Most Popular Place In Sri Lanka"
-					   data-image="images/image_1.jpg"
-					   data-content="Sri Lanka is famous for its beautiful beaches, ancient cities, tea plantations, and wildlife. This destination is highly popular among local and foreign tourists.">
-					</a>
-
-					<div class="text flex-fill d-flex flex-column justify-content-between">
-						<h3 class="heading mb-3">Most Popular Place In Sri Lanka</h3>
-						<p>
-							<a href="javascript:void(0)"
-							   class="btn btn-primary btn-gold-animated read-more-btn"
-							   data-title="Most Popular Place In Sri Lanka"
-							   data-image="images/image_1.jpg"
-							   data-content="Sri Lanka is famous for its beautiful beaches, ancient cities, tea plantations, and wildlife. This destination is highly popular among local and foreign tourists.">
-							   Read more
-							</a>
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<!-- BLOG ITEM 2 -->
-			<div class="col-md-4 col-sm-8 mb-4 d-flex">
-				<div class="blog-entry flex-fill d-flex flex-column">
-					<a href="javascript:void(0)"
-					   class="block-20 read-more-btn mb-3"
-					   style="background-image:url('images/image_2.jpg');"
-					   data-title="Beautiful Beach Destinations"
-					   data-image="images/image_2.jpg"
-					   data-content="Sri Lanka has some of the most beautiful beaches including Mirissa, Unawatuna, and Arugam Bay. Perfect for relaxing and surfing.">
-					</a>
-
-					<div class="text flex-fill d-flex flex-column justify-content-between">
-						<h3 class="heading mb-3">Beautiful Beach Destinations</h3>
-						<p>
-							<a href="javascript:void(0)"
-							   class="btn btn-primary btn-gold-animated read-more-btn"
-							   data-title="Beautiful Beach Destinations"
-							   data-image="images/image_2.jpg"
-							   data-content="Sri Lanka has some of the most beautiful beaches including Mirissa, Unawatuna, and Arugam Bay. Perfect for relaxing and surfing.">
-							   Read more
-							</a>
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<!-- BLOG ITEM 3 -->
-			<div class="col-md-4 col-sm-8 mb-4 d-flex">
-				<div class="blog-entry flex-fill d-flex flex-column">
-					<a href="javascript:void(0)"
-					   class="block-20 read-more-btn mb-3"
-					   style="background-image:url('images/image_3.jpg');"
-					   data-title="Wildlife & Nature Tours"
-					   data-image="images/image_3.jpg"
-					   data-content="Experience wildlife safaris, national parks, and breathtaking mountain views. Sri Lanka is home to elephants, leopards, and rare bird species.">
-					</a>
-
-					<div class="text flex-fill d-flex flex-column justify-content-between">
-						<h3 class="heading mb-3">Wildlife & Nature Tours</h3>
-						<p>
-							<a href="javascript:void(0)"
-							   class="btn btn-primary btn-gold-animated read-more-btn"
-							   data-title="Wildlife & Nature Tours"
-							   data-image="images/image_3.jpg"
-							   data-content="Experience wildlife safaris, national parks, and breathtaking mountain views. Sri Lanka is home to elephants, leopards, and rare bird species.">
-							   Read more
-							</a>
-						</p>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</section>
-
-<!-- MODAL -->
-<div id="blogModal" class="custom-modal" role="dialog" aria-hidden="true">
-	<div class="custom-modal-content">
-		<span class="close-modal">&times;</span>
-		<img id="modalImage" alt="">
-		<h3 id="modalTitle"></h3>
-		<p id="modalContent"></p>
-		<button class="btn btn-primary close-btn">Close</button>
-	</div>
-</div>
-
-<style>
-/* ---------- BLOG CARD ---------- */
-.blog-entry {
-	background: #fff;
-	border-radius: 12px;
-	box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-	padding: 12px;
-	transition: all 0.35s ease;
-}
-
-/* Card hover */
-.blog-entry:hover {
-	transform: translateY(-8px);
-	box-shadow: 0 14px 28px rgba(0,0,0,0.18);
-}
-
-/* Image zoom */
-.block-20 {
-	height: 180px;
-	background-size: cover;
-	background-position: center;
-	border-radius: 12px;
-	transition: transform 0.4s ease;
-}
-
-.blog-entry:hover .block-20 {
-	transform: scale(1.05);
-}
-
-/* Button hover */
-.btn-gold-animated {
-	transition: all 0.3s ease;
-}
-
-.btn-gold-animated:hover {
-	transform: translateY(-2px);
-	box-shadow: 0 8px 20px rgba(248,181,0,0.5);
-}
-
-/* ---------- MODAL ---------- */
-.custom-modal {
-	position: fixed;
-	inset: 0;
-	background: rgba(0,0,0,0.6);
-	display: none;
-	align-items: center;
-	justify-content: center;
-	z-index: 9999;
-}
-
-.custom-modal-content {
-	background: #fff;
-	width: 90%;
-	max-width: 700px;
-	border-radius: 16px;
-	padding: 22px;
-	text-align: center;
-	animation: popupFade 0.35s ease;
-}
-
-.custom-modal-content img {
-	width: 100%;
-	max-height: 300px;
-	object-fit: cover;
-	border-radius: 12px;
-	margin-bottom: 15px;
-}
-
-.close-modal {
-	position: absolute;
-	top: 10px;
-	right: 16px;
-	font-size: 28px;
-	cursor: pointer;
-}
-
-/* ---------- ANIMATIONS ---------- */
-@keyframes popupFade {
-	from { transform: scale(0.85); opacity: 0; }
-	to { transform: scale(1); opacity: 1; }
-}
-</style>
-
-<script>
-const modal = document.getElementById('blogModal');
-const body = document.body;
-
-function openModal(btn) {
-	modal.style.display = 'flex';
-	document.getElementById('modalTitle').textContent = btn.dataset.title;
-	document.getElementById('modalImage').src = btn.dataset.image;
-	document.getElementById('modalContent').textContent = btn.dataset.content;
-	body.style.overflow = 'hidden';
-}
-
-function closeModal() {
-	modal.style.display = 'none';
-	body.style.overflow = '';
-}
-
-document.querySelectorAll('.read-more-btn').forEach(btn => {
-	btn.addEventListener('click', () => openModal(btn));
-});
-
-document.querySelector('.close-modal').addEventListener('click', closeModal);
-document.querySelector('.close-btn').addEventListener('click', closeModal);
-
-window.addEventListener('click', e => {
-	if (e.target === modal) closeModal();
-});
-</script>
-<!-- Post code fully end here -->
-
-
-
-
-<!-- Whatsapp code start -->
-
-<section class="ftco-intro ftco-section ftco-no-pt">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12 text-center">
-                <div class="whatsapp-hero" style="background-image: url('images/bg_2.jpg');">
-                    <div class="overlay"></div>
-                    <div class="content">
-                        <h2>Have Questions? Contact Us Directly!</h2>
-                        <p>Get instant answers and personalized quotes for your dream Sri Lanka trip via WhatsApp.</p>
-                        <a href="https://wa.me/94762055008?text=Hello,%20I%20am%20interested%20in%20a%20tour%20package%20to%20Sri%20Lanka." 
-                           target="_blank" 
-                           class="whatsapp-btn">
-                            <img src="images/whatsapp_logo.png" alt="WhatsApp Logo">
-                            INQUIRE ON WHATSAPP
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<style>
-/* Hero WhatsApp Section */
-.whatsapp-hero {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    border-radius: 25px;
-    overflow: hidden;
-    padding: 80px 20px;
-    transition: transform 0.5s ease;
-    cursor: pointer;
-}
-.whatsapp-hero:hover {
-    transform: scale(1.02);
-}
-
-/* Overlay */
-.whatsapp-hero .overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.45);
-    z-index: 1;
-    transition: background 0.5s ease;
-}
-.whatsapp-hero:hover .overlay {
-    background: rgba(0,0,0,0.25);
-}
-
-/* Content */
-.whatsapp-hero .content {
-    position: relative;
-    z-index: 2;
-    color: #fff;
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto;
-    animation: fadeUp 1s ease forwards;
-}
-.whatsapp-hero h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-    animation: slideInLeft 1s ease forwards;
-}
-.whatsapp-hero p {
-    font-size: 16px;
-    margin-bottom: 30px;
-    animation: slideInRight 1s ease forwards;
-}
-
-/* WhatsApp Button */
-.whatsapp-btn {
+  /* Badge */
+  .hero-badge {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    padding: 15px 30px;
-    background: linear-gradient(45deg, #25D366, #1ebe57);
+    gap: 8px;
+    background: rgba(255,210,51,0.15);
+    border: 1px solid rgba(255,210,51,0.4);
+    backdrop-filter: blur(8px);
+    color: var(--gold);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 7px 18px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    animation: fadeSlideDown 1s ease forwards;
+  }
+  .hero-badge .dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--gold);
+    animation: pulseDot 2s ease infinite;
+  }
+  @keyframes pulseDot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.4); }
+  }
+
+  /* Hero heading */
+  .hero-h1 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 800;
     color: #fff;
-    font-weight: bold;
-    font-size: 16px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    animation: fadeSlideUp 1s ease 0.3s forwards;
+    opacity: 0;
+  }
+  .hero-h1 span {
+    color: var(--gold);
+  }
+
+  /* Typing cursor */
+  #typing-text::after {
+    content: "|";
+    margin-left: 3px;
+    color: var(--gold);
+    animation: blink 1s infinite;
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  /* Hero paragraph */
+  .hero-sub {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: rgba(255,255,255,0.8);
+    max-width: 480px;
+    line-height: 1.7;
+    margin-bottom: 36px;
+    opacity: 0;
+    animation: fadeSlideUp 1s ease 3.4s forwards;
+  }
+
+  /* Hero buttons */
+  .hero-btns {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeSlideUp 1s ease 3.6s forwards;
+  }
+  .btn-hero-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: #111;
+    font-weight: 700;
+    font-size: 0.95rem;
     border-radius: 50px;
     text-decoration: none;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-}
-.whatsapp-btn img {
-    height: 25px;
-}
-.whatsapp-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
-    background: linear-gradient(45deg, #1ebe57, #25D366);
-}
-
-/* Animations */
-@keyframes fadeUp {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-@keyframes slideInLeft {
-    0% { opacity: 0; transform: translateX(-50px); }
-    100% { opacity: 1; transform: translateX(0); }
-}
-@keyframes slideInRight {
-    0% { opacity: 0; transform: translateX(50px); }
-    100% { opacity: 1; transform: translateX(0); }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .whatsapp-hero {
-        padding: 60px 15px;
-    }
-    .whatsapp-hero h2 {
-        font-size: 26px;
-    }
-    .whatsapp-btn {
-        font-size: 14px;
-        padding: 12px 25px;
-        gap: 8px;
-    }
-}
-</style>
-
-
-<!-- Whatsapp code end -->
-
-
-
-
-
-
-
-<!-- Footer start -->
-
-<footer class="ftco-footer bg-bottom ftco-no-pt" style="background-color: #FFD700; color: black; background-image: none; font-size: 14px;">
-    <br><br>
-    <div class="container">
-        <div class="row mb-1">
-            
-            <div class="col-md-5 pt-2">
-                <div class="ftco-footer-widget pt-md-2 mb-2">
-                    <h2 class="ftco-heading-2" style="color: black; font-size: 18px; font-weight: bold;">Ceylon Birdwing Tours</h2>
-                    <p style="color: black;">Specializing in personalized tours across Sri Lanka, covering historical, nature, and coastal experiences. We are committed to making your island dream a reality.</p>
-                    
-                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft social-icons">
-                        <li>
-                            <a href="https://web.facebook.com/people/Ceylon-Birdwing-Tours/61588023495848/" data-tooltip="Facebook" target="_blank">
-                                <img src="https://cdn.simpleicons.org/facebook/ffffff" alt="Facebook">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/ceylonbirdwingtours" data-tooltip="Instagram" target="_blank">
-                                <img src="https://cdn.simpleicons.org/instagram/ffffff" alt="Instagram">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.tiktok.com/@ceylon.birdwing.t" data-tooltip="TikTok" target="_blank">
-                                <img src="https://cdn.simpleicons.org/tiktok/ffffff" alt="TikTok">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.threads.com/@ceylonbirdwingtours" data-tooltip="Threads" target="_blank">
-                                <img src="https://cdn.simpleicons.org/threads/ffffff" alt="Threads">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-3 pt-2 border-left">
-                <div class="ftco-footer-widget pt-md-2 mb-2 ml-md-5">
-                    <h2 class="ftco-heading-2" style="color: black; font-size: 18px; font-weight: bold;">Quick Links</h2>
-                    <ul class="list-unstyled">
-                        <li><a href="javascript:void(0)" class="py-1 d-block footer-link" 
-                               data-title="Online Enquiry" 
-                               data-content="Fill out our online enquiry form to get personalized travel information and assistance.">Online Enquiry</a></li>
-                        <li><a href="javascript:void(0)" class="py-1 d-block footer-link" 
-                               data-title="Booking Conditions" 
-                               data-content="Read our booking terms, conditions, and cancellation policies before confirming your tour.">Booking Conditions</a></li>
-                        <li><a href="javascript:void(0)" class="py-1 d-block footer-link" 
-                               data-title="Privacy Policy" 
-                               data-content="We respect your privacy. Learn how we collect, use, and protect your personal information.">Privacy Policy</a></li>
-                        <li><a href="javascript:void(0)" class="py-1 d-block footer-link" 
-                               data-title="FAQ" 
-                               data-content="Check frequently asked questions to help you plan your tour efficiently.">FAQ</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="col-md-4 pt-2 border-left">
-                <div class="ftco-footer-widget pt-md-2 mb-2">
-                    <h2 class="ftco-heading-2" style="color: black; font-size: 18px; font-weight: bold;">Contact Us</h2>
-                    <div class="block-23 mb-2">
-                        <ul class="list-unstyled">
-                            <li style="margin-bottom: 10px;">
-                                <a href="tel:+94762055008" style="color: black; text-decoration: none;">
-                                    <span class="icon fa fa-phone" style="margin-right: 10px;"></span>
-                                    <span class="text">+94 76 2055008</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="mailto:ceylonbirdwingtours@gmail.com" style="color: black; text-decoration: none;">
-                                    <span class="icon fa fa-paper-plane" style="margin-right: 10px;"></span>
-                                    <span class="text">ceylonbirdwingtours@gmail.com</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <hr style="border-top: 1px solid rgba(0,0,0,0.1);">
-                <p class="py-2 mb-0" style="color: black;">
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Ceylon Birdwing Tours
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<div id="footerModal" class="custom-modal" role="dialog" aria-hidden="true">
-    <div class="custom-modal-content">
-        <span class="close-modal">&times;</span>
-        <h3 id="footerModalTitle" style="font-weight: bold;"></h3>
-        <p id="footerModalContent" style="color: #666;"></p>
-        <button class="btn btn-primary close-btn" style="background: #ff5733; border: none;">Close</button>
-    </div>
-</div>
-
-<style>
-/* ----------------- Social Icons Fixed ----------------- */
-.social-icons {
-    padding: 0;
-    margin: 20px 0 0 0;
-    display: flex;
-    gap: 12px;
-}
-
-.social-icons li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.social-icons a {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 44px;
-    height: 44px;
-    background: #ff5733; 
-    border-radius: 50%;
-    transition: all 0.3s ease;
-    position: relative;
+    box-shadow: 0 8px 25px rgba(255,168,0,0.4);
+    transition: all var(--transition);
+    letter-spacing: 0.03em;
+  }
+  .btn-hero-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 35px rgba(255,168,0,0.55);
+    color: #111;
     text-decoration: none;
-}
-
-.social-icons a img {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
-}
-
-/* ----------------- Tooltip ----------------- */
-.social-icons a::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: 125%;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    background: #333;
+  }
+  .btn-hero-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 30px;
+    background: transparent;
     color: #fff;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 12px;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 10;
-}
-
-.social-icons a:hover {
-    transform: translateY(-4px);
-    background: #e64a19;
-}
-
-.social-icons a:hover::after {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0);
-}
-
-/* ----------------- Other Footer Styles ----------------- */
-.footer-link {
-    color: black !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 50px;
     text-decoration: none;
-    transition: 0.3s;
-}
-.footer-link:hover {
-    padding-left: 5px;
-    color: #ff5733 !important;
-}
+    transition: all var(--transition);
+    letter-spacing: 0.03em;
+    backdrop-filter: blur(4px);
+  }
+  .btn-hero-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(255,210,51,0.08);
+    transform: translateY(-3px);
+    text-decoration: none;
+  }
 
-.border-left {
-    border-left: 1px solid rgba(0,0,0,0.1);
-}
+  /* Hero stats */
+  .hero-stats {
+    display: flex;
+    gap: 32px;
+    margin-top: 44px;
+    opacity: 0;
+    animation: fadeSlideUp 1s ease 3.8s forwards;
+  }
+  .hero-stat { text-align: left; }
+  .hero-stat-num {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .hero-stat-label {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 3px;
+  }
+  .hero-stat-divider {
+    width: 1px;
+    background: rgba(255,255,255,0.2);
+    align-self: stretch;
+    margin: 4px 0;
+  }
 
-@media (max-width: 768px) {
-    .border-left { border-left: none; border-top: 1px solid rgba(0,0,0,0.05); margin-top: 20px; }
-}
+  /* Scroll indicator */
+  .hero-scroll {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255,255,255,0.6);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    animation: fadeIn 2s ease 4s forwards;
+    opacity: 0;
+    text-decoration: none;
+  }
+  .hero-scroll-line {
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.5));
+    animation: scrollBounce 2s ease infinite;
+  }
+  @keyframes scrollBounce {
+    0%, 100% { transform: scaleY(1); opacity: 1; }
+    50% { transform: scaleY(0.6); opacity: 0.4; }
+  }
 
-/* ----------------- Footer Modal ----------------- */
-.custom-modal {
+  /* Slide dots */
+  .hero-dots {
+    position: absolute;
+    bottom: 36px;
+    right: 40px;
+    z-index: 3;
+    display: flex;
+    gap: 8px;
+  }
+  .hero-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.35);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    padding: 0;
+  }
+  .hero-dot.active {
+    background: var(--gold);
+    width: 24px;
+    border-radius: 4px;
+  }
+
+  /* Animations */
+  @keyframes fadeSlideDown {
+    from { opacity: 0; transform: translateY(-15px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+
+  /* Hero responsive */
+  @media (max-width: 768px) {
+    #hero-slider { min-height: 100svh; }
+    .hero-sub { max-width: 100%; }
+    .hero-stats { gap: 20px; }
+    .hero-stat-num { font-size: 1.4rem; }
+    .hero-dots { right: 20px; bottom: 24px; }
+    .hero-scroll { display: none; }
+    #hero-slider .overlay {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+    }
+  }
+  @media (max-width: 480px) {
+    .hero-stats { gap: 14px; flex-wrap: wrap; }
+    .hero-btns { gap: 10px; }
+    .btn-hero-primary, .btn-hero-outline { padding: 12px 22px; font-size: 0.88rem; }
+  }
+
+  /* ============================================================
+     SECTION HEADERS
+  ============================================================ */
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    margin-bottom: 12px;
+  }
+  .section-label::before, .section-label::after {
+    content: '';
+    height: 1px;
+    width: 28px;
+    background: var(--gold-dark);
+  }
+
+  /* ============================================================
+     SERVICES SECTION
+  ============================================================ */
+  .services-section-wrap {
+    background: linear-gradient(135deg, #fefcf6 0%, #fff9ec 50%, #fefcf6 100%);
+    padding: 90px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .services-section-wrap::before {
+    content: '';
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,210,51,0.12), transparent 70%);
+    pointer-events: none;
+  }
+
+  .why-heading { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 800; color: #111; line-height: 1.2; margin-bottom: 16px; }
+  .why-text { color: #555; line-height: 1.8; font-size: 1rem; }
+
+  /* Service cards */
+  .svc-card {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    height: 200px;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition);
+    margin-bottom: 24px;
+  }
+  .svc-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.15) 60%, transparent 100%);
+    z-index: 1;
+    transition: all var(--transition);
+  }
+  .svc-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+  .svc-card:hover::before { background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.05) 100%); }
+
+  .svc-card-body {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+  }
+  .svc-icon {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #111;
+    box-shadow: 0 4px 12px rgba(255,168,0,0.4);
+    transition: transform var(--transition);
+  }
+  .svc-card:hover .svc-icon { transform: scale(1.12) rotate(5deg); }
+  .svc-card h3 { color: #fff; font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+  .svc-card p { color: rgba(255,255,255,0.8); font-size: 0.82rem; line-height: 1.5; margin: 0; }
+
+  /* "Find Destination" button */
+  .btn-find {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 30px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: #111;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(255,168,0,0.35);
+    transition: all var(--transition);
+    margin-top: 16px;
+    margin-bottom: 40px;
+  }
+  .btn-find:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255,168,0,0.5);
+    color: #111;
+    text-decoration: none;
+  }
+  .btn-find i { transition: transform var(--transition); }
+  .btn-find:hover i { transform: translateX(4px); }
+
+  /* ============================================================
+     FEATURED DESTINATIONS
+  ============================================================ */
+  .destinations-section {
+    padding: 90px 0;
+    background: #fff;
+  }
+
+  .dest-card {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition);
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 24px;
+  }
+  .dest-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
+    z-index: 1;
+    transition: all var(--transition);
+  }
+  .dest-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+  .dest-card:hover::before { background: linear-gradient(to top, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.2) 100%); }
+
+  .dest-card-img {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.7s ease;
+  }
+  .dest-card:hover .dest-card-img { transform: scale(1.08); }
+
+  .dest-card-body {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    z-index: 2;
+    padding: 20px;
+    transform: translateY(8px);
+    transition: transform var(--transition);
+  }
+  .dest-card:hover .dest-card-body { transform: translateY(0); }
+
+  .dest-tag {
+    display: inline-block;
+    background: var(--gold);
+    color: #111;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 50px;
+    margin-bottom: 6px;
+  }
+  .dest-card h3 { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
+  .dest-card .dest-loc {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.82rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .dest-card .dest-loc i { color: var(--gold); font-size: 0.75rem; }
+
+  .dest-desc {
+    color: rgba(255,255,255,0.75);
+    font-size: 0.82rem;
+    line-height: 1.5;
+    margin-top: 8px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+  }
+  .dest-card:hover .dest-desc { max-height: 80px; opacity: 1; }
+
+  /* Explore all button */
+  .btn-explore-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background: transparent;
+    color: #111;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border: 2px solid #111;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all var(--transition);
+    margin-top: 40px;
+  }
+  .btn-explore-all:hover {
+    background: #111;
+    color: var(--gold);
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  /* ============================================================
+     DESTINATION POPUP
+  ============================================================ */
+  #destinationPopup {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.75);
     display: none;
     align-items: center;
     justify-content: center;
     z-index: 9999;
-}
+    padding: 20px;
+    backdrop-filter: blur(4px);
+  }
+  #popupBox {
+    background: #fff;
+    max-width: 520px;
+    width: 100%;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transform: scale(0.85) translateY(20px);
+    opacity: 0;
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: var(--shadow-lg);
+  }
+  #popupImage { height: 240px; background-size: cover; background-position: center; }
+  .popup-body { padding: 24px; }
+  .popup-body h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 8px; }
+  .popup-body p { color: #555; font-size: 0.92rem; line-height: 1.7; margin-bottom: 20px; }
+  .popup-close-icon {
+    position: absolute;
+    top: 16px; right: 16px;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.35);
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background var(--transition);
+    z-index: 1;
+  }
+  .popup-close-icon:hover { background: rgba(0,0,0,0.6); }
+  .btn-popup-close {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 28px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: #111;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all var(--transition);
+    box-shadow: 0 4px 15px rgba(255,168,0,0.35);
+  }
+  .btn-popup-close:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(255,168,0,0.5); }
 
-.custom-modal-content {
+  /* ============================================================
+     ABOUT SECTION
+  ============================================================ */
+  .about-section-wrap {
+    padding: 90px 0;
+    background: linear-gradient(135deg, #f8f5ef 0%, #fdf9f0 100%);
+  }
+
+  .about-image-panel {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    height: 500px;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.6s ease;
+  }
+  .about-image-panel:hover { transform: scale(1.02); }
+  .about-img-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: all 1s ease;
+  }
+  /* Floating badge */
+  .about-badge {
+    position: absolute;
+    bottom: 30px;
+    left: -20px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: #111;
+    padding: 16px 22px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    z-index: 2;
+    text-align: center;
+  }
+  .about-badge-num { font-size: 2rem; font-weight: 900; line-height: 1; }
+  .about-badge-text { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  /* Decorative ring */
+  .about-image-panel::after {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border: 2px solid var(--gold);
+    border-radius: calc(var(--radius-lg) + 8px);
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  /* About stats */
+  .about-stats { display: flex; gap: 24px; flex-wrap: wrap; margin: 28px 0; }
+  .about-stat-item {
+    flex: 1;
+    min-width: 100px;
+    padding: 18px 16px;
+    background: #fff;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    border-bottom: 3px solid var(--gold);
+    transition: transform var(--transition);
+  }
+  .about-stat-item:hover { transform: translateY(-4px); }
+  .about-stat-item .num { font-size: 1.8rem; font-weight: 800; color: var(--gold-dark); line-height: 1; }
+  .about-stat-item .lbl { font-size: 0.72rem; font-weight: 600; color: #555; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; }
+
+  .btn-about {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 30px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: #111;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(255,168,0,0.35);
+    transition: all var(--transition);
+  }
+  .btn-about:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255,168,0,0.5);
+    color: #111;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .about-image-panel { height: 320px; margin-bottom: 24px; }
+    .about-badge { left: 16px; bottom: 16px; }
+  }
+
+  /* ============================================================
+     TRIPADVISOR SECTION
+  ============================================================ */
+  .tripadvisor-section {
+    position: relative;
+    padding: 90px 0;
+    background-image: url('images/bg_1.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .tripadvisor-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.55) 100%);
+    z-index: 0;
+  }
+  .tripadvisor-section .container { position: relative; z-index: 1; }
+
+  .ta-card {
+    background: rgba(255,255,255,0.07);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: var(--radius-lg);
+    padding: 50px 40px;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+  }
+  .ta-stars { color: var(--gold); font-size: 1.5rem; letter-spacing: 4px; margin-bottom: 16px; }
+  .ta-card h2 { color: #fff; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; margin-bottom: 12px; }
+  .ta-card p { color: rgba(255,255,255,0.75); font-size: 1rem; line-height: 1.7; margin-bottom: 30px; }
+
+  .btn-ta {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 36px;
+    background: linear-gradient(135deg, #34e0a1, #00af87);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(0,175,135,0.4);
+    transition: all var(--transition);
+  }
+  .btn-ta img { height: 40px; filter: brightness(0) invert(1); }
+  .btn-ta:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 14px 35px rgba(0,175,135,0.55);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .ta-card { padding: 36px 20px; }
+    .tripadvisor-section { background-attachment: scroll; }
+  }
+
+  /* ============================================================
+     BLOG SECTION
+  ============================================================ */
+  .blog-section { padding: 90px 0; background: #fff; }
+
+  .blog-card {
+    background: #fff;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #f0f0f0;
+    margin-bottom: 24px;
+  }
+  .blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: transparent;
+  }
+
+  .blog-img-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+  }
+  .blog-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease;
+  }
+  .blog-card:hover .blog-img { transform: scale(1.08); }
+
+  .blog-category {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: #111;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 50px;
+  }
+
+  .blog-body {
+    padding: 22px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .blog-body h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+
+  .btn-read {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 20px;
+    background: transparent;
+    color: #111;
+    font-weight: 600;
+    font-size: 0.85rem;
+    border: 1.5px solid #ddd;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all var(--transition);
+    align-self: flex-start;
+    margin-top: 4px;
+  }
+  .btn-read i { transition: transform var(--transition); }
+  .btn-read:hover {
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    border-color: transparent;
+    color: #111;
+    text-decoration: none;
+  }
+  .btn-read:hover i { transform: translateX(4px); }
+
+  /* Blog Modal */
+  .blog-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+    backdrop-filter: blur(4px);
+  }
+  .blog-modal-box {
     background: #fff;
     width: 90%;
-    max-width: 450px;
-    border-radius: 12px;
-    padding: 30px;
-    text-align: center;
+    max-width: 680px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    animation: popupFade 0.35s ease;
     position: relative;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+  .blog-modal-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+  }
+  .blog-modal-body { padding: 28px; text-align: center; }
+  .blog-modal-body h3 { font-size: 1.4rem; font-weight: 800; margin-bottom: 10px; }
+  .blog-modal-body p { color: #555; font-size: 0.95rem; line-height: 1.7; margin-bottom: 22px; }
+  .blog-modal-close-icon {
+    position: absolute;
+    top: 14px; right: 14px;
+    width: 34px; height: 34px;
+    background: rgba(0,0,0,0.4);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background var(--transition);
+  }
+  .blog-modal-close-icon:hover { background: rgba(0,0,0,0.7); }
+  @keyframes popupFade {
+    from { transform: scale(0.85); opacity: 0; }
+    to   { transform: scale(1);    opacity: 1; }
+  }
+
+  /* ============================================================
+     WHATSAPP CTA
+  ============================================================ */
+  .wa-section { padding: 70px 0; background: #fafaf8; }
+
+  .wa-hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    padding: 90px 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    box-shadow: var(--shadow-lg);
+  }
+  .wa-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.4) 100%);
+    z-index: 1;
+    transition: background 0.5s ease;
+  }
+  .wa-hero:hover { transform: scale(1.01); }
+  .wa-hero:hover::before { background: linear-gradient(135deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.25) 100%); }
+
+  .wa-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .wa-content h2 {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 800;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    color: #ffffff !important;
+  }
+  .wa-content p {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 32px;
+    line-height: 1.7;
+  }
+
+  .btn-wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 36px;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    position: relative;
+    transition: all var(--transition);
+    box-shadow: 0 8px 25px rgba(18,140,126,0.45);
+  }
+  .btn-wa img { height: 26px; }
+  .btn-wa::before {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 50px;
+    border: 2px solid rgba(37,211,102,0.5);
+    animation: waPulse 2s ease infinite;
+  }
+  @keyframes waPulse {
+    0%, 100% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.06); opacity: 0; }
+  }
+  .btn-wa:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 14px 35px rgba(18,140,126,0.55);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .wa-hero { padding: 70px 20px; }
+  }
+
+  /* ============================================================
+     FOOTER
+  ============================================================ */
+  .site-footer {
+    background: #FFD700;
+    color: #111;
+    padding: 60px 0 0;
+    font-size: 0.92rem;
+  }
+
+  .footer-brand h2 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .footer-brand h2 span { color: #7a5800; }
+  .footer-brand p { color: rgba(0,0,0,0.65); line-height: 1.8; font-size: 0.9rem; }
+
+  .footer-heading {
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #111;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+  }
+
+  /* Social icons */
+  .footer-social { display: flex; gap: 10px; margin-top: 22px; flex-wrap: wrap; }
+  .footer-social a {
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: none;
+    display: flex; align-items: center; justify-content: center;
+    transition: all var(--transition);
+    text-decoration: none;
+    position: relative;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  }
+  .footer-social a img { width: 18px; height: 18px; object-fit: contain; }
+  .footer-social a:hover {
+    background: #c43e20;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(255,87,51,0.4);
+  }
+  /* Tooltip */
+  .footer-social a::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.72rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+  }
+  .footer-social a:hover::after { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+  /* Quick Links */
+  .footer-links { list-style: none; padding: 0; margin: 0; }
+  .footer-links li { margin-bottom: 10px; }
+  .footer-links a {
+    color: rgba(0,0,0,0.7);
+    text-decoration: none;
+    transition: all var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  .footer-links a::before {
+    content: '';
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: #111;
+    flex-shrink: 0;
+    transition: transform var(--transition);
+  }
+  .footer-links a:hover { color: #7a5800; padding-left: 4px; }
+  .footer-links a:hover::before { background: #7a5800; transform: scale(1.4); }
+
+  /* Contact items */
+  .footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    color: rgba(0,0,0,0.7);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color var(--transition);
+    font-weight: 500;
+  }
+  .footer-contact-icon {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.15);
+    display: flex; align-items: center; justify-content: center;
+    color: #111;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    transition: all var(--transition);
+  }
+  .footer-contact-item:hover { color: #7a5800; }
+  .footer-contact-item:hover .footer-contact-icon {
+    background: #111;
+    color: var(--gold);
+    transform: scale(1.1);
+  }
+
+  /* Footer divider */
+  .footer-divider {
+    height: 1px;
+    background: rgba(0,0,0,0.12);
+    margin: 40px 0 0;
+  }
+  .footer-bottom {
+    padding: 18px 0;
+    text-align: center;
+    color: rgba(0,0,0,0.6);
+    font-size: 0.82rem;
+  }
+  .footer-bottom span { color: #7a5800; font-weight: 700; }
+
+  @media (max-width: 768px) {
+    .site-footer [class*="col-"] { margin-bottom: 36px; }
+    .footer-social { flex-wrap: wrap; }
+  }
+
+  /* ============================================================
+     UTILITY & GLOBAL TWEAKS
+  ============================================================ */
+  .section-pad { padding: 90px 0; }
+
+  /* Override Bootstrap btn-primary with gold */
+  .btn-primary {
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark)) !important;
+    border: none !important;
+    color: #111 !important;
+    font-weight: 700 !important;
+    border-radius: 50px !important;
+    padding: 12px 28px !important;
+    transition: all var(--transition) !important;
+    box-shadow: 0 4px 15px rgba(255,168,0,0.3) !important;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(255,168,0,0.5) !important;
+  }
+
+  /* Subheading override */
+  .subheading {
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase !important;
+    color: var(--gold-dark) !important;
+    display: block !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* Lazy load fade */
+  img[loading="lazy"] { transition: opacity 0.4s ease; }
+
+  /* Smooth padding for fixed navbar */
+  body { padding-top: 0; }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR OVERLAY -->
+<div class="nav-overlay" id="nav-overlay"></div>
+
+<!-- ============================================================
+     MODERN NAVBAR
+============================================================ -->
+<nav class="modern-navbar at-top" id="main-navbar">
+  <div class="nav-container">
+
+    <!-- Logo -->
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-img-wrap">
+        <img src="images/logo.png" alt="Ceylon Birdwing Tours Logo" loading="lazy">
+      </div>
+      <div class="nav-logo-text">
+        <span class="nav-logo-title">Ceylon Birdwing Tours</span>
+        <span class="nav-logo-sub">Sri Lanka Travel Experts</span>
+      </div>
+    </a>
+
+    <!-- Hamburger -->
+    <div class="nav-toggle" id="nav-toggle" role="button" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Menu -->
+    <ul class="nav-menu" id="nav-menu" role="list">
+      <li class="nav-item active"><a href="index.html">Home</a></li>
+      <li class="nav-item"><a href="destination.html">Destination</a></li>
+      <li class="nav-item"><a href="packages.html">Tour Packages</a></li>
+      <li class="nav-item"><a href="CustomTours.html">Custom Tours</a></li>
+      <li class="nav-item nav-cta"><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+  </div>
+</nav>
+
+<script>
+// Navbar scroll behavior
+const navbar  = document.getElementById('main-navbar');
+const toggle  = document.getElementById('nav-toggle');
+const menu    = document.getElementById('nav-menu');
+const overlay = document.getElementById('nav-overlay');
+
+function closeNav() {
+  menu.classList.remove('show');
+  overlay.classList.remove('show');
+  toggle.classList.remove('open');
+  toggle.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
 }
 
-.close-modal {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 28px;
-    cursor: pointer;
-    color: #aaa;
+toggle.addEventListener('click', () => {
+  const isOpen = menu.classList.toggle('show');
+  overlay.classList.toggle('show', isOpen);
+  toggle.classList.toggle('open', isOpen);
+  toggle.setAttribute('aria-expanded', isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+
+overlay.addEventListener('click', closeNav);
+
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 60) {
+    navbar.classList.remove('at-top');
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+    navbar.classList.add('at-top');
+  }
+}, { passive: true });
+</script>
+<!-- NAVBAR END -->
+
+
+<!-- ============================================================
+     HERO SECTION
+============================================================ -->
+<div id="hero-slider">
+
+  <!-- Background slide layers -->
+  <div class="hero-slide-layer active" style="background-image: url('images/bg_5.jpg');"></div>
+  <div class="hero-slide-layer"        style="background-image: url('images/bg_2.jpg');"></div>
+  <div class="hero-slide-layer"        style="background-image: url('images/bg_3.jpg');"></div>
+
+  <!-- Dark overlay -->
+  <div class="overlay"></div>
+
+  <!-- Content -->
+  <div class="container">
+    <div class="row no-gutters align-items-center" style="min-height:100vh;">
+      <div class="col-lg-8 col-md-10">
+
+        <!-- Badge -->
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Welcome to Ceylon Birdwing Tours
+        </div>
+
+        <!-- Heading with typing -->
+        <h1 class="hero-h1" id="hero-heading">
+          <span id="typing-text"></span>
+        </h1>
+
+        <!-- Subtext -->
+        <p class="hero-sub">
+          Travel to any corner of Sri Lanka, without going around in circles.
+        </p>
+
+        <!-- Buttons -->
+        <div class="hero-btns">
+          <a href="destination.html" class="btn-hero-primary">
+            <i class="fa fa-compass"></i> Explore Destinations
+          </a>
+          <a href="packages.html" class="btn-hero-outline">
+            <i class="fa fa-map-o"></i> View Packages
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <a href="#why-us" class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <span>Scroll</span>
+  </a>
+
+  <!-- Slide dots -->
+  <div class="hero-dots" id="hero-dots">
+    <button class="hero-dot active" data-index="0" aria-label="Slide 1"></button>
+    <button class="hero-dot"        data-index="1" aria-label="Slide 2"></button>
+    <button class="hero-dot"        data-index="2" aria-label="Slide 3"></button>
+  </div>
+
+</div>
+
+<script>
+// Hero Crossfade + Dots
+(function() {
+  const layers = document.querySelectorAll('#hero-slider .hero-slide-layer');
+  const dots   = document.querySelectorAll('.hero-dot');
+  let current  = 0;
+  let timer;
+
+  function goTo(n) {
+    layers[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (n + layers.length) % layers.length;
+    layers[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  function next() { goTo(current + 1); }
+
+  timer = setInterval(next, 5500);
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      clearInterval(timer);
+      goTo(parseInt(dot.dataset.index));
+      timer = setInterval(next, 5500);
+    });
+  });
+
+  // Typing animation
+  const phrases = [
+    "Discover Your Favorite Place with Us",
+    "Explore the Pearl of the Indian Ocean",
+    "Unforgettable Sri Lanka Adventures"
+  ];
+  const el = document.getElementById('typing-text');
+  let phraseIndex = 0, charIndex = 0, deleting = false;
+
+  function type() {
+    const phrase = phrases[phraseIndex];
+    if (!deleting) {
+      el.textContent = phrase.substring(0, charIndex + 1);
+      charIndex++;
+      if (charIndex === phrase.length) {
+        deleting = true;
+        setTimeout(type, 2200);
+        return;
+      }
+    } else {
+      el.textContent = phrase.substring(0, charIndex - 1);
+      charIndex--;
+      if (charIndex === 0) {
+        deleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+      }
+    }
+    setTimeout(type, deleting ? 55 : 85);
+  }
+
+  window.addEventListener('load', () => setTimeout(type, 400));
+})();
+</script>
+<!-- HERO END -->
+
+
+<!-- ============================================================
+     WHY CHOOSE US / SERVICES
+============================================================ -->
+<section class="services-section-wrap" id="why-us">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <!-- Left: Text + cards -->
+      <div class="col-lg-6 order-lg-2">
+        <span class="subheading">Why Choose Ceylon Birdwing Tours?</span>
+        <h2 class="why-heading">Explore Sri Lanka<br>Like Never Before</h2>
+        <p class="why-text">At Ceylon Birdwing Tours, we believe travel should be personal, safe, and truly immersive. We craft every adventure to showcase the very best of Sri Lanka, from the ancient ruins of Sigiriya to the golden beaches of Mirissa.</p>
+        <p class="why-text">Our commitment is to deliver unforgettable, hassle-free journeys. We pair you with trusted local experts and dedicated private drivers, ensuring every moment is comfortable and focused purely on your enjoyment of the island. Choose the experts who live and breathe Sri Lanka.</p>
+
+        <a href="destination.html" class="btn-find">
+          Find Your Next Destination <i class="fa fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- Right: Service cards grid -->
+      <div class="col-lg-6 order-lg-1">
+        <div class="row g-3">
+
+          <div class="col-6 ftco-animate">
+            <div class="svc-card" style="background-image:url(images/services-1.jpg);">
+              <div class="svc-card-body">
+                <div class="svc-icon"><span class="flaticon-paragliding"></span></div>
+                <h3>Fully Customizable Tours</h3>
+                <p>Every trip is yours to craft — choose destinations, set your pace.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 ftco-animate">
+            <div class="svc-card" style="background-image:url(images/services-2.jpg);">
+              <div class="svc-card-body">
+                <div class="svc-icon"><span class="flaticon-route"></span></div>
+                <h3>Safe &amp; Reliable Travel</h3>
+                <p>Professional drivers delivering comfort, safety &amp; peace of mind.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 ftco-animate">
+            <div class="svc-card" style="background-image:url(images/services-3.jpg);">
+              <div class="svc-card-body">
+                <div class="svc-icon"><span class="flaticon-tour-guide"></span></div>
+                <h3>Transparent Pricing</h3>
+                <p>What you see is what you pay — no hidden charges, ever.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 ftco-animate">
+            <div class="svc-card" style="background-image:url(images/services-4.jpg);">
+              <div class="svc-card-body">
+                <div class="svc-icon"><span class="flaticon-map"></span></div>
+                <h3>24/7 Expert Support</h3>
+                <p>Our dedicated team is available around the clock for you.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- SERVICES END -->
+
+
+<!-- ============================================================
+     FEATURED DESTINATIONS
+============================================================ -->
+<section class="destinations-section" id="destinations">
+  <div class="container">
+
+    <div class="text-center mb-5 ftco-animate">
+      <span class="subheading">Explore the Island Nation</span>
+      <h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:800; color:#111; margin-top:8px;">Featured Sri Lanka Destinations</h2>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Sigiriya -->
+      <div class="col-lg-4 col-md-6 ftco-animate">
+        <div class="dest-card" onclick="openPopup('Sigiriya Rock Fortress','Sigiriya is a UNESCO World Heritage Site famous for its ancient rock fortress, frescoes, royal gardens, and breathtaking views.','images/destination-sigiriya.jpeg')">
+          <div class="dest-card-img" style="background-image:url(images/destination-sigiriya.jpeg);"></div>
+          <div class="dest-card-body">
+            <div class="dest-tag">UNESCO Heritage</div>
+            <h3>Sigiriya Rock Fortress</h3>
+            <p class="dest-loc"><i class="fa fa-map-marker"></i> Matale District, Sri Lanka</p>
+            <p class="dest-desc">Ancient rock fortress with incredible frescoes and panoramic views of the surrounding jungle.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kandy -->
+      <div class="col-lg-4 col-md-6 ftco-animate">
+        <div class="dest-card" onclick="openPopup('Sacred Kandy &amp; Tea Plantations','Kandy is the cultural heart of Sri Lanka, home to the Sacred Tooth Relic Temple and surrounded by scenic tea estates.','images/destination-kandy.jpeg')">
+          <div class="dest-card-img" style="background-image:url(images/destination-kandy.jpeg);"></div>
+          <div class="dest-card-body">
+            <div class="dest-tag">Cultural Capital</div>
+            <h3>Sacred Kandy &amp; Tea Plantations</h3>
+            <p class="dest-loc"><i class="fa fa-map-marker"></i> Central Province, Sri Lanka</p>
+            <p class="dest-desc">Cultural heart of Sri Lanka with the Sacred Tooth Relic and lush tea estates.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mirissa -->
+      <div class="col-lg-4 col-md-6 ftco-animate">
+        <div class="dest-card" onclick="openPopup('Mirissa &amp; Southern Coast','Mirissa is known for its golden beaches, whale watching tours, and relaxed tropical atmosphere.','images/destination-mirissa.jpg')">
+          <div class="dest-card-img" style="background-image:url(images/destination-mirissa.jpg);"></div>
+          <div class="dest-card-body">
+            <div class="dest-tag">Beach Paradise</div>
+            <h3>Mirissa &amp; Southern Coast</h3>
+            <p class="dest-loc"><i class="fa fa-map-marker"></i> Southern Province, Sri Lanka</p>
+            <p class="dest-desc">Golden beaches, whale watching and the most relaxed tropical atmosphere on the island.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Galle -->
+      <div class="col-lg-4 col-md-6 ftco-animate">
+        <div class="dest-card" onclick="openPopup('Historic Galle Fort','Galle Fort is a historic coastal fortress featuring colonial architecture, ocean views, and charming streets.','images/destination-galle.jpeg')">
+          <div class="dest-card-img" style="background-image:url(images/destination-galle.jpeg);"></div>
+          <div class="dest-card-body">
+            <div class="dest-tag">Historic Fort</div>
+            <h3>Historic Galle Fort</h3>
+            <p class="dest-loc"><i class="fa fa-map-marker"></i> Southern Province, Sri Lanka</p>
+            <p class="dest-desc">Dutch colonial fortress with ocean views, boutique cafes and winding cobblestone streets.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Yala -->
+      <div class="col-lg-4 col-md-6 ftco-animate">
+        <div class="dest-card" onclick="openPopup('Yala National Park Safari','Yala National Park offers exciting wildlife safaris with elephants, leopards, and diverse ecosystems.','images/destination-yala.jpg')">
+          <div class="dest-card-img" style="background-image:url(images/destination-yala.jpg);"></div>
+          <div class="dest-card-body">
+            <div class="dest-tag">Wildlife Safari</div>
+            <h3>Yala National Park Safari</h3>
+            <p class="dest-loc"><i class="fa fa-map-marker"></i> Southern Province, Sri Lanka</p>
+            <p class="dest-desc">Sri Lanka's most visited national park — home to leopards, elephants and crocodiles.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nuwara Eliya -->
+      <div class="col-lg-4 col-md-6 ftco-animate">
+        <div class="dest-card" onclick="openPopup('Nuwara Eliya Hill Stations','Nuwara Eliya is famous for its cool climate, misty hills, tea gardens, and colonial-era charm.','images/destination-nuwara-eliya.jpg')">
+          <div class="dest-card-img" style="background-image:url(images/destination-nuwara-eliya.jpg);"></div>
+          <div class="dest-card-body">
+            <div class="dest-tag">Hill Country</div>
+            <h3>Nuwara Eliya Hill Stations</h3>
+            <p class="dest-loc"><i class="fa fa-map-marker"></i> Central Province, Sri Lanka</p>
+            <p class="dest-desc">Cool misty highlands with breathtaking tea gardens and charming colonial-era bungalows.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center">
+      <a href="destination.html" class="btn-explore-all">
+        <i class="fa fa-globe"></i> Explore All Destinations <i class="fa fa-arrow-right"></i>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Destination Popup -->
+<div id="destinationPopup">
+  <div id="popupBox">
+    <div id="popupImage"></div>
+    <div class="popup-body" style="position:relative;">
+      <button class="popup-close-icon" onclick="closePopup()"><i class="fa fa-times"></i></button>
+      <h3 id="popupTitle"></h3>
+      <p id="popupText"></p>
+      <button class="btn-popup-close" onclick="closePopup()">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function openPopup(title, text, image) {
+  document.getElementById('popupTitle').innerText = title;
+  document.getElementById('popupText').innerText = text;
+  document.getElementById('popupImage').style.backgroundImage = "url(" + image + ")";
+  const popup = document.getElementById('destinationPopup');
+  const box   = document.getElementById('popupBox');
+  popup.style.display = "flex";
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => { box.style.transform = "scale(1) translateY(0)"; box.style.opacity = "1"; }, 40);
 }
-</style>
+function closePopup() {
+  const box   = document.getElementById('popupBox');
+  const popup = document.getElementById('destinationPopup');
+  box.style.transform = "scale(0.85) translateY(20px)";
+  box.style.opacity   = "0";
+  setTimeout(() => { popup.style.display = "none"; document.body.style.overflow = ''; }, 320);
+}
+document.getElementById('destinationPopup').addEventListener('click', function(e) {
+  if (e.target === this) closePopup();
+});
+</script>
+<!-- DESTINATIONS END -->
+
+
+<!-- ============================================================
+     ABOUT US
+============================================================ -->
+<section class="about-section-wrap" id="about">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <!-- Image -->
+      <div class="col-lg-6 ftco-animate">
+        <div class="about-image-panel">
+          <div class="about-img-bg" id="about-img-bg" style="background-image:url(images/about-1.jpg);"></div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="col-lg-6 ftco-animate">
+        <span class="subheading">About Us</span>
+        <h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;color:#111;line-height:1.2;margin-bottom:16px;">
+          Make Your Tour<br>Memorable and Safe With Us
+        </h2>
+        <p style="color:#555;line-height:1.8;font-size:1rem;">
+          Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+        </p>
+
+        <a href="destination.html" class="btn-about">
+          <i class="fa fa-compass"></i> Book Your Destination
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+// About image rotation
+(function() {
+  const images = ["images/about-1.jpg","images/about-2.jpg","images/about-3.jpg"];
+  const el = document.getElementById('about-img-bg');
+  let i = 0;
+  if (!el) return;
+  setInterval(() => {
+    el.style.opacity = '0';
+    setTimeout(() => {
+      i = (i + 1) % images.length;
+      el.style.backgroundImage = "url('" + images[i] + "')";
+      el.style.opacity = '1';
+    }, 600);
+  }, 3500);
+  el.style.transition = 'opacity 0.6s ease';
+})();
+</script>
+<!-- ABOUT END -->
+
+
+<!-- ============================================================
+     TRIPADVISOR SECTION
+============================================================ -->
+<section class="tripadvisor-section" id="reviews">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="ta-card ftco-animate">
+          <div class="ta-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <span class="subheading" style="color:rgba(255,210,51,0.8)!important;">Trusted Reviews</span>
+          <h2>See Our Tourist Feedback</h2>
+          <p>We are proud of our excellent track record! View hundreds of verified reviews and ratings from our guests on TripAdvisor.</p>
+
+          <a href="https://www.tripadvisor.com/Profile/ceylonbirdwingtours"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn-ta">
+            <img src="images/tripadvisor_logo.png" alt="TripAdvisor">
+            VIEW OUR TRIPADVISOR PROFILE
+          </a>
+          <p style="margin-top:14px;color:rgba(255,255,255,0.45);font-size:0.8rem;">
+            Click above to see reviews on the official TripAdvisor website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- TRIPADVISOR END -->
+
+
+<!-- ============================================================
+     BLOG / RECENT POSTS
+============================================================ -->
+<section class="blog-section" id="blog">
+  <div class="container">
+
+    <div class="text-center mb-5 ftco-animate">
+      <span class="subheading">Our Blog</span>
+      <h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;color:#111;margin-top:8px;">Recent Posts</h2>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Blog 1 -->
+      <div class="col-lg-4 col-md-6 d-flex ftco-animate">
+        <div class="blog-card w-100">
+          <div class="blog-img-wrap">
+            <div class="blog-img" style="background-image:url('images/image_1.jpg');"></div>
+            <span class="blog-category">Travel Guide</span>
+          </div>
+          <div class="blog-body">
+            <h3>Most Popular Place In Sri Lanka</h3>
+            <a href="javascript:void(0)"
+               class="btn-read read-more-btn"
+               data-title="Most Popular Place In Sri Lanka"
+               data-image="images/image_1.jpg"
+               data-content="Sri Lanka is famous for its beautiful beaches, ancient cities, tea plantations, and wildlife. This destination is highly popular among local and foreign tourists.">
+              Read More <i class="fa fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog 2 -->
+      <div class="col-lg-4 col-md-6 d-flex ftco-animate">
+        <div class="blog-card w-100">
+          <div class="blog-img-wrap">
+            <div class="blog-img" style="background-image:url('images/image_2.jpg');"></div>
+            <span class="blog-category">Beach Life</span>
+          </div>
+          <div class="blog-body">
+            <h3>Beautiful Beach Destinations</h3>
+            <a href="javascript:void(0)"
+               class="btn-read read-more-btn"
+               data-title="Beautiful Beach Destinations"
+               data-image="images/image_2.jpg"
+               data-content="Sri Lanka has some of the most beautiful beaches including Mirissa, Unawatuna, and Arugam Bay. Perfect for relaxing and surfing.">
+              Read More <i class="fa fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog 3 -->
+      <div class="col-lg-4 col-md-6 d-flex ftco-animate">
+        <div class="blog-card w-100">
+          <div class="blog-img-wrap">
+            <div class="blog-img" style="background-image:url('images/image_3.jpg');"></div>
+            <span class="blog-category">Wildlife</span>
+          </div>
+          <div class="blog-body">
+            <h3>Wildlife &amp; Nature Tours</h3>
+            <a href="javascript:void(0)"
+               class="btn-read read-more-btn"
+               data-title="Wildlife &amp; Nature Tours"
+               data-image="images/image_3.jpg"
+               data-content="Experience wildlife safaris, national parks, and breathtaking mountain views. Sri Lanka is home to elephants, leopards, and rare bird species.">
+              Read More <i class="fa fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Blog Modal -->
+<div id="blogModal" class="blog-modal-overlay" role="dialog" aria-hidden="true">
+  <div class="blog-modal-box">
+    <button class="blog-modal-close-icon" id="blog-close-icon"><i class="fa fa-times"></i></button>
+    <img id="modalImage" class="blog-modal-img" src="" alt="">
+    <div class="blog-modal-body">
+      <h3 id="modalTitle"></h3>
+      <p id="modalContent"></p>
+      <button class="btn-popup-close" id="blog-close-btn">Close</button>
+    </div>
+  </div>
+</div>
 
 <script>
 (function() {
-    const footerModal = document.getElementById('footerModal');
-    const footerBody = document.body;
+  const modal     = document.getElementById('blogModal');
+  const modalImg  = document.getElementById('modalImage');
+  const modalT    = document.getElementById('modalTitle');
+  const modalC    = document.getElementById('modalContent');
+  const closeIcon = document.getElementById('blog-close-icon');
+  const closeBtn  = document.getElementById('blog-close-btn');
 
-    function openFooterModal(link) {
-        document.getElementById('footerModalTitle').textContent = link.getAttribute('data-title');
-        document.getElementById('footerModalContent').textContent = link.getAttribute('data-content');
-        footerModal.style.display = 'flex';
-        footerBody.style.overflow = 'hidden';
-    }
+  function openModal(btn) {
+    modalT.textContent = btn.dataset.title;
+    modalImg.src       = btn.dataset.image;
+    modalC.textContent = btn.dataset.content;
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
 
-    function closeFooterModal() {
-        footerModal.style.display = 'none';
-        footerBody.style.overflow = '';
-    }
-
-    document.querySelectorAll('.footer-link').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            openFooterModal(link);
-        });
-    });
-
-    document.querySelector('.close-modal').addEventListener('click', closeFooterModal);
-    document.querySelector('.close-btn').addEventListener('click', closeFooterModal);
-
-    window.addEventListener('click', e => {
-        if(e.target === footerModal) closeFooterModal();
-    });
+  document.querySelectorAll('.read-more-btn').forEach(btn =>
+    btn.addEventListener('click', () => openModal(btn))
+  );
+  closeIcon.addEventListener('click', closeModal);
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
 })();
 </script>
-<!-- FOOTER code fully end here -->
-
-		
-
-			<!-- loader -->
-			<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+<!-- BLOG END -->
 
 
-			<script src="js/jquery.min.js"></script>
-			<script src="js/jquery-migrate-3.0.1.min.js"></script>
-			<script src="js/popper.min.js"></script>
-			<script src="js/bootstrap.min.js"></script>
-			<script src="js/jquery.easing.1.3.js"></script>
-			<script src="js/jquery.waypoints.min.js"></script>
-			<script src="js/jquery.stellar.min.js"></script>
-			<script src="js/owl.carousel.min.js"></script>
-			<script src="js/jquery.magnific-popup.min.js"></script>
-			<script src="js/jquery.animateNumber.min.js"></script>
-			<script src="js/bootstrap-datepicker.js"></script>
-			<script src="js/scrollax.min.js"></script>
-			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-			<script src="js/google-map.js"></script>
-			<script src="js/main.js"></script>
-			
-		</body>
-		</html>
+<!-- ============================================================
+     WHATSAPP CTA
+============================================================ -->
+<section class="wa-section" id="contact-cta">
+  <div class="container">
+    <div class="wa-hero" style="background-image:url('images/bg_2.jpg');">
+      <div class="wa-content">
+        <h2>Have Questions? Contact Us Directly!</h2>
+        <p>Get instant answers and personalized quotes for your dream Sri Lanka trip via WhatsApp.</p>
+        <a href="https://wa.me/94762055008?text=Hello,%20I%20am%20interested%20in%20a%20tour%20package%20to%20Sri%20Lanka."
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn-wa">
+          <img src="images/whatsapp_logo.png" alt="WhatsApp">
+          INQUIRE ON WHATSAPP
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- WHATSAPP END -->
+
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer class="site-footer" id="footer">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Brand Column -->
+      <div class="col-lg-5 col-md-6">
+        <div class="footer-brand">
+          <h2><span>Ceylon Birdwing</span> Tours</h2>
+          <p>Specializing in personalized tours across Sri Lanka, covering historical, nature, and coastal experiences. We are committed to making your island dream a reality.</p>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="footer-social">
+          <a href="https://web.facebook.com/people/Ceylon-Birdwing-Tours/61588023495848/" data-tooltip="Facebook" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.simpleicons.org/facebook/ffffff" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com/ceylonbirdwingtours" data-tooltip="Instagram" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.simpleicons.org/instagram/ffffff" alt="Instagram">
+          </a>
+          <a href="https://www.tiktok.com/@ceylon.birdwing.t" data-tooltip="TikTok" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.simpleicons.org/tiktok/ffffff" alt="TikTok">
+          </a>
+          <a href="https://www.threads.com/@ceylonbirdwingtours" data-tooltip="Threads" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.simpleicons.org/threads/ffffff" alt="Threads">
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-3 col-md-6">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="javascript:void(0)" class="footer-link" data-title="Online Enquiry" data-content="Fill out our online enquiry form to get personalized travel information and assistance.">Online Enquiry</a></li>
+          <li><a href="javascript:void(0)" class="footer-link" data-title="Booking Conditions" data-content="Read our booking terms, conditions, and cancellation policies before confirming your tour.">Booking Conditions</a></li>
+          <li><a href="javascript:void(0)" class="footer-link" data-title="Privacy Policy" data-content="We respect your privacy. Learn how we collect, use, and protect your personal information.">Privacy Policy</a></li>
+          <li><a href="javascript:void(0)" class="footer-link" data-title="FAQ" data-content="Check frequently asked questions to help you plan your tour efficiently.">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-lg-4 col-md-6">
+        <h4 class="footer-heading">Contact Us</h4>
+        <a href="tel:+94762055008" class="footer-contact-item">
+          <div class="footer-contact-icon"><i class="fa fa-phone"></i></div>
+          <span>+94 76 2055008</span>
+        </a>
+        <a href="mailto:ceylonbirdwingtours@gmail.com" class="footer-contact-item">
+          <div class="footer-contact-icon"><i class="fa fa-envelope"></i></div>
+          <span>ceylonbirdwingtours@gmail.com</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-divider"></div>
+  <div class="footer-bottom">
+    <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> <span>Ceylon Birdwing Tours</span> &mdash; All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- Footer Modal -->
+<div id="footerModal" class="blog-modal-overlay" role="dialog" aria-hidden="true">
+  <div class="blog-modal-box">
+    <button class="blog-modal-close-icon" id="footer-modal-close"><i class="fa fa-times"></i></button>
+    <div class="blog-modal-body">
+      <h3 id="footerModalTitle" style="font-weight:800;"></h3>
+      <p id="footerModalContent" style="color:#555;"></p>
+      <button class="btn-popup-close" id="footer-modal-btn">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  const fModal     = document.getElementById('footerModal');
+  const fCloseIcon = document.getElementById('footer-modal-close');
+  const fCloseBtn  = document.getElementById('footer-modal-btn');
+
+  function openFModal(link) {
+    document.getElementById('footerModalTitle').textContent   = link.getAttribute('data-title');
+    document.getElementById('footerModalContent').textContent = link.getAttribute('data-content');
+    fModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeFModal() {
+    fModal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.footer-link').forEach(link =>
+    link.addEventListener('click', e => { e.preventDefault(); openFModal(link); })
+  );
+  fCloseIcon.addEventListener('click', closeFModal);
+  fCloseBtn.addEventListener('click', closeFModal);
+  fModal.addEventListener('click', e => { if (e.target === fModal) closeFModal(); });
+})();
+</script>
+<!-- FOOTER END -->
+
+
+<!-- Page Loader -->
+<div id="ftco-loader" class="show fullscreen">
+  <svg class="circular" width="48px" height="48px">
+    <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+    <circle class="path"    cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#FFD233"/>
+  </svg>
+</div>
+
+
+<!-- Scripts -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
