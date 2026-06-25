@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Lanka Elite | 07 Day Tour Package</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-dark: #1a3c34;
+            --accent-gold: #c5a059;
+            --light-bg: #fdfbf7;
+            --white: #ffffff;
+            --text-gray: #4a4a4a;
+            --whatsapp-green: #25D366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        /* --- Header Section --- */
+        .hero {
+            background: linear-gradient(rgba(26, 60, 52, 0.8), rgba(26, 60, 52, 0.8)), 
+                        url('https://images.unsplash.com/photo-1552423158-95e5462df0f9?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+        }
+
+        /* --- Main Content --- */
+        .container {
+            max-width: 1200px;
+            margin: -50px auto 100px;
+            padding: 0 20px;
+        }
+
+        .package-card {
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            margin-bottom: 60px;
+            overflow: hidden;
+            border: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+        .package-header {
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 30px;
+            text-align: center;
+        }
+
+        .package-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--accent-gold);
+        }
+
+        /* --- Itinerary Grid --- */
+        .itinerary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2px;
+            background: #eee; 
+        }
+
+        .day-block {
+            background: var(--white);
+            padding: 30px;
+        }
+
+        .day-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--accent-gold);
+            padding-bottom: 10px;
+        }
+
+        .day-title i { color: var(--accent-gold); }
+
+        .content-list {
+            list-style: none;
+        }
+
+        .content-list li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .content-list li::before {
+            content: "\f058";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+        }
+
+        .highlight-text {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        /* --- Floating Navigation Bar --- */
+        .action-bar {
+            position: fixed;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 12px 25px;
+            border-radius: 100px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            z-index: 1000;
+            border: 1px solid var(--accent-gold);
+            width: max-content;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-back {
+            background: var(--primary-dark);
+            color: var(--white);
+        }
+
+        .btn-whatsapp {
+            background: var(--whatsapp-green);
+            color: var(--white);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .hero { height: 30vh; }
+            .itinerary-grid { grid-template-columns: 1fr; }
+            .action-bar { width: 90%; justify-content: center; bottom: 15px; }
+            .btn { padding: 10px 15px; font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <p>The Ultimate Island Experience</p>
+        <h1>07 Days Tour Package</h1>
+    </header>
+
+    <div class="container">
+        
+        <article class="package-card">
+            <div class="package-header">
+                <h2>Tour Package 01: Signature Grand Tour</h2>
+            </div>
+            <div class="itinerary-grid">
+                
+                <div class="day-block">
+                    <span class="day-title"><i class="fas fa-map-marked-alt"></i> Day 1 : Sigiriya</span>
+                    <ul class="content-list">
+                        <li>Pick-up from <span class="highlight-text">Colombo Airport</span> / Hotel in Colombo or Negombo</li>
+                        <li>Travel to Sigiriya</li>
+                        <li><span class="highlight-text">Village tour with traditional lunch</span></li>
+                        <li>Evening <span class="highlight-text">Jeep Safari</span> at National park (Minneriya, Kaudulla, or Hurulu)</li>
+                        <li>Overnight at Sigiriya</li>
+                    </ul>
+                </div>
+
+                <div class="day-block">
+                    <span class="day-title"><i class="fas fa-landmark"></i> Day 2 : Kandy</span>
+                    <ul class="content-list">
+                        <li>Early morning climb the <span class="highlight-text">Sigiriya Lion Rock</span></li>
+                        <li>Visit Dambulla Temple</li>
+                        <li>Travel to Kandy</li>
+                        <li>Spice Garden & Silk Garden visit</li>
+                        <li>Gem Museum & <span class="highlight-text">Bahiravokanda Vihara Buddha Statue</span></li>
+                        <li>Kandy Tooth Temple & Kandy Lake</li>
+                        <li>Kandyan Dance Show & Overnight at Kandy</li>
+                    </ul>
+                </div>
+
+                <div class="day-block">
+                    <span class="day-title"><i class="fas fa-cloud-sun"></i> Day 3 : Nuwara Eliya</span>
+                    <ul class="content-list">
+                        <li>Travel to Nuwara Eliya</li>
+                        <li>Visit <span class="highlight-text">Ramboda Waterfalls</span> & Hanuman Temple</li>
+                        <li>Tea factory & Tea plantation visit</li>
+                        <li>Explore <span class="highlight-text">Victoria Park & Gregory Lake</span></li>
+                        <li>Moon Plains & Strawberry Farm visit</li>
+                        <li>Vegetable Market exploration</li>
+                        <li>Overnight at Nuwara Eliya</li>
+                    </ul>
+                </div>
+
+                <div class="day-block">
+                    <span class="day-title"><i class="fas fa-train"></i> Day 4 : Ella</span>
+                    <ul class="content-list">
+                        <li><span class="highlight-text">Scenic Train Ride</span> from Nuwara Eliya to Ella</li>
+                        <li>Hike Little Adams Peak & Ella Rock</li>
+                        <li>Visit <span class="highlight-text">Nine Arch Bridge & Demodara Loop</span></li>
+                        <li>Flying Ravana Mega Zipline experience</li>
+                        <li>Ravana Caves & Ravana Waterfalls</li>
+                        <li>Overnight at Ella</li>
+                    </ul>
+                </div>
+
+                <div class="day-block">
+                    <span class="day-title"><i class="fas fa-paw"></i> Day 5 : Mirissa</span>
+                    <ul class="content-list">
+                        <li>Morning <span class="highlight-text">Jeep Safari at Yala National Park</span></li>
+                        <li>Travel to Mirissa</li>
+                        <li>Visit Parrot Rock & Coconut Tree Hill</li>
+                        <li>Leisure at <span class="highlight-text">Mirissa Beach & Water Sports</span> (surfing, wakeboarding, jet skiing, tubing)</li>
+                        <li>Overnight at Mirissa</li>
+                    </ul>
+                </div>
+
+                <div class="day-block">
+                    <span class="day-title"><i class="fas fa-fish"></i> Day 6 : Bentota</span>
+                    <ul class="content-list">
+                        <li>Early morning <span class="highlight-text">Whale Watching at Mirissa</span></li>
+                        <li>Travel to Bentota</li>
+                        <li>Explore <span class="highlight-text">Galle Dutch Fort & Lighthouse</span></li>
+                        <li>Visit Turtle Hatchery</li>
+                        <li>Overnight at Bentota</li>
+                    </ul>
+                </div>
+
+                <div class="day-block">
+                    <span class="day-title"><i class="fas fa-city"></i> Day 7 : Departure</span>
+                    <ul class="content-list">
+                        <li><span class="highlight-text">Madu River Boat Safari</span></li>
+                        <li>Travel to Colombo for City Tour</li>
+                        <li>Ganagaramaya temple & Lotus tower</li>
+                        <li>Red Masjid & Shopping at Pettah Market</li>
+                        <li>Drop at Colombo Airport / Hotel</li>
+                    </ul>
+                </div>
+
+            </div>
+        </article>
+
+    </div>
+
+    <div class="action-bar">
+        <a href="packages.html" class="btn btn-back">
+            <i class="fas fa-arrow-left"></i> Back to Packages
+        </a>
+        <a href="https://wa.me/94762055008?text=Hello!%20I%20am%20interested%20in%20your%2007-Day%20Tour%20Package." target="_blank" class="btn btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> WhatsApp Inquiry
+        </a>
+    </div>
+
+</body>
+</html>
