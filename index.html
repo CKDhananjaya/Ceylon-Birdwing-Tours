@@ -1040,7 +1040,16 @@
     flex-direction: column;
     height: 100%;
     border: 1px solid #f0f0f0;
-    margin-bottom: 24px;
+    margin-bottom: 24px !important;
+  }
+
+  @media (max-width: 768px) {
+    .blog-section .row.g-4 > [class*="col-"] {
+      margin-bottom: 24px;
+    }
+    .blog-section .row.g-4 > [class*="col-"]:last-child {
+      margin-bottom: 0;
+    }
   }
   .blog-card:hover {
     transform: translateY(-10px);
