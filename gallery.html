@@ -49,8 +49,8 @@
   ============================================================ */
   .gallery-hero {
     position: relative;
-    height: 70vh;
-    min-height: 480px;
+    height: 92vh;
+    min-height: 620px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,7 +62,7 @@
   .gallery-hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url('images/bg_5.jpg');
+    background-image: url('images/cam.png');
     background-size: cover;
     background-position: center;
     animation: heroPan 20s ease-in-out infinite alternate;
@@ -240,51 +240,183 @@
   }
 
   /* ============================================================
-     FILTER BAR
+     GALLERY SECTION BACKGROUND + DECORATIONS
   ============================================================ */
   .gallery-section {
+    position: relative;
     padding: 80px 0 40px;
     background: linear-gradient(135deg, #fefcf6 0%, #fff9ec 50%, #fefcf6 100%);
+    overflow: hidden;
+    isolation: isolate;
   }
 
-  .filter-bar {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 48px;
+  .gallery-section .container {
+    position: relative;
+    z-index: 1;
   }
 
-  .filter-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    padding: 10px 22px;
-    border-radius: 50px;
-    border: 2px solid #e0d9cc;
-    background: #fff;
-    color: #555;
-    font-family: var(--font-main);
-    font-weight: 600;
-    font-size: 0.88rem;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
-    letter-spacing: 0.02em;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  /* Hand-drawn doodle decorations: swirls, sparkles, loops, arrows */
+  .doodle {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.55;
   }
-  .filter-btn i { font-size: 0.82rem; }
-  .filter-btn:hover {
-    border-color: var(--gold-dark);
-    color: #111;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(255,168,0,0.18);
+  .doodle svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
   }
-  .filter-btn.active {
-    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-    border-color: transparent;
-    color: #111;
-    box-shadow: 0 6px 20px rgba(255,168,0,0.35);
-    transform: translateY(-2px);
+
+  .doodle-1 {              /* spiral, top-left */
+    top: 4%;
+    left: 3%;
+    width: clamp(70px, 8vw, 110px);
+    height: clamp(70px, 8vw, 110px);
+    color: #ffa800;
+    transform: rotate(-8deg);
+  }
+  .doodle-2 {              /* coil/wave, bottom-left */
+    bottom: 6%;
+    left: 1%;
+    width: clamp(90px, 10vw, 150px);
+    height: clamp(50px, 6vw, 80px);
+    color: #009688;
+    transform: rotate(6deg);
+  }
+  .doodle-3 {              /* sparkle burst, right-mid */
+    top: 30%;
+    right: 5%;
+    width: clamp(40px, 5vw, 62px);
+    height: clamp(40px, 5vw, 62px);
+    color: #e91e63;
+  }
+  .doodle-4 {              /* triple dash, paired above sparkle */
+    top: 22%;
+    right: 4%;
+    width: clamp(45px, 5vw, 65px);
+    height: clamp(30px, 3.5vw, 44px);
+    color: #e91e63;
+    opacity: 0.5;
+  }
+  .doodle-5 {              /* curved arrow, bottom-right */
+    bottom: 10%;
+    right: 6%;
+    width: clamp(50px, 6vw, 75px);
+    height: clamp(65px, 8vw, 100px);
+    color: #3f51b5;
+    transform: rotate(-4deg);
+  }
+  .doodle-6 {              /* small spiral, top-right */
+    top: 8%;
+    right: 24%;
+    width: clamp(55px, 6vw, 85px);
+    height: clamp(55px, 6vw, 85px);
+    color: #9c27b0;
+    transform: rotate(20deg) scaleX(-1);
+  }
+  .doodle-7 {              /* coil/wave, mid-left */
+    top: 52%;
+    left: 4%;
+    width: clamp(75px, 9vw, 125px);
+    height: clamp(42px, 5vw, 65px);
+    color: #ffc107;
+    transform: rotate(-10deg);
+  }
+  .doodle-8 {              /* small sparkle, top-center */
+    top: 14%;
+    left: 45%;
+    width: clamp(32px, 4vw, 46px);
+    height: clamp(32px, 4vw, 46px);
+    color: #009688;
+    opacity: 0.45;
+  }
+  .doodle-9 {              /* curved arrow, top-left area */
+    top: 2%;
+    left: 20%;
+    width: clamp(45px, 5.5vw, 68px);
+    height: clamp(58px, 7vw, 90px);
+    color: #ffa800;
+    transform: rotate(18deg) scaleX(-1);
+    opacity: 0.5;
+  }
+  .doodle-10 {             /* sparkle burst, top-right corner */
+    top: 2%;
+    right: 8%;
+    width: clamp(34px, 4vw, 50px);
+    height: clamp(34px, 4vw, 50px);
+    color: #3f51b5;
+    opacity: 0.5;
+  }
+
+  /* Tablet: thin out a couple of the smaller accents */
+  @media (max-width: 992px) {
+    .doodle-6,
+    .doodle-8,
+    .doodle-9,
+    .doodle-10 { display: none; }
+  }
+
+  /* Mobile: keep only the calmest, most legible set so nothing feels cramped */
+  @media (max-width: 576px) {
+    .gallery-section {
+      padding: 56px 0 32px;
+    }
+    .doodle-4,
+    .doodle-7 { display: none; }
+    .doodle-1 { width: 60px; height: 60px; top: 2%; left: 2%; }
+    .doodle-2 { width: 80px; height: 45px; bottom: 4%; left: 0; }
+    .doodle-3 { width: 34px; height: 34px; top: 26%; right: 4%; }
+    .doodle-5 { width: 42px; height: 55px; bottom: 6%; right: 4%; }
+  }
+
+  /* ------------------------------------------------------------
+     Colorful blended mesh-blob clusters (green/yellow/purple/blue/pink)
+  ------------------------------------------------------------ */
+  .mesh-cluster {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(48px);
+    opacity: 0.6;
+  }
+  .mesh-cluster .mc {
+    position: absolute;
+    border-radius: 50%;
+  }
+  .mesh-cluster .mc-green  { top: 0;    left: 28%; width: 60%; height: 60%; background: #4caf50; }
+  .mesh-cluster .mc-yellow { top: 18%;  left: 0;   width: 52%; height: 52%; background: #ffd600; }
+  .mesh-cluster .mc-purple { bottom: 0; left: 32%; width: 62%; height: 62%; background: #9c27b0; }
+  .mesh-cluster .mc-blue   { bottom: 8%; right: 0; width: 54%; height: 54%; background: #2196f3; }
+  .mesh-cluster .mc-pink   { top: 32%;  right: 2%; width: 48%; height: 48%; background: #ff4081; }
+
+  .mesh-cluster-gallery {
+    top: -70px;
+    right: 6%;
+    width: clamp(260px, 30vw, 420px);
+    height: clamp(260px, 30vw, 420px);
+  }
+  .mesh-cluster-gallery-2 {
+    bottom: -60px;
+    left: -4%;
+    width: clamp(200px, 24vw, 340px);
+    height: clamp(200px, 24vw, 340px);
+    opacity: 0.5;
+  }
+  .mesh-cluster-cta {
+    bottom: -50px;
+    left: 8%;
+    width: clamp(200px, 24vw, 320px);
+    height: clamp(200px, 24vw, 320px);
+  }
+
+  @media (max-width: 992px) {
+    .mesh-cluster { filter: blur(36px); }
+  }
+  @media (max-width: 576px) {
+    .mesh-cluster { filter: blur(26px); opacity: 0.5; }
+    .mesh-cluster-gallery-2 { display: none; }
   }
 
   /* ============================================================
@@ -752,9 +884,16 @@
      CTA SECTION
   ============================================================ */
   .gallery-cta {
+    position: relative;
     padding: 80px 0;
     background: linear-gradient(135deg, #fefcf6 0%, #fff9ec 100%);
     text-align: center;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .gallery-cta .container {
+    position: relative;
+    z-index: 1;
   }
 
   .gallery-cta h2 {
@@ -891,7 +1030,7 @@
      RESPONSIVE HERO
   ============================================================ */
   @media (max-width: 768px) {
-    .gallery-hero { height: 60vh; }
+    .gallery-hero { height: 70vh; min-height: 520px; }
     .gallery-hero-content { text-align: center; }
     .gallery-hero-sub { max-width: 100%; margin-left: auto; margin-right: auto; }
     .hero-stats-row { justify-content: center; }
@@ -1046,6 +1185,74 @@ window.addEventListener('scroll',()=>{if(window.scrollY>60){navbar.classList.rem
      PHOTO GALLERY SECTION
 ============================================================ -->
 <section class="gallery-section" id="gallery">
+  <!-- Colorful blended mesh-blob clusters -->
+  <div class="mesh-cluster mesh-cluster-gallery" aria-hidden="true">
+    <span class="mc mc-green"></span>
+    <span class="mc mc-yellow"></span>
+    <span class="mc mc-purple"></span>
+    <span class="mc mc-blue"></span>
+    <span class="mc mc-pink"></span>
+  </div>
+  <div class="mesh-cluster mesh-cluster-gallery-2" aria-hidden="true">
+    <span class="mc mc-green"></span>
+    <span class="mc mc-yellow"></span>
+    <span class="mc mc-purple"></span>
+    <span class="mc mc-blue"></span>
+    <span class="mc mc-pink"></span>
+  </div>
+  <!-- Hand-drawn doodle decorations -->
+  <div class="doodle doodle-1" aria-hidden="true">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 90 C20 90 10 65 15 45 C20 20 45 10 65 15 C85 20 90 40 78 52 C68 62 52 58 50 45" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div class="doodle doodle-2" aria-hidden="true">
+    <svg viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 50 C5 20 25 20 25 35 C25 50 45 50 45 35 C45 20 65 20 65 35 C65 50 85 50 85 35 C85 20 95 20 95 30" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div class="doodle doodle-3" aria-hidden="true">
+    <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+      <path d="M30 2 L36 26 L58 30 L36 34 L30 58 L24 34 L2 30 L24 26 Z" fill="currentColor"/>
+    </svg>
+  </div>
+  <div class="doodle doodle-4" aria-hidden="true">
+    <svg viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 30 L20 15 M28 32 L34 18 M45 30 L50 20" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div class="doodle doodle-5" aria-hidden="true">
+    <svg viewBox="0 0 60 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M45 75 C10 75 5 40 25 20" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+      <path d="M25 20 L15 28 M25 20 L33 30" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div class="doodle doodle-6" aria-hidden="true">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 90 C20 90 10 65 15 45 C20 20 45 10 65 15 C85 20 90 40 78 52 C68 62 52 58 50 45" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div class="doodle doodle-7" aria-hidden="true">
+    <svg viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 50 C5 20 25 20 25 35 C25 50 45 50 45 35 C45 20 65 20 65 35 C65 50 85 50 85 35 C85 20 95 20 95 30" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div class="doodle doodle-8" aria-hidden="true">
+    <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+      <path d="M30 2 L36 26 L58 30 L36 34 L30 58 L24 34 L2 30 L24 26 Z" fill="currentColor"/>
+    </svg>
+  </div>
+  <div class="doodle doodle-9" aria-hidden="true">
+    <svg viewBox="0 0 60 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M45 75 C10 75 5 40 25 20" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+      <path d="M25 20 L15 28 M25 20 L33 30" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div class="doodle doodle-10" aria-hidden="true">
+    <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+      <path d="M30 2 L36 26 L58 30 L36 34 L30 58 L24 34 L2 30 L24 26 Z" fill="currentColor"/>
+    </svg>
+  </div>
   <div class="container">
 
     <!-- Section header -->
@@ -1058,25 +1265,6 @@ window.addEventListener('scroll',()=>{if(window.scrollY>60){navbar.classList.rem
           a story of adventure, culture, and natural wonder.
         </p>
       </div>
-    </div>
-
-    <!-- Filter bar -->
-    <div class="filter-bar" id="filterBar" role="group" aria-label="Gallery filter">
-      <button class="filter-btn active" data-filter="all" id="filter-all">
-        <i class="fas fa-th"></i> All Photos
-      </button>
-      <button class="filter-btn" data-filter="nature" id="filter-nature">
-        <i class="fas fa-leaf"></i> Nature
-      </button>
-      <button class="filter-btn" data-filter="wildlife" id="filter-wildlife">
-        <i class="fas fa-paw"></i> Wildlife
-      </button>
-      <button class="filter-btn" data-filter="culture" id="filter-culture">
-        <i class="fas fa-landmark"></i> Culture
-      </button>
-      <button class="filter-btn" data-filter="beach" id="filter-beach">
-        <i class="fas fa-umbrella-beach"></i> Beach
-      </button>
     </div>
 
     <!-- Masonry gallery grid -->
@@ -1526,6 +1714,13 @@ window.addEventListener('scroll',()=>{if(window.scrollY>60){navbar.classList.rem
      CALL TO ACTION
 ============================================================ -->
 <section class="gallery-cta" id="galleryCta">
+  <div class="mesh-cluster mesh-cluster-cta" aria-hidden="true">
+    <span class="mc mc-green"></span>
+    <span class="mc mc-yellow"></span>
+    <span class="mc mc-purple"></span>
+    <span class="mc mc-blue"></span>
+    <span class="mc mc-pink"></span>
+  </div>
   <div class="container">
     <p class="section-label" style="justify-content:center;">Plan Your Trip</p>
     <h2>Ready to Create Your Own <span>Memories?</span></h2>
@@ -1678,39 +1873,9 @@ fModal.addEventListener('click',function(e){if(e.target===fModal)closeFModal();}
   ];
 
   /* ——————————————————————————
-     FILTER LOGIC
+     GALLERY ITEMS (filtering removed — all photos always shown)
   —————————————————————————— */
-  var filterBtns = document.querySelectorAll('.filter-btn');
   var galleryItems = document.querySelectorAll('.gallery-item');
-  var currentFilter = 'all';
-  var visibleItems = [];
-
-  function applyFilter(filter) {
-    currentFilter = filter;
-    visibleItems = [];
-    galleryItems.forEach(function(item) {
-      var cat = item.getAttribute('data-category');
-      if (filter === 'all' || cat === filter) {
-        item.classList.remove('hidden');
-        visibleItems.push(item);
-        // Re-trigger entrance animation
-        item.classList.remove('revealed');
-        setTimeout(function(el) { el.classList.add('revealed'); }, 50, item);
-      } else {
-        item.classList.add('hidden');
-      }
-    });
-    // Rebuild visible index map
-    buildVisibleMap();
-  }
-
-  filterBtns.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      filterBtns.forEach(function(b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-      applyFilter(btn.getAttribute('data-filter'));
-    });
-  });
 
   /* ——————————————————————————
      ENTRANCE ANIMATION (Intersection Observer)
@@ -1845,7 +2010,6 @@ fModal.addEventListener('click',function(e){if(e.target===fModal)closeFModal();}
 
   // Init
   buildVisibleMap();
-  applyFilter('all');
 
 })();
 </script>
