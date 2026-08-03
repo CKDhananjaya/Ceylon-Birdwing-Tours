@@ -62,7 +62,7 @@
   .gallery-hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url('images/cam.png');
+    background-image: url('images/cam.PNG');
     background-size: cover;
     background-position: center;
     animation: heroPan 20s ease-in-out infinite alternate;
@@ -746,7 +746,7 @@
      VIDEO SECTION
   ============================================================ */
   .video-section {
-    padding: 80px 0;
+    padding: 60px 0;
     background: #111;
     position: relative;
     overflow: hidden;
@@ -780,17 +780,24 @@
     font-size: 1rem;
     line-height: 1.7;
     max-width: 580px;
-    margin-bottom: 48px;
+    margin-bottom: 36px;
   }
 
+  /* Video grid: centered, max 720px wide so a single card looks intentional */
   .video-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 28px;
+  }
+  .video-grid .video-card {
+    flex: 0 1 640px;
+    max-width: 720px;
+    width: 100%;
   }
 
   @media (max-width: 600px) {
-    .video-grid { grid-template-columns: 1fr; }
+    .video-grid .video-card { flex: 1 1 100%; }
   }
 
   .video-card {
