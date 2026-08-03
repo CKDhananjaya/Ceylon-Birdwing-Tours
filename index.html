@@ -1,0 +1,2566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ceylon Birdwing Tours – Discover Sri Lanka</title>
+  <meta name="description" content="Ceylon Birdwing Tours – Personalized, safe & memorable tours across Sri Lanka. Explore ancient ruins, golden beaches, tea hills & wildlife with expert guides.">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="shortcut icon" href="images/logo.ico">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google Fonts: Outfit + Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Plugins CSS -->
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+  /* ============================================================
+     DESIGN TOKENS
+  ============================================================ */
+  :root {
+    --gold:        #FFD233;
+    --gold-dark:   #FFA800;
+    --accent:      #ff5733;
+    --dark:        #0f0f0f;
+    --dark-2:      #1a1a1a;
+    --dark-3:      #242424;
+    --text-light:  #f0f0f0;
+    --text-muted:  #aaaaaa;
+    --white:       #ffffff;
+    --glass-bg:    rgba(255,255,255,0.08);
+    --glass-border:rgba(255,255,255,0.15);
+    --radius-sm:   8px;
+    --radius-md:   16px;
+    --radius-lg:   24px;
+    --shadow-sm:   0 4px 15px rgba(0,0,0,0.12);
+    --shadow-md:   0 8px 30px rgba(0,0,0,0.2);
+    --shadow-lg:   0 20px 60px rgba(0,0,0,0.35);
+    --transition:  0.35s cubic-bezier(0.4,0,0.2,1);
+    --font-main:   'Outfit', 'Poppins', sans-serif;
+  }
+
+  /* ============================================================
+     GLOBAL RESET & BASE
+  ============================================================ */
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-main);
+    margin: 0;
+    background: #f7f5f0;
+    color: #222;
+    overflow-x: hidden;
+  }
+
+  h1,h2,h3,h4,h5,h6 { font-family: var(--font-main); }
+
+  img { max-width: 100%; }
+
+  /* ============================================================
+     SCROLLBAR STYLE
+  ============================================================ */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #111; }
+  ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
+
+  /* ============================================================
+     NAVBAR
+  ============================================================ */
+  .modern-navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 0;
+    transition: all 0.4s ease;
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0px 24px;
+    transition: padding var(--transition);
+  }
+
+  /* Gold/yellow at top */
+  .modern-navbar.at-top {
+    background: rgba(255, 210, 51, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+  }
+
+  /* Deeper gold on scroll */
+  .modern-navbar.scrolled {
+    background: linear-gradient(135deg, #FFD233, #FFC300);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  }
+  .modern-navbar.scrolled .nav-container {
+    padding: 0px 24px;
+  }
+
+  /* Logo */
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+  .nav-logo-img-wrap {
+    position: relative;
+    width: 76px;
+    height: 76px;
+    flex-shrink: 0;
+    transition: transform var(--transition);
+  }
+  .modern-navbar.scrolled .nav-logo-img-wrap { width: 64px; height: 64px; }
+  .nav-logo-img-wrap img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: none;
+  }
+  .nav-logo:hover .nav-logo-img-wrap { transform: rotate(-5deg) scale(1.05); }
+
+  .nav-logo-text { display: flex; flex-direction: column; }
+  .nav-logo-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #111;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+  }
+  .nav-logo-sub {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: rgba(0,0,0,0.55);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* Menu */
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+
+  .nav-item a {
+    display: block;
+    color: #111;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+    transition: all var(--transition);
+    position: relative;
+    background: rgba(255,255,255,0.15);
+  }
+  .nav-item a::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 16px;
+    right: 16px;
+    height: 2px;
+    background: #111;
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform var(--transition);
+  }
+  .nav-item a:hover,
+  .nav-item.active a {
+    color: #FFC300;
+    background: #fff;
+    font-weight: 700;
+  }
+  .nav-item a:hover::after,
+  .nav-item.active a::after {
+    background: #FFC300;
+    transform: scaleX(1);
+  }
+
+  /* CTA nav button */
+  .nav-cta a {
+    background: #fff !important;
+    color: #111 !important;
+    font-weight: 700 !important;
+    padding: 7px 18px !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  }
+  .nav-cta a::after { display: none !important; }
+  .nav-cta a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2) !important;
+    background: #fff !important;
+    color: #FFC300 !important;
+  }
+
+  /* Hamburger */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    padding: 8px;
+    border-radius: var(--radius-sm);
+    transition: background var(--transition);
+    position: relative;
+    z-index: 1001;
+  }
+  .nav-toggle:hover { background: rgba(255,255,255,0.1); }
+  .nav-toggle span {
+    display: block;
+    height: 2px;
+    width: 26px;
+    background: #111;
+    border-radius: 2px;
+    transition: all 0.35s ease;
+    transform-origin: center;
+  }
+
+  /* Mobile nav */
+  @media (max-width: 900px) {
+    .nav-toggle { display: flex; }
+
+    .nav-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 280px;
+      height: 100vh;
+      flex-direction: column;
+      background: linear-gradient(180deg, #FFD233 0%, #FFC300 100%);
+      padding: 100px 20px 30px;
+      gap: 6px;
+      transition: right 0.4s cubic-bezier(0.4,0,0.2,1);
+      box-shadow: -6px 0 30px rgba(0,0,0,0.25);
+      align-items: flex-start;
+      overflow-y: auto;
+    }
+    .nav-menu.show { right: 0; }
+
+    .nav-item { width: 100%; }
+    .nav-item a {
+      border-radius: var(--radius-sm);
+      padding: 12px 18px;
+      font-size: 1rem;
+      color: #111;
+      background: rgba(255,255,255,0.2);
+    }
+    .nav-item a::after { display: none; }
+    .nav-item a:hover, .nav-item.active a {
+      background: #fff;
+      color: #FFC300;
+      padding-left: 24px;
+    }
+    .nav-cta { width: 100%; margin-top: 10px; }
+    .nav-cta a { text-align: center !important; justify-content: center; border-radius: var(--radius-sm) !important; }
+
+    /* Nav overlay */
+    .nav-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 999;
+    }
+    .nav-overlay.show { display: block; }
+  }
+
+  @media (max-width: 480px) {
+    .nav-logo-title { font-size: 0.95rem; }
+    .nav-logo-sub { display: none; }
+    .nav-logo-img-wrap { width: 58px; height: 58px; }
+    .nav-container { padding: 0px 14px; }
+  }
+
+  /* ============================================================
+     HERO
+  ============================================================ */
+  #hero-slider {
+    position: relative;
+    height: 100vh;
+    min-height: 580px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-top: 88px; /* clear fixed navbar */
+  }
+
+  /* Slide layers with Ken Burns */
+  .hero-slide-layer {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    animation: kenBurns 20s ease-in-out infinite alternate;
+    will-change: transform, opacity;
+  }
+  .hero-slide-layer.active { opacity: 1; }
+
+  @keyframes kenBurns {
+    0%   { transform: scale(1)    translateX(0)    translateY(0); }
+    50%  { transform: scale(1.08) translateX(-1%)  translateY(-1%); }
+    100% { transform: scale(1.12) translateX(1%)   translateY(0.5%); }
+  }
+
+  /* Multi-layer overlay */
+  #hero-slider .overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 60%, transparent 100%),
+      linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%);
+    z-index: 1;
+  }
+
+  /* Content */
+  #hero-slider .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Badge */
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,210,51,0.15);
+    border: 1px solid rgba(255,210,51,0.4);
+    backdrop-filter: blur(8px);
+    color: var(--gold);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 7px 18px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    animation: fadeSlideDown 1s ease forwards;
+  }
+  .hero-badge .dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--gold);
+    animation: pulseDot 2s ease infinite;
+  }
+  @keyframes pulseDot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.4); }
+  }
+
+  /* Hero heading */
+  .hero-h1 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    animation: fadeSlideUp 1s ease 0.3s forwards;
+    opacity: 0;
+  }
+  .hero-h1 span {
+    color: var(--gold);
+  }
+
+  /* Typing cursor */
+  #typing-text::after {
+    content: "|";
+    margin-left: 3px;
+    color: var(--gold);
+    animation: blink 1s infinite;
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  /* Hero paragraph */
+  .hero-sub {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: rgba(255,255,255,0.8);
+    max-width: 480px;
+    line-height: 1.7;
+    margin-bottom: 36px;
+    opacity: 0;
+    animation: fadeSlideUp 1s ease 3.4s forwards;
+  }
+
+  /* Hero buttons */
+  .hero-btns {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeSlideUp 1s ease 3.6s forwards;
+  }
+  .btn-hero-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: #111;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(255,168,0,0.4);
+    transition: all var(--transition);
+    letter-spacing: 0.03em;
+  }
+  .btn-hero-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 35px rgba(255,168,0,0.55);
+    color: #111;
+    text-decoration: none;
+  }
+  .btn-hero-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 30px;
+    background: transparent;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all var(--transition);
+    letter-spacing: 0.03em;
+    backdrop-filter: blur(4px);
+  }
+  .btn-hero-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(255,210,51,0.08);
+    transform: translateY(-3px);
+    text-decoration: none;
+  }
+
+
+
+  /* Scroll indicator */
+  .hero-scroll {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255,255,255,0.6);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    animation: fadeIn 2s ease 4s forwards;
+    opacity: 0;
+    text-decoration: none;
+  }
+  .hero-scroll-line {
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.5));
+    animation: scrollBounce 2s ease infinite;
+  }
+  @keyframes scrollBounce {
+    0%, 100% { transform: scaleY(1); opacity: 1; }
+    50% { transform: scaleY(0.6); opacity: 0.4; }
+  }
+
+  /* Slide dots */
+  .hero-dots {
+    position: absolute;
+    bottom: 36px;
+    right: 40px;
+    z-index: 3;
+    display: flex;
+    gap: 8px;
+  }
+  .hero-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.35);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    padding: 0;
+  }
+  .hero-dot.active {
+    background: var(--gold);
+    width: 24px;
+    border-radius: 4px;
+  }
+
+  /* Animations */
+  @keyframes fadeSlideDown {
+    from { opacity: 0; transform: translateY(-15px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+
+  /* Hero responsive */
+  @media (max-width: 768px) {
+    #hero-slider { min-height: 100svh; }
+    .hero-sub { max-width: 100%; }
+    .hero-dots { right: 20px; bottom: 24px; }
+    .hero-scroll { display: none; }
+    #hero-slider .overlay {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+    }
+  }
+  @media (max-width: 480px) {
+    .hero-btns { gap: 10px; }
+    .btn-hero-primary, .btn-hero-outline { padding: 12px 22px; font-size: 0.88rem; }
+  }
+
+  /* ============================================================
+     SECTION HEADERS
+  ============================================================ */
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    margin-bottom: 12px;
+  }
+  .section-label::before, .section-label::after {
+    content: '';
+    height: 1px;
+    width: 28px;
+    background: var(--gold-dark);
+  }
+
+  /* ============================================================
+     SERVICES SECTION
+  ============================================================ */
+  .services-section-wrap {
+    background: linear-gradient(135deg, #fefcf6 0%, #fff9ec 50%, #fefcf6 100%);
+    padding: 90px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .services-section-wrap::before {
+    content: '';
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,210,51,0.12), transparent 70%);
+    pointer-events: none;
+  }
+
+  .why-heading { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 800; color: #111; line-height: 1.2; margin-bottom: 16px; }
+  .why-text { color: #555; line-height: 1.8; font-size: 1rem; }
+
+  /* Service cards */
+  .svc-card {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    height: 200px;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition);
+    margin-bottom: 24px;
+  }
+  .svc-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.15) 60%, transparent 100%);
+    z-index: 1;
+    transition: all var(--transition);
+  }
+  .svc-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+  .svc-card:hover::before { background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.05) 100%); }
+
+  .svc-card-body {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    gap: 6px;
+  }
+  .svc-icon {
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #111;
+    box-shadow: 0 4px 12px rgba(255,168,0,0.4);
+    transition: transform var(--transition);
+    flex-shrink: 0;
+  }
+  .svc-card:hover .svc-icon { transform: scale(1.12) rotate(5deg); }
+  .svc-card h3 { color: #fff; font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+  .svc-card p { color: rgba(255,255,255,0.8); font-size: 0.82rem; line-height: 1.5; margin: 0; }
+
+  @media (max-width: 992px) {
+    .svc-card {
+      min-height: 220px;
+    }
+    .svc-card-body {
+      padding: 18px;
+      justify-content: space-between;
+    }
+    .svc-icon {
+      width: 48px; 
+      height: 48px;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .svc-card {
+      min-height: 210px;
+      margin-bottom: 16px;
+    }
+    .svc-card-body {
+      padding: 16px;
+      justify-content: space-between;
+    }
+    .svc-icon {
+      width: 46px; 
+      height: 46px;
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+    .svc-card h3 { 
+      font-size: 0.95rem; 
+      margin-bottom: 4px;
+    }
+    .svc-card p { 
+      font-size: 0.78rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .svc-card {
+      min-height: 200px;
+      margin-bottom: 12px;
+    }
+    .svc-card-body {
+      padding: 14px;
+      justify-content: flex-start;
+      gap: 8px;
+    }
+    .svc-icon {
+      width: 42px; 
+      height: 42px;
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+    }
+    .svc-card h3 { 
+      font-size: 0.9rem;
+      line-height: 1.3;
+      margin-bottom: 2px;
+    }
+    .svc-card p { 
+      font-size: 0.72rem;
+      line-height: 1.4;
+    }
+  }
+
+  /* "Find Destination" button */
+  .btn-find {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 30px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: #111;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(255,168,0,0.35);
+    transition: all var(--transition);
+    margin-top: 16px;
+    margin-bottom: 40px;
+  }
+  .btn-find:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255,168,0,0.5);
+    color: #111;
+    text-decoration: none;
+  }
+  .btn-find i { transition: transform var(--transition); }
+  .btn-find:hover i { transform: translateX(4px); }
+
+  /* ============================================================
+     MINT-GREEN DECORATION TOKENS
+  ============================================================ */
+  :root {
+    --mint:        #e8faf3;
+    --mint-2:      #d0f5e8;
+    --mint-3:      #b8eeda;
+    --mint-accent: #4ecb8d;
+    --mint-mid:    #a8e6c8;
+  }
+
+  /* Floating blob keyframes */
+  @keyframes floatBlob1 {
+    0%,100% { transform: translate(0,0) scale(1); }
+    33%     { transform: translate(18px,-22px) scale(1.04); }
+    66%     { transform: translate(-12px,14px) scale(0.97); }
+  }
+  @keyframes floatBlob2 {
+    0%,100% { transform: translate(0,0) scale(1) rotate(0deg); }
+    40%     { transform: translate(-20px,16px) scale(1.06) rotate(8deg); }
+    70%     { transform: translate(14px,-10px) scale(0.95) rotate(-5deg); }
+  }
+  @keyframes floatBlob3 {
+    0%,100% { transform: translate(0,0) scale(1); }
+    50%     { transform: translate(10px,20px) scale(1.08); }
+  }
+  @keyframes shimmerDot {
+    0%,100% { opacity: 0.35; }
+    50%     { opacity: 0.65; }
+  }
+
+  /* ============================================================
+     FEATURED DESTINATIONS
+  ============================================================ */
+  .destinations-section {
+    padding: 90px 0;
+    background: linear-gradient(160deg, #f0fdf8 0%, #e8faf3 35%, #f7fffe 65%, #edfaf4 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Dot grid overlay */
+  .destinations-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(78,203,141,0.22) 1.5px, transparent 1.5px);
+    background-size: 32px 32px;
+    pointer-events: none;
+    z-index: 0;
+    animation: shimmerDot 5s ease-in-out infinite;
+  }
+
+  /* Ensure content sits above decoration */
+  .destinations-section > .container { position: relative; z-index: 1; }
+
+  /* Blob 1 – top-right */
+  .dest-blob-1 {
+    position: absolute;
+    top: -80px; right: -100px;
+    width: 420px; height: 420px;
+    border-radius: 60% 40% 55% 45% / 50% 55% 45% 50%;
+    background: radial-gradient(circle at 40% 40%, rgba(168,230,200,0.55), rgba(78,203,141,0.18) 70%, transparent);
+    pointer-events: none;
+    z-index: 0;
+    animation: floatBlob1 16s ease-in-out infinite;
+  }
+
+  /* Blob 2 – bottom-left */
+  .dest-blob-2 {
+    position: absolute;
+    bottom: -60px; left: -80px;
+    width: 340px; height: 340px;
+    border-radius: 45% 55% 40% 60% / 55% 45% 60% 40%;
+    background: radial-gradient(circle at 60% 60%, rgba(208,245,232,0.7), rgba(78,203,141,0.12) 70%, transparent);
+    pointer-events: none;
+    z-index: 0;
+    animation: floatBlob2 20s ease-in-out infinite;
+  }
+
+  /* Blob 3 – center accent */
+  .dest-blob-3 {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px; height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse, rgba(232,250,243,0.8), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+    animation: floatBlob3 24s ease-in-out infinite;
+  }
+
+  .dest-card {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition);
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 24px;
+  }
+  .dest-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
+    z-index: 1;
+    transition: all var(--transition);
+  }
+  .dest-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+  .dest-card:hover::before { background: linear-gradient(to top, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.2) 100%); }
+
+  .dest-card-img {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.7s ease;
+  }
+  .dest-card:hover .dest-card-img { transform: scale(1.08); }
+
+  .dest-card-body {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    z-index: 2;
+    padding: 20px;
+    transform: translateY(8px);
+    transition: transform var(--transition);
+  }
+  .dest-card:hover .dest-card-body { transform: translateY(0); }
+
+  .dest-tag {
+    display: inline-block;
+    background: var(--gold);
+    color: #111;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 50px;
+    margin-bottom: 6px;
+  }
+  .dest-card h3 { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
+  .dest-card .dest-loc {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.82rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .dest-card .dest-loc i { color: var(--gold); font-size: 0.75rem; }
+
+  .dest-desc {
+    color: rgba(255,255,255,0.75);
+    font-size: 0.82rem;
+    line-height: 1.5;
+    margin-top: 8px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+  }
+  .dest-card:hover .dest-desc { max-height: 80px; opacity: 1; }
+
+  /* Explore all button */
+  .btn-explore-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background: transparent;
+    color: #111;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border: 2px solid #111;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all var(--transition);
+    margin-top: 40px;
+  }
+  .btn-explore-all:hover {
+    background: #111;
+    color: var(--gold);
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  /* ============================================================
+     DESTINATION POPUP
+  ============================================================ */
+  #destinationPopup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+    backdrop-filter: blur(4px);
+  }
+  #popupBox {
+    background: #fff;
+    max-width: 520px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: var(--radius-lg);
+    transform: scale(0.85) translateY(20px);
+    opacity: 0;
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: var(--shadow-lg);
+  }
+  #popupImage { height: 240px; background-size: cover; background-position: center; }
+  .popup-body { padding: 24px; }
+  .popup-body h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 8px; }
+  .popup-body p { color: #555; font-size: 0.92rem; line-height: 1.7; margin-bottom: 20px; }
+  .popup-close-icon {
+    position: absolute;
+    top: 16px; right: 16px;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.35);
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background var(--transition);
+    z-index: 1;
+  }
+  .popup-close-icon:hover { background: rgba(0,0,0,0.6); }
+  .btn-popup-close {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 28px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: #111;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all var(--transition);
+    box-shadow: 0 4px 15px rgba(255,168,0,0.35);
+  }
+  .btn-popup-close:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(255,168,0,0.5); }
+
+  /* ============================================================
+     ABOUT SECTION
+  ============================================================ */
+  .about-section-wrap {
+    padding: 90px 0;
+    background: linear-gradient(135deg, #f8f5ef 0%, #fdf9f0 100%);
+  }
+
+  .about-image-panel {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    height: 500px;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.6s ease;
+  }
+  .about-image-panel:hover { transform: scale(1.02); }
+  .about-img-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: all 1s ease;
+  }
+
+
+  .btn-about {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 30px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: #111;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(255,168,0,0.35);
+    transition: all var(--transition);
+  }
+  .btn-about:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255,168,0,0.5);
+    color: #111;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .about-image-panel { height: 320px; margin-bottom: 24px; }
+    .about-badge { left: 16px; bottom: 16px; }
+  }
+
+  /* ============================================================
+     TRIPADVISOR SECTION
+  ============================================================ */
+  .tripadvisor-section {
+    position: relative;
+    padding: 90px 0;
+    background-image: url('images/bg_1.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .tripadvisor-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.55) 100%);
+    z-index: 0;
+  }
+  .tripadvisor-section .container { position: relative; z-index: 1; }
+
+  .ta-card {
+    background: rgba(255,255,255,0.07);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: var(--radius-lg);
+    padding: 50px 40px;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+  }
+  .ta-stars { color: var(--gold); font-size: 1.5rem; letter-spacing: 4px; margin-bottom: 16px; }
+  .ta-card h2 { color: #fff; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; margin-bottom: 12px; }
+  .ta-card p { color: rgba(255,255,255,0.75); font-size: 1rem; line-height: 1.7; margin-bottom: 30px; }
+
+  .btn-ta {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 36px;
+    background: linear-gradient(135deg, #34e0a1, #00af87);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(0,175,135,0.4);
+    transition: all var(--transition);
+  }
+  .btn-ta img { height: 40px; filter: brightness(0) invert(1); }
+  .btn-ta:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 14px 35px rgba(0,175,135,0.55);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .ta-card { padding: 36px 20px; }
+    .tripadvisor-section { background-attachment: scroll; }
+  }
+
+  /* ============================================================
+     BLOG SECTION
+  ============================================================ */
+  .blog-section {
+    padding: 90px 0;
+    background: linear-gradient(145deg, #f7fffe 0%, #edfaf4 30%, #e8faf3 60%, #f4fdf9 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Diagonal stripe texture */
+  .blog-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(
+        135deg,
+        rgba(78,203,141,0.06) 0px,
+        rgba(78,203,141,0.06) 1px,
+        transparent 1px,
+        transparent 28px
+      );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Ensure blog content above decoration */
+  .blog-section > .container { position: relative; z-index: 1; }
+
+  /* Corner accent ring – top-left */
+  .blog-ring-1 {
+    position: absolute;
+    top: -60px; left: -60px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    border: 40px solid rgba(168,230,200,0.3);
+    pointer-events: none;
+    z-index: 0;
+    animation: floatBlob3 18s ease-in-out infinite;
+  }
+
+  /* Corner accent ring – bottom-right */
+  .blog-ring-2 {
+    position: absolute;
+    bottom: -70px; right: -70px;
+    width: 360px; height: 360px;
+    border-radius: 50%;
+    border: 50px solid rgba(78,203,141,0.18);
+    pointer-events: none;
+    z-index: 0;
+    animation: floatBlob1 22s ease-in-out infinite reverse;
+  }
+
+  /* Small mint blobs flanking blog cards */
+  .blog-blob-mid {
+    position: absolute;
+    top: 50%; right: -120px;
+    transform: translateY(-50%);
+    width: 280px; height: 280px;
+    border-radius: 40% 60% 70% 30% / 50% 50% 60% 40%;
+    background: radial-gradient(circle, rgba(208,245,232,0.6), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+    animation: floatBlob2 14s ease-in-out infinite;
+  }
+
+  .blog-card {
+    background: #fff;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #f0f0f0;
+    margin-bottom: 24px !important;
+  }
+
+  @media (max-width: 768px) {
+    .blog-section .row.g-4 > [class*="col-"] {
+      margin-bottom: 24px;
+    }
+    .blog-section .row.g-4 > [class*="col-"]:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: transparent;
+  }
+
+  .blog-img-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+  }
+  .blog-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease;
+  }
+  .blog-card:hover .blog-img { transform: scale(1.08); }
+
+  .blog-category {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: #111;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 50px;
+  }
+
+  .blog-body {
+    padding: 22px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .blog-body h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+
+  .btn-read {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 20px;
+    background: transparent;
+    color: #111;
+    font-weight: 600;
+    font-size: 0.85rem;
+    border: 1.5px solid #ddd;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all var(--transition);
+    align-self: flex-start;
+    margin-top: 4px;
+  }
+  .btn-read i { transition: transform var(--transition); }
+  .btn-read:hover {
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    border-color: transparent;
+    color: #111;
+    text-decoration: none;
+  }
+  .btn-read:hover i { transform: translateX(4px); }
+
+  /* Blog Modal */
+  .blog-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+    backdrop-filter: blur(4px);
+  }
+  .blog-modal-box {
+    background: #fff;
+    width: 90%;
+    max-width: 680px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    animation: popupFade 0.35s ease;
+    position: relative;
+  }
+  .blog-modal-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+  }
+  .blog-modal-body { padding: 28px; text-align: center; }
+  .blog-modal-body h3 { font-size: 1.4rem; font-weight: 800; margin-bottom: 10px; }
+  .blog-modal-body p { color: #555; font-size: 0.95rem; line-height: 1.7; margin-bottom: 22px; }
+  .blog-modal-close-icon {
+    position: absolute;
+    top: 14px; right: 14px;
+    width: 34px; height: 34px;
+    background: rgba(0,0,0,0.4);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background var(--transition);
+  }
+  .blog-modal-close-icon:hover { background: rgba(0,0,0,0.7); }
+  @keyframes popupFade {
+    from { transform: scale(0.85); opacity: 0; }
+    to   { transform: scale(1);    opacity: 1; }
+  }
+
+  /* ============================================================
+     WHATSAPP CTA
+  ============================================================ */
+  .wa-section { padding: 70px 0; background: #fafaf8; }
+
+  .wa-hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    padding: 90px 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    box-shadow: var(--shadow-lg);
+  }
+  .wa-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.4) 100%);
+    z-index: 1;
+    transition: background 0.5s ease;
+  }
+  .wa-hero:hover { transform: scale(1.01); }
+  .wa-hero:hover::before { background: linear-gradient(135deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.25) 100%); }
+
+  .wa-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .wa-content h2 {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 800;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    color: #ffffff !important;
+  }
+  .wa-content p {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 32px;
+    line-height: 1.7;
+  }
+
+  .btn-wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 36px;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    position: relative;
+    transition: all var(--transition);
+    box-shadow: 0 8px 25px rgba(18,140,126,0.45);
+  }
+  .btn-wa img { height: 26px; }
+  .btn-wa::before {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 50px;
+    border: 2px solid rgba(37,211,102,0.5);
+    animation: waPulse 2s ease infinite;
+  }
+  @keyframes waPulse {
+    0%, 100% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.06); opacity: 0; }
+  }
+  .btn-wa:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 14px 35px rgba(18,140,126,0.55);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .wa-hero { padding: 70px 20px; }
+  }
+
+  /* ============================================================
+     FOOTER
+  ============================================================ */
+  .site-footer {
+    background: #FFD700;
+    color: #111;
+    padding: 60px 0 0;
+    font-size: 0.92rem;
+  }
+
+  .footer-brand h2 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .footer-brand h2 span { color: #7a5800; }
+  .footer-brand p { color: rgba(0,0,0,0.65); line-height: 1.8; font-size: 0.9rem; }
+
+  .footer-heading {
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #111;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+  }
+
+  /* Social icons */
+  .footer-social { display: flex; gap: 10px; margin-top: 22px; flex-wrap: wrap; }
+  .footer-social a {
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: none;
+    display: flex; align-items: center; justify-content: center;
+    transition: all var(--transition);
+    text-decoration: none;
+    position: relative;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  }
+  .footer-social a img { width: 18px; height: 18px; object-fit: contain; }
+  .footer-social a:hover {
+    background: #c43e20;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(255,87,51,0.4);
+  }
+  /* Tooltip */
+  .footer-social a::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.72rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+  }
+  .footer-social a:hover::after { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+
+  /* Quick Links */
+  .footer-links { list-style: none; padding: 0; margin: 0; }
+  .footer-links li { margin-bottom: 10px; }
+  .footer-links a {
+    color: rgba(0,0,0,0.7);
+    text-decoration: none;
+    transition: all var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  .footer-links a::before {
+    content: '';
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: #111;
+    flex-shrink: 0;
+    transition: transform var(--transition);
+  }
+  .footer-links a:hover { color: #7a5800; padding-left: 4px; }
+  .footer-links a:hover::before { background: #7a5800; transform: scale(1.4); }
+
+  /* Contact items */
+  .footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    color: rgba(0,0,0,0.7);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color var(--transition);
+    font-weight: 500;
+  }
+  .footer-contact-icon {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.15);
+    display: flex; align-items: center; justify-content: center;
+    color: #111;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    transition: all var(--transition);
+  }
+  .footer-contact-item:hover { color: #7a5800; }
+  .footer-contact-item:hover .footer-contact-icon {
+    background: #111;
+    color: var(--gold);
+    transform: scale(1.1);
+  }
+
+  /* Footer divider */
+  .footer-divider {
+    height: 1px;
+    background: rgba(0,0,0,0.12);
+    margin: 40px 0 0;
+  }
+  .footer-bottom {
+    padding: 18px 0;
+    text-align: center;
+    color: rgba(0,0,0,0.6);
+    font-size: 0.82rem;
+  }
+  .footer-bottom span { color: #7a5800; font-weight: 700; }
+
+  @media (max-width: 768px) {
+    .site-footer [class*="col-"] { margin-bottom: 36px; }
+    .footer-social { flex-wrap: wrap; }
+  }
+
+  /* ============================================================
+     UTILITY & GLOBAL TWEAKS
+  ============================================================ */
+
+
+  /* Override Bootstrap btn-primary with gold */
+  .btn-primary {
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark)) !important;
+    border: none !important;
+    color: #111 !important;
+    font-weight: 700 !important;
+    border-radius: 50px !important;
+    padding: 12px 28px !important;
+    transition: all var(--transition) !important;
+    box-shadow: 0 4px 15px rgba(255,168,0,0.3) !important;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(255,168,0,0.5) !important;
+  }
+
+  /* Subheading override */
+  .subheading {
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase !important;
+    color: var(--gold-dark) !important;
+    display: block !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* Lazy load fade */
+  img[loading="lazy"] { transition: opacity 0.4s ease; }
+
+
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR OVERLAY -->
+<div class="nav-overlay" id="nav-overlay"></div>
+
+<!-- ============================================================
+     MODERN NAVBAR
+============================================================ -->
+<nav class="modern-navbar at-top" id="main-navbar">
+  <div class="nav-container">
+
+    <!-- Logo -->
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-img-wrap">
+        <img src="images/logo.png" alt="Ceylon Birdwing Tours Logo" loading="lazy">
+      </div>
+      <div class="nav-logo-text">
+        <span class="nav-logo-title">Ceylon Birdwing Tours</span>
+        <span class="nav-logo-sub">Sri Lanka Travel Experts</span>
+      </div>
+    </a>
+
+    <!-- Hamburger -->
+    <div class="nav-toggle" id="nav-toggle" role="button" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Menu -->
+    <ul class="nav-menu" id="nav-menu" role="list">
+      <li class="nav-item active"><a href="index.html">Home</a></li>
+      <li class="nav-item"><a href="destination.html">Destination</a></li>
+      <li class="nav-item"><a href="packages.html">Tour Packages</a></li>
+      <li class="nav-item"><a href="CustomTours.html">Custom Tours</a></li>
+      <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+      <li class="nav-item nav-cta"><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+  </div>
+</nav>
+
+<script>
+// Navbar scroll behavior
+const navbar  = document.getElementById('main-navbar');
+const toggle  = document.getElementById('nav-toggle');
+const menu    = document.getElementById('nav-menu');
+const overlay = document.getElementById('nav-overlay');
+
+function closeNav() {
+  menu.classList.remove('show');
+  overlay.classList.remove('show');
+  toggle.classList.remove('open');
+  toggle.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+
+toggle.addEventListener('click', () => {
+  const isOpen = menu.classList.toggle('show');
+  overlay.classList.toggle('show', isOpen);
+  toggle.classList.toggle('open', isOpen);
+  toggle.setAttribute('aria-expanded', isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+
+overlay.addEventListener('click', closeNav);
+
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 60) {
+    navbar.classList.remove('at-top');
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+    navbar.classList.add('at-top');
+  }
+}, { passive: true });
+</script>
+<!-- NAVBAR END -->
+
+
+<!-- ============================================================
+     HERO SECTION
+============================================================ -->
+<div id="hero-slider">
+
+  <!-- Background slide layers -->
+  <div class="hero-slide-layer active" style="background-image: url('images/bg_5.jpg');"></div>
+  <div class="hero-slide-layer"        style="background-image: url('images/bg_2.jpg');"></div>
+  <div class="hero-slide-layer"        style="background-image: url('images/bg_3.jpg');"></div>
+
+  <!-- Dark overlay -->
+  <div class="overlay"></div>
+
+  <!-- Content -->
+  <div class="container">
+    <div class="row no-gutters align-items-center" style="min-height:100vh;">
+      <div class="col-lg-8 col-md-10">
+
+        <!-- Badge -->
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Welcome to Ceylon Birdwing Tours
+        </div>
+
+        <!-- Heading with typing -->
+        <h1 class="hero-h1" id="hero-heading">
+          <span id="typing-text"></span>
+        </h1>
+
+        <!-- Subtext -->
+        <p class="hero-sub">
+          Travel to any corner of Sri Lanka, without going around in circles.
+        </p>
+
+        <!-- Buttons -->
+        <div class="hero-btns">
+          <a href="destination.html" class="btn-hero-primary">
+            <i class="fa fa-compass"></i> Explore Destinations
+          </a>
+          <a href="packages.html" class="btn-hero-outline">
+            <i class="fa fa-map-o"></i> View Packages
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <a href="#why-us" class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <span>Scroll</span>
+  </a>
+
+  <!-- Slide dots -->
+  <div class="hero-dots" id="hero-dots">
+    <button class="hero-dot active" data-index="0" aria-label="Slide 1"></button>
+    <button class="hero-dot"        data-index="1" aria-label="Slide 2"></button>
+    <button class="hero-dot"        data-index="2" aria-label="Slide 3"></button>
+  </div>
+
+</div>
+
+<script>
+// Hero Crossfade + Dots
+(function() {
+  const layers = document.querySelectorAll('#hero-slider .hero-slide-layer');
+  const dots   = document.querySelectorAll('.hero-dot');
+  let current  = 0;
+  let timer;
+
+  function goTo(n) {
+    layers[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (n + layers.length) % layers.length;
+    layers[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  function next() { goTo(current + 1); }
+
+  timer = setInterval(next, 5500);
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      clearInterval(timer);
+      goTo(parseInt(dot.dataset.index));
+      timer = setInterval(next, 5500);
+    });
+  });
+
+  // Typing animation
+  const phrases = [
+    "Discover Your Favorite Place with Us",
+    "Explore the Pearl of the Indian Ocean",
+    "Unforgettable Sri Lanka Adventures"
+  ];
+  const el = document.getElementById('typing-text');
+  let phraseIndex = 0, charIndex = 0, deleting = false;
+
+  function type() {
+    const phrase = phrases[phraseIndex];
+    if (!deleting) {
+      el.textContent = phrase.substring(0, charIndex + 1);
+      charIndex++;
+      if (charIndex === phrase.length) {
+        deleting = true;
+        setTimeout(type, 2200);
+        return;
+      }
+    } else {
+      el.textContent = phrase.substring(0, charIndex - 1);
+      charIndex--;
+      if (charIndex === 0) {
+        deleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+      }
+    }
+    setTimeout(type, deleting ? 55 : 85);
+  }
+
+  window.addEventListener('load', () => setTimeout(type, 400));
+})();
+</script>
+<!-- HERO END -->
+
+
+<!-- ============================================================
+     WHY CHOOSE US / SERVICES
+============================================================ -->
+<section class="services-section-wrap" id="why-us">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <!-- Left: Text + cards -->
+      <div class="col-lg-6 order-lg-2">
+        <span class="subheading">Why Choose Ceylon Birdwing Tours?</span>
+        <h2 class="why-heading">Explore Sri Lanka<br>Like Never Before</h2>
+        <p class="why-text">At Ceylon Birdwing Tours, we believe travel should be personal, safe, and truly immersive. We craft every adventure to showcase the very best of Sri Lanka, from the ancient ruins of Sigiriya to the golden beaches of Mirissa.</p>
+        <p class="why-text">Our commitment is to deliver unforgettable, hassle-free journeys. We pair you with trusted local experts and dedicated private drivers, ensuring every moment is comfortable and focused purely on your enjoyment of the island. Choose the experts who live and breathe Sri Lanka.</p>
+
+        <a href="destination.html" class="btn-find">
+          Find Your Next Destination <i class="fa fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- Right: Service cards grid -->
+      <div class="col-lg-6 order-lg-1">
+        <div class="row g-3">
+
+          <div class="col-6 ftco-animate">
+            <div class="svc-card" style="background-image:url(images/services-1.jpg);">
+              <div class="svc-card-body">
+                <div class="svc-icon"><span class="flaticon-paragliding"></span></div>
+                <h3>Fully Customizable Tours</h3>
+                <p>Every trip is yours to craft — choose destinations, set your pace.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 ftco-animate">
+            <div class="svc-card" style="background-image:url(images/services-2.jpg);">
+              <div class="svc-card-body">
+                <div class="svc-icon"><span class="flaticon-route"></span></div>
+                <h3>Safe &amp; Reliable Travel</h3>
+                <p>Professional drivers delivering comfort, safety &amp; peace of mind.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 ftco-animate">
+            <div class="svc-card" style="background-image:url(images/services-3.jpg);">
+              <div class="svc-card-body">
+                <div class="svc-icon"><span class="flaticon-tour-guide"></span></div>
+                <h3>Transparent Pricing</h3>
+                <p>What you see is what you pay — no hidden charges, ever.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 ftco-animate">
+            <div class="svc-card" style="background-image:url(images/services-4.jpg);">
+              <div class="svc-card-body">
+                <div class="svc-icon"><span class="flaticon-map"></span></div>
+                <h3>24/7 Expert Support</h3>
+                <p>Our dedicated team is available around the clock for you.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- SERVICES END -->
+
+
+<!-- ============================================================
+     FEATURED DESTINATIONS
+============================================================ -->
+<section class="destinations-section" id="destinations">
+  <!-- Mint decoration blobs -->
+  <div class="dest-blob-1" aria-hidden="true"></div>
+  <div class="dest-blob-2" aria-hidden="true"></div>
+  <div class="dest-blob-3" aria-hidden="true"></div>
+
+  <div class="container">
+
+    <div class="text-center mb-5 ftco-animate">
+      <span class="subheading">Explore the Island Nation</span>
+      <h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:800; color:#111; margin-top:8px;">Featured Sri Lanka Destinations</h2>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Sigiriya -->
+      <div class="col-lg-4 col-md-6 ftco-animate">
+        <div class="dest-card" onclick="openPopup('Sigiriya Rock Fortress','Sigiriya is a UNESCO World Heritage Site famous for its ancient rock fortress, frescoes, royal gardens, and breathtaking views.','images/destination-sigiriya.jpeg')">
+          <div class="dest-card-img" style="background-image:url(images/destination-sigiriya.jpeg);"></div>
+          <div class="dest-card-body">
+            <div class="dest-tag">UNESCO Heritage</div>
+            <h3>Sigiriya Rock Fortress</h3>
+            <p class="dest-loc"><i class="fa fa-map-marker"></i> Matale District, Sri Lanka</p>
+            <p class="dest-desc">Ancient rock fortress with incredible frescoes and panoramic views of the surrounding jungle.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kandy -->
+      <div class="col-lg-4 col-md-6 ftco-animate">
+        <div class="dest-card" onclick="openPopup('Sacred Kandy &amp; Tea Plantations','Kandy is the cultural heart of Sri Lanka, home to the Sacred Tooth Relic Temple and surrounded by scenic tea estates.','images/destination-kandy.jpeg')">
+          <div class="dest-card-img" style="background-image:url(images/destination-kandy.jpeg);"></div>
+          <div class="dest-card-body">
+            <div class="dest-tag">Cultural Capital</div>
+            <h3>Sacred Kandy &amp; Tea Plantations</h3>
+            <p class="dest-loc"><i class="fa fa-map-marker"></i> Central Province, Sri Lanka</p>
+            <p class="dest-desc">Cultural heart of Sri Lanka with the Sacred Tooth Relic and lush tea estates.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mirissa -->
+      <div class="col-lg-4 col-md-6 ftco-animate">
+        <div class="dest-card" onclick="openPopup('Mirissa &amp; Southern Coast','Mirissa is known for its golden beaches, whale watching tours, and relaxed tropical atmosphere.','images/destination-mirissa.jpg')">
+          <div class="dest-card-img" style="background-image:url(images/destination-mirissa.jpg);"></div>
+          <div class="dest-card-body">
+            <div class="dest-tag">Beach Paradise</div>
+            <h3>Mirissa &amp; Southern Coast</h3>
+            <p class="dest-loc"><i class="fa fa-map-marker"></i> Southern Province, Sri Lanka</p>
+            <p class="dest-desc">Golden beaches, whale watching and the most relaxed tropical atmosphere on the island.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Galle -->
+      <div class="col-lg-4 col-md-6 ftco-animate">
+        <div class="dest-card" onclick="openPopup('Historic Galle Fort','Galle Fort is a historic coastal fortress featuring colonial architecture, ocean views, and charming streets.','images/destination-galle.jpeg')">
+          <div class="dest-card-img" style="background-image:url(images/destination-galle.jpeg);"></div>
+          <div class="dest-card-body">
+            <div class="dest-tag">Historic Fort</div>
+            <h3>Historic Galle Fort</h3>
+            <p class="dest-loc"><i class="fa fa-map-marker"></i> Southern Province, Sri Lanka</p>
+            <p class="dest-desc">Dutch colonial fortress with ocean views, boutique cafes and winding cobblestone streets.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Yala -->
+      <div class="col-lg-4 col-md-6 ftco-animate">
+        <div class="dest-card" onclick="openPopup('Yala National Park Safari','Yala National Park offers exciting wildlife safaris with elephants, leopards, and diverse ecosystems.','images/destination-yala.jpg')">
+          <div class="dest-card-img" style="background-image:url(images/destination-yala.jpg);"></div>
+          <div class="dest-card-body">
+            <div class="dest-tag">Wildlife Safari</div>
+            <h3>Yala National Park Safari</h3>
+            <p class="dest-loc"><i class="fa fa-map-marker"></i> Southern Province, Sri Lanka</p>
+            <p class="dest-desc">Sri Lanka's most visited national park — home to leopards, elephants and crocodiles.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nuwara Eliya -->
+      <div class="col-lg-4 col-md-6 ftco-animate">
+        <div class="dest-card" onclick="openPopup('Nuwara Eliya Hill Stations','Nuwara Eliya is famous for its cool climate, misty hills, tea gardens, and colonial-era charm.','images/destination-nuwara-eliya.jpg')">
+          <div class="dest-card-img" style="background-image:url(images/destination-nuwara-eliya.jpg);"></div>
+          <div class="dest-card-body">
+            <div class="dest-tag">Hill Country</div>
+            <h3>Nuwara Eliya Hill Stations</h3>
+            <p class="dest-loc"><i class="fa fa-map-marker"></i> Central Province, Sri Lanka</p>
+            <p class="dest-desc">Cool misty highlands with breathtaking tea gardens and charming colonial-era bungalows.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center">
+      <a href="destination.html" class="btn-explore-all">
+        <i class="fa fa-globe"></i> Explore All Destinations <i class="fa fa-arrow-right"></i>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Destination Popup -->
+<div id="destinationPopup">
+  <div id="popupBox">
+    <div id="popupImage"></div>
+    <div class="popup-body" style="position:relative;">
+      <button class="popup-close-icon" onclick="closePopup()"><i class="fa fa-times"></i></button>
+      <h3 id="popupTitle"></h3>
+      <p id="popupText"></p>
+      <button class="btn-popup-close" onclick="closePopup()">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function openPopup(title, text, image) {
+  document.getElementById('popupTitle').innerText = title;
+  document.getElementById('popupText').innerText = text;
+  document.getElementById('popupImage').style.backgroundImage = "url(" + image + ")";
+  const popup = document.getElementById('destinationPopup');
+  const box   = document.getElementById('popupBox');
+  popup.style.display = "flex";
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => { box.style.transform = "scale(1) translateY(0)"; box.style.opacity = "1"; }, 40);
+}
+function closePopup() {
+  const box   = document.getElementById('popupBox');
+  const popup = document.getElementById('destinationPopup');
+  box.style.transform = "scale(0.85) translateY(20px)";
+  box.style.opacity   = "0";
+  setTimeout(() => { popup.style.display = "none"; document.body.style.overflow = ''; }, 320);
+}
+document.getElementById('destinationPopup').addEventListener('click', function(e) {
+  if (e.target === this) closePopup();
+});
+</script>
+<!-- DESTINATIONS END -->
+
+<!-- Wave divider: destinations → about -->
+<div class="wave-divider" aria-hidden="true" style="background:linear-gradient(160deg,#f0fdf8 0%,#e8faf3 35%,#f7fffe 65%,#edfaf4 100%);">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#f8f5ef"/>
+  </svg>
+</div>
+
+
+<!-- ============================================================
+     ABOUT US
+============================================================ -->
+<section class="about-section-wrap" id="about">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <!-- Image -->
+      <div class="col-lg-6 ftco-animate">
+        <div class="about-image-panel">
+          <div class="about-img-bg" id="about-img-bg" style="background-image:url(images/about-1.jpg);"></div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="col-lg-6 ftco-animate">
+        <span class="subheading">About Us</span>
+        <h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;color:#111;line-height:1.2;margin-bottom:16px;">
+          Make Your Tour<br>Memorable and Safe With Us
+        </h2>
+        <p style="color:#555;line-height:1.8;font-size:1rem;">
+          Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+        </p>
+
+        <a href="destination.html" class="btn-about">
+          <i class="fa fa-compass"></i> Book Your Destination
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+// About image rotation
+(function() {
+  const images = ["images/about-1.jpg","images/about-2.jpg","images/about-3.jpg"];
+  const el = document.getElementById('about-img-bg');
+  let i = 0;
+  if (!el) return;
+  setInterval(() => {
+    el.style.opacity = '0';
+    setTimeout(() => {
+      i = (i + 1) % images.length;
+      el.style.backgroundImage = "url('" + images[i] + "')";
+      el.style.opacity = '1';
+    }, 600);
+  }, 3500);
+  el.style.transition = 'opacity 0.6s ease';
+})();
+</script>
+<!-- ABOUT END -->
+
+<!-- Wave divider: about → tripadvisor -->
+<div class="wave-divider" aria-hidden="true" style="background:linear-gradient(135deg,#f8f5ef 0%,#fdf9f0 100%);">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,20 C480,60 960,0 1440,40 L1440,60 L0,60 Z" fill="rgba(0,0,0,0.35)"/>
+  </svg>
+</div>
+
+<!-- ============================================================
+     TRIPADVISOR SECTION
+============================================================ -->
+<section class="tripadvisor-section" id="reviews">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="ta-card ftco-animate">
+          <div class="ta-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <span class="subheading" style="color:rgba(255,210,51,0.8)!important;">Trusted Reviews</span>
+          <h2>See Our Tourist Feedback</h2>
+          <p>We are proud of our excellent track record! View hundreds of verified reviews and ratings from our guests on TripAdvisor.</p>
+
+          <a href="https://www.tripadvisor.com/Attraction_Review-g293962-d34570025-Reviews-Ceylon_Birdwing_Tours-Colombo_Western_Province.html"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn-ta">
+            <img src="images/tripadvisor_logo.png" alt="TripAdvisor">
+            VIEW OUR TRIPADVISOR PROFILE
+          </a>
+          <p style="margin-top:14px;color:rgba(255,255,255,0.45);font-size:0.8rem;">
+            Click above to see reviews on the official TripAdvisor website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- TRIPADVISOR END -->
+
+
+<!-- ============================================================
+     BLOG / RECENT POSTS
+============================================================ -->
+<section class="blog-section" id="blog">
+  <!-- Mint decoration rings & blob -->
+  <div class="blog-ring-1" aria-hidden="true"></div>
+  <div class="blog-ring-2" aria-hidden="true"></div>
+  <div class="blog-blob-mid" aria-hidden="true"></div>
+
+  <div class="container">
+
+    <div class="text-center mb-5 ftco-animate">
+      <span class="subheading">Our Blog</span>
+      <h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;color:#111;margin-top:8px;">Recent Posts</h2>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Blog 1 -->
+      <div class="col-lg-4 col-md-6 d-flex ftco-animate">
+        <div class="blog-card w-100">
+          <div class="blog-img-wrap">
+            <div class="blog-img" style="background-image:url('images/image_1.jpg');"></div>
+            <span class="blog-category">Travel Guide</span>
+          </div>
+          <div class="blog-body">
+            <h3>Most Popular Place In Sri Lanka</h3>
+            <a href="javascript:void(0)"
+               class="btn-read read-more-btn"
+               data-title="Most Popular Place In Sri Lanka"
+               data-image="images/image_1.jpg"
+               data-content="Sri Lanka is famous for its beautiful beaches, ancient cities, tea plantations, and wildlife. This destination is highly popular among local and foreign tourists.">
+              Read More <i class="fa fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog 2 -->
+      <div class="col-lg-4 col-md-6 d-flex ftco-animate">
+        <div class="blog-card w-100">
+          <div class="blog-img-wrap">
+            <div class="blog-img" style="background-image:url('images/image_2.jpg');"></div>
+            <span class="blog-category">Beach Life</span>
+          </div>
+          <div class="blog-body">
+            <h3>Beautiful Beach Destinations</h3>
+            <a href="javascript:void(0)"
+               class="btn-read read-more-btn"
+               data-title="Beautiful Beach Destinations"
+               data-image="images/image_2.jpg"
+               data-content="Sri Lanka has some of the most beautiful beaches including Mirissa, Unawatuna, and Arugam Bay. Perfect for relaxing and surfing.">
+              Read More <i class="fa fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog 3 -->
+      <div class="col-lg-4 col-md-6 d-flex ftco-animate">
+        <div class="blog-card w-100">
+          <div class="blog-img-wrap">
+            <div class="blog-img" style="background-image:url('images/image_3.jpg');"></div>
+            <span class="blog-category">Wildlife</span>
+          </div>
+          <div class="blog-body">
+            <h3>Wildlife &amp; Nature Tours</h3>
+            <a href="javascript:void(0)"
+               class="btn-read read-more-btn"
+               data-title="Wildlife &amp; Nature Tours"
+               data-image="images/image_3.jpg"
+               data-content="Experience wildlife safaris, national parks, and breathtaking mountain views. Sri Lanka is home to elephants, leopards, and rare bird species.">
+              Read More <i class="fa fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Wave divider: blog → whatsapp -->
+<div class="wave-divider" aria-hidden="true" style="background:linear-gradient(145deg,#f7fffe 0%,#edfaf4 30%,#e8faf3 60%,#f4fdf9 100%);">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,40 C360,10 1080,55 1440,20 L1440,60 L0,60 Z" fill="#fafaf8"/>
+  </svg>
+</div>
+
+<!-- Blog Modal -->
+<div id="blogModal" class="blog-modal-overlay" role="dialog" aria-hidden="true">
+  <div class="blog-modal-box">
+    <button class="blog-modal-close-icon" id="blog-close-icon"><i class="fa fa-times"></i></button>
+    <img id="modalImage" class="blog-modal-img" src="" alt="">
+    <div class="blog-modal-body">
+      <h3 id="modalTitle"></h3>
+      <p id="modalContent"></p>
+      <button class="btn-popup-close" id="blog-close-btn">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  const modal     = document.getElementById('blogModal');
+  const modalImg  = document.getElementById('modalImage');
+  const modalT    = document.getElementById('modalTitle');
+  const modalC    = document.getElementById('modalContent');
+  const closeIcon = document.getElementById('blog-close-icon');
+  const closeBtn  = document.getElementById('blog-close-btn');
+
+  function openModal(btn) {
+    modalT.textContent = btn.dataset.title;
+    modalImg.src       = btn.dataset.image;
+    modalC.textContent = btn.dataset.content;
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.read-more-btn').forEach(btn =>
+    btn.addEventListener('click', () => openModal(btn))
+  );
+  closeIcon.addEventListener('click', closeModal);
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+})();
+</script>
+<!-- BLOG END -->
+
+
+<!-- ============================================================
+     WHATSAPP CTA
+============================================================ -->
+<section class="wa-section" id="contact-cta">
+  <div class="container">
+    <div class="wa-hero" style="background-image:url('images/bg_2.jpg');">
+      <div class="wa-content">
+        <h2>Have Questions? Contact Us Directly!</h2>
+        <p>Get instant answers and personalized quotes for your dream Sri Lanka trip via WhatsApp.</p>
+        <a href="https://wa.me/94762055008?text=Hello,%20I%20am%20interested%20in%20a%20tour%20package%20to%20Sri%20Lanka."
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn-wa">
+          <img src="images/whatsapp_logo.png" alt="WhatsApp">
+          INQUIRE ON WHATSAPP
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- WHATSAPP END -->
+
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer class="site-footer" id="footer">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Brand Column -->
+      <div class="col-lg-5 col-md-6">
+        <div class="footer-brand">
+          <h2><span>Ceylon Birdwing</span> Tours</h2>
+          <p>Specializing in personalized tours across Sri Lanka, covering historical, nature, and coastal experiences. We are committed to making your island dream a reality.</p>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="footer-social">
+          <a href="https://web.facebook.com/people/Ceylon-Birdwing-Tours/61588023495848/" data-tooltip="Facebook" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.simpleicons.org/facebook/ffffff" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com/ceylonbirdwingtours" data-tooltip="Instagram" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.simpleicons.org/instagram/ffffff" alt="Instagram">
+          </a>
+          <a href="https://www.tiktok.com/@ceylon.birdwing.t" data-tooltip="TikTok" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.simpleicons.org/tiktok/ffffff" alt="TikTok">
+          </a>
+          <a href="https://www.threads.com/@ceylonbirdwingtours" data-tooltip="Threads" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.simpleicons.org/threads/ffffff" alt="Threads">
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-3 col-md-6">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="javascript:void(0)" class="footer-link" data-title="Online Enquiry" data-content="Fill out our online enquiry form to get personalized travel information and assistance.">Online Enquiry</a></li>
+          <li><a href="javascript:void(0)" class="footer-link" data-title="Booking Conditions" data-content="Read our booking terms, conditions, and cancellation policies before confirming your tour.">Booking Conditions</a></li>
+          <li><a href="javascript:void(0)" class="footer-link" data-title="Privacy Policy" data-content="We respect your privacy. Learn how we collect, use, and protect your personal information.">Privacy Policy</a></li>
+          <li><a href="javascript:void(0)" class="footer-link" data-title="FAQ" data-content="Check frequently asked questions to help you plan your tour efficiently.">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-lg-4 col-md-6">
+        <h4 class="footer-heading">Contact Us</h4>
+        <a href="tel:+94762055008" class="footer-contact-item">
+          <div class="footer-contact-icon"><i class="fa fa-phone"></i></div>
+          <span>+94 76 2055008</span>
+        </a>
+        <a href="mailto:ceylonbirdwingtours@gmail.com" class="footer-contact-item">
+          <div class="footer-contact-icon"><i class="fa fa-envelope"></i></div>
+          <span>ceylonbirdwingtours@gmail.com</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-divider"></div>
+  <div class="footer-bottom">
+    <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> <span>Ceylon Birdwing Tours</span> &mdash; All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- Footer Modal -->
+<div id="footerModal" class="blog-modal-overlay" role="dialog" aria-hidden="true">
+  <div class="blog-modal-box">
+    <button class="blog-modal-close-icon" id="footer-modal-close"><i class="fa fa-times"></i></button>
+    <div class="blog-modal-body">
+      <h3 id="footerModalTitle" style="font-weight:800;"></h3>
+      <p id="footerModalContent" style="color:#555;"></p>
+      <button class="btn-popup-close" id="footer-modal-btn">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  const fModal     = document.getElementById('footerModal');
+  const fCloseIcon = document.getElementById('footer-modal-close');
+  const fCloseBtn  = document.getElementById('footer-modal-btn');
+
+  function openFModal(link) {
+    document.getElementById('footerModalTitle').textContent   = link.getAttribute('data-title');
+    document.getElementById('footerModalContent').textContent = link.getAttribute('data-content');
+    fModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeFModal() {
+    fModal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.footer-link').forEach(link =>
+    link.addEventListener('click', e => { e.preventDefault(); openFModal(link); })
+  );
+  fCloseIcon.addEventListener('click', closeFModal);
+  fCloseBtn.addEventListener('click', closeFModal);
+  fModal.addEventListener('click', e => { if (e.target === fModal) closeFModal(); });
+})();
+</script>
+<!-- FOOTER END -->
+
+
+<!-- Page Loader -->
+<div id="ftco-loader" class="show fullscreen">
+  <svg class="circular" width="48px" height="48px">
+    <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+    <circle class="path"    cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#FFD233"/>
+  </svg>
+</div>
+
+
+<!-- Scripts -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
+
+<!-- ================= FINAL RESPONSIVE & UX POLISH (added) ================= -->
+<style>
+  /* Smooth in-page scrolling for anchor links */
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  /* Prevent any horizontal scroll/jank on small screens & remove mobile tap flash */
+  body { overflow-x: hidden; -webkit-tap-highlight-color: transparent; }
+  *, *::before, *::after { box-sizing: border-box; }
+  img, svg, video { max-width: 100%; height: auto; }
+
+  /* Long text/emails never overflow their container on narrow phones */
+  p, h1, h2, h3, h4, h5, h6, a, span, li, .contact-value { overflow-wrap: break-word; word-break: break-word; }
+
+  /* Visible keyboard focus state for accessibility, invisible to mouse users */
+  a:focus-visible, button:focus-visible, input:focus-visible,
+  select:focus-visible, textarea:focus-visible, .nav-toggle:focus-visible {
+    outline: 3px solid #36C5F0;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Respect users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Comfortable tap targets + crisp press feedback on touch devices */
+  @media (max-width: 600px) {
+    .contact-btn, .cta-btn, .dest-btn, .tour-btn, .whatsapp-btn, .btn-wa,
+    .footer-contact-item, #sendBtn, #clearBtn, .cta-buttons a {
+      min-height: 44px;
+    }
+  }
+  .contact-btn:active, .cta-btn:active, .dest-btn:active, .tour-btn:active,
+  .whatsapp-btn:active, .btn-wa:active, #sendBtn:active, #clearBtn:active,
+  .tour-btn-wa:active {
+    transform: scale(0.97);
+  }
+
+  /* Tone down oversized decorative type on small screens (perf + tidiness) */
+  @media (max-width: 600px) {
+    .deco-text { font-size: 140px; }
+  }
+
+  /* Slightly tighter side padding on very small phones */
+  @media (max-width: 400px) {
+    .contact-section, .tour-container, .transfer-container { padding-left: 12px; padding-right: 12px; }
+  }
+
+  /* ============================================================
+     SVG WAVE DIVIDERS
+  ============================================================ */
+  .wave-divider {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    margin: 0;
+  }
+  .wave-divider svg {
+    display: block;
+    width: 100%;
+    height: 60px;
+  }
+
+  /* ============================================================
+     BACK TO TOP BUTTON
+  ============================================================ */
+  #backToTop {
+    position: fixed;
+    bottom: 32px;
+    right: 28px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4ecb8d, #2eaf72);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    box-shadow: 0 6px 20px rgba(78,203,141,0.45);
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
+    z-index: 9800;
+  }
+  #backToTop.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  #backToTop:hover {
+    box-shadow: 0 10px 28px rgba(78,203,141,0.6);
+    transform: translateY(-3px);
+  }
+
+  /* ============================================================
+     MINT CARD ACCENT – subtle mint left-border on destination cards
+  ============================================================ */
+  .dest-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #4ecb8d, #2eaf72);
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    border-radius: 4px 0 0 4px;
+  }
+  .dest-card:hover::after { opacity: 1; }
+
+  /* Blog card top accent bar */
+  .blog-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #4ecb8d, #2eaf72, #4ecb8d);
+    background-size: 200% 100%;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    animation: shimmerBar 2.5s linear infinite;
+  }
+  .blog-card:hover::after { opacity: 1; }
+  @keyframes shimmerBar {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+  .blog-card { position: relative; }
+</style>
+<!-- ================= END FINAL POLISH ================= -->
+
+<!-- Back To Top Button -->
+<button id="backToTop" aria-label="Back to top"><i class="fa fa-chevron-up"></i></button>
+<script>
+(function() {
+  var btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 400) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+  }, { passive: true });
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+
+</body>
+</html>

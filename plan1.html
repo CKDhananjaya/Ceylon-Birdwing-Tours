@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Lanka Elite | 04 Day Tour Packages</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-dark: #1a3c34;
+            --accent-gold: #c5a059;
+            --light-bg: #fdfbf7;
+            --white: #ffffff;
+            --text-gray: #4a4a4a;
+            --whatsapp-green: #25D366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        /* --- Header Section --- */
+        .hero {
+            background: linear-gradient(rgba(26, 60, 52, 0.8), rgba(26, 60, 52, 0.8)), 
+                        url('https://images.unsplash.com/photo-1552423158-95e5462df0f9?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+        }
+
+        /* --- Main Content --- */
+        .container {
+            max-width: 1200px;
+            margin: -50px auto 100px;
+            padding: 0 20px;
+        }
+
+        .package-card {
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            margin-bottom: 60px;
+            overflow: hidden;
+            border: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+        .package-header {
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 30px;
+            text-align: center;
+        }
+
+        .package-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--accent-gold);
+        }
+
+        /* --- Itinerary Grid --- */
+        .itinerary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2px;
+            background: #eee; /* Divider color */
+        }
+
+        .day-block {
+            background: var(--white);
+            padding: 30px;
+        }
+
+        .day-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--accent-gold);
+            padding-bottom: 10px;
+        }
+
+        .day-title i { color: var(--accent-gold); }
+
+        .content-list {
+            list-style: none;
+        }
+
+        .content-list li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .content-list li::before {
+            content: "\f058";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+        }
+
+        .highlight-text {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        /* --- Floating Navigation Bar --- */
+        .action-bar {
+            position: fixed;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 12px 25px;
+            border-radius: 100px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            z-index: 1000;
+            border: 1px solid var(--accent-gold);
+            width: max-content;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-back {
+            background: var(--primary-dark);
+            color: var(--white);
+        }
+
+        .btn-whatsapp {
+            background: var(--whatsapp-green);
+            color: var(--white);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* --- Responsive Tweaks --- */
+        @media (max-width: 768px) {
+            .hero { height: 30vh; }
+            .itinerary-grid { grid-template-columns: 1fr; }
+            .action-bar { width: 90%; justify-content: center; bottom: 15px; }
+            .btn { padding: 10px 15px; font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <p>Premium Sri Lankan Journeys</p>
+        <h1>04 Days Tour Packages</h1>
+    </header>
+
+    <div class="container">
+        
+        <article class="package-card">
+            <div class="package-header">
+                <h2>Tour Package - 01 (Culture & Heritage)</h2>
+            </div>
+            <div class="itinerary-grid">
+                <div class="day-block">
+                    <span class="day-title"><i class="fas fa-map-marker-alt"></i> Day 1 : Sigiriya</span>
+                    <ul class="content-list">
+                        <li>Arrive at Bandaranaike International Airport</li>
+                        <li>Pick-up from Airport, or hotel in Colombo/Negombo.</li>
+                        <li>Travel to <span class="highlight-text">Sigiriya</span></li>
+                        <li>Visit <span class="highlight-text">Sigiriya Lion Rock Fortress.</span></li>
+                        <li>Enjoy an exciting <span class="highlight-text">Minneriya Jeep Safari.</span></li>
+                        <li>Overnight stay in Sigiriya.</li>
+                    </ul>
+                </div>
+                <div class="day-block">
+                    <span class="day-title"><i class="fas fa-umbrella-beach"></i> Day 2 : Sigiriya</span>
+                    <ul class="content-list">
+                        <li>Experience a <span class="highlight-text">traditional village tour.</span></li>
+                        <li>Explore the <span class="highlight-text">Dambulla Cave Temple.</span></li>
+                        <li>Watch the sunset from <span class="highlight-text">Pidurangala Rock.</span></li>
+                        <li>Overnight stay in Sigiriya.</li>
+                    </ul>
+                </div>
+                <div class="day-block">
+                    <span class="day-title"><i class="fas fa-leaf"></i> Day 3 : Kandy</span>
+                    <ul class="content-list">
+                        <li>Visit a <span class="highlight-text">Spice & Herbal Garden.</span></li>
+                        <li>Explore a <span class="highlight-text">Silk Garden.</span></li>
+                        <li>See the <span class="highlight-text">Temple of the Tooth Relic</span> and Kandy Lake.</li>
+                        <li>Walk through the <span class="highlight-text">Royal Botanical Gardens.</span></li>
+                        <li>Visit the <span class="highlight-text">Ceylon Tea Museum.</span></li>
+                        <li>Stop at the <span class="highlight-text">Bahiravokanda Buddha Statue</span> and Kandy View Point.</li>
+                        <li>Evening <span class="highlight-text">Kandyan Dance Show.</span></li>
+                        <li>Overnight stay in Kandy.</li>
+                    </ul>
+                </div>
+                <div class="day-block">
+                    <span class="day-title"><i class="fas fa-plane-departure"></i> Day 4 : Departure</span>
+                    <ul class="content-list">
+                        <li>Visit <span class="highlight-text">Gem & Mineral shops.</span></li>
+                        <li>Experience the <span class="highlight-text">Millennium Elephant Foundation.</span></li>
+                        <li>Drop-off at Colombo Airport, Port, or hotel in Colombo/Negombo.</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <article class="package-card">
+            <div class="package-header" style="background: #0d47a1;">
+                <h2>Tour Package - 02 (Coast & Sun)</h2>
+            </div>
+            <div class="itinerary-grid">
+                <div class="day-block">
+                    <span class="day-title"><i class="fas fa-water"></i> Day 1 : Bentota</span>
+                    <ul class="content-list">
+                        <li>Arrive at Bandaranaike International Airport</li>
+                        <li>Pick-up from Airport, or hotel in Colombo/Negombo.</li>
+                        <li>Travel to <span class="highlight-text">Bentota</span></li>
+                        <li>Leisure at <span class="highlight-text">Bentota Beach</span> (diving, snorkeling, water skiing, speed boating, kitesurfing, windsurfing).</li>
+                        <li>Rejuvenate with a <span class="highlight-text">Traditional Ayurvedic Spa</span></li>
+                        <li>Overnight stay in Bentota.</li>
+                    </ul>
+                </div>
+                <div class="day-block">
+                    <span class="day-title"><i class="fas fa-fort-awesome"></i> Day 2 : Galle</span>
+                    <ul class="content-list">
+                        <li>Travel to Galle</li>
+                        <li>Take a <span class="highlight-text">boat safari</span> along the Madu Ganga River.</li>
+                        <li>Visit the <span class="highlight-text">Kosgoda Turtle Hatchery.</span></li>
+                        <li>Explore <span class="highlight-text">Hikkaduwa Coral Gardens.</span></li>
+                        <li>Stop by <span class="highlight-text">Gem & Mineral shops.</span></li>
+                        <li>Discover the historic <span class="highlight-text">Galle Fort & Lighthouse.</span></li>
+                        <li>Overnight stay in Galle.</li>
+                    </ul>
+                </div>
+                <div class="day-block">
+                    <span class="day-title"><i class="fas fa-fish"></i> Day 3 : Mirissa</span>
+                    <ul class="content-list">
+                        <li>Travel to Mirissa</li>
+                        <li><span class="highlight-text">Whale watching</span> at Mirissa.</li>
+                        <li><span class="highlight-text">Parrot Rock & Coconut Tree Hill.</span></li>
+                        <li>Enjoy beach activities in Mirissa.</li>
+                        <li>Overnight stay in Mirissa.</li>
+                    </ul>
+                </div>
+                <div class="day-block">
+                    <span class="day-title"><i class="fas fa-city"></i> Day 4 : Departure</span>
+                    <ul class="content-list">
+                        <li>Travel to Colombo and airport</li>
+                        <li>Travel to Colombo for a <span class="highlight-text">city tour:</span> Gangaramaya Temple, Independence Square, Lotus Tower, Red Masjid, Pettah Market, and shopping.</li>
+                        <li>Drop-off at Colombo Airport or hotel in Colombo/Negombo.</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <article class="package-card">
+            <div class="package-header" style="background: #3e2723;">
+                <h2>Tour Package - 03 (Highlands & Nature)</h2>
+            </div>
+            <div class="itinerary-grid">
+                <div class="day-block">
+                    <span class="day-title"><i class="fas fa-cloud-sun"></i> Day 1 : Nuwara Eliya</span>
+                    <ul class="content-list">
+                        <li>Arrive at Bandaranaike International Airport</li>
+                        <li>Pick-up from Airport, or hotel in Colombo/Negombo.</li>
+                        <li>Travel to <span class="highlight-text">Nuwara Eliya</span></li>
+                        <li>Visit <span class="highlight-text">Ramboda Waterfall.</span></li>
+                        <li>Tea plantation & tea factory.</li>
+                        <li>Stroll through <span class="highlight-text">Victoria Park.</span></li>
+                        <li>Relax at <span class="highlight-text">Gregory Lake.</span></li>
+                        <li>Visit <span class="highlight-text">Moon Plains</span> and <span class="highlight-text">Seetha Amman Kovil.</span></li>
+                        <li>See the <span class="highlight-text">Lover’s Leap Waterfall.</span></li>
+                        <li>Overnight stay in Nuwara Eliya.</li>
+                    </ul>
+                </div>
+                <div class="day-block">
+                    <span class="day-title"><i class="fas fa-monument"></i> Day 2 : Kandy</span>
+                    <ul class="content-list">
+                        <li>Travel to Kandy</li>
+                        <li>Tour the <span class="highlight-text">Ceylon Tea Museum</span> and <span class="highlight-text">Gem Museum.</span></li>
+                        <li>See the <span class="highlight-text">Bahiravokanda Buddha Statue</span> and Kandy View Point.</li>
+                        <li>Visit the <span class="highlight-text">Temple of the Tooth Relic</span> and Kandy Lake.</li>
+                        <li>Evening <span class="highlight-text">Kandyan Cultural Dancing Show.</span></li>
+                        <li>Overnight stay in Kandy.</li>
+                    </ul>
+                </div>
+                <div class="day-block">
+                    <span class="day-title"><i class="fas fa-mountain"></i> Day 3 : Sigiriya</span>
+                    <ul class="content-list">
+                        <li>Travel to Sigiriya</li>
+                        <li>Stop at a <span class="highlight-text">Herbal & Spice Garden</span> and silk garden.</li>
+                        <li>Explore the <span class="highlight-text">Dambulla Cave Temple.</span></li>
+                        <li>Enjoy a <span class="highlight-text">traditional village tour.</span></li>
+                        <li>Watch the sunset from <span class="highlight-text">Pidurangala Rock.</span></li>
+                        <li>Experience <span class="highlight-text">Ayurveda massage and steam bath</span> (recommended).</li>
+                    </ul>
+                </div>
+                <div class="day-block">
+                    <span class="day-title"><i class="fas fa-binoculars"></i> Day 4 : Final Safari</span>
+                    <ul class="content-list">
+                        <li>Climb the iconic <span class="highlight-text">Sigiriya Lion Rock.</span></li>
+                        <li>Experience a <span class="highlight-text">Jeep Safari</span> (Minneriya, Kaudulla, or Hurulu).</li>
+                        <li>Drop-off at Colombo Airport, Port, or hotel in Colombo/Negombo.</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+    <div class="action-bar">
+        <a href="packages.html" class="btn btn-back">
+            <i class="fas fa-arrow-left"></i> Back to Packages
+        </a>
+        <a href="https://wa.me/94762055008?text=Hello!%20I%20am%20interested%20in%20your%2004-Day%20Tour%20Packages." target="_blank" class="btn btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> WhatsApp Inquiry
+        </a>
+    </div>
+
+</body>
+</html>

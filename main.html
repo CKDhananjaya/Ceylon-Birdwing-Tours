@@ -1,0 +1,80 @@
+<div class="copyright-section">
+    
+    <p class="main-line">
+        Copyright &copy; <span id="year"></span> 
+        <strong>Chathura Kavish Dhananjaya</strong>. 
+        All rights reserved.
+    </p>
+
+    <p class="legal-text">
+        Unauthorized use and/or duplication of this material without express and written permission from this site’s author and/or owner is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to <strong>Chathura Kavish Dhananjaya</strong> with appropriate and specific direction to the original content.
+    </p>
+
+    <p class="policy-links">
+        <a href="#">Privacy Policy</a> | 
+        <a href="#">Terms of Use</a> |
+        <a href="#">Contact</a>
+    </p>
+
+    <p class="contact-info">
+        Email: <a href="mailto:chathurakavish9@gmail.com">chathurakavish9@gmail.com</a> | 
+        Phone/WhatsApp: 0760578645
+    </p>
+
+</div>
+
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<style>
+    /* -------------------------------------- */
+    /* MODERN DARK FOOTER STYLE */
+    /* -------------------------------------- */
+    .copyright-section {
+        /* FONT AND ALIGNMENT */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        text-align: center;
+        
+        /* COLORS & SPACING */
+        padding: 60px 20px; 
+        background-color: #222; /* Dark background */
+        color: #ccc; /* Light gray text */
+        margin-top: 50px;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); 
+    }
+
+    .main-line {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #fff; /* Pure white for main text emphasis */
+        font-weight: 600; 
+        letter-spacing: 0.5px;
+    }
+
+    .legal-text {
+        font-size: 12px;
+        color: #888; /* Muted gray for small legal text */
+        max-width: 900px;
+        margin: 0 auto 15px auto; 
+        line-height: 1.6;
+    }
+
+    .policy-links, .contact-info {
+        margin-top: 15px;
+        font-size: 13px;
+    }
+
+    .policy-links a, .contact-info a {
+        text-decoration: none;
+        color: #007bff; /* Accent Blue for links */
+        margin: 0 15px;
+        transition: color 0.3s ease; 
+        font-weight: 500;
+    }
+
+    .policy-links a:hover, .contact-info a:hover {
+        color: #fff; /* Links turn white on hover */
+        text-decoration: none; 
+    }
+</style>

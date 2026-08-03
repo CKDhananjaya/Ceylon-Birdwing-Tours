@@ -1,0 +1,1068 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Ceylon Birdwing Tours</title>
+   <link rel="icon" type="image/png" href="images/logo.png"> 
+        <link rel="shortcut icon" href="images/logo.ico">
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+
+
+
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/shared-navbar-footer.css">
+</head>
+
+
+<body>
+
+
+
+<!-- NAVBAR OVERLAY -->
+<div class="nav-overlay" id="nav-overlay"></div>
+
+<!-- MODERN NAVBAR -->
+<nav class="modern-navbar at-top" id="main-navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-img-wrap">
+        <img src="images/logo.png" alt="Ceylon Birdwing Tours Logo" loading="lazy">
+      </div>
+      <div class="nav-logo-text">
+        <span class="nav-logo-title">Ceylon Birdwing Tours</span>
+        <span class="nav-logo-sub">Sri Lanka Travel Experts</span>
+      </div>
+    </a>
+    <div class="nav-toggle" id="nav-toggle" role="button" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-menu" id="nav-menu" role="list">
+      <li class="nav-item"><a href="index.html">Home</a></li>
+      <li class="nav-item active"><a href="destination.html">Destination</a></li>
+      <li class="nav-item"><a href="packages.html">Tour Packages</a></li>
+      <li class="nav-item"><a href="CustomTours.html">Custom Tours</a></li>
+      <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+      <li class="nav-item nav-cta"><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+<script>
+const navbar=document.getElementById('main-navbar'),toggle=document.getElementById('nav-toggle'),menu=document.getElementById('nav-menu'),overlay=document.getElementById('nav-overlay');
+function closeNav(){menu.classList.remove('show');overlay.classList.remove('show');toggle.classList.remove('open');toggle.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+toggle.addEventListener('click',()=>{const o=menu.classList.toggle('show');overlay.classList.toggle('show',o);toggle.classList.toggle('open',o);toggle.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':'';});
+overlay.addEventListener('click',closeNav);
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeNav));
+window.addEventListener('scroll',()=>{if(window.scrollY>60){navbar.classList.remove('at-top');navbar.classList.add('scrolled');}else{navbar.classList.remove('scrolled');navbar.classList.add('at-top');}},{passive:true});
+</script>
+<!-- NAVBAR END -->
+
+
+
+<!-- ================= HERO SECTION START ================= -->
+<div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
+			<div class="col-md-7 ftco-animate">
+
+				<!-- Animated Text -->
+				<span class="subheading animated-text delay-1">Welcome to Ceylon Birdwing Tours</span>
+				<h1 class="mb-4 animated-text delay-2">Destination</h1>
+				<p class="caps animated-text delay-3">Travel to the any corner of the Sri Lanka, without going around in circles</p>
+
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ================= HERO SECTION END ================= -->
+
+<!-- ================= TEXT ANIMATION STYLE START ================= -->
+<style>
+/* Basic text animation */
+.animated-text {
+	opacity: 0;
+	transform: translateY(20px);
+	animation: fadeSlideUp 1s forwards;
+}
+
+/* Animation delays */
+.delay-1 { animation-delay: 0.5s; }
+.delay-2 { animation-delay: 1s; }
+.delay-3 { animation-delay: 1.5s; }
+
+/* Keyframes */
+@keyframes fadeSlideUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+</style>
+<!-- ================= TEXT ANIMATION STYLE END ================= -->
+
+
+
+
+<!-- ================= DESTINATION CARDS SECTION START ================= -->
+<section class="ftco-section dest-section">
+    <!-- Layered Background Blobs & Decor -->
+    <div class="blob-bg blob-1"></div>
+    <div class="blob-bg blob-2"></div>
+    <div class="blob-bg blob-3"></div>
+    
+    <div class="blob-bg blob-4"></div>
+    <div class="blob-bg blob-5"></div>
+    <div class="blob-bg blob-6"></div>
+
+    <div class="deco-grid deco-grid-1"></div>
+    <div class="deco-grid deco-grid-2"></div>
+    <div class="deco-text deco-text-1">EXPLORE</div>
+    <div class="deco-text deco-text-2">CEYLON</div>
+
+    <div class="container">
+        
+        <div class="row justify-content-center pb-4">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+                <span class="subheading" style="color: #FFC300; font-weight: 700; letter-spacing: 2px;">Relax & Unwind</span>
+                <h2 class="mb-4" style="font-family: 'Outfit', sans-serif; font-weight: 800;">Coastal & Beach Destinations</h2>
+            </div>
+        </div>
+        <div class="row">
+            
+            <!-- Mirissa -->
+            <div class="col-md-4 ftco-animate">
+                <div class="dest-card">
+                    <div class="dest-img" style="background-image: url(images/mirissa.jpg);">
+                        <div class="dest-badge">Best: April</div>
+                    </div>
+                    <div class="dest-body">
+                        <div class="dest-bg-pattern"></div>
+                        <h3 class="dest-title">Mirissa</h3>
+                        <p class="dest-location"><i class="fa fa-map-marker"></i> Sri Lanka (2–3 hrs from Colombo)</p>
+                        <p class="dest-desc">A relaxed coastal town known for whale watching, surfing, and stunning sunsets.</p>
+                        <ul class="dest-features">
+                            <li><i class="fas fa-check-circle"></i> Whale & Dolphin watching</li>
+                            <li><i class="fas fa-check-circle"></i> Coconut Tree Hill Viewpoint</li>
+                            <li><i class="fas fa-check-circle"></i> Secret Beach & quiet coves</li>
+                        </ul>
+                        <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Mirissa" class="dest-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Inquire Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weligama -->
+            <div class="col-md-4 ftco-animate">
+                <div class="dest-card">
+                    <div class="dest-img" style="background-image: url(images/weligama.jpg);">
+                        <div class="dest-badge">Best: Nov-Apr</div>
+                    </div>
+                    <div class="dest-body">
+                        <div class="dest-bg-pattern"></div>
+                        <h3 class="dest-title">Weligama</h3>
+                        <p class="dest-location"><i class="fa fa-map-marker"></i> Sri Lanka (2.5 hrs from Colombo)</p>
+                        <p class="dest-desc">Lively beach town famous for stilt fishermen and beginner-friendly surfing.</p>
+                        <ul class="dest-features">
+                            <li><i class="fas fa-check-circle"></i> Iconic stilt fishermen</li>
+                            <li><i class="fas fa-check-circle"></i> Fresh seafood markets</li>
+                            <li><i class="fas fa-check-circle"></i> Beginner surf spots</li>
+                        </ul>
+                        <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Weligama" class="dest-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Inquire Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bentota -->
+            <div class="col-md-4 ftco-animate">
+                <div class="dest-card">
+                    <div class="dest-img" style="background-image: url(images/bentota.jpg);">
+                        <div class="dest-badge">Best: Nov-Apr</div>
+                    </div>
+                    <div class="dest-body">
+                        <div class="dest-bg-pattern"></div>
+                        <h3 class="dest-title">Bentota</h3>
+                        <p class="dest-location"><i class="fa fa-map-marker"></i> Sri Lanka (2 hrs from Colombo)</p>
+                        <p class="dest-desc">Where the river meets the sea. Known for water sports and Ayurvedic spas.</p>
+                        <ul class="dest-features">
+                            <li><i class="fas fa-check-circle"></i> River safaris (Mangroves)</li>
+                            <li><i class="fas fa-check-circle"></i> Water sports & Windsurfing</li>
+                            <li><i class="fas fa-check-circle"></i> Wide sandy beaches</li>
+                        </ul>
+                        <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Bentota" class="dest-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Inquire Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Negombo -->
+            <div class="col-md-4 ftco-animate">
+                <div class="dest-card">
+                    <div class="dest-img" style="background-image: url(images/negombo.jpg);">
+                        <div class="dest-badge">Best: Dec-Apr</div>
+                    </div>
+                    <div class="dest-body">
+                        <div class="dest-bg-pattern"></div>
+                        <h3 class="dest-title">Negombo</h3>
+                        <p class="dest-location"><i class="fa fa-map-marker"></i> Sri Lanka (30 mins from Colombo)</p>
+                        <p class="dest-desc">Lively coastal city with Dutch colonial architecture near the airport.</p>
+                        <ul class="dest-features">
+                            <li><i class="fas fa-check-circle"></i> Dutch Canal & Colonial buildings</li>
+                            <li><i class="fas fa-check-circle"></i> Historic churches</li>
+                            <li><i class="fas fa-check-circle"></i> Fresh seafood markets</li>
+                        </ul>
+                        <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Negombo" class="dest-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Inquire Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Arugam Bay -->
+            <div class="col-md-4 ftco-animate">
+                <div class="dest-card">
+                    <div class="dest-img" style="background-image: url(images/arugam_bay.jpg);">
+                        <div class="dest-badge">Best: May-Sep</div>
+                    </div>
+                    <div class="dest-body">
+                        <div class="dest-bg-pattern"></div>
+                        <h3 class="dest-title">Arugam Bay</h3>
+                        <p class="dest-location"><i class="fa fa-map-marker"></i> Sri Lanka (7-8 hrs from Colombo)</p>
+                        <p class="dest-desc">Renowned surf destination with a laid-back vibe and nearby wildlife.</p>
+                        <ul class="dest-features">
+                            <li><i class="fas fa-check-circle"></i> World-class surfing</li>
+                            <li><i class="fas fa-check-circle"></i> Lagoon safaris</li>
+                            <li><i class="fas fa-check-circle"></i> Beachside nightlife</li>
+                        </ul>
+                        <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Arugam%20Bay" class="dest-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Inquire Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trincomalee -->
+            <div class="col-md-4 ftco-animate">
+                <div class="dest-card">
+                    <div class="dest-img" style="background-image: url(images/trincomalee.jpg);">
+                        <div class="dest-badge">Best: Apr-Oct</div>
+                    </div>
+                    <div class="dest-body">
+                        <div class="dest-bg-pattern"></div>
+                        <h3 class="dest-title">Trincomalee</h3>
+                        <p class="dest-location"><i class="fa fa-map-marker"></i> Sri Lanka (6 hrs from Colombo)</p>
+                        <p class="dest-desc">Pristine beaches, rich marine life, and historic temples.</p>
+                        <ul class="dest-features">
+                            <li><i class="fas fa-check-circle"></i> Nilaveli & Uppuveli Beaches</li>
+                            <li><i class="fas fa-check-circle"></i> Fort Frederick</li>
+                            <li><i class="fas fa-check-circle"></i> Pigeon Island Marine Park</li>
+                        </ul>
+                        <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Trincomalee" class="dest-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Inquire Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sigiriya -->
+            <div class="col-md-4 ftco-animate">
+                <div class="dest-card">
+                    <div class="dest-img" style="background-image: url(images/sigiriya.jpg);">
+                        <div class="dest-badge">Best: Mar-May</div>
+                    </div>
+                    <div class="dest-body">
+                        <div class="dest-bg-pattern"></div>
+                        <h3 class="dest-title">Sigiriya</h3>
+                        <p class="dest-location"><i class="fa fa-map-marker"></i> Sri Lanka (4-5 hrs from Colombo)</p>
+                        <p class="dest-desc">The ‘Lion Rock’ fortress with frescoes and landscaped gardens.</p>
+                        <ul class="dest-features">
+                            <li><i class="fas fa-check-circle"></i> 5th-century rock fortress</li>
+                            <li><i class="fas fa-check-circle"></i> Iconic 'Heavenly Maidens' frescoes</li>
+                            <li><i class="fas fa-check-circle"></i> Ancient Mirror Wall</li>
+                        </ul>
+                        <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Sigiriya" class="dest-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Inquire Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dambulla -->
+            <div class="col-md-4 ftco-animate">
+                <div class="dest-card">
+                    <div class="dest-img" style="background-image: url(images/dambulla.jpg);">
+                        <div class="dest-badge">Best: Year-round</div>
+                    </div>
+                    <div class="dest-body">
+                        <div class="dest-bg-pattern"></div>
+                        <h3 class="dest-title">Dambulla</h3>
+                        <p class="dest-location"><i class="fa fa-map-marker"></i> Sri Lanka (4 hrs from Colombo)</p>
+                        <p class="dest-desc">Home to Sri Lanka’s largest and best-preserved cave temple complex.</p>
+                        <ul class="dest-features">
+                            <li><i class="fas fa-check-circle"></i> Five caves with 150+ statues</li>
+                            <li><i class="fas fa-check-circle"></i> 2,000+ year old paintings</li>
+                            <li><i class="fas fa-check-circle"></i> Golden Temple</li>
+                        </ul>
+                        <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Dambulla" class="dest-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Inquire Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jaffna -->
+            <div class="col-md-4 ftco-animate">
+                <div class="dest-card">
+                    <div class="dest-img" style="background-image: url(images/jaffna.jpg);">
+                        <div class="dest-badge">Best: May-Sep</div>
+                    </div>
+                    <div class="dest-body">
+                        <div class="dest-bg-pattern"></div>
+                        <h3 class="dest-title">Jaffna</h3>
+                        <p class="dest-location"><i class="fa fa-map-marker"></i> Sri Lanka (8 hrs from Colombo)</p>
+                        <p class="dest-desc">The cultural heart of Tamil heritage with historic temples and cuisine.</p>
+                        <ul class="dest-features">
+                            <li><i class="fas fa-check-circle"></i> Nallur Kandaswamy Temple</li>
+                            <li><i class="fas fa-check-circle"></i> Tamil cuisine specialties</li>
+                            <li><i class="fas fa-check-circle"></i> Point Pedro Lighthouse</li>
+                        </ul>
+                        <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Jaffna" class="dest-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Inquire Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kandy -->
+            <div class="col-md-4 ftco-animate">
+                <div class="dest-card">
+                    <div class="dest-img" style="background-image: url(images/kandy.jpg);">
+                        <div class="dest-badge">Best: Dec-Apr</div>
+                    </div>
+                    <div class="dest-body">
+                        <div class="dest-bg-pattern"></div>
+                        <h3 class="dest-title">Kandy</h3>
+                        <p class="dest-location"><i class="fa fa-map-marker"></i> Sri Lanka (3-4 hrs from Colombo)</p>
+                        <p class="dest-desc">The last royal capital, set among hills and tea plantations.</p>
+                        <ul class="dest-features">
+                            <li><i class="fas fa-check-circle"></i> Temple of the Tooth Relic</li>
+                            <li><i class="fas fa-check-circle"></i> Royal Botanical Gardens</li>
+                            <li><i class="fas fa-check-circle"></i> Kandy Lake views</li>
+                        </ul>
+                        <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Kandy" class="dest-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Inquire Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galle -->
+            <div class="col-md-4 ftco-animate">
+                <div class="dest-card">
+                    <div class="dest-img" style="background-image: url(images/galle.jpg);">
+                        <div class="dest-badge">Best: Dec-Apr</div>
+                    </div>
+                    <div class="dest-body">
+                        <div class="dest-bg-pattern"></div>
+                        <h3 class="dest-title">Galle</h3>
+                        <p class="dest-location"><i class="fa fa-map-marker"></i> Sri Lanka (2-3 hrs from Colombo)</p>
+                        <p class="dest-desc">Historic coastal city with a UNESCO Dutch Fort and charming streets.</p>
+                        <ul class="dest-features">
+                            <li><i class="fas fa-check-circle"></i> Dutch Fort</li>
+                            <li><i class="fas fa-check-circle"></i> Artisan shops & cafes</li>
+                            <li><i class="fas fa-check-circle"></i> Maritime Museum</li>
+                        </ul>
+                        <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Galle" class="dest-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Inquire Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Anuradhapura -->
+            <div class="col-md-4 ftco-animate">
+                <div class="dest-card">
+                    <div class="dest-img" style="background-image: url(images/anuradhapura.jpg);">
+                        <div class="dest-badge">Best: Jun-Sep</div>
+                    </div>
+                    <div class="dest-body">
+                        <div class="dest-bg-pattern"></div>
+                        <h3 class="dest-title">Anuradhapura</h3>
+                        <p class="dest-location"><i class="fa fa-map-marker"></i> Sri Lanka (4-5 hrs from Colombo)</p>
+                        <p class="dest-desc">Ancient capital famous for well-preserved ruins and sacred sites.</p>
+                        <ul class="dest-features">
+                            <li><i class="fas fa-check-circle"></i> Sri Maha Bodhi sacred tree</li>
+                            <li><i class="fas fa-check-circle"></i> Ancient dagobas & temples</li>
+                            <li><i class="fas fa-check-circle"></i> Moonstone carvings</li>
+                        </ul>
+                        <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Anuradhapura" class="dest-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Inquire Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Polonnaruwa -->
+            <div class="col-md-4 ftco-animate">
+                <div class="dest-card">
+                    <div class="dest-img" style="background-image: url(images/polonnaruwa.jpg);">
+                        <div class="dest-badge">Best: Jun-Sep</div>
+                    </div>
+                    <div class="dest-body">
+                        <div class="dest-bg-pattern"></div>
+                        <h3 class="dest-title">Polonnaruwa</h3>
+                        <p class="dest-location"><i class="fa fa-map-marker"></i> Sri Lanka (5 hrs from Colombo)</p>
+                        <p class="dest-desc">UNESCO site with medieval ruins and stone sculptures.</p>
+                        <ul class="dest-features">
+                            <li><i class="fas fa-check-circle"></i> Gal Vihara Buddha statues</li>
+                            <li><i class="fas fa-check-circle"></i> Ancient Quadrangle</li>
+                            <li><i class="fas fa-check-circle"></i> Parakrama Samudra</li>
+                        </ul>
+                        <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Polonnaruwa" class="dest-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Inquire Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ella -->
+            <div class="col-md-4 ftco-animate">
+                <div class="dest-card">
+                    <div class="dest-img" style="background-image: url(images/ella.jpg);">
+                        <div class="dest-badge">Best: Jan-Mar</div>
+                    </div>
+                    <div class="dest-body">
+                        <div class="dest-bg-pattern"></div>
+                        <h3 class="dest-title">Ella</h3>
+                        <p class="dest-location"><i class="fa fa-map-marker"></i> Sri Lanka (6-7 hrs from Colombo)</p>
+                        <p class="dest-desc">Scenic hill-country village with tea fields and hiking trails.</p>
+                        <ul class="dest-features">
+                            <li><i class="fas fa-check-circle"></i> Nine Arch Bridge</li>
+                            <li><i class="fas fa-check-circle"></i> Little Adam’s Peak hike</li>
+                            <li><i class="fas fa-check-circle"></i> Ella Rock views</li>
+                        </ul>
+                        <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Ella" class="dest-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Inquire Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kithulgala -->
+            <div class="col-md-4 ftco-animate">
+                <div class="dest-card">
+                    <div class="dest-img" style="background-image: url(images/kithulgala.jpg);">
+                        <div class="dest-badge">Best: Mar-Apr</div>
+                    </div>
+                    <div class="dest-body">
+                        <div class="dest-bg-pattern"></div>
+                        <h3 class="dest-title">Kithulgala</h3>
+                        <p class="dest-location"><i class="fa fa-map-marker"></i> Sri Lanka (3 hrs from Colombo)</p>
+                        <p class="dest-desc">Lush rainforest getaway best known for white-water rafting.</p>
+                        <ul class="dest-features">
+                            <li><i class="fas fa-check-circle"></i> White-water rafting</li>
+                            <li><i class="fas fa-check-circle"></i> Jungle trekking</li>
+                            <li><i class="fas fa-check-circle"></i> Waterfall abseiling</li>
+                        </ul>
+                        <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Kithulgala" class="dest-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Inquire Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Haputhale -->
+            <div class="col-md-4 ftco-animate">
+                <div class="dest-card">
+                    <div class="dest-img" style="background-image: url(images/haputhale.jpg);">
+                        <div class="dest-badge">Best: Mar-May</div>
+                    </div>
+                    <div class="dest-body">
+                        <div class="dest-bg-pattern"></div>
+                        <h3 class="dest-title">Haputhale</h3>
+                        <p class="dest-location"><i class="fa fa-map-marker"></i> Sri Lanka (6 hrs from Colombo)</p>
+                        <p class="dest-desc">Misty hill town with stunning views and cool climate.</p>
+                        <ul class="dest-features">
+                            <li><i class="fas fa-check-circle"></i> Lipton's Seat viewpoint</li>
+                            <li><i class="fas fa-check-circle"></i> Adisham Monastery</li>
+                            <li><i class="fas fa-check-circle"></i> Nature trails & hiking</li>
+                        </ul>
+                        <a href="https://wa.me/94762055008?text=Hi,%20I%20am%20interested%20in%20visiting%20Haputhale" class="dest-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Inquire Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+/* Premium Destination Cards */
+.dest-section {
+    background-color: #fcfbf8;
+    padding: 80px 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Base Blob Styles */
+.blob-bg {
+    position: absolute;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    z-index: -1;
+    pointer-events: none;
+    transition: all 1s ease;
+}
+
+/* Right Layered Blobs */
+.blob-1 {
+    top: -10%;
+    right: -25%;
+    width: 900px;
+    height: 900px;
+    background: rgba(255, 210, 51, 0.1);
+    animation: morph 15s ease-in-out infinite;
+}
+.blob-2 {
+    top: -5%;
+    right: -15%;
+    width: 700px;
+    height: 700px;
+    background: rgba(255, 210, 51, 0.15);
+    animation: morph 12s ease-in-out infinite reverse;
+}
+.blob-3 {
+    top: 5%;
+    right: -5%;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 210, 51, 0.2);
+    animation: morph 18s ease-in-out infinite;
+}
+
+/* Left Layered Blobs (middle page) */
+.blob-4 {
+    top: 35%;
+    left: -25%;
+    width: 900px;
+    height: 900px;
+    background: rgba(255, 210, 51, 0.1);
+    border-radius: 60% 40% 30% 70% / 50% 60% 50% 40%;
+    animation: morph2 18s ease-in-out infinite;
+}
+.blob-5 {
+    top: 40%;
+    left: -15%;
+    width: 700px;
+    height: 700px;
+    background: rgba(255, 210, 51, 0.15);
+    border-radius: 60% 40% 30% 70% / 50% 60% 50% 40%;
+    animation: morph2 14s ease-in-out infinite reverse;
+}
+.blob-6 {
+    top: 45%;
+    left: -5%;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 210, 51, 0.2);
+    border-radius: 60% 40% 30% 70% / 50% 60% 50% 40%;
+    animation: morph2 20s ease-in-out infinite;
+}
+
+/* Extra Typography & Grid Decor */
+.deco-grid {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-image: radial-gradient(rgba(255, 210, 51, 0.4) 2px, transparent 2px);
+    background-size: 30px 30px;
+    z-index: -1;
+    opacity: 0.6;
+}
+.deco-grid-1 { top: 5%; left: 2%; }
+.deco-grid-2 { top: 60%; right: 2%; }
+
+.deco-text {
+    position: absolute;
+    font-size: 250px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    color: rgba(255, 210, 51, 0.08);
+    z-index: -2;
+    transform: rotate(-90deg);
+    letter-spacing: 20px;
+    user-select: none;
+    pointer-events: none;
+    white-space: nowrap;
+}
+.deco-text-1 { top: 20%; left: -250px; }
+.deco-text-2 { top: 70%; right: -300px; transform: rotate(90deg); }
+
+@keyframes morph {
+    0%, 100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; transform: rotate(0deg); }
+    34% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; transform: rotate(10deg); }
+    67% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; transform: rotate(-5deg); }
+}
+@keyframes morph2 {
+    0%, 100% { border-radius: 60% 40% 30% 70% / 50% 60% 50% 40%; transform: rotate(0deg); }
+    34% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; transform: rotate(-10deg); }
+    67% { border-radius: 50% 50% 30% 70% / 60% 40% 50% 50%; transform: rotate(5deg); }
+}
+.dest-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin-bottom: 30px;
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.04);
+    z-index: 1;
+}
+.dest-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 210, 51, 0.15);
+}
+
+.dest-img {
+    width: 100%;
+    height: 240px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+}
+
+.dest-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,0.4) 100%);
+    border-radius: 20px 20px 0 0;
+}
+
+.dest-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    color: #111;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    z-index: 2;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.dest-body {
+    padding: 25px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    border-radius: 0 0 20px 20px;
+    background: #ffffff;
+}
+
+/* Card BG Decoration */
+.dest-bg-pattern {
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    width: 150px;
+    height: 150px;
+    background-image: radial-gradient(circle, rgba(255, 210, 51, 0.15) 20%, transparent 20%),
+                      radial-gradient(circle, rgba(255, 210, 51, 0.15) 20%, transparent 20%);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    opacity: 0.5;
+    z-index: -1;
+    border-radius: 50%;
+    transform: rotate(15deg);
+    pointer-events: none;
+}
+
+.dest-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 5px;
+}
+.dest-location {
+    font-size: 13px;
+    color: #777;
+    font-weight: 500;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.dest-location i { color: #FFC300; }
+
+.dest-desc {
+    font-size: 14.5px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.dest-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+}
+.dest-features li {
+    font-size: 14px;
+    color: #222;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-weight: 500;
+}
+.dest-features li i {
+    color: #25D366;
+    margin-top: 3px;
+    font-size: 16px;
+}
+
+.dest-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px 0;
+    background: linear-gradient(135deg, #FFD233, #FFC300);
+    color: #111;
+    font-weight: 700;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 210, 51, 0.3);
+}
+.dest-btn:hover {
+    background: linear-gradient(135deg, #FFC300, #FFA800);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 210, 51, 0.5);
+    color: #111;
+}
+.dest-btn i {
+    font-size: 18px;
+}
+</style>
+<!-- ================= DESTINATION CARDS SECTION END ================= -->
+
+
+
+
+
+<!-- Whatsapp code start -->
+
+<section class="ftco-intro ftco-section ftco-no-pt">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center">
+                <div class="whatsapp-hero" style="background-image: url('images/bg_2.jpg');">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <h2>Have Questions? Contact Us Directly!</h2>
+                        <p>Get instant answers and personalized quotes for your dream Sri Lanka trip via WhatsApp.</p>
+                        <a href="https://wa.me/94762055008?text=Hello,%20I%20am%20interested%20in%20a%20tour%20package%20to%20Sri%20Lanka." 
+                           target="_blank" 
+                           class="whatsapp-btn">
+                            <img src="images/whatsapp_logo.png" alt="WhatsApp Logo">
+                            INQUIRE ON WHATSAPP
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Hero WhatsApp Section */
+.whatsapp-hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 80px 20px;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+.whatsapp-hero:hover {
+    transform: scale(1.02);
+}
+
+/* Overlay */
+.whatsapp-hero .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+    transition: background 0.5s ease;
+}
+.whatsapp-hero:hover .overlay {
+    background: rgba(0,0,0,0.25);
+}
+
+/* Content */
+.whatsapp-hero .content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    animation: fadeUp 1s ease forwards;
+}
+.whatsapp-hero h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    animation: slideInLeft 1s ease forwards;
+}
+.whatsapp-hero p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    animation: slideInRight 1s ease forwards;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #25D366, #1ebe57);
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+.whatsapp-btn img {
+    height: 25px;
+}
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    background: linear-gradient(45deg, #1ebe57, #25D366);
+}
+
+/* Animations */
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInLeft {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+    0% { opacity: 0; transform: translateX(50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .whatsapp-hero {
+        padding: 60px 15px;
+    }
+    .whatsapp-hero h2 {
+        font-size: 26px;
+    }
+    .whatsapp-btn {
+        font-size: 14px;
+        padding: 12px 25px;
+        gap: 8px;
+    }
+}
+</style>
+
+
+<!-- Whatsapp code end -->
+
+
+<!-- FOOTER -->
+<footer class="site-footer" id="footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5 col-md-6">
+        <div class="footer-brand">
+          <h2><span>Ceylon Birdwing</span> Tours</h2>
+          <p>Specializing in personalized tours across Sri Lanka, covering historical, nature, and coastal experiences. We are committed to making your island dream a reality.</p>
+        </div>
+        <div class="footer-social">
+          <a href="https://web.facebook.com/people/Ceylon-Birdwing-Tours/61588023495848/" data-tooltip="Facebook" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/facebook/ffffff" alt="Facebook"></a>
+          <a href="https://www.instagram.com/ceylonbirdwingtours" data-tooltip="Instagram" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/instagram/ffffff" alt="Instagram"></a>
+          <a href="https://www.tiktok.com/@ceylon.birdwing.t" data-tooltip="TikTok" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/tiktok/ffffff" alt="TikTok"></a>
+          <a href="https://www.threads.com/@ceylonbirdwingtours" data-tooltip="Threads" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/threads/ffffff" alt="Threads"></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="javascript:void(0)" class="footer-link" data-title="Online Enquiry" data-content="Fill out our online enquiry form to get personalized travel information and assistance.">Online Enquiry</a></li>
+          <li><a href="javascript:void(0)" class="footer-link" data-title="Booking Conditions" data-content="Read our booking terms, conditions, and cancellation policies before confirming your tour.">Booking Conditions</a></li>
+          <li><a href="javascript:void(0)" class="footer-link" data-title="Privacy Policy" data-content="We respect your privacy. Learn how we collect, use, and protect your personal information.">Privacy Policy</a></li>
+          <li><a href="javascript:void(0)" class="footer-link" data-title="FAQ" data-content="Check frequently asked questions to help you plan your tour efficiently.">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h4 class="footer-heading">Contact Us</h4>
+        <a href="tel:+94762055008" class="footer-contact-item"><div class="footer-contact-icon"><i class="fa fa-phone"></i></div><span>+94 76 2055008</span></a>
+        <a href="mailto:ceylonbirdwingtours@gmail.com" class="footer-contact-item"><div class="footer-contact-icon"><i class="fa fa-envelope"></i></div><span>ceylonbirdwingtours@gmail.com</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-bottom">
+    <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> <span>Ceylon Birdwing Tours</span> &mdash; All Rights Reserved.</p>
+  </div>
+</footer>
+<div id="footerModal" class="footer-modal-overlay" role="dialog" aria-hidden="true">
+  <div class="footer-modal-box">
+    <button class="footer-modal-close-icon" id="footer-modal-close"><i class="fa fa-times"></i></button>
+    <h3 id="footerModalTitle"></h3>
+    <p id="footerModalContent"></p>
+    <button class="btn-footer-modal-close" id="footer-modal-btn">Close</button>
+  </div>
+</div>
+<script>
+(function(){var fModal=document.getElementById('footerModal'),fCloseIcon=document.getElementById('footer-modal-close'),fCloseBtn=document.getElementById('footer-modal-btn');
+function openFModal(link){document.getElementById('footerModalTitle').textContent=link.getAttribute('data-title');document.getElementById('footerModalContent').textContent=link.getAttribute('data-content');fModal.style.display='flex';document.body.style.overflow='hidden';}
+function closeFModal(){fModal.style.display='none';document.body.style.overflow='';}
+document.querySelectorAll('.footer-link').forEach(function(link){link.addEventListener('click',function(e){e.preventDefault();openFModal(link);});});
+fCloseIcon.addEventListener('click',closeFModal);fCloseBtn.addEventListener('click',closeFModal);
+fModal.addEventListener('click',function(e){if(e.target===fModal)closeFModal();});})();
+</script>
+<!-- FOOTER END -->
+
+
+
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
+
+<!-- ================= FINAL RESPONSIVE & UX POLISH (added) ================= -->
+<style>
+  /* Smooth in-page scrolling for anchor links */
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  /* Prevent any horizontal scroll/jank on small screens & remove mobile tap flash */
+  body { overflow-x: hidden; -webkit-tap-highlight-color: transparent; }
+  *, *::before, *::after { box-sizing: border-box; }
+  img, svg, video { max-width: 100%; height: auto; }
+
+  /* Long text/emails never overflow their container on narrow phones */
+  p, h1, h2, h3, h4, h5, h6, a, span, li, .contact-value { overflow-wrap: break-word; word-break: break-word; }
+
+  /* Visible keyboard focus state for accessibility, invisible to mouse users */
+  a:focus-visible, button:focus-visible, input:focus-visible,
+  select:focus-visible, textarea:focus-visible, .nav-toggle:focus-visible {
+    outline: 3px solid #36C5F0;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Respect users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Comfortable tap targets + crisp press feedback on touch devices */
+  @media (max-width: 600px) {
+    .contact-btn, .cta-btn, .dest-btn, .tour-btn, .whatsapp-btn, .btn-wa,
+    .footer-contact-item, #sendBtn, #clearBtn, .cta-buttons a {
+      min-height: 44px;
+    }
+  }
+  .contact-btn:active, .cta-btn:active, .dest-btn:active, .tour-btn:active,
+  .whatsapp-btn:active, .btn-wa:active, #sendBtn:active, #clearBtn:active,
+  .tour-btn-wa:active {
+    transform: scale(0.97);
+  }
+
+  /* Tone down oversized decorative type on small screens (perf + tidiness) */
+  @media (max-width: 600px) {
+    .deco-text { font-size: 140px; }
+  }
+
+  /* Slightly tighter side padding on very small phones */
+  @media (max-width: 400px) {
+    .contact-section, .tour-container, .transfer-container { padding-left: 12px; padding-right: 12px; }
+  }
+</style>
+<!-- ================= END FINAL POLISH ================= -->
+
+</body>
+</html>

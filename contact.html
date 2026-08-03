@@ -1,0 +1,785 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ceylon Birdwing Tours</title>
+    <link rel="icon" type="image/png" href="images/logo.png"> 
+        <link rel="shortcut icon" href="images/logo.ico">
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/shared-navbar-footer.css">
+
+</head>
+
+<body>
+
+
+ 
+<!-- NAVBAR OVERLAY -->
+<div class="nav-overlay" id="nav-overlay"></div>
+<!-- MODERN NAVBAR -->
+<nav class="modern-navbar at-top" id="main-navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-img-wrap"><img src="images/logo.png" alt="Ceylon Birdwing Tours Logo" loading="lazy"></div>
+      <div class="nav-logo-text">
+        <span class="nav-logo-title">Ceylon Birdwing Tours</span>
+        <span class="nav-logo-sub">Sri Lanka Travel Experts</span>
+      </div>
+    </a>
+    <div class="nav-toggle" id="nav-toggle" role="button" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-menu" id="nav-menu" role="list">
+      <li class="nav-item"><a href="index.html">Home</a></li>
+      <li class="nav-item"><a href="destination.html">Destination</a></li>
+      <li class="nav-item"><a href="packages.html">Tour Packages</a></li>
+      <li class="nav-item"><a href="CustomTours.html">Custom Tours</a></li>
+      <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+      <li class="nav-item nav-cta active"><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+<script>
+const navbar=document.getElementById('main-navbar'),toggle=document.getElementById('nav-toggle'),menu=document.getElementById('nav-menu'),overlay=document.getElementById('nav-overlay');
+function closeNav(){menu.classList.remove('show');overlay.classList.remove('show');toggle.classList.remove('open');toggle.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+toggle.addEventListener('click',()=>{const o=menu.classList.toggle('show');overlay.classList.toggle('show',o);toggle.classList.toggle('open',o);toggle.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':'';});
+overlay.addEventListener('click',closeNav);
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeNav));
+window.addEventListener('scroll',()=>{if(window.scrollY>60){navbar.classList.remove('at-top');navbar.classList.add('scrolled');}else{navbar.classList.remove('scrolled');navbar.classList.add('at-top');}},{passive:true});
+</script>
+<!-- NAVBAR END -->
+
+
+<div class="hero-wrap js-fullheight" style="background-image: url('images/bg_4.jpg');">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
+				<div class="col-md-7 ftco-animate">
+					<span class="subheading">Welcome to Ceylon Birdwing Tours</span>
+					<h1 class="mb-4">Contact</h1>
+					<p class="caps">Travel to the any corner of the Sri Lanka, without going around in circles</p>
+				</div>
+				
+				</a>
+			</div>
+		</div>
+</div>
+
+<style>
+  :root {
+    --gold: #FFD233;
+    --gold-dark: #FFA800;
+    --accent: #ff5733;
+    --dark: #0f0f0f;
+    --text-light: #f0f0f0;
+    --white: #ffffff;
+    --radius-md: 16px;
+    --shadow-md: 0 8px 30px rgba(0,0,0,0.2);
+    --transition: 0.35s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  .contact-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  /* INTRO SECTION */
+  .contact-intro {
+    text-align: center;
+    animation: slideInDown 0.6s ease-out;
+  }
+
+  .contact-intro h2 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, #FFD233, #FFA800);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .contact-intro p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 500;
+  }
+
+  /* CONTACT METHODS GRID */
+  .contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
+    margin-bottom: 20px;
+  }
+
+  .contact-card {
+    position: relative;
+    padding: 40px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: all var(--transition);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-md);
+  }
+
+  .contact-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .contact-card-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+  }
+
+  /* WHATSAPP CARD */
+  .card-whatsapp {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: #fff;
+  }
+
+  .card-whatsapp:hover {
+    box-shadow: 0 20px 50px rgba(37, 211, 102, 0.35);
+  }
+
+  /* EMAIL CARD */
+  .card-email {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+  }
+
+  .card-email:hover {
+    box-shadow: 0 20px 50px rgba(102, 126, 234, 0.35);
+  }
+
+  /* PHONE CARD */
+  .card-phone {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+    color: #fff;
+  }
+
+  .card-phone:hover {
+    box-shadow: 0 20px 50px rgba(255, 107, 107, 0.35);
+  }
+
+  .contact-card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+  }
+
+  .contact-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.5px;
+  }
+
+  .contact-card .contact-value {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+    opacity: 0.95;
+  }
+
+  .contact-card p {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    line-height: 1.6;
+    margin: 0 0 24px 0;
+    flex-grow: 1;
+  }
+
+  .contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 50px;
+    text-decoration: none;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    transition: all var(--transition);
+    backdrop-filter: blur(10px);
+    align-self: flex-start;
+    cursor: pointer;
+  }
+
+  .contact-btn:hover {
+    background: rgba(255, 255, 255, 0.35);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateX(4px);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* FEATURES SECTION */
+  .features-section {
+    background: linear-gradient(135deg, #f8f5ef 0%, #fdf9f0 100%);
+    padding: 60px 40px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+  }
+
+  .features-section h2 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+
+  .feature-item {
+    padding: 30px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all var(--transition);
+    border-left: 4px solid var(--gold);
+  }
+
+  .feature-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  }
+
+  .feature-item h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .feature-item::before {
+    content: '✓';
+    display: inline-flex;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: #111;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .feature-item p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* CTA SECTION */
+  .contact-cta {
+    text-align: center;
+    padding: 50px 40px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    border-radius: var(--radius-md);
+    color: #111;
+    box-shadow: var(--shadow-md);
+  }
+
+  .contact-cta h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+  }
+
+  .contact-cta p {
+    font-size: 1rem;
+    margin-bottom: 28px;
+    opacity: 0.9;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-btn {
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .cta-btn-primary {
+    background: #fff;
+    color: #111;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  .cta-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    color: #111;
+    text-decoration: none;
+  }
+
+  .cta-btn-secondary {
+    background: rgba(255, 255, 255, 0.2);
+    color: #111;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .cta-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+    color: #111;
+    text-decoration: none;
+  }
+
+  /* ANIMATIONS */
+  @keyframes slideInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .contact-card {
+    animation: slideInUp 0.6s ease-out;
+  }
+
+  .contact-card:nth-child(1) { animation-delay: 0.1s; }
+  .contact-card:nth-child(2) { animation-delay: 0.2s; }
+  .contact-card:nth-child(3) { animation-delay: 0.3s; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .contact-section {
+      margin: 60px auto;
+      gap: 40px;
+    }
+
+    .contact-intro h2 {
+      font-size: 2rem;
+    }
+
+    .contact-intro p {
+      font-size: 1rem;
+    }
+
+    .contact-methods {
+      gap: 20px;
+    }
+
+    .contact-card {
+      padding: 30px;
+    }
+
+    .contact-card-icon {
+      width: 50px;
+      height: 50px;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+
+    .contact-card h3 {
+      font-size: 1.2rem;
+    }
+
+    .contact-card .contact-value {
+      font-size: 1rem;
+    }
+
+    .features-section {
+      padding: 40px 24px;
+    }
+
+    .features-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+    }
+
+    .features-grid {
+      gap: 20px;
+    }
+
+    .feature-item {
+      padding: 24px;
+    }
+
+    .contact-cta {
+      padding: 40px 24px;
+    }
+
+    .contact-cta h3 {
+      font-size: 1.5rem;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .cta-btn {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .contact-section {
+      margin: 50px auto;
+      gap: 30px;
+    }
+
+    .contact-intro h2 {
+      font-size: 1.6rem;
+    }
+
+    .contact-card {
+      padding: 24px;
+    }
+
+    .contact-card h3 {
+      font-size: 1.1rem;
+    }
+
+    .contact-card p {
+      font-size: 0.9rem;
+      margin-bottom: 18px;
+    }
+
+    .feature-item {
+      padding: 20px;
+    }
+
+    .contact-cta {
+      padding: 30px 20px;
+    }
+  }
+</style>
+
+<section class="contact-section">
+
+  <!-- Intro -->
+  <div class="contact-intro">
+    <h2>Let's Plan Your Perfect Sri Lankan Adventure</h2>
+    <p>Connect with our travel experts to craft a personalized journey tailored to your interests, pace, and preferences. Whether it's beaches, culture, wildlife, or adventure — we make it happen.</p>
+  </div>
+
+  <!-- Contact Methods -->
+  <div class="contact-methods">
+
+    <!-- WhatsApp Card -->
+    <div class="contact-card card-whatsapp">
+      <div class="contact-card-content">
+        <div class="contact-card-icon">💬</div>
+        <h3>WhatsApp</h3>
+        <div class="contact-value">+94 76 2055008</div>
+        <p>Get instant replies to your questions and receive custom quotes directly on WhatsApp. Perfect for quick inquiries and real-time planning.</p>
+        <a href="https://wa.me/94762055008?text=Hello,%20I%20am%20interested%20in%20a%20tour%20package%20to%20Sri%20Lanka." target="_blank" rel="noopener noreferrer" class="contact-btn">
+          <i class="fab fa-whatsapp"></i> Open WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Email Card -->
+    <div class="contact-card card-email">
+      <div class="contact-card-content">
+        <div class="contact-card-icon">✉️</div>
+        <h3>Email</h3>
+        <div class="contact-value">ceylonbirdwingtours@gmail.com</div>
+        <p>Send detailed inquiries or share your travel ideas via email. We'll respond with comprehensive options tailored to your vision.</p>
+        <a href="mailto:ceylonbirdwingtours@gmail.com" class="contact-btn">
+          <i class="fa fa-envelope"></i> Send Email
+        </a>
+      </div>
+    </div>
+
+    <!-- Phone Card -->
+    <div class="contact-card card-phone">
+      <div class="contact-card-content">
+        <div class="contact-card-icon">📞</div>
+        <h3>Phone Call</h3>
+        <div class="contact-value">+94 76 2055008</div>
+        <p>Speak directly with our team for personalized guidance. We're available to discuss your trip and answer any questions you have.</p>
+        <a href="tel:+94762055008" class="contact-btn">
+          <i class="fa fa-phone"></i> Call Us Now
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Features Section -->
+  <div class="features-section">
+    <h2>How We Personalize Your Journey</h2>
+    <div class="features-grid">
+      <div class="feature-item">
+        <h4>Flexible Duration</h4>
+        <p>Choose your trip length from short getaways to extended adventures—we adapt to your schedule.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Customized Routes</h4>
+        <p>Pick destinations across Sri Lanka that match your interests and travel style perfectly.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Your Pace</h4>
+        <p>Travel relaxed or action-packed—we design itineraries that match your preferred pace.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Group Flexibility</h4>
+        <p>Solo travelers, couples, families, or friends—we craft experiences for every group type.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Expert Guides</h4>
+        <p>Local experts and professional drivers ensure comfort, safety, and authentic experiences.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Transparent Pricing</h4>
+        <p>No hidden charges. What you see is what you pay—complete clarity from start to finish.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <div class="contact-cta">
+    <h3>Ready to Explore Sri Lanka?</h3>
+    <p>Our team is standing by to help you plan an unforgettable experience. Reach out today!</p>
+    <div class="cta-buttons">
+      <a href="https://wa.me/94762055008?text=Hello,%20I%20am%20interested%20in%20a%20tour%20package%20to%20Sri%20Lanka." target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn-primary">
+        <i class="fab fa-whatsapp"></i> Message on WhatsApp
+      </a>
+      <a href="mailto:ceylonbirdwingtours@gmail.com" class="cta-btn cta-btn-secondary">
+        <i class="fa fa-envelope"></i> Send Email
+      </a>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="site-footer" id="footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5 col-md-6">
+        <div class="footer-brand">
+          <h2><span>Ceylon Birdwing</span> Tours</h2>
+          <p>Specializing in personalized tours across Sri Lanka, covering historical, nature, and coastal experiences. We are committed to making your island dream a reality.</p>
+        </div>
+        <div class="footer-social">
+          <a href="https://web.facebook.com/people/Ceylon-Birdwing-Tours/61588023495848/" data-tooltip="Facebook" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/facebook/ffffff" alt="Facebook"></a>
+          <a href="https://www.instagram.com/ceylonbirdwingtours" data-tooltip="Instagram" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/instagram/ffffff" alt="Instagram"></a>
+          <a href="https://www.tiktok.com/@ceylon.birdwing.t" data-tooltip="TikTok" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/tiktok/ffffff" alt="TikTok"></a>
+          <a href="https://www.threads.com/@ceylonbirdwingtours" data-tooltip="Threads" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/threads/ffffff" alt="Threads"></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="javascript:void(0)" class="footer-link" data-title="Online Enquiry" data-content="Fill out our online enquiry form to get personalized travel information and assistance.">Online Enquiry</a></li>
+          <li><a href="javascript:void(0)" class="footer-link" data-title="Booking Conditions" data-content="Read our booking terms, conditions, and cancellation policies before confirming your tour.">Booking Conditions</a></li>
+          <li><a href="javascript:void(0)" class="footer-link" data-title="Privacy Policy" data-content="We respect your privacy. Learn how we collect, use, and protect your personal information.">Privacy Policy</a></li>
+          <li><a href="javascript:void(0)" class="footer-link" data-title="FAQ" data-content="Check frequently asked questions to help you plan your tour efficiently.">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h4 class="footer-heading">Contact Us</h4>
+        <a href="tel:+94762055008" class="footer-contact-item"><div class="footer-contact-icon"><i class="fa fa-phone"></i></div><span>+94 76 2055008</span></a>
+        <a href="mailto:ceylonbirdwingtours@gmail.com" class="footer-contact-item"><div class="footer-contact-icon"><i class="fa fa-envelope"></i></div><span>ceylonbirdwingtours@gmail.com</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-bottom">
+    <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> <span>Ceylon Birdwing Tours</span> &mdash; All Rights Reserved.</p>
+  </div>
+</footer>
+<div id="footerModal" class="footer-modal-overlay" role="dialog" aria-hidden="true">
+  <div class="footer-modal-box">
+    <button class="footer-modal-close-icon" id="footer-modal-close"><i class="fa fa-times"></i></button>
+    <h3 id="footerModalTitle"></h3>
+    <p id="footerModalContent"></p>
+    <button class="btn-footer-modal-close" id="footer-modal-btn">Close</button>
+  </div>
+</div>
+<script>
+(function(){var fModal=document.getElementById('footerModal'),fCloseIcon=document.getElementById('footer-modal-close'),fCloseBtn=document.getElementById('footer-modal-btn');
+function openFModal(link){document.getElementById('footerModalTitle').textContent=link.getAttribute('data-title');document.getElementById('footerModalContent').textContent=link.getAttribute('data-content');fModal.style.display='flex';document.body.style.overflow='hidden';}
+function closeFModal(){fModal.style.display='none';document.body.style.overflow='';}
+document.querySelectorAll('.footer-link').forEach(function(link){link.addEventListener('click',function(e){e.preventDefault();openFModal(link);});});
+fCloseIcon.addEventListener('click',closeFModal);fCloseBtn.addEventListener('click',closeFModal);
+fModal.addEventListener('click',function(e){if(e.target===fModal)closeFModal();});})();
+</script>
+<!-- FOOTER END -->
+
+
+
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
+
+<!-- ================= FINAL RESPONSIVE & UX POLISH (added) ================= -->
+<style>
+  /* Smooth in-page scrolling for anchor links */
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  /* Prevent any horizontal scroll/jank on small screens & remove mobile tap flash */
+  body { overflow-x: hidden; -webkit-tap-highlight-color: transparent; }
+  *, *::before, *::after { box-sizing: border-box; }
+  img, svg, video { max-width: 100%; height: auto; }
+
+  /* Long text/emails never overflow their container on narrow phones */
+  p, h1, h2, h3, h4, h5, h6, a, span, li, .contact-value { overflow-wrap: break-word; word-break: break-word; }
+
+  /* Visible keyboard focus state for accessibility, invisible to mouse users */
+  a:focus-visible, button:focus-visible, input:focus-visible,
+  select:focus-visible, textarea:focus-visible, .nav-toggle:focus-visible {
+    outline: 3px solid #36C5F0;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Respect users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Comfortable tap targets + crisp press feedback on touch devices */
+  @media (max-width: 600px) {
+    .contact-btn, .cta-btn, .dest-btn, .tour-btn, .whatsapp-btn, .btn-wa,
+    .footer-contact-item, #sendBtn, #clearBtn, .cta-buttons a {
+      min-height: 44px;
+    }
+  }
+  .contact-btn:active, .cta-btn:active, .dest-btn:active, .tour-btn:active,
+  .whatsapp-btn:active, .btn-wa:active, #sendBtn:active, #clearBtn:active,
+  .tour-btn-wa:active {
+    transform: scale(0.97);
+  }
+
+  /* Tone down oversized decorative type on small screens (perf + tidiness) */
+  @media (max-width: 600px) {
+    .deco-text { font-size: 140px; }
+  }
+
+  /* Slightly tighter side padding on very small phones */
+  @media (max-width: 400px) {
+    .contact-section, .tour-container, .transfer-container { padding-left: 12px; padding-right: 12px; }
+  }
+</style>
+<!-- ================= END FINAL POLISH ================= -->
+
+</body>
+</html>
