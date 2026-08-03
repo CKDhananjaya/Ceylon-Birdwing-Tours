@@ -234,24 +234,19 @@
     padding: 8px;
     border-radius: var(--radius-sm);
     transition: background var(--transition);
+    position: relative;
+    z-index: 1001;
   }
   .nav-toggle:hover { background: rgba(255,255,255,0.1); }
   .nav-toggle span {
     display: block;
     height: 2px;
     width: 26px;
-    background: #fff;
+    background: #111;
     border-radius: 2px;
     transition: all 0.35s ease;
     transform-origin: center;
   }
-  /* Animated X */
-  .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  .nav-toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-  .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-  /* Hamburger bars — dark on gold bg */
-  .nav-toggle span { background: #111; }
 
   /* Mobile nav */
   @media (max-width: 900px) {
@@ -319,6 +314,7 @@
     overflow: hidden;
     display: flex;
     align-items: center;
+    padding-top: 88px; /* clear fixed navbar */
   }
 
   /* Slide layers with Ken Burns */
@@ -476,34 +472,7 @@
     text-decoration: none;
   }
 
-  /* Hero stats */
-  .hero-stats {
-    display: flex;
-    gap: 32px;
-    margin-top: 44px;
-    opacity: 0;
-    animation: fadeSlideUp 1s ease 3.8s forwards;
-  }
-  .hero-stat { text-align: left; }
-  .hero-stat-num {
-    font-size: 1.7rem;
-    font-weight: 800;
-    color: var(--gold);
-    line-height: 1;
-  }
-  .hero-stat-label {
-    font-size: 0.78rem;
-    color: rgba(255,255,255,0.6);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-top: 3px;
-  }
-  .hero-stat-divider {
-    width: 1px;
-    background: rgba(255,255,255,0.2);
-    align-self: stretch;
-    margin: 4px 0;
-  }
+
 
   /* Scroll indicator */
   .hero-scroll {
@@ -577,8 +546,6 @@
   @media (max-width: 768px) {
     #hero-slider { min-height: 100svh; }
     .hero-sub { max-width: 100%; }
-    .hero-stats { gap: 20px; }
-    .hero-stat-num { font-size: 1.4rem; }
     .hero-dots { right: 20px; bottom: 24px; }
     .hero-scroll { display: none; }
     #hero-slider .overlay {
@@ -586,7 +553,6 @@
     }
   }
   @media (max-width: 480px) {
-    .hero-stats { gap: 14px; flex-wrap: wrap; }
     .hero-btns { gap: 10px; }
     .btn-hero-primary, .btn-hero-outline { padding: 12px 22px; font-size: 0.88rem; }
   }
@@ -686,7 +652,7 @@
 
   @media (max-width: 992px) {
     .svc-card {
-      height: 220px;
+      min-height: 220px;
     }
     .svc-card-body {
       padding: 18px;
@@ -702,7 +668,7 @@
 
   @media (max-width: 768px) {
     .svc-card {
-      height: 210px;
+      min-height: 210px;
       margin-bottom: 16px;
     }
     .svc-card-body {
@@ -726,7 +692,7 @@
 
   @media (max-width: 576px) {
     .svc-card {
-      height: 200px;
+      min-height: 200px;
       margin-bottom: 12px;
     }
     .svc-card-body {
@@ -903,8 +869,9 @@
     background: #fff;
     max-width: 520px;
     width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
     border-radius: var(--radius-lg);
-    overflow: hidden;
     transform: scale(0.85) translateY(20px);
     opacity: 0;
     transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -970,48 +937,7 @@
     background-position: center;
     transition: all 1s ease;
   }
-  /* Floating badge */
-  .about-badge {
-    position: absolute;
-    bottom: 30px;
-    left: -20px;
-    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-    color: #111;
-    padding: 16px 22px;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-md);
-    z-index: 2;
-    text-align: center;
-  }
-  .about-badge-num { font-size: 2rem; font-weight: 900; line-height: 1; }
-  .about-badge-text { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
-  /* Decorative ring */
-  .about-image-panel::after {
-    content: '';
-    position: absolute;
-    inset: -8px;
-    border: 2px solid var(--gold);
-    border-radius: calc(var(--radius-lg) + 8px);
-    opacity: 0.3;
-    pointer-events: none;
-  }
 
-  /* About stats */
-  .about-stats { display: flex; gap: 24px; flex-wrap: wrap; margin: 28px 0; }
-  .about-stat-item {
-    flex: 1;
-    min-width: 100px;
-    padding: 18px 16px;
-    background: #fff;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
-    text-align: center;
-    border-bottom: 3px solid var(--gold);
-    transition: transform var(--transition);
-  }
-  .about-stat-item:hover { transform: translateY(-4px); }
-  .about-stat-item .num { font-size: 1.8rem; font-weight: 800; color: var(--gold-dark); line-height: 1; }
-  .about-stat-item .lbl { font-size: 0.72rem; font-weight: 600; color: #555; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; }
 
   .btn-about {
     display: inline-flex;
@@ -1207,8 +1133,9 @@
     background: #fff;
     width: 90%;
     max-width: 680px;
+    max-height: 90vh;
+    overflow-y: auto;
     border-radius: var(--radius-lg);
-    overflow: hidden;
     box-shadow: var(--shadow-lg);
     animation: popupFade 0.35s ease;
     position: relative;
@@ -1476,7 +1403,7 @@
   /* ============================================================
      UTILITY & GLOBAL TWEAKS
   ============================================================ */
-  .section-pad { padding: 90px 0; }
+
 
   /* Override Bootstrap btn-primary with gold */
   .btn-primary {
@@ -1508,8 +1435,7 @@
   /* Lazy load fade */
   img[loading="lazy"] { transition: opacity 0.4s ease; }
 
-  /* Smooth padding for fixed navbar */
-  body { padding-top: 0; }
+
   </style>
 </head>
 
@@ -1548,6 +1474,7 @@
       <li class="nav-item"><a href="destination.html">Destination</a></li>
       <li class="nav-item"><a href="packages.html">Tour Packages</a></li>
       <li class="nav-item"><a href="CustomTours.html">Custom Tours</a></li>
+      <li class="nav-item"><a href="gallery.html">Gallery</a></li>
       <li class="nav-item nav-cta"><a href="contact.html">Contact Us</a></li>
     </ul>
 
