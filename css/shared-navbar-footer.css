@@ -60,7 +60,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-main); }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1280px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 6px 24px;
   transition: padding var(--transition);
@@ -166,6 +166,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-main); }
   color: #FFC300;
   background: #fff;
   font-weight: 700;
+  text-decoration: none !important;
 }
 .nav-item a:hover::after,
 .nav-item.active a::after {
@@ -187,6 +188,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-main); }
   box-shadow: 0 8px 20px rgba(0,0,0,0.2) !important;
   background: #fff !important;
   color: #FFC300 !important;
+  text-decoration: none !important;
 }
 
 /* Hamburger */
